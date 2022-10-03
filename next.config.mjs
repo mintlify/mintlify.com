@@ -19,6 +19,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/docs',
+        destination: 'https://meta.mintlify.com',
+        permanent: false,
+      },
+      {
         source: '/start',
         destination: 'https://1tc7vihvbit.typeform.com/to/pZJ31XZB',
         permanent: false,
