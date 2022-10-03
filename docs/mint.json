@@ -2,10 +2,10 @@
   "name": "Mintlify",
   "basePath": "/docs",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/docs/logo/light.svg",
+    "dark": "/docs/logo/dark.svg"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/docs/favicon.svg",
   "colors": {
     "primary": "#16A34A",
     "light": "#4ADE80",
@@ -21,15 +21,9 @@
   ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://1tc7vihvbit.typeform.com/to/pZJ31XZB"
+    "url": "https://mintlify.com/start"
   },
   "anchors": [
-    {
-      "name": "Writer",
-      "icon": "pen-nib",
-      "color": "#f59f0b",
-      "url": "writer"
-    },
     {
       "name": "Community",
       "icon": "comments",
@@ -46,7 +40,7 @@
   "navigation": [
     {
       "group": "Getting Started",
-      "pages": ["introduction", "quickstart"]
+      "pages": ["quickstart"]
     },
     {
       "group": "Components",
@@ -88,14 +82,6 @@
         "analytics/mixpanel",
         "analytics/posthog"
       ]
-    },
-    {
-      "group": "Writer",
-      "pages": ["writer/introduction"]
-    },
-    {
-      "group": "API",
-      "pages": ["writer/api", "writer/initialize-request", "writer/get-status"]
     }
   ],
   "footerSocials": {
