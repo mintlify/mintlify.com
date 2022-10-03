@@ -44,19 +44,23 @@
       "pages": ["quickstart"]
     },
     {
+      "group": "Settings",
+      "pages": ["settings/customization", "settings/page"]
+    },
+    {
       "group": "Components",
       "pages": [
         "components/overview",
-        "components/text",
+        "components/accordion",
+        "components/card",
         "components/code",
+        "components/callout",
+        "components/embed",
         "components/image",
         "components/frame",
         "components/list",
-        "components/table",
-        "components/callout",
-        "components/accordion",
-        "components/card",
-        "components/embed"
+        "components/text",
+        "components/table"
       ]
     },
     {
@@ -69,10 +73,6 @@
         "api-components/examples",
         "api-components/openapi"
       ]
-    },
-    {
-      "group": "Settings",
-      "pages": ["settings/customization", "settings/page"]
     },
     {
       "group": "Analytics",
