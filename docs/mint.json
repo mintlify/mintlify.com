@@ -1,0 +1,113 @@
+{
+  "name": "Mintlify",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "favicon": "/favicon.svg",
+  "colors": {
+    "primary": "#16A34A",
+    "light": "#4ADE80",
+    "dark": "#166534",
+    "ultraLight": "#DCFCE7",
+    "ultraDark": "#14532D"
+  },
+  "topbarLinks": [
+    {
+      "name": "Contact Us",
+      "url": "mailto:hi@mintlify.com"
+    }
+  ],
+  "topbarCtaButton": {
+    "name": "Get Started",
+    "url": "https://1tc7vihvbit.typeform.com/to/pZJ31XZB"
+  },
+  "anchors": [
+    {
+      "name": "Writer",
+      "icon": "pen-nib",
+      "color": "#f59f0b",
+      "url": "writer"
+    },
+    {
+      "name": "Community",
+      "icon": "comments",
+      "color": "#2564eb",
+      "url": "https://discord.gg/b499CK8P9g"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "color": "#333333",
+      "url": "https://github.com/mintlify/mint"
+    }
+  ],
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["introduction", "quickstart"]
+    },
+    {
+      "group": "Components",
+      "pages": [
+        "components/overview",
+        "components/text",
+        "components/code",
+        "components/image",
+        "components/frame",
+        "components/list",
+        "components/table",
+        "components/callout",
+        "components/accordion",
+        "components/card",
+        "components/embed"
+      ]
+    },
+    {
+      "group": "API Components",
+      "pages": [
+        "api-components/overview",
+        "api-components/param",
+        "api-components/response",
+        "api-components/expandable",
+        "api-components/examples",
+        "api-components/openapi"
+      ]
+    },
+    {
+      "group": "Settings",
+      "pages": ["settings/customization", "settings/page"]
+    },
+    {
+      "group": "Analytics",
+      "pages": [
+        "analytics/setup",
+        "analytics/google-analytics",
+        "analytics/amplitude",
+        "analytics/mixpanel",
+        "analytics/posthog"
+      ]
+    },
+    {
+      "group": "Writer",
+      "pages": ["writer/introduction"]
+    },
+    {
+      "group": "API",
+      "pages": ["writer/api", "writer/initialize-request", "writer/get-status"]
+    }
+  ],
+  "footerSocials": {
+    "github": "https://github.com/mintlify",
+    "discord": "https://discord.gg/MPNgtSZkgK",
+    "twitter": "https://twitter.com/mintlify"
+  },
+  "analytics": {
+    "fathom": {
+      "siteId": "YSVUHCAK"
+    },
+    "ga4": {
+      "measurementId": "G-J5ZSEPV7HC"
+    }
+  }
+}

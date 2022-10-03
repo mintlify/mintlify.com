@@ -1,0 +1,87 @@
+---
+title: 'Get Job Status'
+description: 'Check the generation status and fetch results'
+api: 'GET https://api.mintlify.com/docs/worker/{id}'
+---
+
+This endpoint checks the status using the `id` from the initialize request endpoint.
+
+**Important**: You must check the status of the job using a time-based listener. Here's an implementation of one using TypeScript that fetches the request every 100 milliseconds
+
+```ts Example of listner in TypeScript
+export const monitorJobStatus = async (id: string) => {
+  let workerStatus = null;
+  const intervalMs = 100;
+
+  while (workerStatus == null) {
+    const { data: status } = await axios.get('https://api.mintlify.com/docs/worker/{id}');
+    if (status.state === 'completed') {
+      workerStatus = status.data;
+      break;
+    } else if (status.state === 'failed') {
+      throw new Error('Unable to generate documentation');
+    }
+
+    millisecondsPassed += intervalMs;
+    await sleep(intervalMs);
+  }
+
+  return workerStatus;
+};
+```
+
+### Parameters
+
+<ParamField name="id" type="string" required>
+
+The job id after it is initialized
+
+</ParamField>
+
+<RequestExample>
+
+```shell cURL
+curl https://api.mintlify.com/docs/worker/{id}
+```
+
+```javascript JavaScript
+const {
+  data: { state, data },
+} = await axios.get('https://api.mintlify.com/docs/worker/{id}');
+```
+
+</RequestExample>
+
+### Response
+
+<ResponseField name="state" type="active | completed | failed">
+
+The current state of the request.
+
+| State       | Description                                                        |
+| ----------- | ------------------------------------------------------------------ |
+| `active`    | The request is still ongoing                                       |
+| `completed` | The request has successfully completed and you can get the results |
+| `failed`    | The request has failed with the following errors                   |
+
+</ResponseField>
+
+<ResponseField name="data" type="object">
+
+Data is only available when the state is `completed`, and it has the following properties
+
+- `docstring`: The generated results from the code
+- `position`: The location that the docstring should be displayed. Values are either "above" or "belowFirstLine"
+
+</ResponseField>
+
+<ResponseExample>
+
+```json Example Response
+{
+  "docstring": "The function console logs 'hello world'",
+  "position": "above"
+}
+```
+
+</ResponseExample>
