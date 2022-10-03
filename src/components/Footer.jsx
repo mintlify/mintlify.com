@@ -56,7 +56,7 @@ export function Footer() {
                   icon={LinkedInIcon}
                 />
               </div>
-              <div className="flex gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
+              <div className="flex flex-wrap gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
                 {navigation.map((nav) => (
                   <NavLink href={nav.href}>{nav.name}</NavLink>
                 ))}
