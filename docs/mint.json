@@ -5,6 +5,7 @@
     "light": "/docs/logo/light.svg",
     "dark": "/docs/logo/dark.svg"
   },
+  "logoHref": "https://mintlify.com",
   "favicon": "/favicon.svg",
   "colors": {
     "primary": "#16A34A",
