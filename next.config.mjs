@@ -20,7 +20,7 @@ const nextConfig = {
       },
       {
         source: '/docs',
-        destination: 'https://meta.mintlify.com',
+        destination: 'https://meta.mintlify.com/docs',
         permanent: false,
       },
       {
