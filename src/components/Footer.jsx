@@ -36,22 +36,17 @@ export function Footer() {
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <div className="flex gap-6">
                 <SocialLink
-                  href="https://twitter.com"
+                  href="https://twitter.com/mintlify"
                   aria-label="Follow on Twitter"
                   icon={TwitterIcon}
                 />
                 <SocialLink
-                  href="https://instagram.com"
-                  aria-label="Follow on Instagram"
-                  icon={InstagramIcon}
-                />
-                <SocialLink
-                  href="https://github.com"
+                  href="https://github.com/mintlify"
                   aria-label="Follow on GitHub"
                   icon={GitHubIcon}
                 />
                 <SocialLink
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/company/mintsearch"
                   aria-label="Follow on LinkedIn"
                   icon={LinkedInIcon}
                 />
