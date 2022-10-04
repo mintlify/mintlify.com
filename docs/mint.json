@@ -77,11 +77,11 @@
     {
       "group": "Analytics",
       "pages": [
-        "analytics/setup",
-        "analytics/google-analytics",
-        "analytics/amplitude",
-        "analytics/mixpanel",
-        "analytics/posthog"
+        "site-stats/setup",
+        "site-stats/ga4",
+        "site-stats/amplitude",
+        "site-stats/mixpanel",
+        "site-stats/posthog"
       ]
     }
   ],
