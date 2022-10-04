@@ -80,7 +80,7 @@
         "site-stats/setup",
         "site-stats/ga4",
         "site-stats/amplitude",
-        "site-stats/mixpanel",
+        "site-stats/mp",
         "site-stats/posthog"
       ]
     }
