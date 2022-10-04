@@ -6,22 +6,18 @@ auth: "bearer"
 ---
 
 <RequestExample>
-
 ```json Request
 curl -X PUT https://docs.mintlify.com/api/v1/sites/integrations/mixpanel
     -H "Authorization: Bearer YOUR_MINTLIFY_ACCESS_TOKEN"
     -H "Content-Type: application/json"
     -d '{"projectToken":"YOUR_MIXPANEL_PROJECT_TOKEN"}'
 ```
-
 </RequestExample>
 
 <ResponseExample>
-
 ```md Response
 Set Mixpanel projectToken.
 ```
-
 </ResponseExample>
 
 Set your project token by making a `PUT` request to our endpoint. We will start sending analytics on your next site deployment.
