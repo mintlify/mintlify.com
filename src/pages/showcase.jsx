@@ -121,7 +121,7 @@ const showcases = [
   {
     name: 'Relate.so',
     description: 'The collaborative CRM your whole team uses',
-    link: { href: 'https://docs.relate.so', label: 'docs.relate.so' },
+    link: { href: 'https://relate.so/docs', label: 'relate.so/docs' },
     logo: logoRelateShowcase,
   },
   {
