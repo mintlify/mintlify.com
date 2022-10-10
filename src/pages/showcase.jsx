@@ -21,6 +21,9 @@ import logoTolstoyShowcase from '@/images/logos/showcase/tolstoy.svg'
 import logoVesselShowcase from '@/images/logos/showcase/vessel.svg'
 import logoVitalShowcase from '@/images/logos/showcase/vital.svg'
 import logoWebappShowcase from '@/images/logos/showcase/webapp.svg'
+import logoContraxShowcase from '@/images/logos/showcase/contrax.svg'
+import logoInvezoShowcase from '@/images/logos/showcase/invezo.svg'
+import logoMundiShowcase from '@/images/logos/showcase/mundi.svg'
 
 export const featuredShowcases = [
   {
@@ -151,6 +154,27 @@ const showcases = [
     description: 'The data sharing platform for SaaS',
     link: { href: 'https://docs.pipebird.com', label: 'docs.pipebird.com' },
     logo: logoPipebirdShowcase,
+  },
+  {
+    name: 'Contrax',
+    description: 'No-code dev tools & auto-compounding vaults on Arbitrum',
+    link: {
+      href: 'https://docs.contrax.finance',
+      label: 'docs.contrax.finance',
+    },
+    logo: logoContraxShowcase,
+  },
+  {
+    name: 'Invezo',
+    description: 'All-in-one crypto data platform',
+    link: { href: 'https://docs.invezo.com', label: 'docs.invezo.com' },
+    logo: logoInvezoShowcase,
+  },
+  {
+    name: 'Mundi',
+    description: 'Framework for Python spatial data analysis',
+    link: { href: 'https://docs.mundi.ai', label: 'docs.mundi.ai' },
+    logo: logoMundiShowcase,
   },
 ]
 
