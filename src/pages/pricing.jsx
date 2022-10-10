@@ -167,22 +167,28 @@ function Plan({
             <span
               aria-hidden={activePeriod === 'Annually'}
               className={clsx(
-                'transition duration-300',
+                'space-x-1 transition duration-300',
                 activePeriod === 'Annually' &&
                   'pointer-events-none translate-x-6 select-none opacity-0'
               )}
             >
-              {price.Monthly}
+              <span>{price.Monthly}</span>
+              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+                /month
+              </span>
             </span>
             <span
               aria-hidden={activePeriod === 'Monthly'}
               className={clsx(
-                'absolute left-0 top-0 transition duration-300',
+                'absolute left-0 top-0 space-x-1 transition duration-300',
                 activePeriod === 'Monthly' &&
                   'pointer-events-none -translate-x-6 select-none opacity-0'
               )}
             >
-              {price.Annually}
+              <span>{price.Annually}</span>
+              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+                /month
+              </span>
             </span>
           </>
         )}
