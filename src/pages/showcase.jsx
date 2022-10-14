@@ -24,6 +24,8 @@ import logoWebappShowcase from '@/images/logos/showcase/webapp.svg'
 import logoContraxShowcase from '@/images/logos/showcase/contrax.svg'
 import logoInvezoShowcase from '@/images/logos/showcase/invezo.svg'
 import logoMundiShowcase from '@/images/logos/showcase/mundi.svg'
+import logoInfisicalShowcase from '@/images/logos/showcase/infisical.svg'
+import logoSlaiShowcase from '@/images/logos/showcase/slai.svg'
 
 export const featuredShowcases = [
   {
@@ -175,6 +177,19 @@ const showcases = [
     description: 'Framework for Python spatial data analysis',
     link: { href: 'https://docs.mundi.ai', label: 'docs.mundi.ai' },
     logo: logoMundiShowcase,
+  },
+  {
+    name: 'Infisical',
+    description:
+      'Automatically sync your environment variables easily, securely',
+    link: { href: 'https://docs.mundi.ai', label: 'docs.mundi.ai' },
+    logo: logoInfisicalShowcase,
+  },
+  {
+    name: 'Slai',
+    description: 'The fastest way to add production-ready ML into an app',
+    link: { href: 'https://docs.slai.io', label: 'docs.slai.io' },
+    logo: logoSlaiShowcase,
   },
 ]
 
