@@ -182,7 +182,7 @@ const showcases = [
     name: 'Infisical',
     description:
       'Automatically sync your environment variables easily, securely',
-    link: { href: 'https://docs.mundi.ai', label: 'docs.mundi.ai' },
+    link: { href: 'https://infisical.com/docs', label: 'infisical.com/docs' },
     logo: logoInfisicalShowcase,
   },
   {
