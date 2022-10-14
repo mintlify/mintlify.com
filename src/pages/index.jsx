@@ -226,7 +226,7 @@ const features = [
       </svg>
     ),
     title: 'Developer first',
-    description: `Content is powered by MDX and lives alongside the codebase. It's built to be opionated when you're lazy, but infinitely flexible when you need it to be.`,
+    description: `Content is powered by MDX and lives alongside the codebase. It's built to be opinionated when you're lazy, but infinitely flexible when you need it to be.`,
     cta: {
       name: 'View documentation',
       href: '/docs',
