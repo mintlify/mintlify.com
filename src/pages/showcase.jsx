@@ -38,7 +38,7 @@ export const featuredShowcases = [
   {
     name: 'Explo',
     description: 'Customer-facing analytics for any platform',
-    link: { href: 'https://explo.mintlify.com', label: 'explo.mintlify.com' },
+    link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
     logo: logoExploShowcase,
   },
   {
