@@ -25,7 +25,7 @@ export const navigation = [
   },
   {
     name: 'Community',
-    href: 'https://discord.gg/b499CK8P9g',
+    href: '/community',
   },
   {
     name: 'GitHub',

@@ -28,6 +28,11 @@ const nextConfig = {
         destination: 'https://1tc7vihvbit.typeform.com/to/pZJ31XZB',
         permanent: false,
       },
+      {
+        source: 'community',
+        destination: 'https://discord.gg/b499CK8P9g',
+        permanent: false,
+      },
     ]
   },
 }
