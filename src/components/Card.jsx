@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import clsx from 'clsx'
+import DynamicLink from './DynamicLink'
 
 export function ChevronRightIcon(props) {
   return (
@@ -28,10 +28,10 @@ Card.Link = function CardLink({ children, ...props }) {
   return (
     <>
       <div className="absolute -inset-y-6 -inset-x-4 z-0 group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
-      <Link {...props}>
+      <DynamicLink {...props}>
         <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
-      </Link>
+      </DynamicLink>
     </>
   )
 }

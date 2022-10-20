@@ -317,7 +317,7 @@ export default function Home() {
           <h1 className="text-4xl font-extrabold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Beautiful documentation that{' '}
             <Link href="/start">
-              <a
+              <span
                 className="border-b-4 hover:border-b-[5px]"
                 style={{
                   borderImage:
@@ -325,7 +325,7 @@ export default function Home() {
                 }}
               >
                 converts
-              </a>
+              </span>
             </Link>{' '}
             users
           </h1>
