@@ -26,6 +26,7 @@ import logoInvezoShowcase from '@/images/logos/showcase/invezo.svg'
 import logoMundiShowcase from '@/images/logos/showcase/mundi.svg'
 import logoInfisicalShowcase from '@/images/logos/showcase/infisical.svg'
 import logoSlaiShowcase from '@/images/logos/showcase/slai.svg'
+import logoFunctionaryShowcase from '@/images/logos/showcase/functionary.svg'
 
 export const featuredShowcases = [
   {
@@ -190,6 +191,15 @@ const showcases = [
     description: 'The fastest way to add production-ready ML into an app',
     link: { href: 'https://docs.slai.io', label: 'docs.slai.io' },
     logo: logoSlaiShowcase,
+  },
+  {
+    name: 'Functionary',
+    description: 'Trigger Alerts & Webhooks on User Events',
+    link: {
+      href: 'https://docs.functionary.run',
+      label: 'docs.functionary.run',
+    },
+    logo: logoFunctionaryShowcase,
   },
 ]
 

@@ -9,6 +9,12 @@ import zach from '@/images/testimonials/zach.jpeg'
 import maitham from '@/images/testimonials/maitham.jpeg'
 import philip from '@/images/testimonials/philip.jpeg'
 import brendan from '@/images/testimonials/brendan.jpeg'
+import emmett from '@/images/testimonials/emmett.jpeg'
+import rohan from '@/images/testimonials/rohan.jpeg'
+import vlad from '@/images/testimonials/vlad.jpeg'
+import kartikye from '@/images/testimonials/kartikye.jpeg'
+import torben from '@/images/testimonials/torben.jpeg'
+import nodar from '@/images/testimonials/nodar.jpeg'
 
 const testimonials = [
   [
@@ -38,6 +44,23 @@ const testimonials = [
         image: maitham,
       },
     },
+    {
+      content: `Mintlify is beautiful and the team is amazing to work with :)`,
+      author: {
+        name: 'Kartikye Mittal',
+        role: 'Co-Founder, Dots',
+        image: kartikye,
+      },
+    },
+    {
+      content:
+        'Mintlify did an excellent job of onboarding us onto their documentation and making it zero-cost to switch over from another doc provider. They are super responsive to feedback and have built a beautiful product :)',
+      author: {
+        name: 'Rohan Varma',
+        role: 'Co-Founder, Explo',
+        image: rohan,
+      },
+    },
   ],
   [
     {
@@ -63,6 +86,23 @@ const testimonials = [
         name: 'Philip Scott',
         role: 'Co-Founder, Hyperbeam',
         image: philip,
+      },
+    },
+    {
+      content: `Mintlify is absolutely amazing! Their team has been such a pleasure to work with, and just look at our docs - they look gorgeous! I definitely think everyone should try Mintlify out!`,
+      author: {
+        name: 'Vlad Matsiiako',
+        role: 'Co-Founder, Infisical',
+        image: vlad,
+      },
+    },
+    {
+      content:
+        'Han and the team set up our documentation extremely quickly and they are BEAUTIFUL. They moved extremely quickly and the product is great.',
+      author: {
+        name: 'Emmett Miller',
+        role: 'Founder at Invezo',
+        image: emmett,
       },
     },
   ],
@@ -91,6 +131,24 @@ const testimonials = [
         name: 'Brendan Ashworth',
         role: 'Founder, Bunting Labs',
         image: brendan,
+      },
+    },
+    {
+      content:
+        'I love how Mintlify made our documentation look 10 times better with minimum effort on our side. We just provided our documentation, and they did all the rest. I highly recommend working with them.',
+      author: {
+        name: 'Torben Friehe',
+        role: 'Co-Founder, Wingback',
+        image: torben,
+      },
+    },
+    {
+      content:
+        'Absolutely amazing! The lovely team Mintlify has converted our ugly and buggy docs into a seamless work of art and we are loving every bit of it so far - keep it up, team!',
+      author: {
+        name: 'Nodar Daneliya',
+        role: 'Founder, Shuttle',
+        image: nodar,
       },
     },
   ],

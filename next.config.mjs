@@ -29,7 +29,7 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: 'community',
+        source: '/community',
         destination: 'https://discord.gg/b499CK8P9g',
         permanent: false,
       },
