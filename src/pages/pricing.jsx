@@ -18,7 +18,7 @@ const plans = [
     },
     features: [
       'Full access to the documentation platform for one project',
-      'all guides and API components',
+      'All guides and API components',
       'User edit requests and feedback',
       'Integrations with third-party analytics providers',
     ],
