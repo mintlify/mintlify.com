@@ -15,7 +15,7 @@ const nextConfig = {
     return [
       {
         source: '/writer',
-        destination: '/',
+        destination: 'https://writer.mintlify.com',
         permanent: false,
       },
       {
