@@ -107,7 +107,7 @@ const showcases = [
     description: 'Wearables and lab test API for digital health companies',
     link: {
       href: 'https://docs.tryvital.io',
-      label: 'https://docs.tryvital.io',
+      label: 'docs.tryvital.io',
     },
     logo: logoVitalShowcase,
   },
