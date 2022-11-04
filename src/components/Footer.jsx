@@ -1,10 +1,5 @@
 import Link from 'next/link'
-import {
-  TwitterIcon,
-  InstagramIcon,
-  GitHubIcon,
-  LinkedInIcon,
-} from '@/components/SocialIcons'
+import { TwitterIcon, GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import { Container } from '@/components/Container'
 import { navigation } from './Header'
 
