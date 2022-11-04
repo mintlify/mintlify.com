@@ -29,7 +29,11 @@ export const navigation = [
   },
   {
     name: 'GitHub',
-    href: 'https://github.com/mintlify/mint',
+    href: '/github',
+  },
+  {
+    name: 'Writer',
+    href: '/writer',
   },
 ]
 

@@ -29,6 +29,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/github',
+        destination: 'https://github.com/mintlify/mint',
+        permanent: false,
+      },
+      {
         source: '/community',
         destination: 'https://discord.gg/b499CK8P9g',
         permanent: false,
