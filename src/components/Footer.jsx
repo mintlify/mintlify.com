@@ -52,8 +52,7 @@ export function Footer() {
                 ))}
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
-                &copy; {new Date().getFullYear()} Mintlify, Inc. All rights
-                reserved.
+                &copy; {new Date().getFullYear()} Mintlify, Inc.
               </p>
             </div>
           </Container.Inner>
