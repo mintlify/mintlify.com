@@ -168,24 +168,24 @@ function Plan({
               aria-hidden={activePeriod === 'Annually'}
               className={clsx(
                 'space-x-1 transition duration-300',
-                activePeriod === 'Annually' &&
+                activePeriod === 'Monthly' &&
                   'pointer-events-none translate-x-6 select-none opacity-0'
               )}
             >
-              <span>{price.Monthly}</span>
+              <span>{price.Annually}</span>
               <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
                 /month
               </span>
             </span>
             <span
-              aria-hidden={activePeriod === 'Monthly'}
+              aria-hidden={activePeriod === 'Annually'}
               className={clsx(
                 'absolute left-0 top-0 space-x-1 transition duration-300',
-                activePeriod === 'Monthly' &&
+                activePeriod === 'Annually' &&
                   'pointer-events-none -translate-x-6 select-none opacity-0'
               )}
             >
-              <span>{price.Annually}</span>
+              <span>{price.Monthly}</span>
               <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
                 /month
               </span>
@@ -256,7 +256,7 @@ export function Pricing() {
                 value={period}
                 className={clsx(
                   'cursor-pointer border border-gray-300 py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-zinc-700 outline-2 outline-offset-2 transition-colors hover:border-gray-400 dark:text-zinc-200',
-                  period === 'Monthly' ? 'rounded-l-lg' : '-ml-px rounded-r-lg'
+                  period === 'Annually' ? 'rounded-l-lg' : '-ml-px rounded-r-lg'
                 )}
               >
                 {period}
@@ -267,7 +267,7 @@ export function Pricing() {
             aria-hidden="true"
             className={clsx(
               'pointer-events-none absolute inset-0 z-10 grid grid-cols-2 overflow-hidden rounded-lg bg-primary transition-all duration-300',
-              activePeriod === 'Monthly'
+              activePeriod === 'Annually'
                 ? '[clip-path:inset(0_50%_0_0)]'
                 : '[clip-path:inset(0_0_0_calc(50%-1px))]'
             )}
@@ -277,7 +277,7 @@ export function Pricing() {
                 key={period}
                 className={clsx(
                   'py-2 text-center text-sm font-semibold text-white [&:not(:focus-visible)]:focus:outline-none',
-                  period === 'Annually' && '-ml-px'
+                  period === 'Monthly' && '-ml-px'
                 )}
               >
                 {period}
