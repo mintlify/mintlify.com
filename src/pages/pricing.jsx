@@ -239,7 +239,7 @@ function Plan({
 }
 
 export function Pricing() {
-  let [activePeriod, setActivePeriod] = useState('Monthly')
+  let [activePeriod, setActivePeriod] = useState('Annually')
 
   return (
     <section id="pricing" aria-labelledby="pricing-title">
@@ -250,7 +250,7 @@ export function Pricing() {
             onChange={setActivePeriod}
             className="grid grid-cols-2"
           >
-            {['Monthly', 'Annually'].map((period) => (
+            {['Annually', 'Monthly'].map((period) => (
               <RadioGroup.Option
                 key={period}
                 value={period}
@@ -272,7 +272,7 @@ export function Pricing() {
                 : '[clip-path:inset(0_0_0_calc(50%-1px))]'
             )}
           >
-            {['Monthly', 'Annually'].map((period) => (
+            {['Annually', 'Monthly'].map((period) => (
               <div
                 key={period}
                 className={clsx(
