@@ -27,12 +27,17 @@ import logoMundiShowcase from '@/images/logos/showcase/mundi.svg'
 import logoInfisicalShowcase from '@/images/logos/showcase/infisical.svg'
 import logoSlaiShowcase from '@/images/logos/showcase/slai.svg'
 import logoFunctionaryShowcase from '@/images/logos/showcase/functionary.svg'
+import logoAlpacaShowcase from '@/images/logos/showcase/alpaca.svg'
+import logoCerebriumShowcase from '@/images/logos/showcase/cerebrium.svg'
+import logoMirageMLShowcase from '@/images/logos/showcase/mirageml.svg'
+import logoOpkitShowcase from '@/images/logos/showcase/opkit.svg'
+import logoPelmShowcase from '@/images/logos/showcase/pelm.svg'
+import logoShuttleShowcase from '@/images/logos/showcase/shuttle.svg'
 
 export const featuredShowcases = [
   {
     name: 'Loophole Labs',
-    description:
-      'Modern application delivery for developers and DevOps teams. From Open-Source to Enterprise',
+    description: 'Modern application delivery for developers and DevOps teams',
     link: { href: 'https://frpc.io', label: 'frpc.io' },
     logo: logoLoopholeShowcase,
   },
@@ -78,12 +83,6 @@ const showcases = [
     logo: logoTolstoyShowcase,
   },
   {
-    name: 'Bracket',
-    description: 'Sync data across your business. One-time setup. No code',
-    link: { href: 'https://docs.usebracket.com', label: 'docs.usebracket.com' },
-    logo: logoBracketShowcase,
-  },
-  {
     name: 'Hyperbeam',
     description: 'Embed virtual computers in your web app',
     link: { href: 'https://docs.hyperbeam.com', label: 'docs.hyperbeam.com' },
@@ -112,11 +111,33 @@ const showcases = [
     logo: logoVitalShowcase,
   },
   {
-    name: 'Cloudanix',
+    name: 'Shuttle',
     description:
-      'A central dashboard to secures your AWS, Azure, GCP, DigitalOcean and Kubernetes platforms',
-    link: { href: 'https://docs.cloudanix.com', label: 'docs.cloudanix.com' },
-    logo: logoCloudanixShowcase,
+      'A Rust-native cloud development platform that lets you deploy your Rust apps for free',
+    link: {
+      href: 'https://docs.shuttle.rs',
+      label: 'docs.shuttle.rs',
+    },
+    logo: logoShuttleShowcase,
+  },
+  {
+    name: 'Cerebrium',
+    description:
+      'AWS Sagemaker alternative providing all the features you need to quickly build a ML product',
+    link: {
+      href: 'https://docs.cerebrium.ai',
+      label: 'docs.cerebrium.ai',
+    },
+    logo: logoCerebriumShowcase,
+  },
+  {
+    name: 'Alpaca',
+    description: 'Combining Human skill and AI generative power',
+    link: {
+      href: 'https://docs.getalpaca.io',
+      label: 'docs.getalpaca.io',
+    },
+    logo: logoAlpacaShowcase,
   },
   {
     name: 'Intuned',
@@ -168,6 +189,12 @@ const showcases = [
     logo: logoContraxShowcase,
   },
   {
+    name: 'Bracket',
+    description: 'Sync data across your business. One-time setup. No code',
+    link: { href: 'https://docs.usebracket.com', label: 'docs.usebracket.com' },
+    logo: logoBracketShowcase,
+  },
+  {
     name: 'Invezo',
     description: 'All-in-one crypto data platform',
     link: { href: 'https://docs.invezo.com', label: 'docs.invezo.com' },
@@ -200,6 +227,41 @@ const showcases = [
       label: 'docs.functionary.run',
     },
     logo: logoFunctionaryShowcase,
+  },
+  {
+    name: 'MirageML',
+    description: 'Generate 3D Design, Fast',
+    link: {
+      href: 'https://docs.mirageml.com',
+      label: 'docs.mirageml.com',
+    },
+    logo: logoMirageMLShowcase,
+  },
+  {
+    name: 'Opkit',
+    description:
+      'Platform for collecting and verifying patient health insurance details',
+    link: {
+      href: 'https://docs.opkit.co',
+      label: 'docs.opkit.co',
+    },
+    logo: logoOpkitShowcase,
+  },
+  {
+    name: 'Pelm',
+    description: 'The developer API for energy data',
+    link: {
+      href: 'https://pelm.com/docs',
+      label: 'pelm.com/docs',
+    },
+    logo: logoPelmShowcase,
+  },
+  {
+    name: 'Cloudanix',
+    description:
+      'A central dashboard to secures your AWS, Azure, GCP, DigitalOcean and Kubernetes platforms',
+    link: { href: 'https://docs.cloudanix.com', label: 'docs.cloudanix.com' },
+    logo: logoCloudanixShowcase,
   },
 ]
 
