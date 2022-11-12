@@ -35,7 +35,12 @@ const nextConfig = {
       },
       {
         source: '/community',
-        destination: 'https://discord.gg/b499CK8P9g',
+        destination: 'https://discord.gg/MPNgtSZkgK',
+        permanent: false,
+      },
+      {
+        source: '/cli',
+        destination: 'https://www.npmjs.com/package/mintlify',
         permanent: false,
       },
     ]
