@@ -57,7 +57,7 @@ export const featuredShowcases = [
   {
     name: 'Kana',
     description: 'API-first platform to improve how you monetize your product',
-    link: { href: 'https://kana.mintlify.com', label: 'kana.mintlify.com' },
+    link: { href: 'https://docs.usekana.com', label: 'docs.usekana.com' },
     logo: logoKanaShowcase,
   },
   {
