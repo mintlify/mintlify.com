@@ -33,6 +33,7 @@ import logoMirageMLShowcase from '@/images/logos/showcase/mirageml.svg'
 import logoOpkitShowcase from '@/images/logos/showcase/opkit.svg'
 import logoPelmShowcase from '@/images/logos/showcase/pelm.svg'
 import logoShuttleShowcase from '@/images/logos/showcase/shuttle.svg'
+import logoMindsDBShowcase from '@/images/logos/showcase/mindsdb.svg'
 
 export const featuredShowcases = [
   {
@@ -48,17 +49,17 @@ export const featuredShowcases = [
     logo: logoExploShowcase,
   },
   {
+    name: 'MindsDB',
+    description: 'Introducing AI to your database',
+    link: { href: 'https://docs.mindsdb.com', label: 'docs.mindsdb.com' },
+    logo: logoMindsDBShowcase,
+  },
+  {
     name: 'Corrily',
     description:
       'Know exactly what to price your products, services, and subscriptions',
     link: { href: 'https://docs.corrily.com', label: 'docs.corrily.com' },
     logo: logoCorrilyShowcase,
-  },
-  {
-    name: 'Kana',
-    description: 'API-first platform to improve how you monetize your product',
-    link: { href: 'https://docs.usekana.com', label: 'docs.usekana.com' },
-    logo: logoKanaShowcase,
   },
   {
     name: 'Elementary',
@@ -129,6 +130,12 @@ const showcases = [
       label: 'docs.cerebrium.ai',
     },
     logo: logoCerebriumShowcase,
+  },
+  {
+    name: 'Kana',
+    description: 'API-first platform to improve how you monetize your product',
+    link: { href: 'https://docs.usekana.com', label: 'docs.usekana.com' },
+    logo: logoKanaShowcase,
   },
   {
     name: 'Alpaca',
