@@ -20,7 +20,7 @@ import logoKana from '@/images/logos/clouds/kana.svg'
 import logoSieve from '@/images/logos/clouds/sieve.svg'
 import logoWebapp from '@/images/logos/clouds/webappio.svg'
 import logoRelate from '@/images/logos/clouds/relate.svg'
-import logoRampay from '@/images/logos/clouds/rampay.svg'
+import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
 import { featuredShowcases } from './showcase'
 import DynamicLink from '@/components/DynamicLink'
 
@@ -338,13 +338,13 @@ export default function Home() {
               {[
                 ['YCombinator', logoYCombinator],
                 ['Explo', logoExplo],
-                ['Tolstoy', logoTolstoy],
+                ['MindsDB', logoMindsDB],
                 ['Kana', logoKana],
                 ['Corrily', logoCorrily],
                 ['Webapp.io', logoWebapp],
                 ['Sieve', logoSieve],
                 ['Vital', logoVital],
-                ['Rampay', logoRampay],
+                ['Tolstoy', logoTolstoy],
                 ['Relate', logoRelate],
               ].map(([alt, logo]) => (
                 <div className="col-span-1 flex justify-center dark:brightness-125 lg:col-span-1">
