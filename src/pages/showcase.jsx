@@ -84,10 +84,11 @@ const showcases = [
     logo: logoTolstoyShowcase,
   },
   {
-    name: 'Hyperbeam',
-    description: 'Embed virtual computers in your web app',
-    link: { href: 'https://docs.hyperbeam.com', label: 'docs.hyperbeam.com' },
-    logo: logoHyperbeamShowcase,
+    name: 'Corrily',
+    description:
+      'Know exactly what to price your products, services, and subscriptions',
+    link: { href: 'https://docs.corrily.com', label: 'docs.corrily.com' },
+    logo: logoCorrilyShowcase,
   },
   {
     name: 'Sieve',
@@ -120,6 +121,12 @@ const showcases = [
       label: 'docs.shuttle.rs',
     },
     logo: logoShuttleShowcase,
+  },
+  {
+    name: 'Hyperbeam',
+    description: 'Embed virtual computers in your web app',
+    link: { href: 'https://docs.hyperbeam.com', label: 'docs.hyperbeam.com' },
+    logo: logoHyperbeamShowcase,
   },
   {
     name: 'Cerebrium',
@@ -212,13 +219,6 @@ const showcases = [
     description: 'Framework for Python spatial data analysis',
     link: { href: 'https://docs.mundi.ai', label: 'docs.mundi.ai' },
     logo: logoMundiShowcase,
-  },
-  {
-    name: 'Corrily',
-    description:
-      'Know exactly what to price your products, services, and subscriptions',
-    link: { href: 'https://docs.corrily.com', label: 'docs.corrily.com' },
-    logo: logoCorrilyShowcase,
   },
   {
     name: 'Slai',
