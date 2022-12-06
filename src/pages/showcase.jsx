@@ -55,11 +55,11 @@ export const featuredShowcases = [
     logo: logoMindsDBShowcase,
   },
   {
-    name: 'Corrily',
+    name: 'Infisical',
     description:
-      'Know exactly what to price your products, services, and subscriptions',
-    link: { href: 'https://docs.corrily.com', label: 'docs.corrily.com' },
-    logo: logoCorrilyShowcase,
+      'Automatically sync your environment variables easily, securely',
+    link: { href: 'https://infisical.com/docs', label: 'infisical.com/docs' },
+    logo: logoInfisicalShowcase,
   },
   {
     name: 'Elementary',
@@ -214,11 +214,11 @@ const showcases = [
     logo: logoMundiShowcase,
   },
   {
-    name: 'Infisical',
+    name: 'Corrily',
     description:
-      'Automatically sync your environment variables easily, securely',
-    link: { href: 'https://infisical.com/docs', label: 'infisical.com/docs' },
-    logo: logoInfisicalShowcase,
+      'Know exactly what to price your products, services, and subscriptions',
+    link: { href: 'https://docs.corrily.com', label: 'docs.corrily.com' },
+    logo: logoCorrilyShowcase,
   },
   {
     name: 'Slai',
