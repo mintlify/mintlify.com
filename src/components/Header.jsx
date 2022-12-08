@@ -430,7 +430,7 @@ export function Header() {
                 <MobileNavigation className="pointer-events-auto lg:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden lg:block" />
               </div>
-              <div className="flex justify-end space-x-4 lg:flex-1">
+              <div className="flex items-center justify-end space-x-5 lg:flex-1">
                 <div className="pointer-events-auto">
                   <Link href="/start">
                     <div className="group flex items-center rounded-full bg-zinc-800/90 px-4 py-2 text-xs font-medium text-zinc-50 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-800 dark:ring-white/10 dark:hover:bg-zinc-200 sm:text-sm">
@@ -439,7 +439,7 @@ export function Header() {
                     </div>
                   </Link>
                 </div>
-                <div className="pointer-events-auto mt-2">
+                <div className="pointer-events-auto h-[24px]">
                   <ModeToggle />
                 </div>
               </div>
