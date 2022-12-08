@@ -66,34 +66,34 @@ function ChevronDownIcon(props) {
   )
 }
 
-function SunIcon(props) {
+function SunIcon() {
   return (
     <svg
-      viewBox="0 0 24 24"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      className="dark:hidden"
     >
-      <path d="M8 12.25A4.25 4.25 0 0 1 12.25 8v0a4.25 4.25 0 0 1 4.25 4.25v0a4.25 4.25 0 0 1-4.25 4.25v0A4.25 4.25 0 0 1 8 12.25v0Z" />
       <path
-        d="M12.25 3v1.5M21.5 12.25H20M18.791 18.791l-1.06-1.06M18.791 5.709l-1.06 1.06M12.25 20v1.5M4.5 12.25H3M6.77 6.77 5.709 5.709M6.77 17.73l-1.061 1.061"
-        fill="none"
-      />
+        className="fill-yellow-500"
+        d="M3.828 5.243L2.343 3.757a1 1 0 011.414-1.414l1.486 1.485a5.027 5.027 0 00-1.415 1.415zM7 3.1V1a1 1 0 112 0v2.1a5.023 5.023 0 00-2 0zm3.757.728l1.486-1.485a1 1 0 111.414 1.414l-1.485 1.486a5.027 5.027 0 00-1.415-1.415zM12.9 7H15a1 1 0 010 2h-2.1a5.023 5.023 0 000-2zm-.728 3.757l1.485 1.486a1 1 0 11-1.414 1.414l-1.486-1.485a5.027 5.027 0 001.415-1.415zM9 12.9V15a1 1 0 01-2 0v-2.1a5.023 5.023 0 002 0zm-3.757-.728l-1.486 1.485a1 1 0 01-1.414-1.414l1.485-1.486a5.027 5.027 0 001.415 1.415zM3.1 9H1a1 1 0 110-2h2.1a5.023 5.023 0 000 2zM8 11a3 3 0 110-6 3 3 0 010 6z"
+        fillRule="evenodd"
+      ></path>
     </svg>
   )
 }
 
-function MoonIcon(props) {
+function MoonIcon() {
   return (
-    <svg viewBox="0 0 24 24" aria-hidden="true" {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 16 16"
+      className="hidden dark:block"
+    >
       <path
-        d="M17.25 16.22a6.937 6.937 0 0 1-9.47-9.47 7.451 7.451 0 1 0 9.47 9.47ZM12.75 7C17 7 17 2.75 17 2.75S17 7 21.25 7C17 7 17 11.25 17 11.25S17 7 12.75 7Z"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+        className="fill-[#2AB673]"
+        d="M7.914 0a6.874 6.874 0 00-1.26 3.972c0 3.875 3.213 7.017 7.178 7.017.943 0 1.843-.178 2.668-.5C15.423 13.688 12.34 16 8.704 16 4.174 16 .5 12.41.5 7.982.5 3.814 3.754.389 7.914 0z"
+        fillRule="evenodd"
+      ></path>
     </svg>
   )
 }
@@ -198,16 +198,7 @@ function DesktopNavigation(props) {
 }
 
 function ModeToggle() {
-  function disableTransitionsTemporarily() {
-    document.documentElement.classList.add('[&_*]:!transition-none')
-    window.setTimeout(() => {
-      document.documentElement.classList.remove('[&_*]:!transition-none')
-    }, 0)
-  }
-
   function toggleMode() {
-    disableTransitionsTemporarily()
-
     let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     let isSystemDarkMode = darkModeMediaQuery.matches
     let isDarkMode = document.documentElement.classList.toggle('dark')
@@ -221,13 +212,18 @@ function ModeToggle() {
 
   return (
     <button
-      type="button"
-      aria-label="Toggle dark mode"
-      className="group rounded-full px-3 py-2 ring-zinc-900/5 transition"
-      onClick={toggleMode}
+      onClick={() => toggleMode()}
+      className="relative inline-flex h-[24px] w-[36px] shrink-0 cursor-pointer border-2 border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
     >
-      <SunIcon className="h-6 w-6 fill-zinc-100 stroke-zinc-500 transition group-hover:fill-zinc-200 group-hover:stroke-zinc-700 dark:hidden [@media(prefers-color-scheme:dark)]:fill-ultraLight [@media(prefers-color-scheme:dark)]:stroke-primary [@media(prefers-color-scheme:dark)]:group-hover:fill-ultraLight [@media(prefers-color-scheme:dark)]:group-hover:stroke-dark" />
-      <MoonIcon className="hidden h-6 w-6 fill-zinc-700 stroke-zinc-500 transition dark:block [@media(prefers-color-scheme:dark)]:group-hover:stroke-zinc-400 [@media_not_(prefers-color-scheme:dark)]:fill-light/10 [@media_not_(prefers-color-scheme:dark)]:stroke-primary" />
+      <div className="absolute left-0 right-0 top-1/2 h-[0.65rem] translate-y-[-50%] rounded-full bg-black/10 dark:bg-white/10"></div>
+      <span className="sr-only">Switch theme</span>
+      <span
+        aria-hidden="true"
+        className="pointer-events-none inline-block h-5 w-5 translate-x-0 transform rounded-full border border-zinc-400/40 bg-white p-[3px] ring-0 transition-transform duration-200 ease-in-out dark:translate-x-3 dark:border-[#2AB673] dark:bg-zinc-900"
+      >
+        <SunIcon />
+        <MoonIcon />
+      </span>
     </button>
   )
 }
@@ -434,7 +430,7 @@ export function Header() {
                 <MobileNavigation className="pointer-events-auto lg:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden lg:block" />
               </div>
-              <div className="flex justify-end space-x-3 lg:flex-1">
+              <div className="flex justify-end space-x-4 lg:flex-1">
                 <div className="pointer-events-auto">
                   <Link href="/start">
                     <div className="group flex items-center rounded-full bg-zinc-800/90 px-4 py-2 text-xs font-medium text-zinc-50 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-800 dark:ring-white/10 dark:hover:bg-zinc-200 sm:text-sm">
@@ -443,7 +439,7 @@ export function Header() {
                     </div>
                   </Link>
                 </div>
-                <div className="pointer-events-auto">
+                <div className="pointer-events-auto mt-2">
                   <ModeToggle />
                 </div>
               </div>
