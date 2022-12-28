@@ -20,7 +20,7 @@ const nextConfig = {
       },
       {
         source: '/start',
-        destination: 'https://mintlify.typeform.com/to/pZJ31XZB',
+        destination: 'https://mintlify.typeform.com/start',
         permanent: false,
       },
       {
