@@ -39,6 +39,19 @@ export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
       <Head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-NZ6RFCB9LN"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+  
+            gtag('config', 'G-NZ6RFCB9LN');
+          `}
+        </Script>
         <script dangerouslySetInnerHTML={{ __html: modeScript }} />
         <link
           rel="alternate"
