@@ -23,6 +23,7 @@ import logoRelate from '@/images/logos/clouds/relate.svg'
 import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
 import { featuredShowcases } from './showcase'
 import DynamicLink from '@/components/DynamicLink'
+import { trackStartOnboarding } from '@/analytics'
 
 function StartIcon(props) {
   return (
@@ -323,6 +324,7 @@ export default function Home() {
                   borderImage:
                     'linear-gradient(to right, #18E251 0%, #00C0EA 60%, #6248FF 100%) 1',
                 }}
+                onClick={() => trackStartOnboarding('Hero')}
               >
                 converts
               </span>

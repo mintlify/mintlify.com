@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { RadioGroup } from '@headlessui/react'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { Testimonials } from '@/components/Testimonials'
+import { trackStartOnboarding } from '@/analytics'
 
 const plans = [
   {
@@ -231,6 +232,7 @@ function Plan({
         color={featured ? 'primary' : 'gray'}
         className="mt-6"
         aria-label={`Get started with the ${name} plan for ${price}`}
+        onClick={() =>  trackStartOnboarding('Pricing')}
       >
         {button.label}
       </Button>

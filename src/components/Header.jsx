@@ -10,6 +10,7 @@ import logo from '@/images/mintlify.svg'
 import { Fragment, useEffect, useRef } from 'react'
 import DynamicLink from './DynamicLink'
 import { ChevronRightIcon } from './Card'
+import { trackStartOnboarding } from '@/analytics'
 
 export const navigation = [
   {
@@ -434,7 +435,9 @@ export function Header() {
               <div className="flex items-center justify-end space-x-6 lg:flex-1">
                 <div className="pointer-events-auto">
                   <PopupButton id="QuGaC3n6">
-                    <div className="group flex items-center rounded-full bg-zinc-800/90 px-4 py-2 text-xs font-medium text-zinc-50 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur whitespace-nowrap transition hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-800 dark:ring-white/10 dark:hover:bg-zinc-200 sm:text-sm">
+                    <div
+                      className="group flex items-center rounded-full bg-zinc-800/90 px-4 py-2 text-xs font-medium text-zinc-50 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur whitespace-nowrap transition hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-800 dark:ring-white/10 dark:hover:bg-zinc-200 sm:text-sm"
+                      onClick={() => trackStartOnboarding('Header')}>
                       Get Started
                       <ChevronRightIcon className="ml-1 h-auto w-4 stroke-zinc-400 dark:stroke-zinc-600" />
                     </div>
