@@ -27,7 +27,7 @@ const plans = [
   {
     name: 'Starter',
     featured: true,
-    price: { Monthly: '$80', Annually: '$64' },
+    price: { Monthly: '$150', Annually: '$120' },
     description:
       'Everything you need to make documentation simple and powerful',
     button: {
