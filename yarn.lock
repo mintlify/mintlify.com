@@ -112,6 +112,14 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
+"@mintlify/validation@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.0.tgz#94a62cd19974984a3056371baf3cee0961f40480"
+  integrity sha512-TrE3plprlBUNatwu9VWC4ao27OSJZnIcAuhvL84wBB1PhIOdJ9Ia73v8gm/rHuW7Somz7ixa/elsO9QIHp2g1w==
+  dependencies:
+    zod "^3.19.1"
+    zod-to-json-schema "^3.20.2"
+
 "@next/env@12.3.1":
   version "12.3.1"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-12.3.1.tgz#18266bd92de3b4aa4037b1927aa59e6f11879260"
@@ -5875,6 +5883,16 @@ yargs@^14.2.3:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^15.0.1"
+
+zod-to-json-schema@^3.20.2:
+  version "3.20.2"
+  resolved "https://registry.yarnpkg.com/zod-to-json-schema/-/zod-to-json-schema-3.20.2.tgz#576f53749fd90bbb42c99a9b8c81be234bb53cbb"
+  integrity sha512-qka3UAXmVXD8z5SHkRU89UyHp8JHJW7zc8RQCpt7QloJOn6uijwkjUm8o+M/cF1IysmKc5gxac/QeDikaQMdzQ==
+
+zod@^3.19.1:
+  version "3.20.2"
+  resolved "https://registry.yarnpkg.com/zod/-/zod-3.20.2.tgz#068606642c8f51b3333981f91c0a8ab37dfc2807"
+  integrity sha512-1MzNQdAvO+54H+EaK5YpyEy0T+Ejo/7YLHS93G3RnYWh5gaotGHwGeN/ZO687qEDU2y4CdStQYXVHIgrUl5UVQ==
 
 zwitch@^2.0.0:
   version "2.0.2"
