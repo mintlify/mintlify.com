@@ -43,7 +43,7 @@ const nextConfig = {
   async rewrites() {
     return [
       {
-        source: '/schema',
+        source: '/schema.json',
         destination: '/api/schema'
       }
     ]  
