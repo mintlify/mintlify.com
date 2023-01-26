@@ -112,10 +112,10 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
-"@mintlify/validation@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.2.tgz#6fe072be7ac7f84cc6c5665109b4df1ce0718692"
-  integrity sha512-+S841+E+IGL8ztiuItq9vqPWDhciQdCfhcE4iA62J2zm0tbcMYuloHkinoRbJQ7gn8z/yWzwFPpjY/g0ZXIyAA==
+"@mintlify/validation@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.4.tgz#cc01959d1ddeccc283df59ea3e229b1fbedf8b22"
+  integrity sha512-O0WCLeFuAeUHeZuHntvZ0Pz5xBJLPoWspJa3teIX+C7IxrpW/I3hKa82CA2NRttmciud/DFWHgY7q1BomoRr9w==
   dependencies:
     zod "^3.19.1"
     zod-to-json-schema "^3.20.2"
