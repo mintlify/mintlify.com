@@ -7,12 +7,14 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { Testimonials } from '@/components/Testimonials'
 import { trackStartOnboarding } from '@/analytics'
 
+const IS_SCREENSHOT_MODE = false;
+
 const plans = [
   {
     name: 'Open Source',
     featured: false,
-    price: { Monthly: '$0', Annually: '$0' },
-    description: 'Forever free for open source projects',
+    price: { Monthly: 'Free', Annually: 'Free' },
+    description: 'Simple and powerful for OS projects',
     button: {
       label: 'Get started for free',
       href: '/start',
@@ -135,26 +137,28 @@ function Plan({
       className={clsx(
         'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5',
         featured
-          ? 'order-first bg-slate-900 dark:bg-slate-50 lg:order-none'
+          ? 'order-first bg-zinc-900 dark:bg-slate-50 lg:order-none'
           : 'border border-zinc-100 dark:border-zinc-800'
       )}
     >
       <h3
         className={clsx(
-          'flex items-center text-sm font-semibold',
+          'flex items-center',
           featured
             ? 'text-white dark:text-zinc-900'
-            : 'text-gray-900 dark:text-zinc-100'
+            : 'text-gray-900 dark:text-zinc-100',
+          IS_SCREENSHOT_MODE ? 'text-2xl tracking-tight font-medium' : 'text-sm font-semibold'
         )}
       >
         <span>{name}</span>
       </h3>
       <p
         className={clsx(
-          'relative mt-5 flex text-3xl tracking-tight',
+          'relative flex tracking-tight',
           featured
             ? 'text-white dark:text-zinc-900'
-            : 'text-zinc-900 dark:text-zinc-100'
+            : 'text-zinc-900 dark:text-zinc-100',
+          IS_SCREENSHOT_MODE ? 'mt-3 text-xl' : 'mt-5 text-3xl',
         )}
       >
         {price.Monthly === price.Annually ? (
@@ -223,7 +227,8 @@ function Plan({
           ))}
         </ul>
       </div>
-      <Button
+      {
+        !IS_SCREENSHOT_MODE && (<Button
         href={button.href}
         color={featured ? 'primary' : 'gray'}
         className="mt-6"
@@ -231,7 +236,8 @@ function Plan({
         onClick={() =>  trackStartOnboarding('Pricing')}
       >
         {button.label}
-      </Button>
+      </Button>)
+      }
     </section>
   )
 }
