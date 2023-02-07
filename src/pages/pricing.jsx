@@ -9,27 +9,27 @@ import { trackStartOnboarding } from '@/analytics'
 
 const plans = [
   {
-    name: 'Free',
+    name: 'Open Source',
     featured: false,
     price: { Monthly: '$0', Annually: '$0' },
-    description: 'Start building world-class documentation using Mintlify',
+    description: 'Forever free for open source projects',
     button: {
       label: 'Get started for free',
       href: '/start',
     },
     features: [
       'Full access to the documentation platform for one project',
-      'All guides and API components',
-      'User edit requests and feedback',
+      'Third-party analytics integrations',
+      'Out of the box in-app search',
       'Integrations with third-party analytics providers',
     ],
   },
   {
-    name: 'Starter',
+    name: 'Pro',
     featured: true,
     price: { Monthly: '$150', Annually: '$120' },
     description:
-      'Everything you need to make documentation simple and powerful',
+      'Built for growing companies',
     button: {
       label: 'Try for free',
       href: '/start',
@@ -39,8 +39,6 @@ const plans = [
       'Custom subdomains',
       'Advanced analytics and user insights',
       'White-glove documentation migration',
-      'Documentation hosted from private repositories',
-      'Versioning and preview links',
       'Workflow automations',
       'Slack Connect customer support',
     ],
@@ -55,13 +53,11 @@ const plans = [
       href: 'mailto:hi@mintlify.com',
     },
     features: [
-      'Everything from the Starter plan',
-      'Custom subpaths (/docs)',
-      'Unlimited projects',
+      'Everything from the Pro plan',
+      'Custom subpaths - /docs',
       'Custom authentication and gated content',
       'Custom workflow automations and integrations',
-      'Translation and localization management',
-      'On demand technical writing assistance',
+      'Translation management',
       'Priority customer support',
     ],
   },
