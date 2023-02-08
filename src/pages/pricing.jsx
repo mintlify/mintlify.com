@@ -7,7 +7,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { Testimonials } from '@/components/Testimonials'
 import { trackStartOnboarding } from '@/analytics'
 
-const IS_SCREENSHOT_MODE = false;
+const IS_SCREENSHOT_MODE = true;
 
 const plans = [
   {
@@ -27,7 +27,7 @@ const plans = [
     ],
   },
   {
-    name: 'Pro',
+    name: 'Startup',
     featured: true,
     price: { Monthly: '$150', Annually: '$120' },
     description:
@@ -152,13 +152,13 @@ function Plan({
       >
         <span>{name}</span>
       </h3>
-      <p
+      {!IS_SCREENSHOT_MODE && <p
         className={clsx(
           'relative flex tracking-tight',
           featured
             ? 'text-white dark:text-zinc-900'
             : 'text-zinc-900 dark:text-zinc-100',
-          IS_SCREENSHOT_MODE ? 'mt-3 text-xl' : 'mt-5 text-3xl',
+          'mt-5 text-3xl',
         )}
       >
         {price.Monthly === price.Annually ? (
@@ -193,7 +193,7 @@ function Plan({
             </span>
           </>
         )}
-      </p>
+      </p>}
       <p
         className={clsx(
           'mt-3 text-sm',
