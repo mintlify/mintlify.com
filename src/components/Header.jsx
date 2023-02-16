@@ -266,7 +266,7 @@ function Logo({ large = false, className, ...props }) {
   )
 }
 
-export function Header() {
+export function Header({ onlyLogo }) {
   let isHomePage = useRouter().pathname === '/'
 
   let headerRef = useRef()
@@ -424,11 +424,11 @@ export function Header() {
                   </AvatarContainer>
                 )}
               </div>
-              <div className="flex flex-1 justify-end lg:justify-center">
+              {!onlyLogo && <div className="flex flex-1 justify-end lg:justify-center">
                 <MobileNavigation className="pointer-events-auto lg:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden lg:block" />
-              </div>
-              <div className="flex items-center justify-end space-x-6 lg:flex-1">
+              </div>}
+              {!onlyLogo && <div className="flex items-center justify-end space-x-6 lg:flex-1">
                 <div className="pointer-events-auto">
                   <PopupButton id="QuGaC3n6">
                     <div
@@ -442,7 +442,7 @@ export function Header() {
                 <div className="pointer-events-auto h-[24px]">
                   <ModeToggle />
                 </div>
-              </div>
+              </div>}
             </div>
           </Container>
         </div>
