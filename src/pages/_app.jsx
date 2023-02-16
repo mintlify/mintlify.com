@@ -5,6 +5,7 @@ import { Header } from '@/components/Header'
 
 import '@/styles/tailwind.css'
 import 'focus-visible'
+import { useRouter } from 'next/router'
 
 function usePrevious(value) {
   let ref = useRef()
@@ -17,7 +18,9 @@ function usePrevious(value) {
 }
 
 export default function App({ Component, pageProps, router }) {
-  let previousPathname = usePrevious(router.pathname)
+  const { pathname } = useRouter();
+  const previousPathname = usePrevious(router.pathname);
+  const isLoadingPage = pathname === '/loading';
 
   return (
     <>
@@ -27,11 +30,15 @@ export default function App({ Component, pageProps, router }) {
         </div>
       </div>
       <div className="relative">
-        <Header onlyLogo={previousPathname && previousPathname === '/loading'} />
+        {
+          !isLoadingPage && <Header />
+        }
         <main>
           <Component previousPathname={previousPathname} {...pageProps} />
         </main>
-        {previousPathname && previousPathname!== '/loading' && <Footer />}
+        {
+          !isLoadingPage && <Footer />
+        }
       </div>
     </>
   )

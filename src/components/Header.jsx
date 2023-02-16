@@ -244,7 +244,7 @@ function AvatarContainer({ className, ...props }) {
   )
 }
 
-function Logo({ large = false, className, ...props }) {
+export function Logo({ large = false, className, ...props }) {
   return (
     <DynamicLink
       href="/"
@@ -266,12 +266,12 @@ function Logo({ large = false, className, ...props }) {
   )
 }
 
-export function Header({ onlyLogo }) {
-  let isHomePage = useRouter().pathname === '/'
-
-  let headerRef = useRef()
-  let avatarRef = useRef()
-  let isInitial = useRef(true)
+export function Header() {
+  const { pathname } = useRouter();
+  const isHomePage = pathname === '/';
+  const headerRef = useRef()
+  const avatarRef = useRef()
+  const isInitial = useRef(true)
 
   useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0
@@ -424,11 +424,11 @@ export function Header({ onlyLogo }) {
                   </AvatarContainer>
                 )}
               </div>
-              {!onlyLogo && <div className="flex flex-1 justify-end lg:justify-center">
+              <div className="flex flex-1 justify-end lg:justify-center">
                 <MobileNavigation className="pointer-events-auto lg:hidden" />
                 <DesktopNavigation className="pointer-events-auto hidden lg:block" />
-              </div>}
-              {!onlyLogo && <div className="flex items-center justify-end space-x-6 lg:flex-1">
+              </div>
+              <div className="flex items-center justify-end space-x-6 lg:flex-1">
                 <div className="pointer-events-auto">
                   <PopupButton id="QuGaC3n6">
                     <div
@@ -442,7 +442,7 @@ export function Header({ onlyLogo }) {
                 <div className="pointer-events-auto h-[24px]">
                   <ModeToggle />
                 </div>
-              </div>}
+              </div>
             </div>
           </Container>
         </div>

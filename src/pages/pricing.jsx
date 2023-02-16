@@ -7,7 +7,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { Testimonials } from '@/components/Testimonials'
 import { trackStartOnboarding } from '@/analytics'
 
-const IS_SCREENSHOT_MODE = true;
+const IS_SCREENSHOT_MODE = false;
 
 const plans = [
   {
