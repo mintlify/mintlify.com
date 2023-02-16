@@ -7,7 +7,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { Testimonials } from '@/components/Testimonials'
 import { trackStartOnboarding } from '@/analytics'
 
-const IS_SCREENSHOT_MODE = true;
+const IS_SCREENSHOT_MODE = false
 
 const plans = [
   {
@@ -30,8 +30,7 @@ const plans = [
     name: 'Startup',
     featured: true,
     price: { Monthly: '$150', Annually: '$120' },
-    description:
-      'Built for growing companies',
+    description: 'Built for growing companies',
     button: {
       label: 'Try for free',
       href: '/start',
@@ -147,53 +146,57 @@ function Plan({
           featured
             ? 'text-white dark:text-zinc-900'
             : 'text-gray-900 dark:text-zinc-100',
-          IS_SCREENSHOT_MODE ? 'text-2xl tracking-tight font-medium' : 'text-sm font-semibold'
+          IS_SCREENSHOT_MODE
+            ? 'text-2xl font-medium tracking-tight'
+            : 'text-sm font-semibold'
         )}
       >
         <span>{name}</span>
       </h3>
-      {!IS_SCREENSHOT_MODE && <p
-        className={clsx(
-          'relative flex tracking-tight',
-          featured
-            ? 'text-white dark:text-zinc-900'
-            : 'text-zinc-900 dark:text-zinc-100',
-          'mt-5 text-3xl',
-        )}
-      >
-        {price.Monthly === price.Annually ? (
-          price.Monthly
-        ) : (
-          <>
-            <span
-              aria-hidden={activePeriod === 'Annually'}
-              className={clsx(
-                'space-x-1 transition duration-300',
-                activePeriod === 'Monthly' &&
-                  'pointer-events-none translate-x-6 select-none opacity-0'
-              )}
-            >
-              <span>{price.Annually}</span>
-              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
-                /month
+      {!IS_SCREENSHOT_MODE && (
+        <p
+          className={clsx(
+            'relative flex tracking-tight',
+            featured
+              ? 'text-white dark:text-zinc-900'
+              : 'text-zinc-900 dark:text-zinc-100',
+            'mt-5 text-3xl'
+          )}
+        >
+          {price.Monthly === price.Annually ? (
+            price.Monthly
+          ) : (
+            <>
+              <span
+                aria-hidden={activePeriod === 'Annually'}
+                className={clsx(
+                  'space-x-1 transition duration-300',
+                  activePeriod === 'Monthly' &&
+                    'pointer-events-none translate-x-6 select-none opacity-0'
+                )}
+              >
+                <span>{price.Annually}</span>
+                <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+                  /month
+                </span>
               </span>
-            </span>
-            <span
-              aria-hidden={activePeriod === 'Annually'}
-              className={clsx(
-                'absolute left-0 top-0 space-x-1 transition duration-300',
-                activePeriod === 'Annually' &&
-                  'pointer-events-none -translate-x-6 select-none opacity-0'
-              )}
-            >
-              <span>{price.Monthly}</span>
-              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
-                /month
+              <span
+                aria-hidden={activePeriod === 'Annually'}
+                className={clsx(
+                  'absolute left-0 top-0 space-x-1 transition duration-300',
+                  activePeriod === 'Annually' &&
+                    'pointer-events-none -translate-x-6 select-none opacity-0'
+                )}
+              >
+                <span>{price.Monthly}</span>
+                <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+                  /month
+                </span>
               </span>
-            </span>
-          </>
-        )}
-      </p>}
+            </>
+          )}
+        </p>
+      )}
       <p
         className={clsx(
           'mt-3 text-sm',
@@ -227,17 +230,17 @@ function Plan({
           ))}
         </ul>
       </div>
-      {
-        !IS_SCREENSHOT_MODE && (<Button
-        href={button.href}
-        color={featured ? 'primary' : 'gray'}
-        className="mt-6"
-        aria-label={`Get started with the ${name} plan for ${price}`}
-        onClick={() =>  trackStartOnboarding('Pricing')}
-      >
-        {button.label}
-      </Button>)
-      }
+      {!IS_SCREENSHOT_MODE && (
+        <Button
+          href={button.href}
+          color={featured ? 'primary' : 'gray'}
+          className="mt-6"
+          aria-label={`Get started with the ${name} plan for ${price}`}
+          onClick={() => trackStartOnboarding('Pricing')}
+        >
+          {button.label}
+        </Button>
+      )}
     </section>
   )
 }
