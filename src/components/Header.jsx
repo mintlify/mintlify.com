@@ -30,10 +30,6 @@ export const navigation = [
     href: '/community',
   },
   {
-    name: 'Careers',
-    href: 'https://jobs.ashbyhq.com/Mintlify',
-  },
-  {
     name: 'Writer',
     href: '/writer',
   },
