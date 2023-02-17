@@ -271,11 +271,11 @@ function Logo({ large = false, className, ...props }) {
 }
 
 export function Header() {
-  let isHomePage = useRouter().pathname === '/'
-
-  let headerRef = useRef()
-  let avatarRef = useRef()
-  let isInitial = useRef(true)
+  const { pathname } = useRouter();
+  const isHomePage = pathname === '/';
+  const headerRef = useRef()
+  const avatarRef = useRef()
+  const isInitial = useRef(true)
 
   useEffect(() => {
     let downDelay = avatarRef.current?.offsetTop ?? 0
