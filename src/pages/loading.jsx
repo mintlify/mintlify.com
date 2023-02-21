@@ -1,12 +1,16 @@
-import { Logo } from '@/components/Header'
 import { SimpleLayout } from '@/components/SimpleLayout'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 export default function Loading() {
   const { name: subdomain } = useRouter().query
-  console.log(subdomain)
-  // const response = await fetch(`https://www.${subdomain}.mintlify.app`).then((response) => response.json())
+  setTimeout(() => {
+    if (subdomain) {
+      window.location.replace(`https://${subdomain}.mintlify.app`)
+    } else {
+      window.location.replace(`https://mintlify.com`)
+    }
+  }, 8000)
   return (
     <>
       <Head>
