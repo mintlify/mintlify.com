@@ -13,7 +13,6 @@ import logoHyperbeamShowcase from '@/images/logos/showcase/hyperbeam.svg'
 import logoIntunedShowcase from '@/images/logos/showcase/intuned.svg'
 import logoKanaShowcase from '@/images/logos/showcase/kana.svg'
 import logoLoopholeShowcase from '@/images/logos/showcase/loophole.svg'
-import logoPipebirdShowcase from '@/images/logos/showcase/pipebird.svg'
 import logoRampayShowcase from '@/images/logos/showcase/rampay.svg'
 import logoRelateShowcase from '@/images/logos/showcase/relate.svg'
 import logoSieveShowcase from '@/images/logos/showcase/sieve.svg'
@@ -34,6 +33,19 @@ import logoOpkitShowcase from '@/images/logos/showcase/opkit.svg'
 import logoPelmShowcase from '@/images/logos/showcase/pelm.svg'
 import logoShuttleShowcase from '@/images/logos/showcase/shuttle.svg'
 import logoMindsDBShowcase from '@/images/logos/showcase/mindsdb.svg'
+import logoThanxShowcase from '@/images/logos/showcase/thanx.svg'
+import logoMageShowcase from '@/images/logos/showcase/mage.svg'
+import logoReactEmailShowcase from '@/images/logos/showcase/reactemail.svg'
+import logoHopioShowcase from '@/images/logos/showcase/hopio.svg'
+import logoLotusShowcase from '@/images/logos/showcase/lotus.svg'
+import logoDotsShowcase from '@/images/logos/showcase/dots.svg'
+import logoInvopopShowcase from '@/images/logos/showcase/invopop.svg'
+import logoBitskiShowcase from '@/images/logos/showcase/bitski.svg'
+import logoPropelauthShowcase from '@/images/logos/showcase/propelauth.svg'
+import logoArchitectShowcase from '@/images/logos/showcase/architect.svg'
+import logoKaldeaShowcase from '@/images/logos/showcase/kaldea.svg'
+import logoFliptShowcase from '@/images/logos/showcase/flipt.svg'
+import logoRadiantShowcase from '@/images/logos/showcase/radiant.svg'
 
 export const featuredShowcases = [
   {
@@ -96,6 +108,84 @@ const showcases = [
       'Build magical video AI functionality into your apps with just a few API calls',
     link: { href: 'https://docs.sievedata.com', label: 'docs.sievedata.com' },
     logo: logoSieveShowcase,
+  },
+  {
+    name: 'Thanx',
+    description: `The #1 guest engagement platform`,
+    link: { href: 'https://docs.thanx.com', label: 'docs.thanx.com' },
+    logo: logoThanxShowcase,
+  },
+  {
+    name: 'Mage',
+    description: `Open-source data pipeline tool for transforming and integrating data`,
+    link: { href: 'https://docs.mage.ai', label: 'docs.mage.ai' },
+    logo: logoMageShowcase,
+  },
+  {
+    name: 'React Email',
+    description: `Build and send emails using React and TypeScript`,
+    link: { href: 'https://react.email/docs', label: 'react.email/docs' },
+    logo: logoReactEmailShowcase,
+  },
+  {
+    name: 'Hop',
+    description: `Automatically detects your environment and builds your code`,
+    link: { href: 'https://docs.hop.io', label: 'docs.hop.io' },
+    logo: logoHopioShowcase,
+  },
+  {
+    name: 'Lotus',
+    description: `A real-time engine for your pricing & packaging`,
+    link: { href: 'https://docs.uselotus.io', label: 'docs.uselotus.io' },
+    logo: logoLotusShowcase,
+  },
+  {
+    name: 'Dots',
+    description: `A Single Unified Platform For All Your Payments`,
+    link: { href: 'https://docs.dots.dev', label: 'docs.dots.dev' },
+    logo: logoDotsShowcase,
+  },
+  {
+    name: 'Invopop',
+    description: `API to automate VAT, complex e-invoicing formats and integrations with local tax authorities`,
+    link: { href: 'https://docs.invopop.com', label: 'docs.invopop.com' },
+    logo: logoInvopopShowcase,
+  },
+  {
+    name: 'Bitski',
+    description: `The NFT wallet for everyone`,
+    link: { href: 'https://docs.bitski.com', label: 'docs.bitski.com' },
+    logo: logoBitskiShowcase,
+  },
+  {
+    name: 'Propelauth',
+    description: `End-to-end managed user authentication specializing in B2B use cases`,
+    link: { href: 'https://docs.propelauth.com', label: 'docs.propelauth.com' },
+    logo: logoPropelauthShowcase,
+  },
+  {
+    name: 'Architect',
+    description: `Continuous delivery platform for modern, scalable cloud applications`,
+    link: { href: 'https://docs.architect.io', label: 'docs.architect.io' },
+    logo: logoArchitectShowcase,
+  },
+  {
+    name: 'Kaldea',
+    description: `The unified analytics platform`,
+    link: { href: 'https://docs.kaldea.com', label: 'docs.kaldea.com' },
+    logo: logoKaldeaShowcase,
+  },
+  {
+    name: 'Flipt',
+    description: `Open source feature flag infrastructure`,
+    link: { href: 'https://flipt.io/docs', label: 'flipt.io/docs' },
+    logo: logoFliptShowcase,
+  },
+  {
+    name: 'Radiant',
+    description: `Web3 no-code automation`,
+    link: { href: 'https://docs.radiant.so', label: 'docs.radiant.so' },
+    logo: logoRadiantShowcase,
   },
   {
     name: 'Vessel',
@@ -186,12 +276,6 @@ const showcases = [
     description: 'The serverless VM platform',
     link: { href: 'https://docs.webapp.io', label: 'docs.webapp.io' },
     logo: logoWebappShowcase,
-  },
-  {
-    name: 'Pipebird',
-    description: 'The data sharing platform for SaaS',
-    link: { href: 'https://docs.pipebird.com', label: 'docs.pipebird.com' },
-    logo: logoPipebirdShowcase,
   },
   {
     name: 'Contrax',
@@ -290,12 +374,12 @@ export default function Projects() {
         <title>Showcase - Mintlify</title>
         <meta
           name="description"
-          content="Discover how we help developer-focused companies win with documentation."
+          content="Discover how we help hundreds of developer-focused companies win with documentation."
         />
       </Head>
       <SimpleLayout
         title="Customer showcase"
-        intro="Discover how we help developer-focused companies win with documentation."
+        intro="Discover how we help hundreds of developer-focused companies win with documentation."
       >
         <ul
           role="list"
