@@ -88,7 +88,7 @@ export const featuredShowcases = [
 const showcases = [
   ...featuredShowcases,
   {
-    name: 'Trigger',
+    name: 'Trigger.dev',
     description: 'Effortless automation built for developers',
     link: {
       href: 'https://docs.trigger.dev',
