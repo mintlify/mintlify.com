@@ -46,6 +46,7 @@ import logoArchitectShowcase from '@/images/logos/showcase/architect.svg'
 import logoKaldeaShowcase from '@/images/logos/showcase/kaldea.svg'
 import logoFliptShowcase from '@/images/logos/showcase/flipt.svg'
 import logoRadiantShowcase from '@/images/logos/showcase/radiant.svg'
+import logoTriggerShowcase from '@/images/logos/showcase/trigger.svg'
 
 export const featuredShowcases = [
   {
@@ -86,6 +87,15 @@ export const featuredShowcases = [
 
 const showcases = [
   ...featuredShowcases,
+  {
+    name: 'Trigger',
+    description: 'Effortless automation built for developers',
+    link: {
+      href: 'https://docs.trigger.dev',
+      label: 'docs.trigger.com',
+    },
+    logo: logoTriggerShowcase,
+  },
   {
     name: 'Tolstoy',
     description: 'A new way to communicate, with interactive video',
