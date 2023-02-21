@@ -254,12 +254,6 @@ const showcases = [
     logo: logoAlpacaShowcase,
   },
   {
-    name: 'Intuned',
-    description: 'The data assistant for engineering leaders',
-    link: { href: 'https://docs.intunedhq.com', label: 'docs.intunedhq.com' },
-    logo: logoIntunedShowcase,
-  },
-  {
     name: 'Relate.so',
     description: 'The collaborative CRM your whole team uses',
     link: { href: 'https://relate.so/docs', label: 'relate.so/docs' },
