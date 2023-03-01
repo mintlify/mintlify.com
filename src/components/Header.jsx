@@ -30,6 +30,10 @@ export const navigation = [
     href: '/community',
   },
   {
+    name: 'Careers',
+    href: '/careers',
+  },
+  {
     name: 'Writer',
     href: '/writer',
   },

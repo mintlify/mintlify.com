@@ -38,6 +38,11 @@ const nextConfig = {
         destination: 'https://www.npmjs.com/package/mintlify',
         permanent: false,
       },
+      {
+        source: '/careers',
+        destination: 'https://mintlify.notion.site/Careers-Mintlify-d5bc6b6e72ff4bbeb8b20d6d372ac111',
+        permanent: false,
+      },
     ]
   },
   async rewrites() {
