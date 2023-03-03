@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
 
+import Head from 'next/head'
+
 import { Footer } from '@/components/Footer'
 import { Header } from '@/components/Header'
 
@@ -24,6 +26,15 @@ export default function App({ Component, pageProps, router }) {
 
   return (
     <>
+      <Head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@mintlify" />
+        <meta name="twitter:creator" content="@mintlify" />
+        <meta name="og:image" content="https://mintlify.com/meta-image.png" />
+        <meta name="og:image:alt" content="Mintlify" />
+        <meta name="og:image:width" content="1200" />
+        <meta name="og:image:height" content="617" />
+      </Head>
       <div className="fixed inset-0 flex justify-center sm:px-8">
         <div className="flex w-full max-w-7xl lg:px-8">
           <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
