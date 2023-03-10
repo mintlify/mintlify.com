@@ -440,7 +440,7 @@ export function Header() {
                 <DesktopNavigation className="pointer-events-auto hidden lg:block" />
               </div>
               <div className="flex items-center justify-end lg:flex-1">
-                <a href="https://dashboard.mintlify.com" className="pointer-events-auto text-zinc-800 dark:text-zinc-200 dark:text-zinc text-sm font-medium hidden lg:block mr-7">Login</a>
+                <a href="https://dashboard.mintlify.com" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden lg:block mr-7">Login</a>
                 <div className="space-x-6 flex items-center justify-end">
                   <div className="pointer-events-auto">
                     <PopupButton id="QuGaC3n6">
