@@ -146,7 +146,7 @@ const showcases = [
   {
     name: 'Kaldea',
     description: `The unified analytics platform`,
-    link: { href: 'https://docs.kaldea.com', label: 'docs.kaldea.com' },
+    link: { href: 'https://docs.kaldea.com', label: 'kaldea.com/docs' },
     logo: logoKaldeaShowcase,
   },
   {
