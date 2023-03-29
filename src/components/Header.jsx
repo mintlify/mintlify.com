@@ -439,13 +439,13 @@ export function Header() {
                 <DesktopNavigation className="pointer-events-auto hidden lg:block" />
               </div>
               <div className="flex items-center justify-end lg:flex-1">
-                <a href="https://dashboard.mintlify.com" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden lg:block mr-7">Login</a>
+                <a href="/login" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden lg:block mr-7">Login</a>
                 <div className="space-x-6 flex items-center justify-end">
                   <div className="pointer-events-auto">
                       <a
                         className="group flex items-center whitespace-nowrap rounded-full bg-zinc-800/90 px-4 py-2 text-xs font-medium text-zinc-50 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-800 dark:ring-white/10 dark:hover:bg-zinc-200 sm:text-sm"
                         onClick={() => trackStartOnboarding('Header')}
-                        href="https://dashboard.mintlify.com/signup"
+                        href="/start"
                       >
                         Get Started
                         <ChevronRightIcon className="ml-1 h-auto w-4 stroke-zinc-400 dark:stroke-zinc-600" />

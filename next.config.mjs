@@ -19,8 +19,13 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/login',
+        destination: 'https://dashboard.mintlify.com',
+        permanent: false,
+      },
+      {
         source: '/start',
-        destination: 'https://mintlify.typeform.com/start',
+        destination: 'https://dashboard.mintlify.com/signup',
         permanent: false,
       },
       {
