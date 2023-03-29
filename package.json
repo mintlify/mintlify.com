@@ -18,7 +18,6 @@
     "@next/mdx": "^12.2.3",
     "@segment/analytics-next": "^1.49.1",
     "@tailwindcss/typography": "^0.5.4",
-    "@typeform/embed-react": "^2.8.0",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
     "fast-glob": "^3.2.11",
