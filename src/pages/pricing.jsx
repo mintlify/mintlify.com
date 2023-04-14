@@ -301,7 +301,7 @@ export function Pricing() {
         </div>
       </div>
 
-      <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 p-4 sm:mt-6 lg:max-w-none lg:grid-cols-4">
+      <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-4 gap-y-10 p-4 sm:mt-6 lg:max-w-none lg:grid-cols-4">
         {plans.map((plan) => (
           <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
         ))}
