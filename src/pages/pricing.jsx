@@ -9,9 +9,9 @@ import { trackStartOnboarding } from '@/analytics'
 
 const plans = [
   {
-    name: 'Open Source',
+    name: 'Free',
     featured: false,
-    price: { Monthly: 'Free', Annually: 'Free' },
+    price: { Monthly: '$0', Annually: '$0' },
     description: 'Simple and powerful',
     button: {
       label: 'Get started for free',
@@ -74,6 +74,7 @@ const plans = [
       'Translation management',
       'Top-priority customer support',
     ],
+    isNotMonthly: true,
   },
 ]
 
@@ -142,6 +143,7 @@ function Plan({
   button,
   features,
   featured = false,
+  isNotMonthly = false,
   activePeriod,
 }) {
   return (
@@ -173,16 +175,17 @@ function Plan({
             'mt-5 text-3xl'
           )}
         >
-        {price.Monthly === price.Annually ? (
-          price.Monthly
+        {isNotMonthly === true ? (
+          price.Annually
         ) : (
           <>
             <span
               aria-hidden={activePeriod === 'Annually'}
               className={clsx(
-                'space-x-1 transition duration-300',
+                'space-x-1',
                 activePeriod === 'Monthly' &&
-                  'pointer-events-none translate-x-6 select-none opacity-0'
+                  'pointer-events-none translate-x-6 select-none opacity-0',
+                price.Monthly !== price.Annually && 'transition duration-300'
               )}
             >
               <span>{price.Annually}</span>
@@ -193,9 +196,10 @@ function Plan({
             <span
               aria-hidden={activePeriod === 'Annually'}
               className={clsx(
-                'absolute left-0 top-0 space-x-1 transition duration-300',
+                'absolute left-0 top-0 space-x-1',
                 activePeriod === 'Annually' &&
-                  'pointer-events-none -translate-x-6 select-none opacity-0'
+                  'pointer-events-none -translate-x-6 select-none opacity-0',
+                price.Monthly !== price.Annually && 'transition duration-300'
               )}
             >
               <span>{price.Monthly}</span>
@@ -234,7 +238,7 @@ function Plan({
                   featured ? 'text-white dark:text-primary' : 'text-primary'
                 )}
               />
-              <span className="ml-4">{feature}</span>
+              <span className="ml-3">{feature}</span>
             </li>
           ))}
         </ul>
