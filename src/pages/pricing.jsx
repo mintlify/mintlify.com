@@ -185,11 +185,13 @@ function Plan({
                 'space-x-1',
                 activePeriod === 'Monthly' &&
                   'pointer-events-none translate-x-6 select-none opacity-0',
-                price.Monthly !== price.Annually && 'transition duration-300'
+                price.Monthly !== price.Annually && 'transition'
               )}
             >
               <span>{price.Annually}</span>
-              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+              <span className={clsx("text-sm tracking-normal",
+                featured ? 'text-zinc-300 dark:text-zinc-500' : 'text-zinc-600 dark:text-zinc-400'
+              )}>
                 /month
               </span>
             </span>
@@ -199,11 +201,12 @@ function Plan({
                 'absolute left-0 top-0 space-x-1',
                 activePeriod === 'Annually' &&
                   'pointer-events-none -translate-x-6 select-none opacity-0',
-                price.Monthly !== price.Annually && 'transition duration-300'
+                price.Monthly !== price.Annually && 'transition'
               )}
             >
               <span>{price.Monthly}</span>
-              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+              <span className={clsx("text-sm tracking-normal",
+              featured ? 'text-zinc-300 dark:text-zinc-500' : 'text-zinc-600 dark:text-zinc-400')}>
                 /month
               </span>
             </span>
