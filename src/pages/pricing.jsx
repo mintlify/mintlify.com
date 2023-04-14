@@ -7,23 +7,21 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 import { Testimonials } from '@/components/Testimonials'
 import { trackStartOnboarding } from '@/analytics'
 
-const IS_SCREENSHOT_MODE = false
-
 const plans = [
   {
     name: 'Open Source',
     featured: false,
     price: { Monthly: 'Free', Annually: 'Free' },
-    description: 'Simple and powerful for OS projects',
+    description: 'Simple and powerful',
     button: {
       label: 'Get started for free',
       href: '/start',
     },
     features: [
-      'Full access to the documentation platform for one project',
+      'Beautiful styling out of the box',
+      'SEO-optimized documentation',
       'Third-party analytics integrations',
-      'Out of the box in-app search',
-      'Integrations with third-party analytics providers',
+      'In-app search',
     ],
   },
   {
@@ -36,12 +34,28 @@ const plans = [
       href: '/start',
     },
     features: [
-      'Everything from the Free plan',
+      'The Free plan plus:',
       'Custom subdomains',
       'Advanced analytics and user insights',
-      'White-glove documentation migration',
-      'Workflow automations',
+      'White-glove migrations',
       'Slack Connect customer support',
+    ],
+  },
+  {
+    name: 'Business',
+    featured: false,
+    price: { Monthly: '$350', Annually: '$280' },
+    description: 'The next level for your docs',
+    button: {
+      label: 'Try for free',
+      href: '/start',
+    },
+    features: [
+      'The Startup plan plus:',
+      'Custom subpaths /docs',
+      'GPT-powered AI search and analytics',
+      'No Mintlify branding',
+      'Prioritized customer support',
     ],
   },
   {
@@ -54,12 +68,11 @@ const plans = [
       href: 'mailto:hi@mintlify.com',
     },
     features: [
-      'Everything from the Pro plan',
-      'Custom subpaths - /docs',
+      'The Business plan plus:',
       'Custom authentication and gated content',
-      'Custom workflow automations and integrations',
+      'Custom automations and integrations',
       'Translation management',
-      'Priority customer support',
+      'Top-priority customer support',
     ],
   },
 ]
@@ -146,14 +159,11 @@ function Plan({
           featured
             ? 'text-white dark:text-zinc-900'
             : 'text-gray-900 dark:text-zinc-100',
-          IS_SCREENSHOT_MODE
-            ? 'text-2xl font-medium tracking-tight'
-            : 'text-sm font-semibold'
+            'text-sm font-semibold'
         )}
       >
         <span>{name}</span>
       </h3>
-      {!IS_SCREENSHOT_MODE && (
         <p
           className={clsx(
             'relative flex tracking-tight',
@@ -163,40 +173,39 @@ function Plan({
             'mt-5 text-3xl'
           )}
         >
-          {price.Monthly === price.Annually ? (
-            price.Monthly
-          ) : (
-            <>
-              <span
-                aria-hidden={activePeriod === 'Annually'}
-                className={clsx(
-                  'space-x-1 transition duration-300',
-                  activePeriod === 'Monthly' &&
-                    'pointer-events-none translate-x-6 select-none opacity-0'
-                )}
-              >
-                <span>{price.Annually}</span>
-                <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
-                  /month
-                </span>
+        {price.Monthly === price.Annually ? (
+          price.Monthly
+        ) : (
+          <>
+            <span
+              aria-hidden={activePeriod === 'Annually'}
+              className={clsx(
+                'space-x-1 transition duration-300',
+                activePeriod === 'Monthly' &&
+                  'pointer-events-none translate-x-6 select-none opacity-0'
+              )}
+            >
+              <span>{price.Annually}</span>
+              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+                /month
               </span>
-              <span
-                aria-hidden={activePeriod === 'Annually'}
-                className={clsx(
-                  'absolute left-0 top-0 space-x-1 transition duration-300',
-                  activePeriod === 'Annually' &&
-                    'pointer-events-none -translate-x-6 select-none opacity-0'
-                )}
-              >
-                <span>{price.Monthly}</span>
-                <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
-                  /month
-                </span>
+            </span>
+            <span
+              aria-hidden={activePeriod === 'Annually'}
+              className={clsx(
+                'absolute left-0 top-0 space-x-1 transition duration-300',
+                activePeriod === 'Annually' &&
+                  'pointer-events-none -translate-x-6 select-none opacity-0'
+              )}
+            >
+              <span>{price.Monthly}</span>
+              <span className="text-sm tracking-normal text-zinc-300 dark:text-zinc-500">
+                /month
               </span>
-            </>
-          )}
-        </p>
-      )}
+            </span>
+          </>
+        )}
+      </p>
       <p
         className={clsx(
           'mt-3 text-sm',
@@ -230,17 +239,15 @@ function Plan({
           ))}
         </ul>
       </div>
-      {!IS_SCREENSHOT_MODE && (
-        <Button
-          href={button.href}
-          color={featured ? 'primary' : 'gray'}
-          className="mt-6"
-          aria-label={`Get started with the ${name} plan for ${price}`}
-          onClick={() => trackStartOnboarding('Pricing')}
-        >
-          {button.label}
-        </Button>
-      )}
+      <Button
+        href={button.href}
+        color={featured ? 'primary' : 'gray'}
+        className="mt-6"
+        aria-label={`Get started with the ${name} plan for ${price}`}
+        onClick={() => trackStartOnboarding('Pricing')}
+      >
+        {button.label}
+      </Button>
     </section>
   )
 }
@@ -294,7 +301,7 @@ export function Pricing() {
         </div>
       </div>
 
-      <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 p-4 sm:mt-6 lg:max-w-none lg:grid-cols-3">
+      <div className="mx-auto mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 p-4 sm:mt-6 lg:max-w-none lg:grid-cols-4">
         {plans.map((plan) => (
           <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
         ))}
@@ -312,7 +319,7 @@ export default function ArticlesIndex() {
       </Head>
       <SimpleLayout
         title="Pricing on your terms"
-        intro="Whichever plan you pick, it's free until you love your docs. That's our promise"
+        intro="Whichever plan you pick, it's free until you love your docs. That's our promise."
       >
         <Pricing />
         <Testimonials />
