@@ -91,15 +91,15 @@ const variantStyles = {
       'relative overflow-hidden bg-primary text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-cyan-600 active:text-white/80 before:transition-colors',
     white:
       'bg-white text-cyan-900 hover:bg-white/90 active:bg-white/90 active:text-cyan-900/70',
-    gray: 'bg-gray-800 text-white hover:bg-gray-900 active:bg-gray-800 active:text-white/80',
+    zinc: 'border border-transparent bg-zinc-800 text-white hover:bg-zinc-900 hover:border-zinc-600 active:bg-zinc-800 active:text-white/80',
   },
   outline: {
-    gray: 'border-gray-300 text-gray-700 hover:border-gray-400 active:bg-gray-100 active:text-gray-700/80',
+    zinc: 'border-zinc-300 text-zinc-700 hover:border-zinc-400 active:bg-zinc-100 active:text-zinc-700/80',
   },
 }
 
 export const Button = forwardRef(function Button(
-  { variant = 'solid', color = 'gray', className, href, ...props },
+  { variant = 'solid', color = 'zinc', className, href, ...props },
   ref
 ) {
   className = clsx(
@@ -149,7 +149,7 @@ function Plan({
   return (
     <section
       className={clsx(
-        'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5',
+        'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-zinc-900/5',
         featured
           ? 'order-first bg-zinc-900 dark:bg-slate-50 lg:order-none'
           : 'border border-zinc-100 dark:border-zinc-800'
@@ -160,7 +160,7 @@ function Plan({
           'flex items-center',
           featured
             ? 'text-white dark:text-zinc-900'
-            : 'text-gray-900 dark:text-zinc-100',
+            : 'text-zinc-900 dark:text-zinc-100',
             'text-sm font-semibold'
         )}
       >
@@ -217,7 +217,7 @@ function Plan({
         className={clsx(
           'mt-3 text-sm',
           featured
-            ? 'text-gray-300 dark:text-zinc-700'
+            ? 'text-zinc-300 dark:text-zinc-700'
             : 'text-zinc-700 dark:text-zinc-300'
         )}
       >
@@ -248,7 +248,7 @@ function Plan({
       </div>
       <Button
         href={button.href}
-        color={featured ? 'primary' : 'gray'}
+        color={featured ? 'primary' : 'zinc'}
         className="mt-6"
         aria-label={`Get started with the ${name} plan for ${price}`}
         onClick={() => trackStartOnboarding('Pricing')}
@@ -276,7 +276,7 @@ export function Pricing() {
                 key={period}
                 value={period}
                 className={clsx(
-                  'cursor-pointer border border-gray-300 py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-zinc-700 outline-2 outline-offset-2 transition-colors hover:border-gray-400 dark:text-zinc-200',
+                  'cursor-pointer border border-zinc-300 dark:border-zinc-500 py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-zinc-700 outline-2 outline-offset-2 transition-colors hover:border-zinc-400 dark:text-zinc-200',
                   period === 'Annually' ? 'rounded-l-lg' : '-ml-px rounded-r-lg'
                 )}
               >

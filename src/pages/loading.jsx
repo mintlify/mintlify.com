@@ -24,7 +24,7 @@ export default function Loading() {
         <div className="relative flex h-56 w-full justify-center">
           <svg
             aria-hidden="true"
-            className="h-8 w-8 animate-spin fill-green-600 text-gray-200 dark:text-gray-600"
+            className="h-8 w-8 animate-spin fill-green-600 text-zinc-200 dark:text-zinc-600"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
