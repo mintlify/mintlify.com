@@ -55,7 +55,7 @@ const plans = [
       'Custom subpaths /docs',
       'GPT-powered AI search and analytics',
       'No Mintlify branding',
-      'Prioritized customer support',
+      'Priority customer support',
     ],
   },
   {
@@ -72,7 +72,7 @@ const plans = [
       'Custom authentication and gated content',
       'Custom automations and integrations',
       'Translation management',
-      'Top-priority customer support',
+      '24/7 customer support',
     ],
     isNotMonthly: true,
   },
