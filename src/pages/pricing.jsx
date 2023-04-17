@@ -35,10 +35,9 @@ const plans = [
     },
     features: [
       'The Free plan plus:',
-      'Custom subdomains',
+      'Custom subdomain',
       'Advanced analytics and user insights',
       'White-glove migrations',
-      'Slack Connect customer support',
     ],
   },
   {
@@ -55,7 +54,7 @@ const plans = [
       'Custom subpaths /docs',
       'GPT-powered AI search and analytics',
       'No Mintlify branding',
-      'Priority customer support',
+      'Slack Connect customer support',
     ],
   },
   {
