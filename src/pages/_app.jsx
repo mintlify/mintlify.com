@@ -19,10 +19,18 @@ function usePrevious(value) {
   return ref.current
 }
 
+const TWO_WEEKS_IN_MILLISECONDS = 12096e5
+
 export default function App({ Component, pageProps, router }) {
-  const { pathname } = useRouter()
+  const { pathname, query } = useRouter()
   const previousPathname = usePrevious(router.pathname)
   const isLoadingPage = pathname === '/loading'
+
+  const referredBy = query['i']
+
+  if (referredBy) {
+    document.cookie=`r=${referredBy};expires=${new Date(Date.now() + TWO_WEEKS_IN_MILLISECONDS)}`
+  }
 
   return (
     <>

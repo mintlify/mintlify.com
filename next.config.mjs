@@ -48,6 +48,11 @@ const nextConfig = {
         destination: 'https://mintlify.notion.site/Careers-Mintlify-d5bc6b6e72ff4bbeb8b20d6d372ac111',
         permanent: false,
       },
+      {
+        source: '/i/:slug',
+        destination: '/?i=:slug',
+        permanent: false,
+      }
     ]
   },
   async rewrites() {
