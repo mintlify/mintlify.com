@@ -38,6 +38,7 @@ const plans = [
       'Custom subdomain',
       'Advanced analytics and user insights',
       'White-glove migrations',
+      'Prioritized customer support',
     ],
   },
   {
