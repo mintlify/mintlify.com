@@ -52,6 +52,16 @@ const nextConfig = {
         source: '/i/:slug',
         destination: '/?i=:slug',
         permanent: false,
+      },
+      {
+        source: '/upgrade/startup',
+        destination: 'https://buy.stripe.com/7sI4khba69AT0uI3d9',
+        permanent: false,
+      },
+      {
+        source: '/upgrade/startup-trial',
+        destination: 'https://buy.stripe.com/3cs185ceaaEX3GUcNH',
+        permanent: false,
       }
     ]
   },
