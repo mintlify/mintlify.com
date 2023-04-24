@@ -29,7 +29,7 @@ export default function App({ Component, pageProps, router }) {
   const referredBy = query['i']
 
   if (referredBy) {
-    document.cookie=`mintlifyReferral=${referredBy};expires=${new Date(Date.now() + TWO_WEEKS_IN_MILLISECONDS)}`
+    document.cookie=`mintlifyReferral=${referredBy};domain=mintlify.com;expires=${new Date(Date.now() + TWO_WEEKS_IN_MILLISECONDS)}`
   }
 
   return (
