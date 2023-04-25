@@ -1,6 +1,5 @@
 import Script from 'next/script'
 import { Head, Html, Main, NextScript } from 'next/document'
-import { SEGMENT_WRITE_KEY } from '@/analytics'
 
 const modeScript = `
   let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
