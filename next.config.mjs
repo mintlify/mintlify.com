@@ -62,6 +62,11 @@ const nextConfig = {
         source: '/upgrade/startup-trial',
         destination: 'https://buy.stripe.com/3cs185ceaaEX3GUcNH',
         permanent: false,
+      },
+      {
+        source: '/code-of-conduct',
+        destination: 'https://mintlify.notion.site/Celo-Code-of-Conduct-02f83bbe9c8645698fa7640e1442d94f',
+        permanent: false,
       }
     ]
   },
