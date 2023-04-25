@@ -36,20 +36,23 @@ const modeScript = `
   }
 `
 
+const googleAnalyticsScript = `
+window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NZ6RFCB9LN');
+`
+
 export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
       <Head />
-      <Script
+      <script
         src="https://www.googletagmanager.com/gtag/js?id=G-NZ6RFCB9LN"
         strategy="afterInteractive"
       />
-      <Script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{__html: `
-        window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-NZ6RFCB9LN');`}} />
+      <script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{__html: googleAnalyticsScript}} />
       <script dangerouslySetInnerHTML={{ __html: modeScript }} />
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
         <Main />
