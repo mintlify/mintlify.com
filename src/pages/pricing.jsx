@@ -57,8 +57,8 @@ const plans = [
     features: [
       'The Startup plan plus:',
       'Authentication and gated content',
-      'Custom automations and integrations',
       'Multiple documentation instances',
+      'Custom integrations',
       'No Mintlify branding',
       'Translation management',
       'Slack Connect customer support',
@@ -296,7 +296,7 @@ export function Pricing() {
         </div>
       </div>
 
-      <div className="mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-4 gap-y-10 py-4 md:-mx-4 sm:mt-6 lg:max-w-none lg:grid-cols-3">
+      <div className="mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 py-4 sm:mt-6 lg:max-w-none lg:grid-cols-3">
         {plans.map((plan) => (
           <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
         ))}
