@@ -9,7 +9,7 @@ import { Testimonials } from '@/components/Testimonials'
 const plans = [
   {
     name: 'Free',
-    featured: false,
+    featured: true,
     price: { Monthly: '$0', Annually: '$0' },
     description: 'Simple and powerful',
     button: {
@@ -17,15 +17,18 @@ const plans = [
       href: '/start',
     },
     features: [
-      'Beautiful styling out of the box',
       'SEO-optimized documentation',
+      'Beautiful styling out of the box',
+      'Custom domains',
+      'Auto-generated API docs',
+      'Built-in components library',
       'Third-party analytics integrations',
-      'In-app search',
+      'In-app search and user logs',
     ],
   },
   {
     name: 'Startup',
-    featured: true,
+    featured: false,
     price: { Monthly: '$150', Annually: '$120' },
     description: 'Built for growing companies',
     button: {
@@ -34,27 +37,12 @@ const plans = [
     },
     features: [
       'The Free plan plus:',
-      'Custom subdomain',
-      'Advanced analytics and user insights',
-      'White-glove migrations',
-      'Prioritized customer support',
-    ],
-  },
-  {
-    name: 'Business',
-    featured: false,
-    price: { Monthly: '$350', Annually: '$280' },
-    description: 'The next level for your docs',
-    button: {
-      label: 'Try for free',
-      href: '/start',
-    },
-    features: [
-      'The Startup plan plus:',
+      'Unlimited editors',
+      'GPT-powered search',
+      'Analytics and conversion insights',
       'Custom subpaths /docs',
-      'GPT-powered AI search and analytics',
-      'No Mintlify branding',
-      'Slack Connect customer support',
+      'White-glove migrations',
+      'Prioritized customer support'
     ],
   },
   {
@@ -67,11 +55,13 @@ const plans = [
       href: 'mailto:hi@mintlify.com',
     },
     features: [
-      'The Business plan plus:',
-      'Custom authentication and gated content',
+      'The Startup plan plus:',
+      'Authentication and gated content',
       'Custom automations and integrations',
+      'Multiple documentation instances',
+      'No Mintlify branding',
       'Translation management',
-      '24/7 customer support',
+      'Slack Connect customer support',
     ],
     isNotMonthly: true,
   },
@@ -160,20 +150,20 @@ function Plan({
           featured
             ? 'text-white dark:text-zinc-900'
             : 'text-zinc-900 dark:text-zinc-100',
-            'text-sm font-semibold'
+          'text-sm font-semibold'
         )}
       >
         <span>{name}</span>
       </h3>
-        <p
-          className={clsx(
-            'relative flex tracking-tight',
-            featured
-              ? 'text-white dark:text-zinc-900'
-              : 'text-zinc-900 dark:text-zinc-100',
-            'mt-5 text-3xl'
-          )}
-        >
+      <p
+        className={clsx(
+          'relative flex tracking-tight',
+          featured
+            ? 'text-white dark:text-zinc-900'
+            : 'text-zinc-900 dark:text-zinc-100',
+          'mt-5 text-3xl'
+        )}
+      >
         {isNotMonthly === true ? (
           price.Annually
         ) : (
@@ -183,7 +173,7 @@ function Plan({
               className={clsx(
                 'space-x-1',
                 activePeriod === 'Monthly' &&
-                  'pointer-events-none translate-x-6 select-none opacity-0',
+                'pointer-events-none translate-x-6 select-none opacity-0',
                 price.Monthly !== price.Annually && 'transition'
               )}
             >
@@ -199,13 +189,13 @@ function Plan({
               className={clsx(
                 'absolute left-0 top-0 space-x-1',
                 activePeriod === 'Annually' &&
-                  'pointer-events-none -translate-x-6 select-none opacity-0',
+                'pointer-events-none -translate-x-6 select-none opacity-0',
                 price.Monthly !== price.Annually && 'transition'
               )}
             >
               <span>{price.Monthly}</span>
               <span className={clsx("text-sm tracking-normal",
-              featured ? 'text-zinc-300 dark:text-zinc-500' : 'text-zinc-600 dark:text-zinc-400')}>
+                featured ? 'text-zinc-300 dark:text-zinc-500' : 'text-zinc-600 dark:text-zinc-400')}>
                 /month
               </span>
             </span>
@@ -306,7 +296,7 @@ export function Pricing() {
         </div>
       </div>
 
-      <div className="mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-4 gap-y-10 py-4 md:-mx-4 sm:mt-6 lg:max-w-none lg:grid-cols-4">
+      <div className="mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-4 gap-y-10 py-4 md:-mx-4 sm:mt-6 lg:max-w-none lg:grid-cols-3">
         {plans.map((plan) => (
           <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
         ))}
