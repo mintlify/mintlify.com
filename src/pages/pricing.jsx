@@ -38,8 +38,8 @@ const plans = [
     features: [
       'The Free plan plus:',
       'Unlimited editors',
-      'GPT-powered search',
       'Analytics and conversion insights',
+      'GPT-powered search',
       'Custom subpaths /docs',
       'White-glove migrations',
       'Prioritized customer support'
