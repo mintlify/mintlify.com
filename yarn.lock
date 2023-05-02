@@ -113,9 +113,9 @@
     "@types/react" ">=16"
 
 "@mintlify/validation@^0.1.18":
-  version "0.1.18"
-  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.18.tgz#7f7f9f0658e60dc47010cfa31bedf42b5dc175ab"
-  integrity sha512-46B06NNw+NJlRB1PrVnJZT1Df2G6qpf6gSCCBnbvDPs9d072kg4IHOCI/EUeWeD4+3gt4UZln7cUkbCbPRsMSA==
+  version "0.1.20"
+  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.20.tgz#88755edb7fa7c3cf1a8f4971f94e1b5b651fd408"
+  integrity sha512-2rHVXscatbHGXP8E+Mk3bys0ByHhmp19BSAVoLwgNlIDa9BObrvGtWW86l22Do6Ifpx4rtvZXQK1qr8XlfIpqg==
   dependencies:
     zod "^3.20.6"
     zod-to-json-schema "^3.20.3"
@@ -5872,9 +5872,9 @@ yargs@^14.2.3:
     yargs-parser "^15.0.1"
 
 zod-to-json-schema@^3.20.3:
-  version "3.20.4"
-  resolved "https://registry.yarnpkg.com/zod-to-json-schema/-/zod-to-json-schema-3.20.4.tgz#155f687c5a059fdc0f1bb3ff32d6e9200036b6f4"
-  integrity sha512-Un9+kInJ2Zt63n6Z7mLqBifzzPcOyX+b+Exuzf7L1+xqck9Q2EPByyTRduV3kmSPaXaRer1JCsucubpgL1fipg==
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/zod-to-json-schema/-/zod-to-json-schema-3.21.0.tgz#b6f2fc4284c44c0d0b7ed121620f2a0107609d1e"
+  integrity sha512-+KyFCzqKwE6CxMSZxEUBaGmdXzB09BoFebO+xef/ISE4cTfReQlyThYbS8aqd3uWkdt9fz5BGHsY0CbY+Ra9oA==
 
 zod@^3.20.6:
   version "3.21.4"
