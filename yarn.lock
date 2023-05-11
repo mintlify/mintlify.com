@@ -114,7 +114,7 @@
 
 "@mintlify/validation@0.1.23":
   version "0.1.23"
-  resolved "https://mintlify-299860545752.d.codeartifact.us-east-1.amazonaws.com/npm/mintlify-code-artifact-repository/@mintlify/validation/-/validation-0.1.23.tgz#c579c609a1272220fde9b64119da599583c03616"
+  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.23.tgz#c579c609a1272220fde9b64119da599583c03616"
   integrity sha512-0it1sADTptq30HKQGgzJkuCKULbsE36x3RUgbr1bnG2+ykBMfKm5U/gakyFhhHI1zwtbe27pXIC7Um/h+SrQSQ==
   dependencies:
     zod "^3.20.6"
