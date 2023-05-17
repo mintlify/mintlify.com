@@ -35,6 +35,12 @@ export const navigation = [
   {
     name: 'Writer',
     href: '/writer',
+    hideInFooter: true,
+  },
+  {
+    name: 'Status',
+    href: 'https://status.mintlify.com',
+    hideInHeaderDeskop: true,
   },
   {
     name: 'Login',
