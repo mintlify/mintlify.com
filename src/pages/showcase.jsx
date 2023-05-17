@@ -23,6 +23,7 @@ import logoKaldeaShowcase from '@/images/logos/showcase/kaldea.svg'
 import logoFliptShowcase from '@/images/logos/showcase/flipt.svg'
 import logoRadiantShowcase from '@/images/logos/showcase/radiant.svg'
 import logoTriggerShowcase from '@/images/logos/showcase/trigger.svg'
+import logoFlatfileShowcase from '@/images/logos/showcase/flatfile.svg'
 
 export const featuredShowcases = [
   {
@@ -32,10 +33,11 @@ export const featuredShowcases = [
     logo: logoLoopholeShowcase,
   },
   {
-    name: 'Explo',
-    description: 'Customer-facing analytics for any platform',
-    link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
-    logo: logoExploShowcase,
+    name: 'Flatfile',
+    description:
+      'Smart APIs for file-based data import',
+    link: { href: 'https://flatfile.com/docs', label: 'flatfile.com/docs' },
+    logo: logoFlatfileShowcase,
   },
   {
     name: 'MindsDB',
@@ -44,11 +46,10 @@ export const featuredShowcases = [
     logo: logoMindsDBShowcase,
   },
   {
-    name: 'Infisical',
-    description:
-      'Automatically sync your environment variables easily, securely',
-    link: { href: 'https://infisical.com/docs', label: 'infisical.com/docs' },
-    logo: logoInfisicalShowcase,
+    name: 'Explo',
+    description: 'Customer-facing analytics for any platform',
+    link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
+    logo: logoExploShowcase,
   },
   {
     name: 'Elementary',
@@ -63,6 +64,13 @@ export const featuredShowcases = [
 
 const showcases = [
   ...featuredShowcases,
+  {
+    name: 'Infisical',
+    description:
+      'Automatically sync your environment variables easily, securely',
+    link: { href: 'https://infisical.com/docs', label: 'infisical.com/docs' },
+    logo: logoInfisicalShowcase,
+  },
   {
     name: 'Trigger.dev',
     description: 'Effortless automation built for developers',

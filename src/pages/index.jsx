@@ -12,15 +12,16 @@ import mindsdb from '@/images/screenshots/mindsdb.svg'
 import explo from '@/images/screenshots/explo.svg'
 import elementary from '@/images/screenshots/elementary.svg'
 import logoYCombinator from '@/images/logos/clouds/ycombinator.svg'
+import logoFlatfile from '@/images/logos/clouds/flatfile.svg'
+import logoThanx from '@/images/logos/clouds/thanx.svg'
+import logoSequence from '@/images/logos/clouds/sequence.svg'
 import logoExplo from '@/images/logos/clouds/explo.svg'
 import logoTolstoy from '@/images/logos/clouds/tolstoy.svg'
-import logoVital from '@/images/logos/clouds/vital.svg'
+import logoResend from '@/images/logos/clouds/resend.svg'
 import logoCorrily from '@/images/logos/clouds/corrily.svg'
-import logoKana from '@/images/logos/clouds/kana.svg'
-import logoSieve from '@/images/logos/clouds/sieve.svg'
 import logoWebapp from '@/images/logos/clouds/webappio.svg'
-import logoRelate from '@/images/logos/clouds/relate.svg'
 import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
+
 import { featuredShowcases } from './showcase'
 import DynamicLink from '@/components/DynamicLink'
 
@@ -337,15 +338,15 @@ export default function Home() {
             <div className="grid grid-cols-4 gap-2 sm:grid-cols-5 sm:gap-4">
               {[
                 ['YCombinator', logoYCombinator],
+                ['Flatfile', logoFlatfile],
+                ['Thanx', logoThanx],
+                ['Sequence', logoSequence],
                 ['Explo', logoExplo],
                 ['MindsDB', logoMindsDB],
-                ['Kana', logoKana],
                 ['Corrily', logoCorrily],
                 ['Webapp.io', logoWebapp],
-                ['Sieve', logoSieve],
-                ['Vital', logoVital],
+                ['Resend', logoResend],
                 ['Tolstoy', logoTolstoy],
-                ['Relate', logoRelate],
               ].map(([alt, logo]) => (
                 <div className="col-span-1 flex justify-center dark:brightness-125 lg:col-span-1">
                   <Image className="h-12" src={logo} alt={alt} />
