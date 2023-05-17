@@ -27,10 +27,12 @@ export const navigation = [
     name: 'Community',
     href: '/community',
     hideInHeaderDeskop: true,
+    hideInHeaderMobile: true,
   },
   {
     name: 'Careers',
     href: '/careers',
+    hideInHeaderMobile: true,
   },
   {
     name: 'Writer',
@@ -41,6 +43,12 @@ export const navigation = [
     name: 'Status',
     href: 'https://status.mintlify.com',
     hideInHeaderDeskop: true,
+  },
+  {
+    name: 'Contact Sales',
+    href: 'https://dashboard.mintlify.com',
+    hideInHeaderDeskop: true,
+    hideInFooter: true,
   },
   {
     name: 'Login',
@@ -163,7 +171,7 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                {navigation.map((nav) => (
+                {navigation.filter((nav) => nav.hideInHeaderMobile !== true).map((nav) => (
                   <MobileNavItem href={nav.href}>{nav.name}</MobileNavItem>
                 ))}
               </ul>

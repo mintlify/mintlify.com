@@ -340,12 +340,12 @@ export default function Home() {
                 ['YCombinator', logoYCombinator],
                 ['Flatfile', logoFlatfile],
                 ['Thanx', logoThanx],
-                ['Sequence', logoSequence],
                 ['Explo', logoExplo],
+                ['Sequence', logoSequence],
                 ['MindsDB', logoMindsDB],
                 ['Corrily', logoCorrily],
-                ['Webapp.io', logoWebapp],
                 ['Resend', logoResend],
+                ['Webapp.io', logoWebapp],
                 ['Tolstoy', logoTolstoy],
               ].map(([alt, logo]) => (
                 <div className="col-span-1 flex justify-center dark:brightness-125 lg:col-span-1">
