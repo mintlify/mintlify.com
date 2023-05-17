@@ -46,7 +46,7 @@ export const navigation = [
   },
   {
     name: 'Contact Sales',
-    href: 'https://dashboard.mintlify.com',
+    href: 'https://calendly.com/mintlify/contact-us',
     hideInHeaderDeskop: true,
     hideInFooter: true,
   },
@@ -453,7 +453,7 @@ export function Header() {
                 <DesktopNavigation className="pointer-events-auto hidden xl:block" />
               </div>
               <div className="flex items-center justify-end xl:flex-1">
-                <a href="/login" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden xl:block mr-7">Contact Sales</a>
+                <a href="https://calendly.com/mintlify/contact-us" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden xl:block mr-7">Contact Sales</a>
                 <div className="space-x-6 flex items-center justify-end">
                   <div className="pointer-events-auto">
                       <a
