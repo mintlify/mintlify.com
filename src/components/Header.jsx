@@ -440,12 +440,12 @@ export function Header() {
                   </AvatarContainer>
                 )}
               </div>
-              <div className="flex flex-1 justify-end lg:justify-center">
-                <MobileNavigation className="pointer-events-auto lg:hidden" />
-                <DesktopNavigation className="pointer-events-auto hidden lg:block" />
+              <div className="flex flex-1 justify-end xl:justify-center">
+                <MobileNavigation className="pointer-events-auto xl:hidden" />
+                <DesktopNavigation className="pointer-events-auto hidden xl:block" />
               </div>
-              <div className="flex items-center justify-end lg:flex-1">
-                <a href="/login" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden lg:block mr-7">Contact Sales</a>
+              <div className="flex items-center justify-end xl:flex-1">
+                <a href="/login" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden xl:block mr-7">Contact Sales</a>
                 <div className="space-x-6 flex items-center justify-end">
                   <div className="pointer-events-auto">
                       <a
