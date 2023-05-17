@@ -210,7 +210,8 @@ function DesktopNavigation(props) {
   )
 }
 
-function ModeToggle() {
+// Currently not used
+export function ModeToggle() {
   function toggleMode() {
     let darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
     let isSystemDarkMode = darkModeMediaQuery.matches
@@ -444,7 +445,7 @@ export function Header() {
                 <DesktopNavigation className="pointer-events-auto hidden lg:block" />
               </div>
               <div className="flex items-center justify-end lg:flex-1">
-                <a href="/login" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden lg:block mr-7">Login</a>
+                <a href="/login" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden lg:block mr-7">Contact Sales</a>
                 <div className="space-x-6 flex items-center justify-end">
                   <div className="pointer-events-auto">
                       <a
@@ -454,9 +455,6 @@ export function Header() {
                         Get Started
                         <ChevronRightIcon className="ml-1 h-auto w-4 stroke-zinc-400 dark:stroke-zinc-600" />
                       </a>
-                  </div>
-                  <div className="pointer-events-auto h-[24px]">
-                    <ModeToggle />
                   </div>
                 </div>
               </div>
