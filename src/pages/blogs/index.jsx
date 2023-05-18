@@ -7,6 +7,8 @@ import { getAllArticles } from '@/lib/getAllArticles'
 
 function Article({ article }) {
   return (
+    //blog homepage card style
+
     <article className="md:grid md:grid-cols-4 md:items-baseline">
       <Card className="md:col-span-3">
         <Card.Title href={`/blogs/${article.slug}`}>{article.title}</Card.Title>
