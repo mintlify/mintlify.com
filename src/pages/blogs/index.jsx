@@ -50,37 +50,6 @@ function Article({ article }) {
   )
 }
 
-// <article className="md:grid md:grid-cols-4 md:items-baseline">
-//   <Card className="md:col-span-3">
-//     <div className="relative w-full">
-//       <img
-//         src={article.imageUrl}
-//         alt=""
-//         className="aspect-[16/9] w-full rounded-2xl sm:aspect-[2/1] lg:aspect-[3/2]"
-//       />
-//       <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
-//     </div>
-//     <Card.Title href={`/blogs/${article.slug}`}>{article.title}</Card.Title>
-//     <Card.Eyebrow
-//       as="time"
-//       dateTime={article.date}
-//       className="md:hidden"
-//       decorate
-//     >
-//       {formatDate(article.date)}
-//     </Card.Eyebrow>
-//     <Card.Description>{article.description}</Card.Description>
-//     <Card.Cta>Read more</Card.Cta>
-//   </Card>
-//   <Card.Eyebrow
-//     as="time"
-//     dateTime={article.date}
-//     className="mt-1 hidden md:block"
-//   >
-//     {formatDate(article.date)}
-//   </Card.Eyebrow>
-// </article>
-
 export default function ArticlesIndex({ articles }) {
   return (
     <>
