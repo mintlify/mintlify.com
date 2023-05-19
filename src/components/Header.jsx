@@ -179,7 +179,9 @@ function MobileNavigation(props) {
                 {navigation
                   .filter((nav) => nav.hideInHeaderMobile !== true)
                   .map((nav) => (
-                    <MobileNavItem href={nav.href}>{nav.name}</MobileNavItem>
+                    <MobileNavItem key={nav.name} href={nav.href}>
+                      {nav.name}
+                    </MobileNavItem>
                   ))}
               </ul>
             </nav>
@@ -220,7 +222,9 @@ function DesktopNavigation(props) {
         {navigation
           .filter((nav) => !nav.hideInHeaderDeskop)
           .map((nav) => (
-            <NavItem href={nav.href}>{nav.name}</NavItem>
+            <NavItem key={nav.name} href={nav.href}>
+              {nav.name}
+            </NavItem>
           ))}
       </ul>
     </nav>

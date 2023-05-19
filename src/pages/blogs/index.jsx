@@ -1,5 +1,6 @@
 import { Card } from '@/components/Card'
 import Head from 'next/head'
+import Image from 'next/image'
 
 import { SimpleLayout } from '@/components/SimpleLayout'
 import { formatDate } from '@/lib/formatDate'
@@ -13,17 +14,20 @@ function Article({ article }) {
           <article className="flex flex-col items-start justify-between">
             <a href={`/blogs/${article.slug}`}>
               <div className="relative w-full">
-                <img
-                  alt="blog photo"
+                <Image
                   src={article.imageUrl.src}
-                  className=" aspect-[16/9] w-full rounded-2xl bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                  width={500}
+                  height={300}
+                  objectFit="cover"
+                  className="rounded-2xl"
+                  alt="blog thumbnail"
                 />
               </div>
             </a>
 
             <div className="max-w-xl">
               <div className="mt-8 flex items-center gap-x-4 text-xs">
-                <time datetime={article.date} className="text-gray-500">
+                <time dateTime={article.date} className="text-gray-500">
                   {formatDate(article.date)}
                 </time>
               </div>
@@ -36,10 +40,8 @@ function Article({ article }) {
                     </Card.Title>
                   </a>
                 </h3>
-                <Card.Description>
-                  <div className="line-clamp-3 mt-5 text-sm leading-6 ">
-                    {article.description}
-                  </div>
+                <Card.Description className="line-clamp-3 mt-5 text-sm leading-6 ">
+                  {article.description}
                 </Card.Description>
               </div>
             </div>

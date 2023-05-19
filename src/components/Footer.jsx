@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import { TwitterIcon, GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
 import { Container } from '@/components/Container'
+import { GitHubIcon, LinkedInIcon, TwitterIcon } from '@/components/SocialIcons'
+import Link from 'next/link'
 import { navigation } from './Header'
 
 function NavLink({ href, children }) {
@@ -47,9 +47,13 @@ export function Footer() {
                 />
               </div>
               <div className="flex flex-wrap gap-6 text-sm font-medium text-zinc-800 dark:text-zinc-200">
-                {navigation.filter((nav) => !nav.hideInFooter).map((nav) => (
-                  <NavLink href={nav.href}>{nav.name}</NavLink>
-                ))}
+                {navigation
+                  .filter((nav) => !nav.hideInFooter)
+                  .map((nav) => (
+                    <NavLink key={nav.name} href={nav.href}>
+                      {nav.name}
+                    </NavLink>
+                  ))}
               </div>
               <p className="text-sm text-zinc-400 dark:text-zinc-500">
                 &copy; {new Date().getFullYear()} Mintlify, Inc.
