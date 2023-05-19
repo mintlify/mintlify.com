@@ -37,9 +37,9 @@ function Article({ article }) {
                   </a>
                 </h3>
                 <Card.Description>
-                  <p className="line-clamp-3 mt-5 text-sm leading-6 ">
+                  <div className="line-clamp-3 mt-5 text-sm leading-6 ">
                     {article.description}
-                  </p>
+                  </div>
                 </Card.Description>
               </div>
             </div>
