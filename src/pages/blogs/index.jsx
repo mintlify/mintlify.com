@@ -10,13 +10,13 @@ function Article({ article }) {
   return (
     <Card>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto mt-16 grid max-w-2xl gap-x-8 gap-y-20">
-          <article className="flex flex-col items-start justify-between">
+        <div className="mb-16 cursor-pointer overflow-hidden rounded-lg transition-colors duration-200">
+          <article className="mb-16 cursor-pointer overflow-hidden rounded-lg transition-colors duration-200">
             <a href={`/blogs/${article.slug}`}>
-              <div className="relative w-full">
+              <div className="relative flex w-full justify-center">
                 <Image
                   src={article.imageUrl.src}
-                  width={500}
+                  width={700}
                   height={300}
                   objectFit="cover"
                   className="rounded-2xl"
@@ -25,7 +25,7 @@ function Article({ article }) {
               </div>
             </a>
 
-            <div className="max-w-xl">
+            <div className="max-w-2xl">
               <div className="mt-8 flex items-center gap-x-4 text-xs">
                 <time dateTime={article.date} className="text-gray-500">
                   {formatDate(article.date)}
