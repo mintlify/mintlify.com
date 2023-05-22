@@ -1,10 +1,10 @@
+import rehypePrism from '@mapbox/rehype-prism'
 import nextMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
-import rehypePrism from '@mapbox/rehype-prism'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  pageExtensions: ['jsx', 'js'],
+  pageExtensions: ['jsx', 'js', 'mdx'],
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
@@ -45,7 +45,8 @@ const nextConfig = {
       },
       {
         source: '/careers',
-        destination: 'https://mintlify.notion.site/Careers-Mintlify-d5bc6b6e72ff4bbeb8b20d6d372ac111',
+        destination:
+          'https://mintlify.notion.site/Careers-Mintlify-d5bc6b6e72ff4bbeb8b20d6d372ac111',
         permanent: false,
       },
       {
@@ -65,19 +66,20 @@ const nextConfig = {
       },
       {
         source: '/code-of-conduct',
-        destination: 'https://mintlify.notion.site/Celo-Code-of-Conduct-02f83bbe9c8645698fa7640e1442d94f',
+        destination:
+          'https://mintlify.notion.site/Celo-Code-of-Conduct-02f83bbe9c8645698fa7640e1442d94f',
         permanent: false,
-      }
+      },
     ]
   },
   async rewrites() {
     return [
       {
         source: '/schema.json',
-        destination: '/api/schema'
-      }
-    ]  
-  }
+        destination: '/api/schema',
+      },
+    ]
+  },
 }
 
 const withMDX = nextMDX({

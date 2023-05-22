@@ -1,14 +1,14 @@
+import { Popover, Transition } from '@headlessui/react'
+import clsx from 'clsx'
 import Image from 'next/future/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Popover, Transition } from '@headlessui/react'
-import clsx from 'clsx'
 
 import { Container } from '@/components/Container'
 import logo from '@/images/mintlify.svg'
 import { Fragment, useEffect, useRef } from 'react'
-import DynamicLink from './DynamicLink'
 import { ChevronRightIcon } from './Card'
+import DynamicLink from './DynamicLink'
 
 export const navigation = [
   {
@@ -22,6 +22,11 @@ export const navigation = [
   {
     name: 'Pricing',
     href: '/pricing',
+  },
+  {
+    name: 'Blogs',
+    href: '/blogs',
+    hideInHeaderDeskop: true,
   },
   {
     name: 'Community',
@@ -171,9 +176,13 @@ function MobileNavigation(props) {
             </div>
             <nav className="mt-6">
               <ul className="-my-2 divide-y divide-zinc-100 text-base text-zinc-800 dark:divide-zinc-100/5 dark:text-zinc-300">
-                {navigation.filter((nav) => nav.hideInHeaderMobile !== true).map((nav) => (
-                  <MobileNavItem href={nav.href}>{nav.name}</MobileNavItem>
-                ))}
+                {navigation
+                  .filter((nav) => nav.hideInHeaderMobile !== true)
+                  .map((nav) => (
+                    <MobileNavItem key={nav.name} href={nav.href}>
+                      {nav.name}
+                    </MobileNavItem>
+                  ))}
               </ul>
             </nav>
           </Popover.Panel>
@@ -210,9 +219,13 @@ function DesktopNavigation(props) {
   return (
     <nav {...props}>
       <ul className="flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10">
-        {navigation.filter((nav) => !nav.hideInHeaderDeskop).map((nav) => (
-          <NavItem href={nav.href}>{nav.name}</NavItem>
-        ))}
+        {navigation
+          .filter((nav) => !nav.hideInHeaderDeskop)
+          .map((nav) => (
+            <NavItem key={nav.name} href={nav.href}>
+              {nav.name}
+            </NavItem>
+          ))}
       </ul>
     </nav>
   )
@@ -291,8 +304,8 @@ function Logo({ large = false, className, ...props }) {
 }
 
 export function Header() {
-  const { pathname } = useRouter();
-  const isHomePage = pathname === '/';
+  const { pathname } = useRouter()
+  const isHomePage = pathname === '/'
   const headerRef = useRef()
   const avatarRef = useRef()
   const isInitial = useRef(true)
@@ -453,16 +466,21 @@ export function Header() {
                 <DesktopNavigation className="pointer-events-auto hidden xl:block" />
               </div>
               <div className="flex items-center justify-end xl:flex-1">
-                <a href="https://calendly.com/mintlify/contact-us" className="pointer-events-auto text-zinc-800/90 dark:text-zinc-200 dark:text-zinc transition hover:text-primary dark:hover:text-light text-sm font-medium hidden xl:block mr-7">Contact Sales</a>
-                <div className="space-x-6 flex items-center justify-end">
+                <a
+                  href="https://calendly.com/mintlify/contact-us"
+                  className="dark:text-zinc pointer-events-auto mr-7 hidden text-sm font-medium text-zinc-800/90 transition hover:text-primary dark:text-zinc-200 dark:hover:text-light xl:block"
+                >
+                  Contact Sales
+                </a>
+                <div className="flex items-center justify-end space-x-6">
                   <div className="pointer-events-auto">
-                      <a
-                        className="group flex items-center whitespace-nowrap rounded-full bg-zinc-800/90 px-4 py-2 text-xs font-medium text-zinc-50 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-800 dark:ring-white/10 dark:hover:bg-zinc-200 sm:text-sm"
-                        href="/start"
-                      >
-                        Get Started
-                        <ChevronRightIcon className="ml-1 h-auto w-4 stroke-zinc-400 dark:stroke-zinc-600" />
-                      </a>
+                    <a
+                      className="group flex items-center whitespace-nowrap rounded-full bg-zinc-800/90 px-4 py-2 text-xs font-medium text-zinc-50 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur transition hover:bg-zinc-600 dark:bg-zinc-100 dark:text-zinc-800 dark:ring-white/10 dark:hover:bg-zinc-200 sm:text-sm"
+                      href="/start"
+                    >
+                      Get Started
+                      <ChevronRightIcon className="ml-1 h-auto w-4 stroke-zinc-400 dark:stroke-zinc-600" />
+                    </a>
                   </div>
                 </div>
               </div>
