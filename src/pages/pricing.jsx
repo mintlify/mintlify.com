@@ -42,7 +42,7 @@ const plans = [
       'GPT-powered search',
       'Custom subpaths /docs',
       'White-glove migrations',
-      'Prioritized customer support'
+      'Prioritized customer support',
     ],
   },
   {
@@ -173,14 +173,19 @@ function Plan({
               className={clsx(
                 'space-x-1',
                 activePeriod === 'Monthly' &&
-                'pointer-events-none translate-x-6 select-none opacity-0',
+                  'pointer-events-none translate-x-6 select-none opacity-0',
                 price.Monthly !== price.Annually && 'transition'
               )}
             >
               <span>{price.Annually}</span>
-              <span className={clsx("text-sm tracking-normal",
-                featured ? 'text-zinc-300 dark:text-zinc-500' : 'text-zinc-600 dark:text-zinc-400'
-              )}>
+              <span
+                className={clsx(
+                  'text-sm tracking-normal',
+                  featured
+                    ? 'text-zinc-300 dark:text-zinc-500'
+                    : 'text-zinc-600 dark:text-zinc-400'
+                )}
+              >
                 /month
               </span>
             </span>
@@ -189,13 +194,19 @@ function Plan({
               className={clsx(
                 'absolute left-0 top-0 space-x-1',
                 activePeriod === 'Annually' &&
-                'pointer-events-none -translate-x-6 select-none opacity-0',
+                  'pointer-events-none -translate-x-6 select-none opacity-0',
                 price.Monthly !== price.Annually && 'transition'
               )}
             >
               <span>{price.Monthly}</span>
-              <span className={clsx("text-sm tracking-normal",
-                featured ? 'text-zinc-300 dark:text-zinc-500' : 'text-zinc-600 dark:text-zinc-400')}>
+              <span
+                className={clsx(
+                  'text-sm tracking-normal',
+                  featured
+                    ? 'text-zinc-300 dark:text-zinc-500'
+                    : 'text-zinc-600 dark:text-zinc-400'
+                )}
+              >
                 /month
               </span>
             </span>
@@ -264,7 +275,7 @@ export function Pricing() {
                 key={period}
                 value={period}
                 className={clsx(
-                  'cursor-pointer border border-zinc-300 dark:border-zinc-500 py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-zinc-700 outline-2 outline-offset-2 transition-colors hover:border-zinc-400 dark:text-zinc-200',
+                  'cursor-pointer border border-zinc-300 py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-zinc-700 outline-2 outline-offset-2 transition-colors hover:border-zinc-400 dark:border-zinc-500 dark:text-zinc-200',
                   period === 'Annually' ? 'rounded-l-lg' : '-ml-px rounded-r-lg'
                 )}
               >

@@ -52,7 +52,11 @@ export default function Document() {
         src="https://www.googletagmanager.com/gtag/js?id=G-NZ6RFCB9LN"
         strategy="afterInteractive"
       />
-      <script id="google-analytics" strategy="afterInteractive" dangerouslySetInnerHTML={{__html: googleAnalyticsScript}} />
+      <script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }}
+      />
       <script dangerouslySetInnerHTML={{ __html: modeScript }} />
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
         <Main />
