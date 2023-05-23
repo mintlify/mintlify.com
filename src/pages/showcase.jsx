@@ -34,8 +34,7 @@ export const featuredShowcases = [
   },
   {
     name: 'Flatfile',
-    description:
-      'Smart APIs for file-based data import',
+    description: 'Smart APIs for file-based data import',
     link: { href: 'https://flatfile.com/docs', label: 'flatfile.com/docs' },
     logo: logoFlatfileShowcase,
   },

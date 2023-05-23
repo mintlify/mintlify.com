@@ -29,7 +29,9 @@ export default function App({ Component, pageProps, router }) {
   const referredBy = query['i']
 
   if (referredBy) {
-    document.cookie=`mintlifyReferral=${referredBy};domain=mintlify.com;expires=${new Date(Date.now() + TWO_WEEKS_IN_MILLISECONDS)}`
+    document.cookie = `mintlifyReferral=${referredBy};domain=mintlify.com;expires=${new Date(
+      Date.now() + TWO_WEEKS_IN_MILLISECONDS
+    )}`
   }
 
   return (
@@ -44,7 +46,7 @@ export default function App({ Component, pageProps, router }) {
         <meta name="og:image:height" content="630" />
       </Head>
       <div className="fixed inset-0 flex justify-center sm:px-8">
-        <div className="flex w-full max-w-8xl lg:px-8">
+        <div className="max-w-8xl flex w-full lg:px-8">
           <div className="w-full bg-white ring-1 ring-zinc-100 dark:bg-zinc-900 dark:ring-zinc-300/20" />
         </div>
       </div>

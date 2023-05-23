@@ -1,7 +1,5 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
-import wellCraftedDoc from './well-crafted-docs-mintlify.png'
-import thumbnail from './blog-thumbnail.png'
 
 export const meta = {
   author: 'One Chowdhury',
@@ -9,17 +7,22 @@ export const meta = {
   title: 'Well-crafted API documentation = Product success',
   description:
     'As software and digital products continue to evolve and advance, the emphasis on comprehensive and user-friendly API documentation has never been greater. Properly documented APIs offer a plethora of benefits, from increased productivity to improved developer experience. ',
-  imageUrl: thumbnail,
+  imageUrl: '/blog-assets/blog-thumbnail.png',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-<Image src={thumbnail} alt="blog thumbnail" />A well-crafted API documentation
-is like a well-told story - it should be easy to follow, understand, and apply.
-It fosters a seamless integration process, reducing the chances of confusion,
-errors, and delays. The result? A significant boost in productivity and overall
-user satisfaction, making your product more appealing to its end-users. Here's
-how:
+<Image
+  src="/blog-assets/blog-thumbnail.png"
+  alt="blog thumbnail"
+  width="600"
+  height="300"
+/>
+A well-crafted API documentation is like a well-told story - it should be easy to
+follow, understand, and apply. It fosters a seamless integration process, reducing
+the chances of confusion, errors, and delays. The result? A significant boost in
+productivity and overall user satisfaction, making your product more appealing to
+its end-users. Here's how:
 
 1. **Improved User Engagement:** Clear, concise, and up-to-date API documentation makes it easier for users to integrate and effectively use your product's API, thereby driving user engagement.
 2. **Increased Trust and Credibility:** An API with comprehensive, current, and easy-to-understand documentation speaks volumes about your dedication to user experience, thereby enhancing your product's credibility.
@@ -27,8 +30,6 @@ how:
 4. **Reduced Support Costs:** Good API documentation acts as a self-service support center, resolving most of the common queries and issues that users may face, which can lead to significant cost savings in support.
 
 The success of a product is often a function of the quality of its API documentation. By focusing on creating well-crafted and easy-to-manage API documentation, you not only improve the developer experience but also enhance your product's credibility, user engagement, and overall success. So, the next time you think about your product's success, remember the vital role played by your API documentation.
-
-<Image src={wellCraftedDoc} alt="wellCraftedDoc" />
 
 ## Transforming API Documentation with Mintlify
 
@@ -56,4 +57,4 @@ At Mintlify, we believe that the success of a product is often determined by the
 
 Next time you ponder over your product's success, remember the vital role your API documentation plays. Mintlify is here to ensure your documentation isn't just an afterthought, but a strategic tool that elevates your product's success. Join us on this journey as we transform API documentation one product at a time!
 
-[Get started](/start) today to effortlessly create world-class documentaion with Mintlify!
+[Get started](/start) today to effortlessly create world-class documentation with Mintlify!
