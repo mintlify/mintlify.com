@@ -14,7 +14,7 @@ function Article({ article }) {
           <a href={`/blogs/${article.slug}`}>
             <div className="relative flex w-full justify-center">
               <Image
-                src={article.imageUrl.src}
+                src={article.imageUrl}
                 width={700}
                 height={300}
                 objectFit="cover"
