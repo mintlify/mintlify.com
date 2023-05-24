@@ -24,9 +24,8 @@ export const navigation = [
     href: '/pricing',
   },
   {
-    name: 'Blogs',
-    href: '/blogs',
-    hideInHeaderDeskop: true,
+    name: 'Blog',
+    href: '/blog',
   },
   {
     name: 'Community',
@@ -38,11 +37,14 @@ export const navigation = [
     name: 'Careers',
     href: '/careers',
     hideInHeaderMobile: true,
+    hideInHeaderDeskop: true,
   },
   {
     name: 'Writer',
     href: '/writer',
     hideInFooter: true,
+    hideInHeaderDeskop: true,
+    hideInHeaderMobile: true,
   },
   {
     name: 'Status',

@@ -11,7 +11,7 @@ function Article({ article }) {
     <Card>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <article className="mb-16 max-w-lg cursor-pointer overflow-hidden rounded-lg transition-colors duration-200">
-          <a href={`/blogs/${article.slug}`}>
+          <a href={`/blog/${article.slug}`}>
             <div className="relative flex w-full justify-center">
               <Image
                 src={article.imageUrl}
@@ -54,14 +54,14 @@ export default function ArticlesIndex({ articles }) {
   return (
     <>
       <Head>
-        <title>Blogs - Beautiful documentation that converts users</title>
+        <title>Blog - Beautiful documentation that converts users</title>
         <meta
           name="Blogs"
           content="Build the documentation you've always wanted. Beautiful out of the box, easy to maintain, and optimized for user engagement."
         />
       </Head>
       <SimpleLayout
-        title="Blogs"
+        title="Blog"
         intro="Mintlify Chronicles: Navigating the World of Technical Documentation"
       >
         <div>
