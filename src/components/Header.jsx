@@ -28,6 +28,11 @@ export const navigation = [
     href: '/blog',
   },
   {
+    name: 'Enterprise',
+    href: '/contact-us',
+    hideInFooter: true,
+  },
+  {
     name: 'Community',
     href: '/community',
     hideInHeaderDeskop: true,
@@ -36,8 +41,8 @@ export const navigation = [
   {
     name: 'Careers',
     href: '/careers',
-    hideInHeaderMobile: true,
     hideInHeaderDeskop: true,
+    hideInHeaderMobile: true,
   },
   {
     name: 'Writer',
@@ -469,10 +474,10 @@ export function Header() {
               </div>
               <div className="flex items-center justify-end xl:flex-1">
                 <a
-                  href="https://calendly.com/mintlify/contact-us"
+                  href="/login"
                   className="dark:text-zinc pointer-events-auto mr-7 hidden text-sm font-medium text-zinc-800/90 transition hover:text-primary dark:text-zinc-200 dark:hover:text-light xl:block"
                 >
-                  Contact Sales
+                  Login
                 </a>
                 <div className="flex items-center justify-end space-x-6">
                   <div className="pointer-events-auto">
