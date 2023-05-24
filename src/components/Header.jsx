@@ -55,12 +55,7 @@ export const navigation = [
     name: 'Status',
     href: 'https://status.mintlify.com',
     hideInHeaderDeskop: true,
-  },
-  {
-    name: 'Contact Sales',
-    href: 'https://calendly.com/mintlify/contact-us',
-    hideInHeaderDeskop: true,
-    hideInFooter: true,
+    hideInHeaderMobile: true,
   },
   {
     name: 'Login',
