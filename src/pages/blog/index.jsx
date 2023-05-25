@@ -10,7 +10,7 @@ function Article({ article }) {
   return (
     <Card>
       <div>
-        <article className="mb-16 max-w-lg cursor-pointer overflow-hidden rounded-lg transition-colors duration-200">
+        <article className="mb-16 cursor-pointer overflow-hidden rounded-lg transition-colors duration-200">
           <a href={`/blog/${article.slug}`}>
             <div className="relative flex w-full justify-center">
               <Image
@@ -63,7 +63,7 @@ export default function ArticlesIndex({ articles }) {
       <div className="mx-auto max-w-7xl">
       <SimpleLayout
         title="Blog"
-        intro="We might write interesting stuff from time to time"
+        intro="We write stuff from time to time that might be interesting"
       >
         <div>
           <div>

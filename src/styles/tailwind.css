@@ -4,3 +4,11 @@
 
 @import './prism.css';
 @import './fonts.css';
+
+@layer components {
+  .shine {
+    box-shadow: -8px 0px 20px rgba(5, 162, 194, 0.3),
+      0px 0px 20px rgba(112, 225, 200, 0.3),
+      8px 0px 20px rgba(255, 178, 36, 0.3);
+  }
+}
