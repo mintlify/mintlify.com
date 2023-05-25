@@ -24,13 +24,13 @@ export const navigation = [
     href: '/pricing',
   },
   {
-    name: 'Blog',
-    href: '/blog',
-  },
-  {
     name: 'Enterprise',
     href: '/contact-us',
     hideInFooter: true,
+  },
+  {
+    name: 'Blog',
+    href: '/blog',
   },
   {
     name: 'Community',
@@ -41,13 +41,6 @@ export const navigation = [
   {
     name: 'Careers',
     href: '/careers',
-    hideInHeaderDeskop: true,
-    hideInHeaderMobile: true,
-  },
-  {
-    name: 'Writer',
-    href: '/writer',
-    hideInFooter: true,
     hideInHeaderDeskop: true,
     hideInHeaderMobile: true,
   },
