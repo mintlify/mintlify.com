@@ -15,7 +15,7 @@ function Article({ article }) {
             <Image
               src={article.imageUrl}
               width={700}
-              height={300}
+              height={400}
               objectFit="cover"
               className="rounded-t-xl"
               alt="blog thumbnail"
