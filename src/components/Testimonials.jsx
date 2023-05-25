@@ -162,7 +162,7 @@ export function Testimonials() {
       className="py-20 sm:py-32"
     >
       <div className="mx-auto">
-        <h2 className="text-2xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
+        <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
           Loved by teams worldwide.
         </h2>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">

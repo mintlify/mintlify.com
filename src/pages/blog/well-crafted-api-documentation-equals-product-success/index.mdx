@@ -2,12 +2,13 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
 
 export const meta = {
+  title: 'Welcome to Mintlify',
+  description:
+    'Why we believe that well-crafted documentation = product success',
+  imageUrl: '/blog-assets/blog-thumbnail.png',
   author: 'One Chowdhury',
   date: '2023-05-19',
-  title: 'Why great documentation matters - our manifesto',
-  description:
-    'As software and digital products continue to evolve and advance, the emphasis on comprehensive and user-friendly API documentation has never been greater. Properly documented APIs offer a plethora of benefits, from increased productivity to improved developer experience. ',
-  imageUrl: '/blog-assets/blog-thumbnail.png',
+  authorImageUrl: '/blog-assets/authors/one.png',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
@@ -15,7 +16,7 @@ export default (props) => <ArticleLayout meta={meta} {...props} />
 <Image
   src="/blog-assets/blog-thumbnail.png"
   alt="blog thumbnail"
-  className="rounded-md"
+  className="w-full rounded-md"
   width="600"
   height="300"
 />
