@@ -8,8 +8,8 @@ import { formatDate } from '@/lib/formatDate'
 
 function Article({ article }) {
   return (
-    <Card className="cols-span-1 shadow-lg shadow-zinc-900/5 border rounded-xl dark:border-zinc-800 dark:hover:border-zinc-700 duration-100">
-      <article className="cursor-pointer overflow-hidden rounded-lg transition-colors duration-200">
+    <Card className="cols-span-1 shadow-lg shadow-zinc-800/5 rounded-lg border border-zinc-100 dark:border-zinc-800 dark:hover:border-zinc-700 duration-100">
+      <article className="cursor-pointer overflow-hidden transition-colors duration-200">
         <a href={`/blog/${article.slug}`}>
           <div className="relative flex w-full justify-center">
             <Image
@@ -17,7 +17,7 @@ function Article({ article }) {
               width={700}
               height={400}
               objectFit="cover"
-              className="rounded-t-xl"
+              className="rounded-t-lg"
               alt="blog thumbnail"
             />
           </div>
