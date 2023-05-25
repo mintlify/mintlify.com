@@ -9,7 +9,7 @@ import { getAllArticles } from '@/lib/getAllArticles'
 function Article({ article }) {
   return (
     <Card>
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <div>
         <article className="mb-16 max-w-lg cursor-pointer overflow-hidden rounded-lg transition-colors duration-200">
           <a href={`/blog/${article.slug}`}>
             <div className="relative flex w-full justify-center">
@@ -18,7 +18,7 @@ function Article({ article }) {
                 width={700}
                 height={300}
                 objectFit="cover"
-                className="rounded-2xl"
+                className="rounded-md"
                 alt="blog thumbnail"
               />
             </div>
@@ -31,7 +31,7 @@ function Article({ article }) {
               </time>
             </div>
             <div className="group relative">
-              <h3 className="mt-3 text-lg font-semibold leading-6  ">
+              <h3 className="mt-3 text-lg font-semibold leading-6">
                 <a href={`/blogs/${article.slug}`}>
                   <Card.Title>
                     <span className="absolute inset-0"></span>
@@ -39,7 +39,7 @@ function Article({ article }) {
                   </Card.Title>
                 </a>
               </h3>
-              <Card.Description className="line-clamp-3 mt-5 text-sm leading-6 ">
+              <Card.Description className="line-clamp-3 mt-5 text-sm leading-6">
                 {article.description}
               </Card.Description>
             </div>
@@ -54,15 +54,16 @@ export default function ArticlesIndex({ articles }) {
   return (
     <>
       <Head>
-        <title>Blog - Beautiful documentation that converts users</title>
+        <title>Blog - Mintlify</title>
         <meta
           name="Blogs"
           content="Build the documentation you've always wanted. Beautiful out of the box, easy to maintain, and optimized for user engagement."
         />
       </Head>
+      <div className="mx-auto max-w-7xl">
       <SimpleLayout
         title="Blog"
-        intro="Mintlify Chronicles: Navigating the World of Technical Documentation"
+        intro="We might write interesting stuff from time to time"
       >
         <div>
           <div>
@@ -72,6 +73,7 @@ export default function ArticlesIndex({ articles }) {
           </div>
         </div>
       </SimpleLayout>
+      </div>
     </>
   )
 }

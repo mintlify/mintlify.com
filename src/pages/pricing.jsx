@@ -263,7 +263,7 @@ export function Pricing() {
 
   return (
     <section id="pricing" aria-labelledby="pricing-title">
-      <div className="flex justify-center">
+      <div className="flex justify-start">
         <div className="relative">
           <RadioGroup
             value={activePeriod}
