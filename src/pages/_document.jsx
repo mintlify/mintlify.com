@@ -58,7 +58,7 @@ export default function Document() {
         dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }}
       />
       <script dangerouslySetInnerHTML={{ __html: modeScript }} />
-      <body className="flex h-full flex-col bg-zinc-50 dark:bg-black">
+      <body className="flex h-full flex-col bg-zinc-50 dark:bg-zinc-950">
         <Main />
         <NextScript />
       </body>
