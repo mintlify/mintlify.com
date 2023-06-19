@@ -25,7 +25,7 @@ export const navigation = [
   },
   {
     name: 'Enterprise',
-    href: '/contact-us',
+    href: '/enterprise',
     hideInFooter: true,
   },
   {

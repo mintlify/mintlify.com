@@ -50,9 +50,9 @@ const nextConfig = {
         permanent: false,
       },
       {
-        source: '/contact-us',
+        source: '/enterprise',
         destination:
-          'https://calendly.com/mintlify/contact-us',
+          'https://calendly.com/mintlify/mintlify-enterprise',
         permanent: false,
       },
       {
