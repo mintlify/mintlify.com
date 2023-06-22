@@ -35,7 +35,8 @@ const nextConfig = {
       },
       {
         source: '/community',
-        destination: 'https://discord.gg/MPNgtSZkgK',
+        destination:
+          'https://join.slack.com/t/mintlify-users/shared_invite/zt-1xfzz6x35-f4o4WCYfpvLhSj3O7WAOMA',
         permanent: false,
       },
       {
@@ -51,8 +52,7 @@ const nextConfig = {
       },
       {
         source: '/enterprise',
-        destination:
-          'https://calendly.com/mintlify/mintlify-enterprise',
+        destination: 'https://calendly.com/mintlify/mintlify-enterprise',
         permanent: false,
       },
       {
