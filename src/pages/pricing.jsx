@@ -39,7 +39,7 @@ const plans = [
       'The Free plan plus:',
       'Unlimited editors',
       'Analytics and conversion insights',
-      'GPT-powered search',
+      'ChatGPT for docs',
       'Custom subpaths /docs',
       'White-glove migrations',
       'Prioritized customer support',
