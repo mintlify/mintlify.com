@@ -156,10 +156,10 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
-"@mintlify/validation@^0.1.29":
-  version "0.1.29"
-  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.29.tgz#d97452490a5335ae1084427e512094d20c332f04"
-  integrity sha512-xUlM2T23rizv++NDTsT3JjzuWS1HqbcFlw/WGkO9DlCW8goa/e5JP28EAu7PuEmG6kdoW1wHc3tWi65RVlMNGA==
+"@mintlify/validation@^0.1.48":
+  version "0.1.48"
+  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.48.tgz#b29607dbde953319872c80add3abdffaccdc7c6a"
+  integrity sha512-sHvcupo5HVOTxqFzULTdRXDR/6RaR4cSJbwkVapNN+x7RRhukebBGWEtS9+0tiqokkO49/CoqbCMMWZUbailag==
   dependencies:
     mathjs "^11.8.0"
     zod "^3.20.6"
