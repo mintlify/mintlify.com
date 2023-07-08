@@ -52,7 +52,7 @@ const plans = [
     description: 'Fully tailored for your business',
     button: {
       label: 'Contact us',
-      href: 'mailto:hi@mintlify.com',
+      href: '/enterprise',
     },
     features: [
       'The Startup plan plus:',

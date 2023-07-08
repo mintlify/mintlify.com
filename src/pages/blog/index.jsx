@@ -66,7 +66,6 @@ export default function ArticlesIndex({ articles }) {
       <div className="mx-auto">
       <BlogLayout
         title="Blog"
-        intro="We write stuff from time to time that might be interesting"
       >
         <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
           {articles.map((article) => (
