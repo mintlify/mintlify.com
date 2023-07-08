@@ -2,19 +2,21 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 import Image from 'next/image'
 
 export const meta = {
-  title: 'Welcome to Mintlify',
+  title: 'Documentation as a first-class citizen',
   description:
-    'Why we believe that well-crafted documentation = product success',
-  imageUrl: '/blog-assets/blog-thumbnail.png',
+    'Documentation is the product. A well-crafted documentation is like a well-told story - it should be easy to follow, understand, and apply. ',
+  imageUrl: '/blog-assets/thumbnail.svg',
   author: 'One Chowdhury',
-  date: '2023-05-19',
+  authorRole: 'Software Engineer',
+  date: 'May 19, 2023',
+  category: 'About',
   authorImageUrl: '/blog-assets/authors/one.png',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
 <Image
-  src="/blog-assets/blog-thumbnail.png"
+  src="/blog-assets/thumbnail.svg"
   alt="blog thumbnail"
   className="w-full rounded-md"
   width="600"

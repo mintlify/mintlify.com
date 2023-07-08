@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
-import { formatDate } from '@/lib/formatDate'
 
 function ArrowLeftIcon(props) {
   return (
@@ -58,7 +57,7 @@ export function ArticleLayout({
                   dateTime={meta.date}
                   className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
                 >
-                  <span>{formatDate(meta.date)}</span>
+                  <span>{meta.date}</span>
                 </time>
               </header>
               <Prose className="mt-4">{children}</Prose>

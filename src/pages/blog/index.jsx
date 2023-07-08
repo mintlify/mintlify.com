@@ -1,67 +1,55 @@
-import { Card } from '@/components/Card'
 import Head from 'next/head'
-import Image from 'next/image'
 
-import { SimpleLayout } from '@/components/SimpleLayout'
+import { BlogLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
-import { formatDate } from '@/lib/formatDate'
 
 function Article({ article }) {
   return (
-    <Card className="cols-span-1 shadow-lg shadow-zinc-800/5 rounded-lg border border-zinc-100 dark:border-zinc-800 dark:hover:border-zinc-700 duration-100">
-      <article className="cursor-pointer overflow-hidden transition-colors duration-200">
-        <a href={`/blog/${article.slug}`}>
-          <div className="relative flex w-full justify-center">
-            <Image
-              src={article.imageUrl}
-              width={700}
-              height={400}
-              objectFit="cover"
-              className="rounded-t-lg"
-              alt="blog thumbnail"
-            />
-          </div>
-        </a>
-
-        <div className="p-8">
-          <div className="group relative">
-            <a className="mt-3 text-lg font-semibold tracking-tight leading-6 text-zinc-800 dark:text-zinc-100" href={`/blogs/${article.slug}`}>
+    <article  className="relative isolate flex flex-col gap-10 lg:flex-row">
+      <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+        <img
+          src={article.imageUrl}
+          alt=""
+          className="absolute inset-0 h-full w-full rounded-2xl object-cover"
+        />
+        <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-zinc-900/10 dark:ring-white/10" />
+      </div>
+      <div>
+        <div className="flex items-center gap-x-4 text-xs">
+          <time dateTime={article.date} className="text-zinc-500">
+            {article.date}
+          </time>
+          <a
+            className="relative z-10 rounded-full bg-zinc-50 px-3 py-1.5 font-medium text-zinc-600 hover:bg-zinc-100 dark:bg-zinc-900 dark:text-zinc-400 dark:border dark:border-white/5"
+          >
+            {article.category}
+          </a>
+        </div>
+        <div className="group relative max-w-xl">
+          <h3 className="mt-3 text-lg font-semibold leading-6 text-zinc-900 group-hover:text-zinc-600 dark:text-zinc-200 dark:group-hover:text-zinc-400">
+            <a href={`/blog/${article.slug}`}>
+              <span className="absolute inset-0" />
               {article.title}
             </a>
-            <div className="mt-3 text-sm text-zinc-600 dark:text-zinc-400 leading-loose">
-              {article.description}
-            </div>
-            <div className="flex mt-6 text-xs">
-              <div className="flex-1 text-zinc-500">
-                <div>
-                  Written By
-                </div>
-                <div className="mt-0.5 h-6 text-zinc-800 dark:text-zinc-200 flex items-center space-x-2 font-medium">
-                  <Image
-                    src={article.authorImageUrl}
-                    width={20}
-                    height={20}
-                    objectFit="cover"
-                    className="rounded-full border border-zinc-800"
-                  />
-                  <div>
-                    {article.author}
-                  </div>
-                </div>
-              </div>
-              <div className="flex-1 text-zinc-500">
-                <div>
-                  Published on
-                </div>
-                <div className="mt-0.5 h-6 text-zinc-800 dark:text-zinc-200 font-medium" dateTime={article.date}>
-                  {formatDate(article.date)}
-                </div>
-              </div>
+          </h3>
+          <p className="mt-5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{article.description}</p>
+        </div>
+        <div className="mt-6 flex border-t border-zinc-900/5 dark:border-white/5 pt-6">
+          <div className="relative flex items-center gap-x-4">
+            <img src={article.authorImageUrl} alt="" className="h-10 w-10 rounded-full" />
+            <div className="text-sm leading-6">
+              <p className="font-semibold text-zinc-900 dark:text-zinc-200">
+                <a>
+                  <span className="absolute inset-0" />
+                  {article.author}
+                </a>
+              </p>
+              <p className="text-zinc-600 dark:text-zinc-500">{article.authorRole}</p>
             </div>
           </div>
         </div>
-      </article>
-    </Card>
+      </div>
+    </article>
   )
 }
 
@@ -76,16 +64,16 @@ export default function ArticlesIndex({ articles }) {
         />
       </Head>
       <div className="mx-auto">
-      <SimpleLayout
+      <BlogLayout
         title="Blog"
         intro="We write stuff from time to time that might be interesting"
       >
-        <div className="mt-12 grid lg:grid-cols-2 gap-4">
+        <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
           {articles.map((article) => (
             <Article key={article.slug} article={article} />
           ))}
         </div>
-      </SimpleLayout>
+      </BlogLayout>
       </div>
     </>
   )
