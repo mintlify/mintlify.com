@@ -3,6 +3,21 @@ import Head from 'next/head'
 import { BlogLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
 
+export function Author({ name, role, imgUrl }) {
+  return <div className="relative flex items-center gap-x-4">
+  <img src={imgUrl} alt="" className="h-10 w-10 rounded-full" />
+  <div className="text-sm leading-6">
+    <p className="font-semibold text-zinc-900 dark:text-zinc-200">
+      <a>
+        <span className="absolute inset-0" />
+        {name}
+      </a>
+    </p>
+    <p className="text-zinc-600 dark:text-zinc-400">{role}</p>
+  </div>
+</div>
+}
+
 function Article({ article }) {
   return (
     <article  className="relative isolate flex flex-col gap-10 lg:flex-row">
@@ -35,18 +50,7 @@ function Article({ article }) {
           <p className="mt-5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{article.description}</p>
         </div>
         <div className="mt-6 flex border-t border-zinc-900/5 dark:border-white/5 pt-6">
-          <div className="relative flex items-center gap-x-4">
-            <img src={article.authorImageUrl} alt="" className="h-10 w-10 rounded-full" />
-            <div className="text-sm leading-6">
-              <p className="font-semibold text-zinc-900 dark:text-zinc-200">
-                <a>
-                  <span className="absolute inset-0" />
-                  {article.author}
-                </a>
-              </p>
-              <p className="text-zinc-600 dark:text-zinc-500">{article.authorRole}</p>
-            </div>
-          </div>
+          <Author name={article.author} imgUrl={article.authorImageUrl} role={article.authorRole} />
         </div>
       </div>
     </article>

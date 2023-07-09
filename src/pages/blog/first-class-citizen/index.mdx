@@ -1,5 +1,4 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
-import Image from 'next/image'
 
 export const meta = {
   title: 'Documentation as a first-class citizen',
@@ -15,12 +14,10 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-<Image
+<img
   src="/blog-assets/thumbnail.svg"
   alt="blog thumbnail"
   className="w-full rounded-md"
-  width="600"
-  height="300"
 />
 
 A well-crafted API documentation is like a well-told story - it should be easy to
