@@ -35,9 +35,9 @@ export function ArticleLayout({
               type="button"
               onClick={() => router.back()}
               aria-label="Go back to articles"
-              className="mt-12 group mb-8 flex items-center justify-center transition lg:absolute lg:-left-5 lg:mb-0 xl:-top-0.5 xl:left-0 xl:mt-0 dark:text-zinc-500 text-sm space-x-0.5 font-medium dark:hover:text-zinc-300"
+              className="mt-12 group mb-8 flex items-center justify-center transition lg:absolute lg:-left-5 lg:mb-0 xl:-top-0.5 xl:left-0 xl:mt-0 text-zinc-600 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300 text-sm space-x-0.5 font-medium"
             >
-              <ArrowLeftIcon className="h-6 w-6 stroke-zinc-500 group-hover:stroke-zinc-700 dark:stroke-zinc-500 dark:group-hover:stroke-zinc-300" />
+              <ArrowLeftIcon className="h-6 w-6" />
               <span>
                 Back
               </span>
