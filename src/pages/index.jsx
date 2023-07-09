@@ -15,11 +15,11 @@ import logoYCombinator from '@/images/logos/clouds/ycombinator.svg'
 import logoFlatfile from '@/images/logos/clouds/flatfile.svg'
 import logoThanx from '@/images/logos/clouds/thanx.svg'
 import logoSequence from '@/images/logos/clouds/sequence.svg'
-import logoExplo from '@/images/logos/clouds/explo.svg'
-import logoTolstoy from '@/images/logos/clouds/tolstoy.svg'
+import logoGoody from '@/images/logos/clouds/goody.svg'
+import logoLatchBio from '@/images/logos/clouds/latchbio.svg'
 import logoResend from '@/images/logos/clouds/resend.svg'
-import logoCorrily from '@/images/logos/clouds/corrily.svg'
-import logoWebapp from '@/images/logos/clouds/webappio.svg'
+import logoElevenLabs from '@/images/logos/clouds/elevenlabs.svg'
+import logoDepict from '@/images/logos/clouds/depict.svg'
 import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
 
 import { featuredShowcases } from './showcase'
@@ -340,13 +340,13 @@ export default function Home() {
                 ['YCombinator', logoYCombinator],
                 ['Flatfile', logoFlatfile],
                 ['Thanx', logoThanx],
-                ['Explo', logoExplo],
+                ['Depict', logoDepict],
                 ['Sequence', logoSequence],
                 ['MindsDB', logoMindsDB],
-                ['Corrily', logoCorrily],
+                ['ElevenLabs', logoElevenLabs],
                 ['Resend', logoResend],
-                ['Webapp.io', logoWebapp],
-                ['Tolstoy', logoTolstoy],
+                ['Goody', logoGoody],
+                ['LatchBio', logoLatchBio],
               ].map(([alt, logo]) => (
                 <div className="col-span-1 flex justify-center dark:brightness-125 lg:col-span-1">
                   <Image className="h-12" src={logo} alt={alt} />
