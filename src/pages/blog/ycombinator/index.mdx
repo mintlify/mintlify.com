@@ -1,0 +1,151 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  title: 'Our journey through Y Combinator',
+  description:
+    `The story of our many pivots and a year of wandering in the desert. It wasn't the experience we expected, but it's the one we needed.`,
+  imageUrl: '/blog-assets/ycombinator.svg',
+  author: 'Han Wang',
+  authorRole: 'Co-founder & CEO',
+  date: 'July 6, 2023',
+  category: 'About',
+  authorImageUrl: '/blog-assets/authors/han.png',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/blog-assets/ycombinator.svg"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Y Combinator (YC) is seen as the world's best and most prolific startup accelerator. Since 2005, YC has funded over 4,000 companies, including Mintlify in the Winter 2022 batch.
+
+Many founders have shared their learnings from the program and offered their two cents on the "is YC worth it" debate. Few, however, have shared their genuine experience going through the program, the pivots along the way, and what happens afterwards.
+
+## The Application
+
+[Mintlify](https://mintlify.com) wasn't always the documentation platform that people know it as today.
+
+Our journey started with an idea called [Figstack](https://figstack.com). People learning how to code have a hard time understanding the syntax, so we created a Google Translate that converts code into what it's doing in English - recently made possible by [Codex](https://openai.com/blog/openai-codex) from OpenAI.
+
+<img
+  src="/blog-assets/figstack.png"
+  alt="Figstack"
+  className="w-full rounded-md"
+/>
+
+We built out the product in 10 days, launched on [Product Hunt](https://www.producthunt.com/products/figstack), and to our surprise, reached #1 Product of the Day and thousands of users in the first week.
+
+<a href="https://www.producthunt.com/posts/figstack?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-figstack" target="_blank"><img className="rounded-none" src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=309436&theme=light&period=daily" alt="Figstack - Your&#0032;intelligent&#0032;coding&#0032;companion | Product Hunt" style={{width: '250px', height: '54px'}} width="250" height="54" /></a>
+
+It was around that time that we applied to YC and submitted the following application video.
+
+<iframe className="w-full aspect-video" src="https://www.youtube.com/embed/OAhXFeENW3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+By mid-October, we were pretty confident that we didn't get in. We heard that so many startups were already accepted, and we haven't even gotten an interview invite. Around that gloomy time, we also realized that Figstack was a leaky bucket. Users weren't coming back and retention was horrible. After speaking with users, we realized that we built a "nice to have", and decided to pivot.
+
+<img
+  src="/blog-assets/figstack-waus.png"
+  alt="Figstack WAUs"
+  className="w-full rounded-md"
+/>
+
+The very next day after we made the decision, we got an interview invite for YC to be had in four days. Talk about horrible timing! At that point, we had a choice. Either 1) prep as if everything is going well with Figstack (it wasn't) or 2) build a completely new product demo in four days and pitch that.
+
+Without even thinking about it, we took the latter option. Over those four days, we pulled two all-nighters, explored [several new brands of caffeinated drinks](https://www.lacolombe.com/products/pure-black-pack?variant=29614522368113&utm_medium=Paid-Search&utm_source=Google&utm_campaign=DTC&utm_content=PMax&gclid=Cj0KCQjwtamlBhD3ARIsAARoaEwUVZKFxvsxiA_VP__Zg9PsxBIX_jh4SFdWieB_PpCy8km8XXDiAlAaAjO5EALw_wcB), and scrapped together a product, demo, landing page, and go to market strategy.
+
+The interview went well! The YC partners were incredibly nice, but blunt and to-the-point as we expected. No one seemed to care that we showed up to the interview pitching a completely differently idea than the one we applied with. Much of the interview ended up being about the pivot, what we learned, and what we would do if we need to pivot again.
+
+## Getting into YCombinator
+
+That night, I picked up a phone call from a San Francisco number. "Hey this is Dalton Caldwell from YC, and we'd like to fund Mintlify for the Winter 22 batch. Can I count you guys in?"
+
+"Yes! You can absolutely count us in" I said before even consulting Hahnbee.
+
+"Out of curiousity, why us?", I asked.
+
+"It's because you were willing to change ideas and you did it quickly. You'll be doing that a lot during YC".
+
+<img
+  src="/blog-assets/yc-sign.jpg"
+  alt="YC Sign"
+  className="w-full rounded-md"
+/>
+
+As it turns out, Dalton was right. Shortly after the interview, we realized that the new idea didn't work either.
+
+**Pro tip**: you don't come up with the best ideas when you're sleep deprived and powering on five cans of Red Bull.
+
+Down but not defeated, we went back to the drawing board.
+
+## Discovering an Insight
+
+We remembered that when we were building Figstack, we discovered that a lot of our users were pasting the generated explinations back into the code as a [docstring](https://en.wikipedia.org/wiki/Docstring). Digging a bit deeper, we found that this specific use case had more power users and stronger retention than anything else in the product.
+
+We wondered if people would've wanted a product dedicated to that functionality - one that's also closer to their workflow. From that idea, we launched [Doc Writer](https://marketplace.visualstudio.com/items?itemName=mintlify.document), an IDE extension that could automatically generate docstrings from code.
+
+[![Demo](/blog-assets/demo-docs.gif)](https://www.loom.com/embed/3dbfcd7e0e1b47519d957746e05bf0f4)
+
+We posted a demo on Reddit, and it blew up. Two days after launch, Doc Writer saw more traction than Figstack did in its entire lifespan.
+
+## Winter 22 Batch Begins
+
+For the first half of the YC programming, we built and grew Doc Writer. We added support for more programming languages, improved performance, and got some TikTok influencers on our side.
+
+{/* <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@kristel99999/video/7092681409374014726" data-video-id="7092681409374014726" className="no-prose"> <section> <a target="_blank" title="@kristel99999" href="https://www.tiktok.com/@kristel99999?refer=embed">@kristel99999</a> Writing docs has never been easier! 😍<a title="tech" target="_blank" href="https://www.tiktok.com/tag/tech?refer=embed">#tech</a> <a title="programmer" target="_blank" href="https://www.tiktok.com/tag/programmer?refer=embed">#programmer</a> <a title="ai" target="_blank" href="https://www.tiktok.com/tag/ai?refer=embed">#ai</a> <a title="coding" target="_blank" href="https://www.tiktok.com/tag/coding?refer=embed">#coding</a> <a title="engineering" target="_blank" href="https://www.tiktok.com/tag/engineering?refer=embed">#engineering</a> <a title="foru" target="_blank" href="https://www.tiktok.com/tag/foru?refer=embed">#foru</a> <a title="forupage" target="_blank" href="https://www.tiktok.com/tag/forupage?refer=embed">#forupage</a> <a title="foryourpage" target="_blank" href="https://www.tiktok.com/tag/foryourpage?refer=embed">#foryourpage</a> <a title="tiktok" target="_blank" href="https://www.tiktok.com/tag/tiktok?refer=embed">#tiktok</a> <a title="tiktoktech" target="_blank" href="https://www.tiktok.com/tag/tiktoktech?refer=embed">#tiktoktech</a> <a title="technology" target="_blank" href="https://www.tiktok.com/tag/technology?refer=embed">#technology</a> <a title="programming" target="_blank" href="https://www.tiktok.com/tag/programming?refer=embed">#programming</a> <a title="foryou" target="_blank" href="https://www.tiktok.com/tag/foryou?refer=embed">#foryou</a> <a target="_blank" title="♬ Hell 2 da Naw - Bullwinkle Boyz" href="https://www.tiktok.com/music/Hell-2-da-Naw-242855113583751168?refer=embed">♬ Hell 2 da Naw - Bullwinkle Boyz</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script> */}
+
+The product kept growing. On an average week, we would see an average 15% increase in weekly active users (which is a lot in hindsight). But, we weren't making any money.
+
+In a call with [Tim Brady](https://www.ycombinator.com/blog/tim-brady-interview), one of our YC partners, he brought up we need to figure out is a path to monetization. "You're not a business until you start making money", he said.
+
+## The Fatal Realization
+
+We started by adding a $7.99/month paywall for those who used it beyond a certain quota, thinking that the power users must see the value in it and would want to pay. We were wrong. When presented with a choice to pay any money or installing the products, the majority of our users opted for the latter.
+
+💡 **Lesson learned**: Selling to individual developers is hard. It's like selling a cake to a baker.
+
+"No worries", we thought. We could just sell to the businesses who could buy it on their developers' behalf.
+
+Turns out, that wasn't the case either. 1) businesses were not comfortable with sending their code to a third-party service unless it's self-hosted and 2) we couldn't offer self hosting as we were using OpenAI's models.
+
+While many were interested in an on-prem solution, we simply couldn't offer it (times might've changed now. Here's the [source code](https://github.com/mintlify/writer) if you want to try).
+
+We realized that we couldn't turn Doc Writer into a business, and made the hard decision to pivot again.
+
+<iframe className="w-full" src="https://giphy.com/embed/UrbnbuU24p1zgyDMUH" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+## Discovering Our Idea Space
+
+By the end of YC, we had less than we started with. We imagined graduating the batch having found product market fit like Stripe, AirBnB, and DoorDash did. Instead, we left the batch with less in our hands than we started with.
+
+But, we were far from giving up and deeply felt that Doc Writer has taught us something.
+
+💡 **Lesson learned**: developer documentation has a lot of problems. Developers hate writing docs and it's poorly maintained. The end result is bad and the cycle perpetuates.
+
+While Doc Writer failed, we believed we have discovered an [idea space](https://www.ycombinator.com/library/8g-how-to-get-startup-ideas) - a level of abstraction above a particular idea. We felt that as long as we continued to tackle the documentation problem from different angles, we will find something that solves a problem.
+
+For the next five months, we did exactly that. We launched one product after another, a total of four in the span of five months. One idea was connecting code to the relevant documentation pages and alerting you when the code changes to update the docs. Another idea was generating documentation from an entire codebase a la JSDoc or Sphinx.
+
+None of them really worked, but on every attempt we learned something and took it into the next idea.
+
+## A Documentation Platform We've Always Wanted
+
+Finally in September, 2022, we took a shot at the simplest idea of them all: building the documentation platform itself.
+
+And Mintlify as we know it is born. Today, we power the documentation for hundreds of companies that are collectively read by hundreds of thousands of developers every month. We're also the #1 most popular YC product by other YC companies in the past 3.5 years (subtle flex, cough, cough, please [use us](/start)).
+
+There was a lot that we had to figure out along the way, but that's the story for another blog post.
+
+## Some unsolicited advice to YC founders in the current batch
+
+No one asked, but I wanted to share some advice anyways.
+
+**It takes time**: we felt the pressure to figure it out by the time YC ended. It's not the case for the vast majority of companies. The only thing that matters is eventually getting there.
+
+**"Your real runway is the number of pivots left in you"**: This is the most memorable quote that YC told us. Don't give up! It's hard, but have faith that in time you will figure it out.
+
+**Good ideas can be adjacent to the bad ones**: Doc Writer is just a feature from Figstack brought out, but has literally 1000x more users. The documentation platform is just a derivative of other ideas that didn't work.
+
+**Use Mintlify**: I had to fit in a call to action in here somehow.

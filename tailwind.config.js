@@ -2,7 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./src/**/*.{js,jsx}'],
+  content: ['./src/**/*.{js,jsx,mdx}'],
   darkMode: 'class',
   plugins: [require('@tailwindcss/typography')],
   theme: {
@@ -179,8 +179,6 @@ module.exports = {
           // Quotes
           blockquote: {
             paddingLeft: theme('spacing.6'),
-            borderLeftWidth: theme('borderWidth.2'),
-            borderLeftColor: 'var(--tw-prose-quote-borders)',
             fontStyle: 'italic',
           },
 
