@@ -179,8 +179,6 @@ module.exports = {
           // Quotes
           blockquote: {
             paddingLeft: theme('spacing.6'),
-            borderLeftWidth: theme('borderWidth.2'),
-            borderLeftColor: 'var(--tw-prose-quote-borders)',
             fontStyle: 'italic',
           },
 
