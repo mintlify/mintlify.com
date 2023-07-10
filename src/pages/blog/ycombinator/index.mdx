@@ -1,0 +1,68 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  title: 'Our journey through YCombinator',
+  description:
+    `The story of our many pivots and a year of wandering in the desert. It wasn't the experience we expected, but it's the one we needed.`,
+  imageUrl: '/blog-assets/ycombinator.svg',
+  author: 'Han Wang',
+  authorRole: 'Co-founder & CEO',
+  date: 'July 6, 2023',
+  category: 'About',
+  authorImageUrl: '/blog-assets/authors/han.png',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/blog-assets/ycombinator.svg"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Y Combinator (YC) is seen as the world's best and most prolific startup accelerator. Since 2005, over 9,000 founders and 4,000 companies around the world have gone through the program, including AirBnb, Stripe, Instacart, and many others.
+
+Many founders have shared their learnings from the program and whether the YC is "worth it". Few, however, have shared their genuine experience going through the program and what happens afterwards.
+
+## The Application
+
+Mintlify wasn't always the documentation platform that many people know it as today. Our first idea was this product called [Figstack](https://figstack.com). Our insight was that people learning how to code have a hard time understanding the syntax, so we created a Google Translate that converts code into what it's doing in English using [Codex](https://openai.com/blog/openai-codex), which just came out at the time.
+
+We built it out in 10 days, launched on [Product Hunt](https://www.producthunt.com/products/figstack), and it went viral. It became #1 product of the day, and immediately reached thousands of users. It was around that time that we applied to YC and submitted the following application video.
+
+<iframe className="w-full aspect-video" src="https://www.youtube.com/embed/OAhXFeENW3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+By mid-October, we were pretty confident that we didn't get in. We heard that so many startups were already accepted, and we haven't even gotten an interview invite. Around that gloomy time, we also realized that Figstack was a leaky bucket. Users weren't coming back and retention was horrible.
+
+<img
+  src="/blog-assets/figstack-waus.png"
+  alt="Figstack WAUs"
+  className="w-full rounded-md"
+/>
+
+After speaking with users, we realized that we built a "nice to have". We ran out of ideas to fix the leaky bucket, and made the hard decision to pivot.
+
+The very next day, we got an interview invite for YC to be had in four days. Talk about horrible timing! At that point, we had a choice. 1) prep as if everything is going well with Figstack (it wasn't) or 2) build a completely new product demo in four days and pitch that.
+
+Thinking that we should hustle for whatever gives us the best chance of getting in, we took the latter option. Over those four days, we pulled two all-nighters, explored several new brands of caffeinated drinks, and scrapped together a product, demo, landing page, and go to market strategy.
+
+The interview went well! The partners were incredibly nice, but blunt and to-the-point as we expected. No one seemed to care that we showed up to the interview pitching a completely differently idea than the one we applied with. Much of the conversation ended up being about the pivot, what we learned, and what we would do if we need to pivot again.
+
+## Getting into YCombinator
+
+That night, a San Francisco number called me. "Hey this is Dalton Caldwell from YC, and we'd like to fund Mintlify for the Winter 22 batch. Can I count you guys in?". "Yes! You can absolutely count us in", I blurted out before Dalton could even finish his last sentence.
+
+"What about us got you interested?", I asked. "It's because you were willing to change ideas and you did it quickly. You'll be doing that a lot during YC". As it turns out, Dalton was right.
+
+## The Second Pivot
+
+Into Doc Writer
+
+
+## After YC
+
+## My advice to YC founders in the current batch
+
+- It takes time. The only thing that matters is eventually getting there
+- Make the hard decision when you're in the uncanny valley of product market fit.
+- Your real runway is the number of pivots left in you
