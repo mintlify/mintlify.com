@@ -28,6 +28,7 @@ export function ArticleLayout({
       <Head>
         <title>{`${meta.title} - Mintlify`}</title>
         <meta name="description" content={meta.description} />
+        <meta property="og:image" content={meta.imageUrl} />
       </Head>
       <Container className="mt-13 lg:mt-24">
         <div className="xl:relative">
