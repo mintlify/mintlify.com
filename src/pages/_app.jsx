@@ -40,10 +40,14 @@ export default function App({ Component, pageProps, router }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@mintlify" />
         <meta name="twitter:creator" content="@mintlify" />
-        <meta name="og:image" content="https://mintlify.com/thumbnail.png" />
-        <meta name="og:image:alt" content="Mintlify" />
-        <meta name="og:image:width" content="1200" />
-        <meta name="og:image:height" content="630" />
+        {
+          !pathname.startsWith('/blog/') && <>
+            <meta name="og:image" content="https://mintlify.com/thumbnail.png" />
+            <meta name="og:image:alt" content="Mintlify" />
+            <meta name="og:image:width" content="1200" />
+            <meta name="og:image:height" content="630" />
+          </>
+        }
       </Head>
       <div className="fixed inset-0 flex justify-center sm:px-8">
         <div className="max-w-8xl flex w-full lg:px-8">
