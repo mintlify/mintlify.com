@@ -77,9 +77,9 @@ const baseStyles = {
 const variantStyles = {
   solid: {
     primary:
-      'relative overflow-hidden bg-primary text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-cyan-600 active:text-white/80 before:transition-colors',
+      'relative overflow-hidden bg-primary text-white before:absolute before:inset-0 active:before:bg-transparent hover:before:bg-white/10 active:bg-green-600 active:text-white/80 before:transition-colors',
     white:
-      'bg-white text-cyan-900 hover:bg-white/90 active:bg-white/90 active:text-cyan-900/70',
+      'bg-white text-green-900 hover:bg-white/90 active:bg-white/90 active:text-green-900/70',
     zinc: 'border border-transparent bg-zinc-800 text-white hover:bg-zinc-900 hover:border-zinc-600 active:bg-zinc-800 active:text-white/80',
   },
   outline: {
