@@ -17,6 +17,7 @@
     "@mintlify/validation": "^0.1.29",
     "@next/mdx": "^12.3.4",
     "@segment/analytics-next": "^1.49.1",
+    "@sentry/nextjs": "^7.58.1",
     "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.12",
     "clsx": "^1.2.1",
