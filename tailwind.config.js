@@ -143,7 +143,7 @@ module.exports = {
 
           // Inline elements
           a: {
-            color: 'var(--tw-prose-links)',
+            color: theme('colors.zinc.800'),
             fontWeight: theme('fontWeight.semibold'),
             borderBottomWidth: '1px',
             borderBottomColor: 'var(--tw-prose-underline)',
@@ -152,7 +152,6 @@ module.exports = {
             transitionTimingFunction: theme('transitionTimingFunction.in-out'),
           },
           'a:hover': {
-            color: 'var(--tw-prose-links-hover)',
             borderBottomWidth: '2px',
           },
           strong: {
@@ -312,7 +311,7 @@ module.exports = {
             paddingRight: theme('spacing.2'),
           },
         },
-      },
+      }
     }),
   },
 }
