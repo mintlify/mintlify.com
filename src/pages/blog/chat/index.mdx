@@ -1,7 +1,7 @@
 import { ArticleLayout } from '@/components/ArticleLayout'
 
 export const meta = {
-  title: 'Mintlify Chat - ChatGPT trained on your docs',
+  title: 'Mintlify Chat - ChatGPT trained on your documentation',
   description:
     'Why we upgraded the answer discovery experience and how we did it',
   mobileImageUrl: '/static/images/blog/chat/chat.png',
@@ -16,7 +16,11 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-We're super excited to announce that Mintlify Chat, our GPT-based search experience, is officially out of private beta!
+Today, we're excited to announce that Mintlify Chat, our intelligent answer discovery experience, is officially out of private beta and available to all [startup plan](/pricing) documentation.
+
+Imagine [ChatGPT](https://openai.com/blog/chatgpt), but trained on your own content and tailored to be a helpful assistant for your documentation.
+
+Want to try it out for yourself? Go to [mintlify.com/docs](https://mintlify.com/docs), hit `cmd` + `K`, and type in a question.
 
 <img
   src="/static/images/blog/chat/chat.png"
@@ -24,11 +28,25 @@ We're super excited to announce that Mintlify Chat, our GPT-based search experie
   className="w-full rounded-md"
 />
 
-Want to try it out for yourself? Go to [mintlify.com/docs](https://mintlify.com/docs), hit cmd + K, and type in a burning question you have about Mintlify (I'm sure there's tons).
-
 ## Why we built it
 
-- Demo of it working on Flatfile
+Mintlify has always taken a problem-first approach to building and launching products. When users click on the search box, they want answers - not a list of 10 pages that _might_ contain what they're looking for.
+
+Since ChatGPT came out, we've wondered how we could deliver answers directly and in a conversation manner. After all, no one _loves_ the traditional search experience that we're so used to seeing in documentation.
+
+For a long time, we were troubled by the quality and reliability of the answers. LLMs are prone to [hallucinations](https://towardsdatascience.com/llm-hallucinations-ec831dcd7786), and for documentation (the place viewers go to find the correct answer), frequent hallucinations are not good enough.
+
+### What changed?
+
+[GPT-4](https://openai.com/research/gpt-4) raised the bar significantly on question and answer use cases. While GPT-3.5 would score in the bottom 10% of LSAT test takers, GPT-4 would score in the top 10%.
+
+In our own tests, we also saw dramatic improvements on the quality of answers that helped us confide in the reliability of responses.
+
+Here's an example running on [Flatfile's documentation](https://flatfile.com/docs).
+
+<video className="w-full" controls>
+  <source src="/static/images/blog/chat/flatfile.mp4" type="video/mp4" />
+</video>
 
 ## How we built it
 
