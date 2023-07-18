@@ -49,9 +49,9 @@ export function ArticleLayout({
                 </h1>
                 <time
                   dateTime={meta.date}
-                  className="order-first flex items-center text-sm text-zinc-600 dark:text-zinc-400"
+                  className="order-first flex items-center text-sm text-zinc-600 dark:text-zinc-500"
                 >
-                  <span>{meta.date}</span>
+                  <span>{meta.date} • {meta.readingTime}</span>
                 </time>
                 <div className="mt-7">
                   <Author name={meta.author} imgUrl={meta.authorImageUrl} role={meta.authorRole} />
