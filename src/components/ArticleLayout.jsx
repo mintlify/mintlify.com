@@ -32,7 +32,7 @@ export function ArticleLayout({
       </Head>
       <Container className="mt-13 lg:mt-24">
         <div className="xl:relative">
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto max-w-2xl">
             <Link
               className="mt-12 group mb-8 flex items-center justify-center transition lg:absolute lg:-left-5 lg:mb-0 xl:-top-0.5 xl:left-0 xl:mt-0 text-zinc-600 hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300 text-sm space-x-0.5 font-medium"
               href="/blog"
