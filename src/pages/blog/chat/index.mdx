@@ -1,0 +1,59 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  title: 'Mintlify Chat - ChatGPT trained on your documentation',
+  description:
+    'How we upgraded the information discovery experience with Inkeep',
+  mobileImageUrl: '/static/images/blog/chat/chat.png',
+  desktopImageUrl: '/static/images/blog/chat/desktop.png',
+  author: 'Han Wang',
+  authorRole: 'Co-founder',
+  date: 'July 19, 2023',
+  category: 'Product',
+  authorImageUrl: '/static/images/blog/authors/han.png',
+  readingTime: '2 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+We're excited to announce that **Mintlify Chat** - our intelligent answer discovery experience - is officially out of private beta and available to all [startup plan](/pricing) customers.
+
+Mintlify Chat is built using [ChatGPT Plus](https://openai.com/blog/chatgpt), trained on your own documentation and tailored to be a helpful assistant for your users.
+
+Want to try it out for yourself? Go to [mintlify.com/docs](https://mintlify.com/docs), hit `cmd` + `K`, and type in a question.
+
+<img
+  src="/static/images/blog/chat/chat.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Why we built it
+
+We at Mintlify have always taken a problem-first approach to building products. When users click on the search box, we believe that they want answers, not a list of 10 pages that _might_ contain what they're looking for. Most documentation up till now only had conventional keyword search.
+
+Since ChatGPT came out, we've wondered how we could improve discoverability within documentation. After all, no one _loves_ the traditional search experience that we're so used to seeing in documentation.
+
+For a long time, we were troubled by the quality and reliability of the answers. LLMs are prone to [hallucinations](https://towardsdatascience.com/llm-hallucinations-ec831dcd7786), and the quality did not suffice.
+
+### What changed?
+
+[GPT-4](https://openai.com/research/gpt-4) raised the bar significantly on question and answer use cases. While GPT-3.5 would score in the bottom 10% of LSAT test takers, GPT-4 would score in the top 10%.
+
+In our own tests, we also saw dramatic improvements on the quality of answers that helped us confide in the reliability of responses.
+
+Here's an example running on [Flatfile's documentation](https://flatfile.com/docs).
+
+<video className="w-full" controls>
+  <source src="/static/images/blog/chat/flatfile.mp4" type="video/mp4" />
+</video>
+
+## Building with Inkeep
+
+We're excited to announce that we are launching Mintlify Chat in collaboration with our friends at [Inkeep](https://inkeep.com). Building the AI-powered chat system with Inkeep simply meant calling a few API requests in our product.
+
+The fine-tuning of the results, optimizations, and quality control has been thoughtfully crafted, ensuring that our end users are able to easily get the best answers for their questions.
+
+---
+
+Want to try it out? [Sign up](https://dashboard.mintlify.com/signup) for Mintlify and unlock an intelligent Q&A bot in your documentation today!

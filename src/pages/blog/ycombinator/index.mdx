@@ -3,12 +3,14 @@ import { ArticleLayout } from '@/components/ArticleLayout'
 export const meta = {
   title: 'Our journey through Y Combinator',
   description: `The story of our many pivots and a year of wandering in the desert. It wasn't the experience we expected, but it was the one we needed.`,
-  imageUrl: '/static/images/blog/ycombinator/ycombinator-graphic.png',
+  mobileImageUrl: '/static/images/blog/ycombinator/ycombinator-graphic.png',
+  desktopImageUrl: '/static/images/blog/ycombinator/ycombinator-graphic.png',
   author: 'Han Wang',
-  authorRole: 'Co-founder & CEO',
+  authorRole: 'Co-founder',
   date: 'July 10, 2023',
   category: 'About',
   authorImageUrl: '/static/images/blog/authors/han.png',
+  readingTime: '5 minute read',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />

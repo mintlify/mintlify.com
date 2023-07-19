@@ -22,9 +22,14 @@ function Article({ article }) {
       <Link href={`/blog/${article.slug}`} className="relative flex flex-col gap-10 lg:flex-row cursor-pointer">
         <div className="relative aspect-[16/9] sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0 overflow-hidden rounded-2xl ring-1 ring-inset ring-zinc-900/10 dark:ring-white/10">
           <img
-            src={article.imageUrl}
+            src={article.mobileImageUrl}
             alt={article.title}
-            className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-150"
+            className="block lg:hidden absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-150"
+          />
+          <img
+            src={article.desktopImageUrl}
+            alt={article.title}
+            className="hidden lg:block absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition duration-150"
           />
         </div>
         <div>
