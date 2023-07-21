@@ -1,0 +1,56 @@
+@ -0,0 +1,55 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  title:
+    'Keep Your Documentation Fresh Through Intelligent Content Suggestions',
+  description: 'Using AI Recommendations to Improve Documentation',
+  mobileImageUrl: '/static/images/blog/suggestions/thumbnail.png',
+  desktopImageUrl: '/static/images/blog/suggestions/desktop.png',
+  author: 'Josh Kim',
+  authorRole: 'Head of Ops and Sales',
+  date: 'July 20, 2023',
+  category: 'Product',
+  authorImageUrl: '/static/images/blog/authors/josh.jpg',
+  readingTime: '2 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/suggestions/thumbnail.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+At Mintlify, we work day-in and day-out with brilliant engineers, product leaders, and technical writers to build world-class documentation.
+
+While an amazing documentation experience design is important, we believe that well-thought content organization, readability, and accessibility are equally paramount to successful docs. Unfortunately, many of our users tell us about the difficulty of creating phenomenal content.
+
+That’s why today, we’re launching **Suggestions**: a new feature available on [Mintlify’s dashboard](https://dashboard.mintlify.com/) that provides helpful recommendations on how to improve your documentation.
+
+<video className="w-full" controls>
+  <source src="/static/images/blog/suggestions/demo.mp4" type="video/mp4" />
+</video>
+
+## Our new tool provides recommendations in three main areas:
+
+### Structure and Readability
+
+We scan the general layout and design of your documentation— **Suggestions** will then provide advice to improve readability. This includes changing header structure, introducing new custom components, and reorganizing text.
+
+### Grammar and Spelling
+
+We look for grammatical or spelling errors as well as offer insight into potential sentence structure changes to increase the literacy of the documentation to everyday users.
+
+### Links and Accessibility
+
+Broken links can be frustrating for users, as redirects to other parts of the documentation aren’t correctly tied. **Suggestions** assesses the functionality of all embedded links and the overall accessibility of the document.
+
+**This is just the start and there are many more reocmmendation areas coming soon!**
+
+## How did we build it?
+
+**Suggestions** is currently powered by [GPT-4](https://openai.com/research/gpt-4) and prompt-engineered from our experience working with exceptional documentation. It’s built to be consistently reliable and high quality.
+
+Want to try it out? [Sign up](https://dashboard.mintlify.com/signup) for Mintlify and unlock intelligent content suggestions for your documentation today!
