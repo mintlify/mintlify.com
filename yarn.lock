@@ -154,12 +154,13 @@
     "@types/mdx" "^2.0.0"
     "@types/react" ">=16"
 
-"@mintlify/validation@^0.1.52":
-  version "0.1.52"
-  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.52.tgz#3fe713135e5da233426f71c6485e53868e2eca54"
-  integrity sha512-IufqMimdqTMGylnBcr5VEuBtKfFtOINva+kuSMnymGc6gL2AylV8pHaB2m/8tcqNLyepQSh7EB9uxETCkEWeBw==
+"@mintlify/validation@^0.1.57":
+  version "0.1.57"
+  resolved "https://registry.yarnpkg.com/@mintlify/validation/-/validation-0.1.57.tgz#1883b1f5f32d6dc9ba925cc8b1a7405010f1dee0"
+  integrity sha512-dIUPNVrOwSuKGCTTTPOKpYoG8TTy0tK7AM0KoLtTsV/WB6vUU26qUWSMDSq0y4ULdhgdF+Pqa8GsSloA4OM3cw==
   dependencies:
     lcm "^0.0.3"
+    openapi-types "^12.1.0"
     zod "^3.20.6"
     zod-to-json-schema "^3.20.3"
 
@@ -4649,6 +4650,11 @@ onetime@^5.1.0:
   integrity sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==
   dependencies:
     mimic-fn "^2.1.0"
+
+openapi-types@^12.1.0:
+  version "12.1.3"
+  resolved "https://registry.yarnpkg.com/openapi-types/-/openapi-types-12.1.3.tgz#471995eb26c4b97b7bd356aacf7b91b73e777dd3"
+  integrity sha512-N4YtSYJqghVu4iek2ZUvcN/0aqH1kRDuNqzcycDxhOUpg7GdvLa2F3DgS6yBNhInhv2r/6I0Flkn7CqL8+nIcw==
 
 optionator@^0.9.1:
   version "0.9.1"
