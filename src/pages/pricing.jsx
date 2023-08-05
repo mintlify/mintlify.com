@@ -40,9 +40,9 @@ const plans = [
       'Unlimited editors',
       'Analytics and conversion insights',
       'ChatGPT for docs',
+      'Intelligent content suggestions',
       'Custom subpaths /docs',
       'White-glove migrations',
-      'Prioritized customer support',
     ],
   },
   {
@@ -275,7 +275,7 @@ export function Pricing() {
                 key={period}
                 value={period}
                 className={clsx(
-                  'cursor-pointer border border-zinc-300 py-[calc(theme(spacing.2)-1px)] px-[calc(theme(spacing.3)-1px)] text-sm text-zinc-700 outline-2 outline-offset-2 transition-colors hover:border-zinc-400 dark:border-zinc-500 dark:text-zinc-200',
+                  'cursor-pointer border border-zinc-300 px-[calc(theme(spacing.3)-1px)] py-[calc(theme(spacing.2)-1px)] text-sm text-zinc-700 outline-2 outline-offset-2 transition-colors hover:border-zinc-400 dark:border-zinc-500 dark:text-zinc-200',
                   period === 'Annually' ? 'rounded-l-lg' : '-ml-px rounded-r-lg'
                 )}
               >
