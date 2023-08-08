@@ -1,0 +1,90 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const meta = {
+  title: 'Mintlify Product Update July 2023',
+  description:
+    'What we launched in July: AI chat and content suggestions, link redirects, and more.',
+  mobileImageUrl: '/static/images/blog/july-2023/july.png',
+  desktopImageUrl: '/static/images/blog/july-2023/desktop.png',
+  author: 'Kate Chen',
+  authorRole: 'Growth',
+  date: 'August 8, 2023',
+  category: 'Product',
+  authorImageUrl: '/static/images/blog/authors/kate.jpg',
+  readingTime: '2 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+July brings AI features, autogeneration, and support for broken links to our users. Here’s a detailed breakdown of all our latest additions:
+
+## Mintlify Chat
+
+<img
+  src="/static/images/blog/chat/chat.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Goodbye, keyword search. **Mintlify Chat** upgrades your documentation discoverabilty through a conversational AI search experience. Built with the same technology as ChatGPT, it provides quality and consistent answers to any question your users might have. It’s a powerful way to leverage your docs for customer success.
+
+Mintlify Chat is built in partnership with our friends at Inkeep, available to all Mintlify startup plan customers. To learn more about Mintlify Chat, head <a href="https://mintlify.com/blog/chat" target="_blank">here</a>.
+
+## Mintlify Suggestions
+
+<img
+  src="/static/images/blog/july-2023/suggestions.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+We understand not having designated docs writers to continuously refine our documentation, which is why we built **AI Suggestions**.
+
+Powered by <a href="https://openai.com/research/gpt-4" target="_blank">GPT-4</a>, AI Suggestions makes improving your docs as easy as clicking a button and provides content recommendations on three fronts: readability, such as text organization; literacy, such as grammar and spelling; and, last but not least, link functionality and user accessibility.
+
+To read more about the feature, click <a href="https://mintlify.com/blog/suggestions" target="_blank">here</a>. **Suggestions** is available to all startup plan customers on the <a href="https://dashboard.mintlify.com/" target="_blank">Mintlify’s Dashboard</a> .
+
+## Link Configurations
+
+If you've changed any documentation page file paths (and subsequently URLs), we now support identifying broken links and maintaining that SEO you’ve been building.
+
+### Setting up SEO Redirects
+
+You can now easily set up 301 redirects in your `mint.json` file to maintain and build upon SEO generated from the previous page.
+
+```json
+{
+  "redirects": [
+    {
+      "source": "original/file/path",
+      "destination": "new/file/path"
+    }
+  ]
+}
+```
+
+Learn more about setting up 301 redirects <a href="https://mintlify.com/docs/settings/broken-links#redirects301" target="_blank">here</a>.
+
+### Identifying Broken Links
+
+Broken links can be a pain to identify, especially when you update many files at once. We’ve added a feature to our CLI to identify any broken links in your docs so you can fix them.
+
+```bash
+mintlify broken-links
+```
+
+Avoid taking your users to dead-ends. Learn more <a href="https://mintlify.com/docs/settings/broken-links#broken-links" target="_blank">here</a>
+
+## Autogenerating OpenAPI Endpoints
+
+Tired of manually creating MDX files for every endpoint? We now fully support automated API endpoint documentation.
+
+```bash
+npx @mintlify/scraping@latest openapi-file <path-to-openapi-file>
+```
+
+Our Mintlify scraper will create MDX files for your OpenAPI endpoints from an OpenAPI file. Then, simply copy-paste the output of the scraper to easily organize the endpoints in your navigation. Hopefully, this will save you the extra minutes (and braincells) spent manually setting-up your API endpoints. Read more on how to run this command <a href="https://mintlify.com/docs/api-playground/openapi-generation" target="_blank">here</a>.
+
+## Wrapping Up
+
+This concludes our July round-up of Mintlify’s latest features. Stay tuned to all of our latest product updates, make sure to follow our <a href="https://twitter.com/mintlify" target="_blank">Twitter</a>. To request any features, let us know in our <a href="https://join.slack.com/t/mintlify-users/shared_invite/zt-1xfzz6x35-f4o4WCYfpvLhSj3O7WAOMA" target="_blank">Slack community</a>. We’ll see you around :)
