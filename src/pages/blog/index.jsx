@@ -74,13 +74,17 @@ export default function ArticlesIndex({ articles }) {
           name="Blogs"
           content="Build the documentation you've always wanted. Beautiful out of the box, easy to maintain, and optimized for user engagement."
         />
-        <meta name="og:image" content={article.desktopImageUrl} />
       </Head>
       <div className="mx-auto">
         <BlogLayout title="Blog">
           <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
             {articles.map((article) => (
-              <Article key={article.slug} article={article} />
+              <>
+                <Head>
+                  <meta name="og:image" content={article.desktopImageUrl} />
+                </Head>
+                <Article key={article.slug} article={article} />
+              </>
             ))}
           </div>
         </BlogLayout>

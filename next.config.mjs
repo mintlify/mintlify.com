@@ -1,4 +1,4 @@
-import {withSentryConfig} from '@sentry/nextjs';
+import { withSentryConfig } from '@sentry/nextjs'
 import rehypePrism from '@mapbox/rehype-prism'
 import nextMDX from '@next/mdx'
 import remarkGfm from 'remark-gfm'
@@ -97,13 +97,17 @@ const withMDX = nextMDX({
   },
 })
 
-export default withSentryConfig(withMDX(nextConfig), {
-  org: "mintlify",
-  project: "mintlify-dot-com",
-  dist: '1',
-}, {
-  widenClientFileUpload: true,
-  transpileClientSDK: true,
-  hideSourceMaps: true,
-  disableLogger: true,
-});
+export default withSentryConfig(
+  withMDX(nextConfig),
+  {
+    org: 'mintlify',
+    project: 'mintlify-dot-com',
+    dist: '1',
+  },
+  {
+    widenClientFileUpload: true,
+    transpileClientSDK: true,
+    hideSourceMaps: true,
+    disableLogger: true,
+  }
+)
