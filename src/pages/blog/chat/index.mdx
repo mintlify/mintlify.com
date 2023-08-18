@@ -16,11 +16,11 @@ export const meta = {
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
-We're excited to announce that **Mintlify Chat** - our intelligent answer discovery experience - is officially out of private beta and available to all [startup plan](/pricing) customers.
+We are excited to announce that **Mintlify Chat** - our AI-powered conversational search for documentation discovery - is now out of private beta. Built with the technology behind <a href="https://openai.com/blog/chatgpt" target="_blank">ChatGPT</a>, Mintlify Chat learns from your documentation to answer any question your users might have.
 
-Mintlify Chat is built using the technology behind [ChatGPT](https://openai.com/blog/chatgpt), trained on your own documentation and tailored to be a helpful assistant for your users.
+You might be familiar with the conventional keyword search that offers 10 different suggestions of what you may (or often, may not) be looking for. We saw users struggle to find the solutions they needed - we built Mintlify Chat to reduce that friction and ensure customer success. With a simple and intuitive experience, we can deliver information quickly and effectively.
 
-Want to try it out for yourself? Go to [mintlify.com/docs](https://mintlify.com/docs), hit `cmd` + `K`, and type in a question.
+Eager to see Mintlify Chat in action? Go to <a href="https://mintlify.com/docs" target="_blank">mintlify.com/docs</a>, hit `cmd` + `K`, and ask away.
 
 <img
   src="/static/images/blog/chat/chat.png"
@@ -28,32 +28,35 @@ Want to try it out for yourself? Go to [mintlify.com/docs](https://mintlify.com/
   className="w-full rounded-md"
 />
 
-## Why we built it
+## How we built Mintlify Chat:
 
-We at Mintlify have always taken a problem-first approach to building products. When users click on the search box, we believe that they want answers, not a list of 10 pages that _might_ contain what they're looking for. Most documentation up till now only had conventional keyword search.
+Ever since Mintlify launched (and perhaps since the beginning of documentation), we’ve been looking for ways to improve information discoverability. While GPT-3.5 had potential, it lacked consistency and quality, being prone to <a href="https://towardsdatascience.com/llm-hallucinations-ec831dcd7786" target="_blank">hallucinations</a> and pulling out misleading or entirely false results from thin air.
 
-Since ChatGPT came out, we've wondered how we could improve discoverability within documentation. After all, no one _loves_ the traditional search experience that we're so used to seeing in documentation.
+The only thing worse than providing no answer was providing the incorrect answer—as it was, our search for more effective documentation discovery would have to wait.
 
-For a long time, we were troubled by the quality and reliability of the answers. LLMs are prone to [hallucinations](https://towardsdatascience.com/llm-hallucinations-ec831dcd7786), and the quality did not suffice.
+<a href="https://openai.com/research/gpt-4" target="_blank">GPT-4</a> changed all that. While GPT-3.5 would’ve scored in the bottom 10% of LSAT test
+takers, GPT-4 is scoring in the top 10%. On top of that, our own test runs have seen
+a drastic improvement in quality and consistency of answers. With GPT-4, the advancement
+of intelligent documentation search and discovery has become a reality.
 
-### What changed?
+Powered by GPT-4, Mintlify Chat has been made possible through collaboration with our friends at <a href="https://inkeep.com" target="_blank">Inkeep</a>. With their partnership, building an AI-powered chat system only required a few API requests. From there, our team fine-tuned all aspects of the chat system, from optimizing product performance to overseeing quality control.
 
-[GPT-4](https://openai.com/research/gpt-4) raised the bar significantly on question and answer use cases. While GPT-3.5 would score in the bottom 10% of LSAT test takers, GPT-4 would score in the top 10%.
+The end result? An intelligent search system primed to deliver the best answers for your documentation queries, each and every time.
 
-In our own tests, we also saw dramatic improvements on the quality of answers that helped us confide in the reliability of responses.
+### Why you’ll want Mintlify Chat:
 
-Here's an example running on [Flatfile's documentation](https://flatfile.com/docs).
+_Okay, we get it_, you think. _It’s an AI search function. It gives me answers. What’s new?_
+
+Well, plainly put,it’s powerful, developer-first, and tailored to what you and your users want in documentation—in other words, perfect for answering any question about anything from onboarding and troubleshooting to discovering power user features.
+
+Think streamlined workflows. Think comprehensive, easy-to-use, and what you need right when you need it. You get the gist.
+
+But hey, don’t listen to us. See the magic for yourself:
 
 <video className="w-full" controls>
   <source src="/static/images/blog/chat/flatfile.mp4" type="video/mp4" />
 </video>
 
-## Building with Inkeep
+## Where to get Mintlify Chat:
 
-We're excited to announce that we are launching Mintlify Chat in collaboration with our friends at [Inkeep](https://inkeep.com). Building the AI-powered chat system with Inkeep simply meant calling a few API requests in our product.
-
-The fine-tuning of the results, optimizations, and quality control has been thoughtfully crafted, ensuring that our end users are able to easily get the best answers for their questions.
-
----
-
-Want to try it out? [Sign up](https://dashboard.mintlify.com/signup) for Mintlify and unlock an intelligent Q&A bot in your documentation today!
+Interested in offering Mintlify Chat in your documentation? [Sign-up](https://mintlify.com/start) for Mintlify and join our start-up plan to unlock an intelligent search bot in your documentation today!
