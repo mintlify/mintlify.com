@@ -1,8 +1,9 @@
 import Head from 'next/head'
-
-import { BlogLayout } from '@/components/SimpleLayout'
+import { useState, useEffect } from 'react'
+import { Container } from '@/components/Container'
 import { getAllArticles } from '@/lib/getAllArticles'
 import Link from 'next/link'
+import { CategoryTags } from '@/components/blog/CategoryTags'
 
 export function Author({ name, role, imgUrl }) {
   return (
@@ -66,6 +67,14 @@ function Article({ article }) {
 }
 
 export default function ArticlesIndex({ articles }) {
+  const [articlesToShow, setArticlesToShow] = useState(articles)
+  const [category, setCategory] = useState('Featured')
+
+  useEffect(() => {
+    setArticlesToShow(
+      articles.filter((article) => article.categories.includes(category))
+    )
+  }, [category])
   return (
     <>
       <Head>
@@ -76,13 +85,24 @@ export default function ArticlesIndex({ articles }) {
         />
       </Head>
       <div className="mx-auto">
-        <BlogLayout title="Blog">
-          <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
+        <Container className="mt-12 sm:mt-24">
+          <header>
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+              Blog
+            </h1>
+          </header>
+          <CategoryTags
+            setCategory={(category) => setCategory(category)}
+            selectedCategory={category}
+          />
+          <div className="mt-8 sm:mt-14">
+            <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+              {articlesToShow.map((article) => (
+                <Article key={article.slug} article={article} />
+              ))}
+            </div>
           </div>
-        </BlogLayout>
+        </Container>
       </div>
     </>
   )
