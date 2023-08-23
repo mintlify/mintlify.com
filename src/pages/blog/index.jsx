@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { BlogLayout } from '@/components/SimpleLayout'
+import { BlogLayout, SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
 import Link from 'next/link'
 
@@ -76,13 +76,13 @@ export default function ArticlesIndex({ articles }) {
         />
       </Head>
       <div className="mx-auto">
-        <BlogLayout title="Blog">
+        <SimpleLayout title="Blog">
           <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
             {articles.map((article) => (
               <Article key={article.slug} article={article} />
             ))}
           </div>
-        </BlogLayout>
+        </SimpleLayout>
       </div>
     </>
   )
