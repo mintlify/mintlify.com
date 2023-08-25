@@ -1,28 +1,40 @@
 import { ArticleLayout } from '@/components/blog/ArticleLayout'
 
 export const meta = {
-  title: 'Code Documentation vs Technical Documentation',
+  title: 'Code Documentation vs. Technical Documentation',
   description: "Why they're different and how to make the most of both.",
-  mobileImageUrl: '/static/images/blog/chat/chat.png',
-  desktopImageUrl: '/static/images/blog/chat/desktop.png',
+  mobileImageUrl: '/static/images/blog/code-vs-technical/mobile.png',
+  desktopImageUrl: '/static/images/blog/code-vs-technical/desktop.png',
   author: 'Nefe James',
   authorRole: 'Content',
   date: 'July 25, 2023',
   categories: ['Developer Experience'],
-  authorImageUrl: '/static/images/blog/authors/nefe.png',
-  readingTime: '4 minute read',
+  authorImageUrl: '/static/images/blog/authors/nefe.jpeg',
+  readingTime: '5 minute read',
 }
 
 export default (props) => <ArticleLayout meta={meta} {...props} />
 
+<img
+  src="/static/images/blog/code-vs-technical/desktop.png"
+  alt="deepcode ai demo"
+  className="w-full rounded-md"
+/>
+
 It doesn't matter how great your product is if your users don't know how to use it. Software developers understand this, so we go to great lengths to document our APIs, SDKs, and even specific functions we create. When done right, proper documentation makes it seamless for your audience to understand and utilize your product effectively.
+
 There are two common types of documentation in the ecosystem: code documentation and technical documentation. Some people use them interchangeably and believe they mean the same thing – but they don’t.
+
 Let’s dive into the contrasts between code and technical documentation.
 
 ## What is Code Documentation?
 
 Code documentation specializes in the actual code of a codebase, covering what it does and how it works. It also provides information that shows how to properly utilize and build upon the codebase.
-While it may seem redundant, code documentation is important for two reasons. First, it gives other developers the information they need to understand a codebase quickly and effectively. Secondly, it helps prevent cases of “ code amnesia," where developers forget the context behind their code days, weeks, or months after writing it. After writing thousands of lines of code, you’re bound to forget some of it. As a result, having some code documentation, even a small amount, can help jog your memory on why it was built the way you built it.
+
+While it may seem redundant, code documentation is important for two reasons: 
+
+- First, it gives other developers the information they need to understand a codebase quickly and effectively. 
+- Secondly, it helps prevent cases of “ code amnesia," where developers forget the context behind their code days, weeks, or months after writing it. After writing thousands of lines of code, you’re bound to forget some of it. As a result, having some code documentation, even a small amount, can help jog your memory on why it was built the way you built it.
 
 There are different types of code documentation, including:
 
@@ -33,14 +45,16 @@ There are different types of code documentation, including:
 
 <img
   src="/static/images/blog/code-vs-technical/code-documentation.png"
-  alt="blog thumbnail"
+  alt="code documentation example"
   className="w-full rounded-md"
 />
 
 ## What is Technical Documentation?
 
 Technical documentation can be a blanket term for any document that provides comprehensive information about a product or system, but often it takes the form of API documentation, SDK documentation, or even manual guides.
+
 As a result, technical documentation serves a variety of purposes, like explaining how a product works to end users, describing the technical details behind the way a product is built, or acting as a knowledge base of internal data for a business.
+
 With its wide range of uses, “technical documentation” can be a misleading term since it can refer to technical and non-technical documents. For example, API documentation usually requires a level of technicality geared towards developers, such that the average person wouldn’t understand, whereas an IKEA manual with instructions for assembling a table is less technical and made for a more general audience.
 
 There are different types of technical documentation, including but not limited to:
@@ -49,7 +63,8 @@ There are different types of technical documentation, including but not limited 
 - **Code documentation**: a document or comments written alongside some code that explains how it works and what it does.
 - **API documentation**: shows developers how to effectively integrate an API and the features the API offers. It often includes set-up instructions and code samples. An example is the Google Maps API, which developers use to integrate maps into their applications.
 - **SDK documentation**: a document that shows developers how to use an SDK. Like API documentation, this also includes set-up instructions, code samples, and installation steps. An example is Facebook's JavaScript SDK.  
-  Because technical documentation can be written for a variety of use cases, it’s often also presented in different ways. From a website to manuals written in Google Docs, there’s no standard format for technical documentation, and the content is often is structured in a way that makes most sense to its audience.
+
+Because technical documentation can be written for a variety of use cases, it’s often also presented in different ways. From a website to manuals written in Google Docs, there’s no standard format for technical documentation, and the content is often is structured in a way that makes most sense to its audience.
 
 ## Differences Between Code Documentation and Technical Documentation
 
@@ -57,25 +72,32 @@ Now that we understand what code and technical documentation are, let's explore 
 
 ### Audience
 
-The audience is the most crucial difference between both types of documentation. The primary target of code documentation is developers and technical stakeholders. It requires some level of programming and software development knowledge. Because code documentation is often written specifically to help developers understand code blocks easier, they may be more literal and technical, relying on the reader’s knowledge to be meaningful.
+The audience is the most crucial difference between both types of documentation. The primary target of code documentation is developers and technical stakeholders. It requires some level of programming and software development knowledge. 
+
+Because code documentation is often written specifically to help developers understand code blocks easier, they may be more literal and technical, relying on the reader’s knowledge to be meaningful.
+
 On the other hand, technical documentation is more of an umbrella term and can focus on anyone from developers and internal eyes to end users and non-technical stakeholders. Sometimes, it can focus on all of the above at the same time. It is all-encompassing and includes technical and non-technical documents. Some of these documents require a level of technical knowledge, while others can be easily understood by a non-technical audience.
 
 ### Purpose
 
 The primary purpose of code documentation is to help developers understand how a codebase works and how to utilize it effectively. It includes information on how to configure a development environment, necessary installation steps, and comments about different parts of the codebase, such as the functions and components.
+
 In contrast, the primary purpose of technical documentation is to provide accurate, clear, and comprehensive information about a product, process, or system. While code documentation is more streamlined and limited to codebases, technical documentation is generalized and covers many use cases. Technical documentation can also have a dynamic purposes, like acting as a customer support lever or an onboarding guide.
 
 ### Delivery Format
 
 Code documentation is often concise and embedded directly within the code itself. It is often written using specific markup or annotation languages, such as Doxygen, Javadoc, or JSDoc.
+
 On the other hand, technical documentation is often published as standalone documents or web pages. It usually has a defined structure with different sections and comprises a table of contents, title, introduction, and visuals like diagrams and charts to illustrate concepts, processes, and procedures.
 
 ### Tools Used
 
 Developers often use comments in the form of plain text or markdown in an IDE or code editor to create code documentation. There are also code documentation tools, such as Github Copilot or Mintlify AI Doc Writer, which integrates with IDEs and automatically generates the documentation for a piece of code.
+
 Technical documentation has a wider range of tools compared to code documentation, since the format of the documentation may look incredibly different. However, what technical documentation shares in common is that it often embodies the style and brand of the product it’s referencing. Companies may use platforms like Mintlify, Notion, Google Docs, and Confluence to achieve this goal.
 
 ## Conclusion
 
 The right tool makes all the difference when developing effective code and technical documentation. Mintlify is the developer-first, AI-powered, and performant documentation solution that helps you build documentation that converts users.
+
 <a href="https://mintlify.com/start?utm_campaign=code_vs_technical&utm_medium=blog&utm_source=mintlify" target="_blank">Get started</a> to start developing effective documentation with ease. Explore our showcase to see how other great brands have built world-class documentation with Mintlify.

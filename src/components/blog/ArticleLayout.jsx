@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
@@ -22,8 +21,6 @@ function ArrowLeftIcon(props) {
 }
 
 export function ArticleLayout({ children, meta, isRssFeed = false }) {
-  let router = useRouter()
-
   if (isRssFeed) {
     return children
   }
