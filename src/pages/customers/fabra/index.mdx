@@ -3,109 +3,104 @@ import { StoryQuote } from '@/components/customerStories/StoryQuote'
 
 export const meta = {
   title:
-    'A solution in minutes—How Fabra worked with Mintlify to launch their API documentation with speed and efficiency',
+    'How Fabra worked with Mintlify to launch their API documentation in minutes',
   description:
     'For Fabra’s founders, quick and efficient client communication is key. Discover how Mintlify delivered a solution to them in minutes.',
-  mobileImageUrl: '/static/images/blog/chat/chat.png',
   desktopImageUrl: '/static/images/blog/chat/desktop.png',
-  logoImageUrl: '/static/images/customers/resend/logo.svg',
+  logoImageUrl: '/static/images/customers/fabra/logo.png',
   quote:
-    'With Mintlify, it was super easy to get started and we basically had 90% of what we wanted in just a few minutes.',
+    'It was super easy to get started on Mintlify and we basically had 90% of what we wanted in just a few minutes.',
   person: 'Nick Fiacco',
   role: 'Co-Founder',
+  priority: 10,
 }
 
 export const about = {
-  imageUrl: '/static/images/customers/resend/about.webp',
-  url: 'https://fabra.io',
+  imageUrl: '/static/images/customers/fabra/about.png',
+  docsUrl: 'https://docs.fabra.io',
   description:
-    'Email API that keeps transactional emails out of spam folders at scale. Founded in January 2023',
-  backedBy:
-    'Y Combinator, SV Angel, Dylan Field of Figma, Guillermo Rauch of Vercel, and more',
+    'Data integration tool that imports and processes external data warehouses. Founded in July 2022.',
+  backedBy: 'Y Combinator',
 }
 
 export const Quote = ({ quote }) => {
   return (
     <StoryQuote
       quote={quote}
-      imgUrl="/static/images/customers/resend/zeno.jpeg"
-      person="Zeno Rocha, Founder & CEO"
+      imgUrl="/static/images/customers/fabra/nick.jpeg"
+      person="Nick Fiacco, Co-Founder"
     />
   )
 }
 
 export default (props) => <StoryLayout meta={meta} about={about} {...props} />
 
-As the founder and CEO of Resend, [Zeno Rocha](https://www.linkedin.com/in/zenorocha/) is driven to build the best developer-focused email API and create high-quality documentation for it.
+Fabra founders <a href="https://www.linkedin.com/in/nfiacco/" target="_blank">Nick</a> and <a href="https://www.linkedin.com/in/colecable/">Cole</a> were quick to realize the importance of smooth and fast-paced customer onboarding.
 
-Docs done right are more than just walls of text, according to Zeno. They’re thoughtful and well-designed extensions of a brand’s identity; they’re intuitive for developers to build and update; and they’re easy for users to navigate and digest.
+A startup working with B2B SaaS clients, Fabra’s core offering provides a quick and easy method for firms to build customer-facing data warehouse integrations, so their clients can better close customer deals.
 
 ## The Challenge
 
-To get the perfect balance of quality and functionality, Zeno used to believe that developers had to build docs from scratch with a slow and resource-heavy process he knew all too well. Before launching Resend, he built docs in-house for various projects, most recently as VP of Developer Experience at [WorkOS](https://workos.com/).
+Soon after launching, the founders soon found themselves overwhelmed onboarding customers via calls and Slack Connect channels. In response to ad-hoc product questions overflowing from their inboxes, they wrote up private Google Docs for each of their customers.
 
-<Quote
-  quote="Typically, people see docs as adjacent to the product, but I’ve always
-  believed docs are a part of the product"
+<Quote quote="We had a bunch of details about how to call our APIs and verify payloads etc, in a Google Doc very early on, which is obviously not ideal." />
+
+Lacking the organization required to quickly onboard customers at scale, Nick and Cole needed an immediate solution to effectively communicate with their users.
+
+## The Search to Ensure Customer Success
+
+When it came to searching for a documentation tool that could meet all their needs, Nick and Cole had three core priorities:
+
+1. Beautiful design that matched their brand
+2. Open API integration to support their endpoints
+3. Version control for easy collaboration and updating
+
+They looked at several documentation providers, but were unhappy with the high levels of involvement required. They didn’t want to manage the deployments themselves and still wanted their docs to exist inside their codebase.
+
+As developers, Nick and Cole needed a solution that blended with their existing processes, not an extra platform to maintain.
+
+## The solution
+
+Mintlify was the answer they were looking for. Three key features stood out to them: beautiful documentation from the get-go, auto-deployment from Git, and a ready-to-use API playground with zero setup.
+
+<Quote quote="With Mintlify, it was super easy to get started and we basically had 90% of what we wanted in just a few minutes." />
+
+### Beautiful documentation out of the box
+
+With the Mintlify starter template, the Fabra team had everything they needed already built in: light or dark mode, a well-organized sidebar, and quickstart cards to get their customers set up as easily as possible.
+
+Even better, Fabra found Mintlify’s docs platform to be highly customizable, allowing them to craft every aspect of their docs to highlight the look and feel of their brand.
+
+<Quote quote="Our docs look 10x better now that we use Mintlify, basically out of the box. I always feel super confident sharing them with customers because of how polished they are." />
+
+### Automated deployment from Git
+
+With automated deployment, the team’s time was freed up for other things, so that Nick could focus on maintaining their product and engaging clients.
+
+"The biggest deciding factor for us was the documentation-as-code feature. Having everything auto-deploy from Github was a game changer," he emphasized.
+
+### API playground with no setup
+
+<img
+  src="/static/images/customers/fabra/api.png"
+  alt="API Playground"
+  className="rounded-md"
 />
 
-Treating docs like a product, he learned, means having a roadmap, budget, and a team of dedicated engineers, designers, and others to build docs, identify patterns, and organize content.
+Ease of usage was another key factor for Fabra’s decision making. For the team, Mintlify’s hands-free API playground set-up for all endpoints was astounding.
 
-While Zeno wanted the control and customization you get from DIY docs for Resend, he didn’t have the budget, resources, or time to spare. And as a Y Combinator (W23) startup, Resend needed to prove traction right away. “We had to figure out how to make something fast, but still have that quality factor,” says Zeno.
-
-## The search for a documentation partner
-
-With skepticism that he would get the quality he wanted, Zeno launched a search for a product that could help Resend build first-class docs fast—without pain and frustration. His top requirements:
-
-- Modern, beautiful, and customizable design
-- A natural fit for developer workflows
-
-<Quote quote="The fact that you can write content in markdown, don’t need to think about how to display it nicely, and it just renders well is the functionality we needed—Mintlify checked all the boxes." />
-
-## The Solution
-
-Before Mintlify, Resend tested two other documentation platforms, but were disappointed by the outdated designs, lack of customization, and poor readability. “I didn’t feel like they cared about docs as much as I did,” he says. “If you’re building a developer product, you need a partner, not just a vendor.”
-
-So in November of 2022, they tried Mintlify, hopeful that fellow YC alumni (W22) could deliver on design and performance. Impressed by what they saw, Resend also chose Mintlify for its open source project, [React Email](https://react.email/).
-
-### Time savings
-
-Right away, Mintlify’s white-glove docs migration, which was completed in less than two days, gave Zeno the crucial thing every founder needs: time.
-
-“If I had done that manually, it would’ve taken me hours. But even if it took me two minutes, that’s the type of work I don’t want to do. It’s not the best use of my time,” he says.
-
-### Customization without the hassle
-
-Out of the box, Mintlify’s starter templates, which have built-in essentials like sidebars and quick-start cards, impressed Zeno. “You can tell Mintlify has kept up with the trends around docs,” he says.
-
-Resend easily customized the templates, creating a seamless fit between its website and [docs](https://resend.com/docs/introduction), both featuring the same simple, black and white aesthetic.
-
-### Zero friction for developers
-
-The days of tedious documentation updates are long gone. Zeno describes Resend’s process in one word: fast. Because creating and updating docs with Mintlify is as simple as updating a markdown file and pushing to GitHub, there’s no friction with current developer workflows.
-
-Additionally, there’s no need for added steps or tools, developers are more motivated to update docs, so there’s less of a chance of docs going stale.
+With Mintlify’s OpenAPI integration, all they had to do was link to an OpenAPI file and their users would be able to interact with their API without ever leaving the documentation.
 
 ## Results
 
-By early August 2023, just eight months post-launch, Resend already had 15,000 users. Zeno credits some of that success to the time and energy Mintlify freed up for Resend to focus on growth and development.
+With Mintlify, Fabra saves at least 2 hours a week from going back and forth with their users. Rather than leading customers step-by-step through the process, Mintlify’s powerful documentation platform now does the work for Fabra’s team.
 
-<Quote quote="Without Mintlify, our products wouldn’t be at the level they are now. And I highly doubt we’d be able to build a product that has this many users in such a short amount of time if we had to build our own docs." />
+With their new docs, users get a comprehensive and intuitive reference for how to integrate the Fabra SDK into their own applications with ease.
 
-### Recognition and conversion
+<Quote quote="By giving us a competitive advantage in the developer experience, Mintlify has really helped us put our best foot forward." />
 
-Another sign of success for Zeno is the frequent praise the startup gets from its customers, who often share its docs on Slack inspiration channels. He knows that when happy customers call out the docs’ attention to detail, they’re really talking about functionality.
+Since data warehouse integrations are at the core of Fabra's product, the startup is always working on supporting new data sources. Their toolbox will only grow as their product encompasses more of their customer’s needs.
 
-### A documentation partner, at last
+As Fabra expands their offerings, Mintlify enables the team to add the necessary documentation seamlessly and effortlessly.
 
-As Resend grows, Zeno expects Mintlify to grow along with it—especially as Mintlify continues to launch new features, like Mintlify Chat.
-
-Instead of the usual keyword search, Mintlify Chat lets users search docs with the same AI technology behind ChatGPT. Best of all, new updates and features are automatically deployed.
-
-And if Resend experiences hiccups or problems of any size on its way to the next level, Zeno is confident that Mintlify’s customer support will be there. “I've never met people who cared about docs as much as I do,” he says.
-
-Mintlify’s support is so fast and responsive, it’s become a model for Zeno as he builds Resend.
-
-<Quote quote="I want to provide this level of support to my own users. When you do work that inspires others to do better work themselves, that’s truly exceptional." />
-
-Want to set up docs like Resend? We’ll migrate your docs for free as a part of our startup plan - get started [here](https://mintlify.com/start)
+Want to set up docs like Fabra? We’ll migrate your docs for free as a part of our startup plan - get started [here](https://mintlify.com/start)

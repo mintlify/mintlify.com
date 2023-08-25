@@ -58,14 +58,14 @@ export function StoryLayout({ children, meta, about }) {
                 <div className="sticky top-0 col-span-2 h-screen pr-4 pt-12">
                   <img
                     src={about.imageUrl}
-                    className="block w-1/2 rounded-md object-cover"
+                    className="block w-2/3 rounded-md object-cover"
                   />
                   <AboutSection title="About" text={about.description} />
                   <Link
                     className="flex items-center gap-2 fill-zinc-500 text-xs text-zinc-500 hover:fill-zinc-900 hover:text-zinc-900"
-                    href={about.url}
+                    href={about.docsUrl}
                   >
-                    {about.url}
+                    {about.docsUrl}
                     <OpenIcon />
                   </Link>
                   <AboutSection title="Backed by" text={about.backedBy} />

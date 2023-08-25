@@ -22,5 +22,5 @@ export async function getAllStories() {
 
   let stories = await Promise.all(storyFilenames.map(importStory))
 
-  return stories
+  return stories.sort((a, z) => a.priority - z.priority)
 }

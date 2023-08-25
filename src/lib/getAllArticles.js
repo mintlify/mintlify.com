@@ -19,5 +19,5 @@ export async function getAllArticles() {
 
   let articles = await Promise.all(articleFilenames.map(importArticle))
 
-  return articles.sort((a, z) => new Date(z.date) - new Date(a.date))
+  return articles.sort((a, z) => new Date(a.date) - new Date(z.date))
 }
