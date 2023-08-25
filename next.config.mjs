@@ -52,6 +52,11 @@ const nextConfig = {
         permanent: false,
       },
       {
+        source: '/showcase',
+        destination: '/customers',
+        permanent: false,
+      },
+      {
         source: '/enterprise',
         destination: 'https://calendly.com/mintlify/mintlify-enterprise',
         permanent: false,

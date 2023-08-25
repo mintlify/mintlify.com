@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { BlogLayout, SimpleLayout } from '@/components/SimpleLayout'
+import { SimpleLayout } from '@/components/SimpleLayout'
 import { getAllArticles } from '@/lib/getAllArticles'
 import Link from 'next/link'
 
@@ -16,7 +16,7 @@ export function Author({ name, role, imgUrl }) {
   )
 }
 
-function Article({ article }) {
+function ArticlePreview({ article }) {
   return (
     <article className="group">
       <Link
@@ -79,7 +79,7 @@ export default function ArticlesIndex({ articles }) {
         <SimpleLayout title="Blog">
           <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
             {articles.map((article) => (
-              <Article key={article.slug} article={article} />
+              <ArticlePreview key={article.slug} article={article} />
             ))}
           </div>
         </SimpleLayout>

@@ -1,0 +1,111 @@
+import { StoryLayout } from '@/components/customerStories/StoryLayout'
+import { StoryQuote } from '@/components/customerStories/StoryQuote'
+
+export const meta = {
+  title:
+    'Why Resend partnered with Mintlify to create world-class documentation instead of building from scratch',
+  description:
+    'For Resend’s founder, world-class documentation is nonnegotiable. Learn why he chose Mintlify instead of building docs from scratch. ',
+  mobileImageUrl: '/static/images/blog/chat/chat.png',
+  desktopImageUrl: '/static/images/blog/chat/desktop.png',
+  logoImageUrl: '/static/images/customers/resend/logo.svg',
+  quote:
+    "Without Mintlify, our products wouldn’t be at the level they are now. I doubt we'd have this many users in such a short amount of time if we had to build our own docs.",
+  person: 'Zeno Rocha',
+  role: 'Founder & CEO',
+}
+
+export const about = {
+  imageUrl: '/static/images/customers/resend/about.webp',
+  url: 'https://resend.com',
+  description:
+    'Email API that keeps transactional emails out of spam folders at scale. Founded in January 2023',
+  backedBy:
+    'Y Combinator, SV Angel, Dylan Field of Figma, Guillermo Rauch of Vercel, and more',
+}
+
+export const Quote = ({ quote }) => {
+  return (
+    <StoryQuote
+      quote={quote}
+      imgUrl="/static/images/customers/resend/zeno.jpeg"
+      person="Zeno Rocha, Founder & CEO"
+    />
+  )
+}
+
+export default (props) => <StoryLayout meta={meta} about={about} {...props} />
+
+As the founder and CEO of Resend, <a href="https://www.linkedin.com/in/zenorocha/" target="_blank">Zeno Rocha</a> is driven to build the best developer-focused email API and create high-quality documentation for it.
+
+Docs done right are more than just walls of text, according to Zeno. They’re thoughtful and well-designed extensions of a brand’s identity; they’re intuitive for developers to build and update; and they’re easy for users to navigate and digest.
+
+## The Challenge
+
+To get the perfect balance of quality and functionality, Zeno used to believe that developers had to build docs from scratch with a slow and resource-heavy process he knew all too well. Before launching Resend, he built docs in-house for various projects, most recently as VP of Developer Experience at [WorkOS](https://workos.com/).
+
+<Quote
+  quote="Typically, people see docs as adjacent to the product, but I’ve always
+  believed docs are a part of the product"
+/>
+
+Treating docs like a product, he learned, means having a roadmap, budget, and a team of dedicated engineers, designers, and others to build docs, identify patterns, and organize content.
+
+While Zeno wanted the control and customization you get from DIY docs for Resend, he didn’t have the budget, resources, or time to spare. And as a Y Combinator (W23) startup, Resend needed to prove traction right away. “We had to figure out how to make something fast, but still have that quality factor,” says Zeno.
+
+## The search for a documentation partner
+
+With skepticism that he would get the quality he wanted, Zeno launched a search for a product that could help Resend build first-class docs fast—without pain and frustration. His top requirements:
+
+- Modern, beautiful, and customizable design
+- A natural fit for developer workflows
+
+<Quote quote="The fact that you can write content in markdown, don’t need to think about how to display it nicely, and it just renders well is the functionality we needed—Mintlify checked all the boxes." />
+
+## The Solution
+
+Before Mintlify, Resend tested two other documentation platforms, but were disappointed by the outdated designs, lack of customization, and poor readability. “I didn’t feel like they cared about docs as much as I did,” he says. “If you’re building a developer product, you need a partner, not just a vendor.”
+
+So in November of 2022, they tried Mintlify, hopeful that fellow YC alumni (W22) could deliver on design and performance. Impressed by what they saw, Resend also chose Mintlify for its open source project, <a href="https://react.email/" target="_blank">React Email</a>.
+
+### Time savings
+
+Right away, Mintlify’s white-glove docs migration, which was completed in less than two days, gave Zeno the crucial thing every founder needs: time.
+
+“If I had done that manually, it would’ve taken me hours. But even if it took me two minutes, that’s the type of work I don’t want to do. It’s not the best use of my time,” he says.
+
+### Customization without the hassle
+
+Out of the box, Mintlify’s starter templates, which have built-in essentials like sidebars and quick-start cards, impressed Zeno. “You can tell Mintlify has kept up with the trends around docs,” he says.
+
+Resend easily customized the templates, creating a seamless fit between its website and <a href="https://resend.com/docs/introduction" target="_blank">docs</a>, both featuring the same simple, black and white aesthetic.
+
+### Zero friction for developers
+
+The days of tedious documentation updates are long gone. Zeno describes Resend’s process in one word: fast. Because creating and updating docs with Mintlify is as simple as updating a markdown file and pushing to GitHub, there’s no friction with current developer workflows.
+
+Additionally, there’s no need for added steps or tools, developers are more motivated to update docs, so there’s less of a chance of docs going stale.
+
+## Results
+
+By early August 2023, just eight months post-launch, Resend already had 15,000 users. Zeno credits some of that success to the time and energy Mintlify freed up for Resend to focus on growth and development.
+
+<Quote quote="Without Mintlify, our products wouldn’t be at the level they are now. And I highly doubt we’d be able to build a product that has this many users in such a short amount of time if we had to build our own docs." />
+
+### Recognition and conversion
+
+Another sign of success for Zeno is the frequent praise the startup gets from its customers, who often share its docs on Slack inspiration channels. He knows that when happy customers call out the docs’ attention to detail, they’re really talking about functionality.
+
+### A documentation partner, at last
+
+As Resend grows, Zeno expects Mintlify to grow along with it—especially as Mintlify continues to launch new features, like Mintlify Chat.
+
+Instead of the usual keyword search, Mintlify Chat lets users search docs with the same AI technology behind ChatGPT. Best of all, new updates and features are automatically deployed.
+
+And if Resend experiences hiccups or problems of any size on its way to the next level, Zeno is confident that Mintlify’s customer support will be there. “I've never met people who cared about docs as much as I do,” he says.
+
+Mintlify’s support is so fast and responsive, it’s become a model for Zeno as he builds Resend.
+
+<Quote quote="I want to provide this level of support to my own users. When you do work that inspires others to do better work themselves, that’s truly exceptional." />
+
+Want to set up docs like Resend? We’ll migrate your docs for free as a part of our startup plan - get started [here](https://mintlify.com/start)

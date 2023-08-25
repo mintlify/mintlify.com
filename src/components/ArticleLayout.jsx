@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
 
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
 import { Author } from '@/pages/blog'
 import Link from 'next/link'
 
-function ArrowLeftIcon(props) {
+export function ArrowLeftIcon(props) {
   return (
     <svg viewBox="0 -9 3 24" {...props}>
       <path
@@ -22,8 +21,6 @@ function ArrowLeftIcon(props) {
 }
 
 export function ArticleLayout({ children, meta, isRssFeed = false }) {
-  let router = useRouter()
-
   if (isRssFeed) {
     return children
   }

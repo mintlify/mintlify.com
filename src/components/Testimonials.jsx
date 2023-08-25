@@ -4,17 +4,11 @@ import maayan from '@/images/testimonials/maayan.jpeg'
 import ian from '@/images/testimonials/ian.jpeg'
 import andrej from '@/images/testimonials/andrej.jpeg'
 import mok from '@/images/testimonials/mok.jpeg'
-import declan from '@/images/testimonials/declan.jpeg'
 import zach from '@/images/testimonials/zach.jpeg'
 import maitham from '@/images/testimonials/maitham.jpeg'
-import philip from '@/images/testimonials/philip.jpeg'
-import brendan from '@/images/testimonials/brendan.jpeg'
 import emmett from '@/images/testimonials/emmett.jpeg'
-import rohan from '@/images/testimonials/rohan.jpeg'
 import vlad from '@/images/testimonials/vlad.jpeg'
-import kartikye from '@/images/testimonials/kartikye.jpeg'
 import torben from '@/images/testimonials/torben.jpeg'
-import nodar from '@/images/testimonials/nodar.jpeg'
 
 const testimonials = [
   [
@@ -44,23 +38,6 @@ const testimonials = [
         image: maitham,
       },
     },
-    {
-      content: `Mintlify is beautiful and the team is amazing to work with :)`,
-      author: {
-        name: 'Kartikye Mittal',
-        role: 'Co-Founder, Dots',
-        image: kartikye,
-      },
-    },
-    {
-      content:
-        'Mintlify did an excellent job of onboarding us onto their documentation and making it zero-cost to switch over from another doc provider. They are super responsive to feedback and have built a beautiful product :)',
-      author: {
-        name: 'Rohan Varma',
-        role: 'Co-Founder, Explo',
-        image: rohan,
-      },
-    },
   ],
   [
     {
@@ -70,22 +47,6 @@ const testimonials = [
         name: 'Ian Yanusko',
         role: 'Co-Founder, Bracket',
         image: ian,
-      },
-    },
-    {
-      content: `We love what Mintlify has done for our API docs. We're an API-first company, so our documentation is an extension of our main product. We honestly couldn't be happier with how our docs are turning out, and I haven't seen any other companies offering a product even close to Mintlify's. Great work!`,
-      author: {
-        name: 'Declan Goncalves',
-        role: 'Co-Founder, Hyperbeam',
-        image: declan,
-      },
-    },
-    {
-      content: `Best docs creator I've ever used.`,
-      author: {
-        name: 'Philip Scott',
-        role: 'Co-Founder, Hyperbeam',
-        image: philip,
       },
     },
     {
@@ -108,7 +69,7 @@ const testimonials = [
   ],
   [
     {
-      content: `We've used Redocly, Gitbook, Docusaurus AND Readme and found all of them to be lacking. Mintlify's API reference pages (reminiscent of Stripe's) are exactly what we were looking for. Throw in the amazing support and you've got a documentation page we couldn't be happier with!`,
+      content: `We've used Redocly, Gitbook, Docusaurus AND Readme and found all of them to be lacking. Mintlify's API reference pages (reminiscent of Stripe's) are exactly what we were looking for. Throw in amazing support and we couldn't be happier!`,
       author: {
         name: 'Andrej Zukov-Gregoric',
         role: 'CEO, Corrily',
@@ -126,29 +87,11 @@ const testimonials = [
     },
     {
       content:
-        'The docs look beautiful and way happier with the result than any of the other alternatives we checked out.',
-      author: {
-        name: 'Brendan Ashworth',
-        role: 'Founder, Bunting Labs',
-        image: brendan,
-      },
-    },
-    {
-      content:
         'I love how Mintlify made our documentation look 10 times better with minimum effort on our side. We just provided our documentation, and they did all the rest. I highly recommend working with them.',
       author: {
         name: 'Torben Friehe',
         role: 'Co-Founder, Wingback',
         image: torben,
-      },
-    },
-    {
-      content:
-        'Absolutely amazing! The lovely team Mintlify has converted our ugly and buggy docs into a seamless work of art and we are loving every bit of it so far - keep it up, team!',
-      author: {
-        name: 'Nodar Daneliya',
-        role: 'Founder, Shuttle',
-        image: nodar,
       },
     },
   ],
@@ -159,15 +102,14 @@ export function Testimonials() {
     <section
       id="testimonials"
       aria-label="What our customers are saying"
-      className="py-20 sm:py-32"
+      className="pt-20 sm:pt-32"
     >
       <div className="mx-auto">
         <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
-          Loved by teams worldwide.
+          Loved by teams worldwide
         </h2>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          See what other developer-focused companies like yours have to say
-          about us
+          See what developer-focused companies like yours have to say about us.
         </p>
       </div>
       <ul

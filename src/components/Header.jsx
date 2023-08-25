@@ -16,8 +16,8 @@ export const navigation = [
     href: '/docs',
   },
   {
-    name: 'Showcase',
-    href: '/showcase',
+    name: 'Customers',
+    href: '/customers',
   },
   {
     name: 'Pricing',
