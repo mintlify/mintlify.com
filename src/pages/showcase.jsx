@@ -20,18 +20,13 @@ import logoInvopopShowcase from '@/images/logos/showcase/invopop.svg'
 import logoBitskiShowcase from '@/images/logos/showcase/bitski.svg'
 import logoPropelauthShowcase from '@/images/logos/showcase/propelauth.svg'
 import logoKaldeaShowcase from '@/images/logos/showcase/kaldea.svg'
+import logoWhopShowcase from '@/images/logos/showcase/whop.svg'
 import logoFliptShowcase from '@/images/logos/showcase/flipt.svg'
 import logoRadiantShowcase from '@/images/logos/showcase/radiant.svg'
 import logoTriggerShowcase from '@/images/logos/showcase/trigger.svg'
 import logoFlatfileShowcase from '@/images/logos/showcase/flatfile.svg'
 
 export const featuredShowcases = [
-  {
-    name: 'Loophole Labs',
-    description: 'Modern application delivery for developers and DevOps teams',
-    link: { href: 'https://frpc.io', label: 'frpc.io' },
-    logo: logoLoopholeShowcase,
-  },
   {
     name: 'Flatfile',
     description: 'Smart APIs for file-based data import',
@@ -45,10 +40,16 @@ export const featuredShowcases = [
     logo: logoMindsDBShowcase,
   },
   {
-    name: 'Explo',
-    description: 'Customer-facing analytics for any platform',
-    link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
-    logo: logoExploShowcase,
+    name: 'Loophole Labs',
+    description: 'Modern application delivery for developers and DevOps teams',
+    link: { href: 'https://frpc.io', label: 'frpc.io' },
+    logo: logoLoopholeShowcase,
+  },
+  {
+    name: 'Whop',
+    description: 'One-stop-shop for all the latest and greatest digital products',
+    link: { href: 'https://dev.whop.com', label: 'dev.whop.com' },
+    logo: logoWhopShowcase,
   },
   {
     name: 'Elementary',
@@ -63,6 +64,12 @@ export const featuredShowcases = [
 
 const showcases = [
   ...featuredShowcases,
+  {
+    name: 'Explo',
+    description: 'Customer-facing analytics for any platform',
+    link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
+    logo: logoExploShowcase,
+  },
   {
     name: 'Infisical',
     description:
