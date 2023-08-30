@@ -41,9 +41,6 @@ function Article({ article }) {
             <time dateTime={article.date} className="text-zinc-500">
               {article.date}
             </time>
-            <span className="relative z-10 rounded-full bg-zinc-50 px-3 py-0.5 font-medium text-zinc-600 dark:border dark:border-white/5 dark:bg-zinc-900 dark:text-zinc-400">
-              {article.category}
-            </span>
           </div>
           <div className="group relative max-w-xl">
             <h3 className="mt-4 text-lg font-semibold leading-6 text-zinc-900 dark:text-zinc-200">
