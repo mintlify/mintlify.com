@@ -72,7 +72,7 @@ export default function ArticlesIndex({ articles }) {
 
   useEffect(() => {
     setArticlesToShow(
-      articles.filter((article) => article.categories.includes(category))
+      articles.filter((article) => category === 'All' || article.categories.includes(category))
     )
   }, [category])
   return (
@@ -95,8 +95,8 @@ export default function ArticlesIndex({ articles }) {
             setCategory={(category) => setCategory(category)}
             selectedCategory={category}
           />
-          <div className="mt-8 sm:mt-14">
-            <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+          <div className="mt-8 sm:mt-10">
+            <div className="mt-16 space-y-20 lg:space-y-20">
               {articlesToShow.map((article) => (
                 <Article key={article.slug} article={article} />
               ))}
