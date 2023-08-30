@@ -1,8 +1,9 @@
 import Head from 'next/head'
-
-import { BlogLayout } from '@/components/SimpleLayout'
+import { useState, useEffect } from 'react'
+import { Container } from '@/components/Container'
 import { getAllArticles } from '@/lib/getAllArticles'
 import Link from 'next/link'
+import { CategoryTags } from '@/components/blog/CategoryTags'
 
 export function Author({ name, role, imgUrl }) {
   return (
@@ -40,9 +41,6 @@ function Article({ article }) {
             <time dateTime={article.date} className="text-zinc-500">
               {article.date}
             </time>
-            <span className="relative z-10 rounded-full bg-zinc-50 px-3 py-0.5 font-medium text-zinc-600 dark:border dark:border-white/5 dark:bg-zinc-900 dark:text-zinc-400">
-              {article.category}
-            </span>
           </div>
           <div className="group relative max-w-xl">
             <h3 className="mt-4 text-lg font-semibold leading-6 text-zinc-900 dark:text-zinc-200">
@@ -66,6 +64,14 @@ function Article({ article }) {
 }
 
 export default function ArticlesIndex({ articles }) {
+  const [articlesToShow, setArticlesToShow] = useState(articles)
+  const [category, setCategory] = useState('Featured')
+
+  useEffect(() => {
+    setArticlesToShow(
+      articles.filter((article) => category === 'All' || article.categories.includes(category))
+    )
+  }, [category])
   return (
     <>
       <Head>
@@ -76,13 +82,24 @@ export default function ArticlesIndex({ articles }) {
         />
       </Head>
       <div className="mx-auto">
-        <BlogLayout title="Blog">
-          <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
-            {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))}
+        <Container className="mt-12 sm:mt-24">
+          <header>
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+              Blog
+            </h1>
+          </header>
+          <CategoryTags
+            setCategory={(category) => setCategory(category)}
+            selectedCategory={category}
+          />
+          <div className="mt-8 sm:mt-10">
+            <div className="mt-16 space-y-20 lg:space-y-20">
+              {articlesToShow.map((article) => (
+                <Article key={article.slug} article={article} />
+              ))}
+            </div>
           </div>
-        </BlogLayout>
+        </Container>
       </div>
     </>
   )

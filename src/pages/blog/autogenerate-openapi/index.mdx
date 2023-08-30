@@ -1,0 +1,70 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: 'Autogenerate API documentation with OpenAPI & Mintlify',
+  description:
+    'Manually creating API documentation is so last year. Try autogenerating your API docs instead.',
+  mobileImageUrl: '/static/images/blog/autogenerate-openapi/desktop.png',
+  desktopImageUrl: '/static/images/blog/autogenerate-openapi/desktop.png',
+  author: 'Josephine Cheng',
+  authorRole: 'Content',
+  date: 'August 19, 2023',
+  categories: ['Featured', 'Developer Experience'],
+  authorImageUrl: '/static/images/blog/authors/josephine.jpeg',
+  readingTime: '3 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/autogenerate-openapi/desktop.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+In a world where every product is powered by a suite of developer tools, APIs have empowered companies to create integrated and innovative solutions like no other. With it, smooth exchange of data between software systems has become the norm, streamlining complex functions and boosting efficiency.
+
+With API-based companies like Stripe and Amplitude leading to way, clear and well-written API documentation have become vital to developer communication and product success.
+
+## What is OpenAPI and how it helps developers
+
+[OpenAPI](https://www.openapis.org/) is a standardized format for describing and documenting RESTful APIs, setting
+clear guidelines for building, integrating, and maintaining the API. Its files are
+written in json or yaml format, and generally include API request URLs, types of
+requests, parameters, and response types.
+
+As a standard format with widespread adoption, OpenAPI has been essential for establishing a consistent understanding of API functionalities. It acts as a universal language, fostering clear communication and comprehensive API documentation among developers. In addition, it streamlines the processes for generating client code, configuring infrastructure, creating test cases, and adding interactive documentation.
+
+OpenAPI’s impact has been evident—simplified communication between developers, smoother software integration, efficient API implementation—all which have led to accelerated development for software systems. But did you know that OpenAPI can also be a powerful format for autogenerating API documentation for your customers as well?
+
+## Why use autogeneration for your OpenAPI documentation
+
+When building API documentation, some companies might think to manually create code blocks and references for each and every OpenAPI endpoint. We believe there’s a better way.
+
+By autogenerating your API documentation, you can cut down on the time spent communicating your API to your users and instead use that time to focus on improving your core product.
+
+On top of that, tools which specialize in autogenerating documentation also offer capabilities to transform your endpoint files into sleek and well-organized pages that are easily customizable with additional features or designs.
+
+Autogenerating API documentation doesn’t just save you time, it also helps you achieve more while doing less. If you’re looking to streamline and accelerate your software development processes, then look no further. Adopting OpenAPI and autogenerating your endpoint docs is the way to go.
+
+## How Mintlify autogenerates your API docs
+
+<img
+  src="/static/images/blog/autogenerate-openapi/goody-example.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Mintlify is an integrated documentation platform which makes updating your documentation as easy as pushing to git. We render beautiful documentation through simple MDX content files and flexible configurations - including your API documentation. In addition to our suite of powerful features such as our AI-enabled <a href="https://mintlify.com/blog/suggestions" target="_blank">Suggestions</a>, our API support, and out-of-the-box analytics, Mintlify effortlessly helps you build and maintain high quality documentation.
+
+Mintlify uses your OpenAPI file to autogenerate sleek, customizable docs for each API endpoint. The process is quick and easy, shaving precious minutes off of your coding process. Simply configure your OpenAPI by adding the file or URL to your documentation repository. We’ll automatically update your documentation as the OpenAPI file changes.
+
+To make your API documentation best in class, Mintlify autogenerates several <a href=" https://mintlify.com/docs/api-playground/overview" target="_blank">features</a>, from our interactive **<a href="https://mintlify.com/docs/api-playground/overview" target="_blank">API Playground</a>**, so your users can make requests and preview an API endpoint, to our **<a href="https://mintlify.com/docs/api-playground/overview#response-examples " target="_blank">Response Examples</a>**, so your users can view an example response to your API call. Not to mention our **<a href="https://mintlify.com/docs/api-playground/overview#parameters-required" target="_blank">Parameters</a>** feature with detailed parameter and body requirements to generate the API playground and request examples, among other features.
+
+Last but not least, Mintlify’s autogenerated docs are optimized for user customization. Their page designs are meant to be tailored, so that each element of your API docs matches the look and feel of your brand.
+
+## How to get started with Mintlify
+
+Using OpenAPI with Mintlify gives you the best of both worlds—a standardized documentation format which promotes clear and consistent exchange between software systems and developers, on top of boosting your own coding efficiency with the help of autogenerated API documentation. It streamlines your workflows, allowing you to deliver a stunning user experience to your customers in less time, with less effort.
+
+Curious to see what that looks like? We’ve autogenerated API docs for many of our users, including <a href="https://developer.ongoody.com/api-reference/order-batches/create-an-order-batch" target="_blank">Goody</a> and <a href="https://docs.vessel.dev/pages/v2/crm-v2/api-reference/get-info" target="_blank">Vessel</a> to name a few. Starting today, we can autogenerate your API docs for you, too. Simply <a href="https://mintlify.com/start?utm_campaign=autogenerate_openapi&utm_medium=blog&utm_source=mintlify" target="_blank">join us or log in</a> to autogenerate your OpenAPI endpoint docs today.
