@@ -1,8 +1,10 @@
 import Head from 'next/head'
 
 import { SimpleLayout } from '@/components/SimpleLayout'
+import { useState, useEffect } from 'react'
 import { getAllArticles } from '@/lib/getAllArticles'
 import Link from 'next/link'
+import { CategoryTags } from '@/components/blog/CategoryTags'
 
 export function Author({ name, role, imgUrl }) {
   return (
@@ -40,9 +42,6 @@ function ArticlePreview({ article }) {
             <time dateTime={article.date} className="text-zinc-500">
               {article.date}
             </time>
-            <span className="relative z-10 rounded-full bg-zinc-50 px-3 py-0.5 font-medium text-zinc-600 dark:border dark:border-white/5 dark:bg-zinc-900 dark:text-zinc-400">
-              {article.category}
-            </span>
           </div>
           <div className="group relative max-w-xl">
             <h3 className="mt-4 text-lg font-semibold leading-6 text-zinc-900 dark:text-zinc-200">
@@ -66,6 +65,16 @@ function ArticlePreview({ article }) {
 }
 
 export default function ArticlesIndex({ articles }) {
+  const [articlesToShow, setArticlesToShow] = useState(articles)
+  const [category, setCategory] = useState('Featured')
+
+  useEffect(() => {
+    setArticlesToShow(
+      articles.filter(
+        (article) => category === 'All' || article.categories.includes(category)
+      )
+    )
+  }, [category])
   return (
     <>
       <Head>
@@ -77,10 +86,16 @@ export default function ArticlesIndex({ articles }) {
       </Head>
       <div className="mx-auto">
         <SimpleLayout title="Blog">
-          <div className="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
-            {articles.map((article) => (
-              <ArticlePreview key={article.slug} article={article} />
-            ))}
+          <CategoryTags
+            setCategory={(category) => setCategory(category)}
+            selectedCategory={category}
+          />
+          <div className="mt-8 sm:mt-10">
+            <div className="mt-16 space-y-20 lg:space-y-20">
+              {articlesToShow.map((article) => (
+                <ArticlePreview key={article.slug} article={article} />
+              ))}
+            </div>
           </div>
         </SimpleLayout>
       </div>

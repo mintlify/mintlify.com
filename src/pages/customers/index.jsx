@@ -71,7 +71,7 @@ export default function ShowcaseIndex({ stories }) {
             className="grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3"
           >
             {stories.map((story) => (
-              <StoryPreview story={story} />
+              <StoryPreview story={story} key={story.slug} />
             ))}
           </ul>
           <Testimonials />

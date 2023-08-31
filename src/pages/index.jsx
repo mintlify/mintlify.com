@@ -13,7 +13,7 @@ import explo from '@/images/screenshots/explo.svg'
 import elementary from '@/images/screenshots/elementary.svg'
 import logoYCombinator from '@/images/logos/clouds/ycombinator.svg'
 import logoFlatfile from '@/images/logos/clouds/flatfile.svg'
-import logoThanx from '@/images/logos/clouds/thanx.svg'
+import logoWhop from '@/images/logos/clouds/whop.svg'
 import logoSequence from '@/images/logos/clouds/sequence.svg'
 import logoGoody from '@/images/logos/clouds/goody.svg'
 import logoLatchBio from '@/images/logos/clouds/latchbio.svg'
@@ -363,13 +363,13 @@ export default function Home() {
               {[
                 ['YCombinator', logoYCombinator],
                 ['Flatfile', logoFlatfile],
-                ['Thanx', logoThanx],
+                ['ElevenLabs', logoElevenLabs],
                 ['Depict', logoDepict],
                 ['Sequence', logoSequence],
                 ['MindsDB', logoMindsDB],
-                ['ElevenLabs', logoElevenLabs],
-                ['Resend', logoResend],
                 ['Goody', logoGoody],
+                ['Resend', logoResend],
+                ['Whop', logoWhop],
                 ['LatchBio', logoLatchBio],
               ].map(([alt, logo]) => (
                 <div className="col-span-1 flex justify-center dark:brightness-125 lg:col-span-1">
