@@ -172,7 +172,7 @@ function ShowcaseCard({ showcase }) {
     <Card as="li" key={showcase.name}>
       <Card.Link
         href={showcase.link.href}
-        className="border-1 border border-zinc-200 p-6 "
+        className="relative rounded-2xl border border-zinc-100 bg-white p-6 shadow-lg shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900 sm:gap-y-8"
       >
         <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
           <Image
