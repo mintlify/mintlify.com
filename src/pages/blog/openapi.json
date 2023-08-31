@@ -1,0 +1,3104 @@
+{
+  "openapi": "3.1.0",
+  "info": { "title": "FastAPI", "version": "0.1.0" },
+  "paths": {
+    "/api/auth/register": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Register User",
+        "operationId": "register_user_api_auth_register_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/UserIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/login": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Login",
+        "operationId": "login_api_auth_login_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/LoginForm" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/auth/check_secret_pass": {
+      "post": {
+        "tags": ["Auth"],
+        "summary": "Check Secret Pass",
+        "operationId": "check_secret_pass_api_auth_check_secret_pass_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/SecretPassRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/cell": {
+      "post": {
+        "tags": ["Cell"],
+        "summary": "Create Cell",
+        "operationId": "create_cell_api_cell_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/CreateCell" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}": {
+      "get": {
+        "tags": ["Cell"],
+        "summary": "Get Cell",
+        "operationId": "get_cell_api_cell__cell_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "delete": {
+        "tags": ["Cell"],
+        "summary": "Delete Cell",
+        "operationId": "delete_cell_api_cell__cell_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/update/prompt": {
+      "put": {
+        "tags": ["Cell"],
+        "summary": "Update Prompt",
+        "operationId": "update_prompt_api_cell_update_prompt_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/UpdateCellPrompt" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}/run/suite": {
+      "post": {
+        "tags": ["Cell"],
+        "summary": "Run Cell On Suite",
+        "operationId": "run_cell_on_suite_api_cell__cell_id__run_suite_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/VaultIdIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}/run/test/{test_id}": {
+      "post": {
+        "tags": ["Cell"],
+        "summary": "Run Cell On Test",
+        "operationId": "run_cell_on_test_api_cell__cell_id__run_test__test_id__post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/VaultIdIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}/update/models": {
+      "put": {
+        "tags": ["Cell"],
+        "summary": "Update Model",
+        "operationId": "update_model_api_cell__cell_id__update_models_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ModelConfig" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}/update/name": {
+      "put": {
+        "tags": ["Cell"],
+        "summary": "Update Model",
+        "operationId": "update_model_api_cell__cell_id__update_name_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/NameConfig" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}/update/response": {
+      "put": {
+        "tags": ["Cell"],
+        "summary": "Update Response",
+        "operationId": "update_response_api_cell__cell_id__update_response_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/RespConfig" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}/update/params": {
+      "put": {
+        "tags": ["Cell"],
+        "summary": "Update Params",
+        "operationId": "update_params_api_cell__cell_id__update_params_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ParamConfig" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/cell/{cell_id}/sdk_reference": {
+      "get": {
+        "tags": ["Cell"],
+        "summary": "Get Sdk Reference",
+        "operationId": "get_sdk_reference_api_cell__cell_id__sdk_reference_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "put": {
+        "tags": ["Cell"],
+        "summary": "Create Sdk Reference",
+        "operationId": "create_sdk_reference_api_cell__cell_id__sdk_reference_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/SDKReference" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/chain": {
+      "post": {
+        "tags": ["Chain"],
+        "summary": "Create Chain",
+        "operationId": "create_chain_api_chain_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ChainIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/chain/{chain_id}": {
+      "get": {
+        "tags": ["Chain"],
+        "summary": "Get Chain",
+        "operationId": "get_chain_api_chain__chain_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "delete": {
+        "tags": ["Chain"],
+        "summary": "Delete Chain",
+        "operationId": "delete_chain_api_chain__chain_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/chain/{chain_id}/run/suite": {
+      "post": {
+        "tags": ["Chain"],
+        "summary": "Run Chain On Suite",
+        "operationId": "run_chain_on_suite_api_chain__chain_id__run_suite_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ChainRunIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/chain/{chain_id}/run/test/{test_id}": {
+      "post": {
+        "tags": ["Chain"],
+        "summary": "Run Chain On Test",
+        "operationId": "run_chain_on_test_api_chain__chain_id__run_test__test_id__post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ChainTestIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/chain/{chain_id}/cells": {
+      "get": {
+        "tags": ["Chain"],
+        "summary": "Get Cell Data Complete",
+        "operationId": "get_cell_data_complete_api_chain__chain_id__cells_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/chain/{chain_id}/update-name": {
+      "post": {
+        "tags": ["Chain"],
+        "summary": "Update Chain Name",
+        "operationId": "update_chain_name_api_chain__chain_id__update_name_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ChainUpdateName" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/history/cell/{cell_id}": {
+      "post": {
+        "tags": ["History"],
+        "summary": "Get Cell History",
+        "operationId": "get_cell_history_api_history_cell__cell_id__post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/PaginateRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/history/chain/{chain_id}": {
+      "post": {
+        "tags": ["History"],
+        "summary": "Get Chain History",
+        "operationId": "get_chain_history_api_history_chain__chain_id__post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/PaginateRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/history/chain/{chain_id}/all": {
+      "post": {
+        "tags": ["History"],
+        "summary": "Get Full Chain History",
+        "operationId": "get_full_chain_history_api_history_chain__chain_id__all_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/history/cells/{chain_id}": {
+      "post": {
+        "tags": ["History"],
+        "summary": "Get Chain Cells History",
+        "operationId": "get_chain_cells_history_api_history_cells__chain_id__post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/PaginateRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/history/cells/{chain_id}/all": {
+      "post": {
+        "tags": ["History"],
+        "summary": "Get All Chain Cells History",
+        "operationId": "get_all_chain_cells_history_api_history_cells__chain_id__all_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/user/details": {
+      "get": {
+        "tags": ["User"],
+        "summary": "Get User Details",
+        "operationId": "get_user_details_api_user_details_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace": {
+      "post": {
+        "tags": ["Workspace"],
+        "summary": "Add Workspace",
+        "operationId": "add_workspace_api_workspace_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/WorkspaceIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/byID/{workspace_id}": {
+      "get": {
+        "tags": ["Workspace"],
+        "summary": "Get Workspace",
+        "operationId": "get_workspace_api_workspace_byID__workspace_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}": {
+      "delete": {
+        "tags": ["Workspace"],
+        "summary": "Delete Workspace",
+        "operationId": "delete_workspace_api_workspace__workspace_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/summary": {
+      "get": {
+        "tags": ["Workspace"],
+        "summary": "Get Workspaces",
+        "operationId": "get_workspaces_api_workspace_summary_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/summary": {
+      "get": {
+        "tags": ["Workspace"],
+        "summary": "Get Workspace Summary",
+        "operationId": "get_workspace_summary_api_workspace__workspace_id__summary_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/collections": {
+      "post": {
+        "tags": ["Workspace"],
+        "summary": "Add Collection",
+        "operationId": "add_collection_api_workspace__workspace_id__collections_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/CollectionIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/collections/{collection_id}": {
+      "delete": {
+        "tags": ["Workspace"],
+        "summary": "Delete Collection",
+        "operationId": "delete_collection_api_workspace__workspace_id__collections__collection_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Collection Id" },
+            "name": "collection_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/vault": {
+      "put": {
+        "tags": ["Workspace"],
+        "summary": "Set Vault Id For Workspace",
+        "operationId": "set_vault_id_for_workspace_api_workspace__workspace_id__vault_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/VaultId" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/state/current-open-chains": {
+      "put": {
+        "tags": ["Workspace"],
+        "summary": "Set Chains Open",
+        "operationId": "set_chains_open_api_workspace__workspace_id__state_current_open_chains_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "items": { "$ref": "#/components/schemas/ChainState" },
+                "type": "array",
+                "title": "Chains"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/state/current-open-chain": {
+      "put": {
+        "tags": ["Workspace"],
+        "summary": "Set Chain Open",
+        "operationId": "set_chain_open_api_workspace__workspace_id__state_current_open_chain_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ChainState" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/state": {
+      "get": {
+        "tags": ["Workspace"],
+        "summary": "Get Workspace State",
+        "operationId": "get_workspace_state_api_workspace__workspace_id__state_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/documents": {
+      "get": {
+        "tags": ["Workspace"],
+        "summary": "Get All Documents",
+        "operationId": "get_all_documents_api_workspace__workspace_id__documents_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "post": {
+        "tags": ["Workspace"],
+        "summary": "Create Document",
+        "operationId": "create_document_api_workspace__workspace_id__documents_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/DocumentIn" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/documents/{document_id}": {
+      "delete": {
+        "tags": ["Workspace"],
+        "summary": "Delete Document",
+        "operationId": "delete_document_api_workspace__workspace_id__documents__document_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Document Id" },
+            "name": "document_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/{workspace_id}/documents/{document_id}/retrieval": {
+      "post": {
+        "tags": ["Workspace"],
+        "summary": "Retrieve",
+        "operationId": "retrieve_api_workspace__workspace_id__documents__document_id__retrieval_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Document Id" },
+            "name": "document_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/RetrievalInput" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/share": {
+      "post": {
+        "tags": ["Workspace"],
+        "summary": "Share Workspace",
+        "operationId": "share_workspace_api_workspace_share_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ShareWorkspaceForm" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/sharedUsers/{workspace_id}": {
+      "get": {
+        "tags": ["Workspace"],
+        "summary": "Get Shared Users",
+        "operationId": "get_shared_users_api_workspace_sharedUsers__workspace_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Workspace Id" },
+            "name": "workspace_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/workspace/update-functions": {
+      "put": {
+        "tags": ["Workspace"],
+        "summary": "Update Workspace Functions",
+        "operationId": "update_workspace_functions_api_workspace_update_functions_put",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/UpdateFunctionsInput" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite": {
+      "get": {
+        "tags": ["Suite"],
+        "summary": "Get Suite",
+        "operationId": "get_suite_api_suite_get",
+        "parameters": [
+          {
+            "required": false,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": { "type": "string", "title": "Chain Id" },
+            "name": "chain_id",
+            "in": "query"
+          },
+          {
+            "required": false,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "query"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/variables": {
+      "get": {
+        "tags": ["Suite"],
+        "summary": "Get Variables",
+        "operationId": "get_variables_api_suite__suite_id__variables_get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "put": {
+        "tags": ["Suite"],
+        "summary": "Update Variable Types",
+        "operationId": "update_variable_types_api_suite__suite_id__variables_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/VariableList" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/{test_id}": {
+      "get": {
+        "tags": ["Suite"],
+        "summary": "Get Test",
+        "operationId": "get_test_api_suite__suite_id___test_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/tests": {
+      "post": {
+        "tags": ["Suite"],
+        "summary": "Add Test",
+        "operationId": "add_test_api_suite__suite_id__tests_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/TestAdd" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/red_team": {
+      "post": {
+        "tags": ["Suite"],
+        "summary": "Add Red Team",
+        "operationId": "add_red_team_api_suite__suite_id__red_team_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/RedTeam" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/tests/bulk": {
+      "post": {
+        "tags": ["Suite"],
+        "summary": "Bulk Add Tests",
+        "operationId": "bulk_add_tests_api_suite__suite_id__tests_bulk_post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "items": { "$ref": "#/components/schemas/TestAdd" },
+                "type": "array",
+                "title": "Tests"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/tests/{test_id}": {
+      "delete": {
+        "tags": ["Suite"],
+        "summary": "Delete Test",
+        "operationId": "delete_test_api_suite__suite_id__tests__test_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/tests/{test_id}/name": {
+      "put": {
+        "tags": ["Suite"],
+        "summary": "Update Test Name",
+        "operationId": "update_test_name_api_suite__suite_id__tests__test_id__name_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/TestName" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/tests/{test_id}/var_mapping/replace": {
+      "put": {
+        "tags": ["Suite"],
+        "summary": "Replace Var Mapping",
+        "operationId": "replace_var_mapping_api_suite__suite_id__tests__test_id__var_mapping_replace_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/UpdateVarMapping" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "title": "Response Replace Var Mapping Api Suite  Suite Id  Tests  Test Id  Var Mapping Replace Put"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/tests/{test_id}/var_mapping/update": {
+      "patch": {
+        "tags": ["Suite"],
+        "summary": "Update Var Mapping",
+        "operationId": "update_var_mapping_api_suite__suite_id__tests__test_id__var_mapping_update_patch",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/UpdateVarMapping" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/{suite_id}/tests/{test_id}/assertions/{cell_id}": {
+      "post": {
+        "tags": ["Suite"],
+        "summary": "Add Assertion",
+        "operationId": "add_assertion_api_suite__suite_id__tests__test_id__assertions__cell_id__post",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Assertion" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/suites/{suite_id}/tests/{test_id}/assertions/{cell_id}": {
+      "put": {
+        "tags": ["Suite"],
+        "summary": "Replace Assertions",
+        "operationId": "replace_assertions_api_suite_suites__suite_id__tests__test_id__assertions__cell_id__put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Test Id" },
+            "name": "test_id",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Cell Id" },
+            "name": "cell_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "items": { "$ref": "#/components/schemas/Assertion" },
+                "type": "array",
+                "title": "Assertions"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/suite/suites/{suite_id}/state": {
+      "put": {
+        "tags": ["Suite"],
+        "summary": "Update Suite State",
+        "operationId": "update_suite_state_api_suite_suites__suite_id__state_put",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Suite Id" },
+            "name": "suite_id",
+            "in": "path"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/State" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/vault": {
+      "get": {
+        "tags": ["Vault"],
+        "summary": "Get User Vaults",
+        "operationId": "get_user_vaults_api_vault_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "post": {
+        "tags": ["Vault"],
+        "summary": "Create Vault",
+        "operationId": "create_vault_api_vault_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Vault" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/vault/{vault_id}": {
+      "get": {
+        "tags": ["Vault"],
+        "summary": "Get Vault By Id",
+        "operationId": "get_vault_by_id_api_vault__vault_id__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Vault Id" },
+            "name": "vault_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "delete": {
+        "tags": ["Vault"],
+        "summary": "Delete Vault",
+        "operationId": "delete_vault_api_vault__vault_id__delete",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Vault Id" },
+            "name": "vault_id",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/api/model": {
+      "get": {
+        "tags": ["Models"],
+        "summary": "Get All Model Data",
+        "operationId": "get_all_model_data_api_model_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          }
+        }
+      }
+    },
+    "/api/model/{model_family}": {
+      "get": {
+        "tags": ["Models"],
+        "summary": "Get Model Family Data",
+        "operationId": "get_model_family_data_api_model__model_family__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Model Family" },
+            "name": "model_family",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/model/{model_family}/{model}": {
+      "get": {
+        "tags": ["Models"],
+        "summary": "Get Specific Model Data",
+        "operationId": "get_specific_model_data_api_model__model_family___model__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Model Family" },
+            "name": "model_family",
+            "in": "path"
+          },
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Model" },
+            "name": "model",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/playground/auth": {
+      "post": {
+        "tags": ["Playground"],
+        "summary": "Register User",
+        "operationId": "register_user_api_playground_auth_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/Email" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/keys/api-keys": {
+      "get": {
+        "tags": ["API Keys"],
+        "summary": "Get Api Keys",
+        "operationId": "get_api_keys_api_keys_api_keys_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "post": {
+        "tags": ["API Keys"],
+        "summary": "Create And Add Api Key",
+        "operationId": "create_and_add_api_key_api_keys_api_keys_post",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ApiKeyRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      },
+      "delete": {
+        "tags": ["API Keys"],
+        "summary": "Delete Api Key",
+        "operationId": "delete_api_key_api_keys_api_keys_delete",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/ApiKeyDel" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": { "application/json": { "schema": {} } }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        },
+        "security": [{ "OAuth2PasswordBearer": [] }]
+      }
+    },
+    "/sdk/prompt/render": {
+      "post": {
+        "tags": ["Prompt"],
+        "summary": "Render Prompt Endpoint",
+        "operationId": "render_prompt_endpoint_sdk_prompt_render_post",
+        "parameters": [
+          {
+            "required": false,
+            "schema": { "type": "string", "title": "Authorization" },
+            "name": "Authorization",
+            "in": "header"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": { "$ref": "#/components/schemas/RenderRequest" }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RenderPromptResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/ErrorResponse" }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/sdk/auth/{api_key}": {
+      "get": {
+        "tags": ["Authenticate"],
+        "summary": "Retrieve User by API Key",
+        "description": "Endpoint can be used to validate API key. It retrieves a user's ID based on the provided API key",
+        "operationId": "get_user_by_api_key_sdk_auth__api_key__get",
+        "parameters": [
+          {
+            "required": true,
+            "schema": { "type": "string", "title": "Api Key" },
+            "name": "api_key",
+            "in": "path"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/UserFoundResponse" }
+              }
+            }
+          },
+          "401": {
+            "description": "Invalid API Key",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvalidAPIKeyResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": { "$ref": "#/components/schemas/HTTPValidationError" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ApiKeyDel": {
+        "properties": { "api_key": { "type": "string", "title": "Api Key" } },
+        "type": "object",
+        "required": ["api_key"],
+        "title": "ApiKeyDel"
+      },
+      "ApiKeyRequest": {
+        "properties": {
+          "api_key_name": { "type": "string", "title": "Api Key Name" }
+        },
+        "type": "object",
+        "required": ["api_key_name"],
+        "title": "ApiKeyRequest"
+      },
+      "Assertion": {
+        "properties": {
+          "id": { "type": "string", "title": "Id" },
+          "assert_type": { "type": "string", "title": "Assert Type" },
+          "assert_string": { "type": "string", "title": "Assert String" },
+          "assert_num": {
+            "anyOf": [
+              { "type": "number" },
+              { "type": "integer" },
+              { "type": "string" }
+            ],
+            "title": "Assert Num"
+          }
+        },
+        "type": "object",
+        "required": ["assert_type"],
+        "title": "Assertion"
+      },
+      "Cell": {
+        "properties": { "id": { "type": "string", "title": "Id" } },
+        "type": "object",
+        "required": ["id"],
+        "title": "Cell"
+      },
+      "Chain": {
+        "properties": { "id": { "type": "string", "title": "Id" } },
+        "type": "object",
+        "required": ["id"],
+        "title": "Chain"
+      },
+      "ChainIn": {
+        "properties": {
+          "name": { "type": "string", "title": "Name" },
+          "workspace_id": { "type": "string", "title": "Workspace Id" },
+          "collection_id": { "type": "string", "title": "Collection Id" },
+          "cells": {
+            "items": { "$ref": "#/components/schemas/Cell" },
+            "type": "array",
+            "title": "Cells"
+          }
+        },
+        "type": "object",
+        "required": ["name", "workspace_id", "collection_id"],
+        "title": "ChainIn"
+      },
+      "ChainRunIn": {
+        "properties": { "vault_id": { "type": "string", "title": "Vault Id" } },
+        "type": "object",
+        "required": ["vault_id"],
+        "title": "ChainRunIn"
+      },
+      "ChainState": {
+        "properties": {
+          "id": { "type": "string", "title": "Id" },
+          "name": { "type": "string", "title": "Name" }
+        },
+        "type": "object",
+        "required": ["id", "name"],
+        "title": "ChainState"
+      },
+      "ChainTestIn": {
+        "properties": { "vault_id": { "type": "string", "title": "Vault Id" } },
+        "type": "object",
+        "required": ["vault_id"],
+        "title": "ChainTestIn"
+      },
+      "ChainUpdateName": {
+        "properties": { "new_name": { "type": "string", "title": "New Name" } },
+        "type": "object",
+        "required": ["new_name"],
+        "title": "ChainUpdateName"
+      },
+      "CollectionIn": {
+        "properties": {
+          "name": { "type": "string", "title": "Name" },
+          "chains": {
+            "items": { "$ref": "#/components/schemas/Chain" },
+            "type": "array",
+            "title": "Chains"
+          }
+        },
+        "type": "object",
+        "required": ["name"],
+        "title": "CollectionIn"
+      },
+      "CreateCell": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "default": "Untitled Cell"
+          },
+          "chain_id": { "type": "string", "title": "Chain Id" },
+          "suite_id": { "type": "string", "title": "Suite Id" },
+          "workspace_id": { "type": "string", "title": "Workspace Id" },
+          "model_family": {
+            "type": "string",
+            "title": "Model Family",
+            "default": "OpenAI"
+          },
+          "model": {
+            "type": "string",
+            "title": "Model",
+            "default": "gpt-3.5-turbo"
+          },
+          "prompt": {
+            "items": {},
+            "type": "array",
+            "title": "Prompt",
+            "default": [{ "role": "user", "content": "New prompt" }]
+          }
+        },
+        "type": "object",
+        "required": ["chain_id"],
+        "title": "CreateCell"
+      },
+      "DbDetails": {
+        "properties": {
+          "db_link": { "type": "string", "title": "Db Link" },
+          "api_key": { "type": "string", "title": "Api Key" },
+          "environment": { "type": "string", "title": "Environment" },
+          "namespace": { "type": "string", "title": "Namespace" },
+          "type": { "type": "string", "title": "Type" },
+          "dimension": { "type": "integer", "title": "Dimension" },
+          "index": { "type": "string", "title": "Index" },
+          "embedding_model": { "type": "string", "title": "Embedding Model" },
+          "project": { "type": "string", "title": "Project" }
+        },
+        "type": "object",
+        "title": "DbDetails"
+      },
+      "DocumentIn": {
+        "properties": {
+          "name": { "type": "string", "title": "Name" },
+          "db_details": { "$ref": "#/components/schemas/DbDetails" },
+          "config": { "type": "string", "title": "Config" }
+        },
+        "type": "object",
+        "required": ["name", "db_details", "config"],
+        "title": "DocumentIn"
+      },
+      "Email": {
+        "properties": {
+          "email": { "type": "string", "title": "Email", "default": "" }
+        },
+        "type": "object",
+        "title": "Email"
+      },
+      "ErrorResponse": {
+        "properties": {
+          "msg": { "type": "string", "title": "Msg" },
+          "error_type": { "type": "string", "title": "Error Type" },
+          "status": { "type": "integer", "title": "Status" }
+        },
+        "type": "object",
+        "required": ["msg", "error_type", "status"],
+        "title": "ErrorResponse"
+      },
+      "Function": {
+        "properties": {
+          "type": { "type": "string", "title": "Type" },
+          "description": { "type": "string", "title": "Description" }
+        },
+        "type": "object",
+        "required": ["type", "description"],
+        "title": "Function"
+      },
+      "FunctionData": {
+        "properties": {
+          "function": { "type": "object", "title": "Function" },
+          "plain_text": { "type": "string", "title": "Plain Text" }
+        },
+        "type": "object",
+        "required": ["function", "plain_text"],
+        "title": "FunctionData"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": { "$ref": "#/components/schemas/ValidationError" },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "InvalidAPIKeyResponse": {
+        "properties": {
+          "msg": {
+            "type": "string",
+            "title": "Msg",
+            "description": "Message indicating an error",
+            "example": "Invalid API key"
+          }
+        },
+        "type": "object",
+        "required": ["msg"],
+        "title": "InvalidAPIKeyResponse"
+      },
+      "Key": {
+        "properties": {
+          "model_family": {
+            "type": "string",
+            "title": "Model Family",
+            "description": "Model Family"
+          },
+          "key": { "type": "string", "title": "Key", "description": "Key" },
+          "org_id": {
+            "type": "string",
+            "title": "Org Id",
+            "description": "Organisation ID"
+          }
+        },
+        "type": "object",
+        "required": ["model_family", "key"],
+        "title": "Key"
+      },
+      "LoginForm": {
+        "properties": {
+          "username": { "type": "string", "title": "Username" },
+          "password": { "type": "string", "title": "Password" }
+        },
+        "type": "object",
+        "required": ["username", "password"],
+        "title": "LoginForm"
+      },
+      "ModelConfig": {
+        "properties": {
+          "model_family": { "type": "string", "title": "Model Family" },
+          "model": { "type": "string", "title": "Model" }
+        },
+        "type": "object",
+        "required": ["model_family", "model"],
+        "title": "ModelConfig"
+      },
+      "NameConfig": {
+        "properties": { "name": { "type": "string", "title": "Name" } },
+        "type": "object",
+        "required": ["name"],
+        "title": "NameConfig"
+      },
+      "PaginateRequest": {
+        "properties": {
+          "page": { "type": "integer", "title": "Page", "default": 1 },
+          "per_page": { "type": "integer", "title": "Per Page", "default": 25 }
+        },
+        "type": "object",
+        "title": "PaginateRequest"
+      },
+      "ParamConfig": {
+        "properties": {
+          "params": { "title": "Params" },
+          "config": { "title": "Config" }
+        },
+        "type": "object",
+        "title": "ParamConfig"
+      },
+      "PromptObject": {
+        "properties": {
+          "role": { "type": "string", "title": "Role" },
+          "content": { "type": "string", "title": "Content" }
+        },
+        "type": "object",
+        "required": ["role", "content"],
+        "title": "PromptObject"
+      },
+      "RedTeam": {
+        "properties": {
+          "quantity": { "type": "integer", "title": "Quantity", "default": 3 }
+        },
+        "type": "object",
+        "title": "RedTeam"
+      },
+      "RenderPromptResponse": {
+        "properties": {
+          "msg": { "type": "string", "title": "Msg" },
+          "prompt": { "type": "string", "title": "Prompt" }
+        },
+        "type": "object",
+        "required": ["msg", "prompt"],
+        "title": "RenderPromptResponse"
+      },
+      "RenderRequest": {
+        "properties": {
+          "id": { "type": "string", "title": "Id" },
+          "var_mapping": { "type": "object", "title": "Var Mapping" }
+        },
+        "type": "object",
+        "required": ["id", "var_mapping"],
+        "title": "RenderRequest"
+      },
+      "RespConfig": {
+        "properties": {
+          "name": { "type": "string", "title": "Name", "default": "" },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "default": ""
+          },
+          "functions": {
+            "additionalProperties": { "$ref": "#/components/schemas/Function" },
+            "type": "object",
+            "title": "Functions",
+            "default": {}
+          },
+          "use_functions": {
+            "type": "boolean",
+            "title": "Use Functions",
+            "default": false
+          },
+          "function_call": {
+            "anyOf": [
+              { "type": "string" },
+              { "type": "string", "format": "json-string" }
+            ],
+            "title": "Function Call",
+            "default": ""
+          }
+        },
+        "type": "object",
+        "title": "RespConfig"
+      },
+      "RetrievalInput": {
+        "properties": {
+          "query": { "type": "string", "title": "Query" },
+          "variable": {
+            "$ref": "#/components/schemas/app__routers__workspace__VariableType"
+          }
+        },
+        "type": "object",
+        "required": ["query", "variable"],
+        "title": "RetrievalInput"
+      },
+      "SDKReference": {
+        "properties": {
+          "reference": { "type": "string", "title": "Reference" }
+        },
+        "type": "object",
+        "required": ["reference"],
+        "title": "SDKReference"
+      },
+      "SecretPassRequest": {
+        "properties": {
+          "secret_pass": { "type": "string", "title": "Secret Pass" }
+        },
+        "type": "object",
+        "required": ["secret_pass"],
+        "title": "SecretPassRequest"
+      },
+      "ShareWorkspaceForm": {
+        "properties": {
+          "workspace_id": { "type": "string", "title": "Workspace Id" },
+          "email": { "type": "string", "title": "Email" }
+        },
+        "type": "object",
+        "required": ["workspace_id", "email"],
+        "title": "ShareWorkspaceForm"
+      },
+      "State": {
+        "properties": {
+          "chain_stats": { "type": "object", "title": "Chain Stats" },
+          "test_results": {
+            "items": { "type": "object" },
+            "type": "array",
+            "title": "Test Results"
+          }
+        },
+        "type": "object",
+        "required": ["chain_stats", "test_results"],
+        "title": "State"
+      },
+      "TestAdd": {
+        "properties": {
+          "var_mapping": { "type": "object", "title": "Var Mapping" },
+          "assertions": {
+            "additionalProperties": {
+              "items": { "$ref": "#/components/schemas/Assertion" },
+              "type": "array"
+            },
+            "type": "object",
+            "title": "Assertions"
+          },
+          "name": { "type": "string", "title": "Name" }
+        },
+        "type": "object",
+        "title": "TestAdd"
+      },
+      "TestName": {
+        "properties": {
+          "name": { "type": "string", "title": "Name", "default": "" }
+        },
+        "type": "object",
+        "title": "TestName"
+      },
+      "UpdateCellPrompt": {
+        "properties": {
+          "cell_id": { "type": "string", "title": "Cell Id" },
+          "prompt": {
+            "items": { "$ref": "#/components/schemas/PromptObject" },
+            "type": "array",
+            "title": "Prompt",
+            "description": "List of prompt objects with roles and content"
+          }
+        },
+        "type": "object",
+        "required": ["cell_id", "prompt"],
+        "title": "UpdateCellPrompt"
+      },
+      "UpdateFunctionsInput": {
+        "properties": {
+          "workspace_id": { "type": "string", "title": "Workspace Id" },
+          "functions": {
+            "items": { "$ref": "#/components/schemas/FunctionData" },
+            "type": "array",
+            "title": "Functions"
+          }
+        },
+        "type": "object",
+        "required": ["workspace_id", "functions"],
+        "title": "UpdateFunctionsInput"
+      },
+      "UpdateVarMapping": {
+        "properties": {
+          "var_mapping": { "type": "object", "title": "Var Mapping" }
+        },
+        "type": "object",
+        "required": ["var_mapping"],
+        "title": "UpdateVarMapping"
+      },
+      "UserFoundResponse": {
+        "properties": {
+          "user_id": {
+            "type": "string",
+            "title": "User Id",
+            "description": "The ID of the user",
+            "example": "USER_ID"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Msg",
+            "description": "Message indicating success",
+            "example": "User found"
+          }
+        },
+        "type": "object",
+        "required": ["user_id", "msg"],
+        "title": "UserFoundResponse"
+      },
+      "UserIn": {
+        "properties": {
+          "username": { "type": "string", "title": "Username" },
+          "password": { "type": "string", "title": "Password" },
+          "first_name": { "type": "string", "title": "First Name" },
+          "last_name": { "type": "string", "title": "Last Name" },
+          "email": { "type": "string", "format": "email", "title": "Email" },
+          "phone": { "type": "string", "title": "Phone", "default": "" },
+          "workspaces": {
+            "items": { "type": "string" },
+            "type": "array",
+            "title": "Workspaces"
+          },
+          "vaults": {
+            "items": { "type": "string" },
+            "type": "array",
+            "title": "Vaults"
+          },
+          "org_id": { "type": "string", "title": "Org Id", "default": "" }
+        },
+        "type": "object",
+        "required": [
+          "username",
+          "password",
+          "first_name",
+          "last_name",
+          "email"
+        ],
+        "title": "UserIn"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": { "anyOf": [{ "type": "string" }, { "type": "integer" }] },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": { "type": "string", "title": "Message" },
+          "type": { "type": "string", "title": "Error Type" }
+        },
+        "type": "object",
+        "required": ["loc", "msg", "type"],
+        "title": "ValidationError"
+      },
+      "VariableList": {
+        "properties": {
+          "variables": {
+            "additionalProperties": {
+              "$ref": "#/components/schemas/app__routers__suite__VariableType"
+            },
+            "type": "object",
+            "title": "Variables"
+          }
+        },
+        "type": "object",
+        "required": ["variables"],
+        "title": "VariableList"
+      },
+      "Vault": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Name of the vault"
+          },
+          "keys": {
+            "items": { "$ref": "#/components/schemas/Key" },
+            "type": "array",
+            "title": "Keys",
+            "description": "List of keys"
+          }
+        },
+        "type": "object",
+        "required": ["name", "keys"],
+        "title": "Vault"
+      },
+      "VaultId": {
+        "properties": { "vault_id": { "type": "string", "title": "Vault Id" } },
+        "type": "object",
+        "required": ["vault_id"],
+        "title": "VaultId"
+      },
+      "VaultIdIn": {
+        "properties": { "vault_id": { "type": "string", "title": "Vault Id" } },
+        "type": "object",
+        "required": ["vault_id"],
+        "title": "VaultIdIn"
+      },
+      "WorkspaceIn": {
+        "properties": {
+          "name": { "type": "string", "title": "Name" },
+          "init_collection": { "type": "string", "title": "Init Collection" },
+          "vault": { "type": "string", "title": "Vault" },
+          "git_link": { "type": "string", "title": "Git Link" }
+        },
+        "type": "object",
+        "required": ["name", "init_collection"],
+        "title": "WorkspaceIn"
+      },
+      "app__routers__suite__VariableType": {
+        "properties": {
+          "type": { "type": "string", "title": "Type" },
+          "cells": {
+            "items": {},
+            "type": "array",
+            "title": "Cells",
+            "default": []
+          },
+          "aux": { "title": "Aux" }
+        },
+        "type": "object",
+        "title": "VariableType"
+      },
+      "app__routers__workspace__VariableType": {
+        "properties": {
+          "type": { "type": "string", "title": "Type" },
+          "cells": {
+            "items": {},
+            "type": "array",
+            "title": "Cells",
+            "default": []
+          },
+          "aux": { "title": "Aux" }
+        },
+        "type": "object",
+        "title": "VariableType"
+      }
+    },
+    "securitySchemes": {
+      "OAuth2PasswordBearer": {
+        "type": "oauth2",
+        "flows": {
+          "password": { "scopes": {}, "tokenUrl": "/routers/auth/login" }
+        }
+      }
+    }
+  }
+}

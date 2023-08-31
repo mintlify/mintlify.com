@@ -44,7 +44,8 @@ export const featuredShowcases = [
   },
   {
     name: 'Whop',
-    description: 'One-stop-shop for all the latest and greatest digital products',
+    description:
+      'One-stop-shop for all the latest and greatest digital products',
     link: { href: 'https://dev.whop.com', label: 'dev.whop.com' },
     logo: logoWhopShowcase,
   },
@@ -138,7 +139,7 @@ export const showcases = [
   },
   {
     name: 'Invopop',
-    description: `API to automate VAT, complex e-invoicing formats and integrations with local tax authorities`,
+    description: `API to automate VAT, e-invoicing formats and integrations with local tax authorities`,
     link: { href: 'https://docs.invopop.com', label: 'docs.invopop.com' },
     logo: logoInvopopShowcase,
   },
@@ -166,12 +167,6 @@ export const showcases = [
     link: { href: 'https://flipt.io/docs', label: 'flipt.io/docs' },
     logo: logoFliptShowcase,
   },
-  {
-    name: 'Radiant',
-    description: `Web3 no-code automation`,
-    link: { href: 'https://docs.radiant.so', label: 'docs.radiant.so' },
-    logo: logoRadiantShowcase,
-  },
 ]
 
 function ShowcaseCard({ showcase }) {
@@ -192,7 +187,9 @@ function ShowcaseCard({ showcase }) {
         <h2 className="mt-6 text-base font-medium text-zinc-800 dark:text-zinc-100">
           {showcase.name}
         </h2>
-        <Card.Description>{showcase.description}</Card.Description>
+        <Card.Description className="h-12">
+          {showcase.description}
+        </Card.Description>
       </Card.Link>
     </Card>
   )
@@ -207,10 +204,10 @@ export function Showcase() {
     >
       <div className="mx-auto">
         <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
-          Beautiful docs you need
+          For every company
         </h2>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Check out some of our favorite documentations for yourself
+          Check out some of our favorite documentations.
         </p>
       </div>
       <ul
@@ -218,7 +215,7 @@ export function Showcase() {
         className="mt-12 grid grid-cols-1 gap-x-4 gap-y-4 sm:grid-cols-2 lg:grid-cols-3"
       >
         {showcases.map((showcase) => (
-          <ShowcaseCard showcase={showcase} />
+          <ShowcaseCard showcase={showcase} key={showcase.name} />
         ))}
       </ul>
     </section>
