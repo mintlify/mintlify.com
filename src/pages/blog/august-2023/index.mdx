@@ -1,0 +1,99 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: 'Mintlify Product Update August 2023',
+  description:
+    'What we launched in August: CLI v4, documentation feedback, LateX support, and more. ',
+  mobileImageUrl: '/static/images/blog/august-2023/desktop.png',
+  desktopImageUrl: '/static/images/blog/august-2023/mobile.png',
+  author: 'Kate Chen',
+  authorRole: 'Growth',
+  date: 'September 2, 2023',
+  categories: ['Featured', 'Product'],
+  authorImageUrl: '/static/images/blog/authors/kate.jpg',
+  readingTime: '2 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/august-2023/desktop.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+In August, we brought a range of improvements and expansions to our platform, including our CLI v4, documentation feedback, LateX support, copying headers from mobile, and icon add-ins.
+
+Here’s a detailed look at all our latest updates this past month:
+
+## CLI Upgrade
+
+<img
+  src="/static/images/blog/august-2023/cli.gif"
+  alt="CLI upgrade"
+  className="w-full rounded-md"
+/>
+
+The newest version of our Mintlify CLI is out! With this upgrade, you can now preview your local changes and enjoy much faster page load speeds (because, like, who wants pages that move slower than me pre-caffeine on a Monday morning).
+
+Upgrade your CLI with the following command to get the latest changes:
+
+```bash
+npm i -g mintlify@latest
+```
+
+## Documentation Feedback
+
+<img
+  src="/static/images/blog/august-2023/feedback.jpeg"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+We take consistent feedback from our users seriously, and so should you. Our new docs feedback configuration allows users to easily identicate whether a page was helpful and suggest edits, creating a direct channel for constructive feedback. With their help, you can better identify new areas of improvement to achieve the best user experience possible. Read more from the docs [here](https://mintlify.com/docs/settings/global#structure).
+
+To integrate our feedback configuration into your docs, simply add the following snippet into your mint.json file:
+
+```json
+{
+  "feedback": {
+    "thumbsRating": true, // option to thumbs up/down
+    "suggestEdit": true, // option to create a PR on the Github repo
+    "raiseIssue": true // option to raise an issue on Github
+  }
+}
+```
+
+## LaTeX Support
+
+We now support LaTeX in our docs. To use them in your interface, use $ before and after your code to convert it into LateX styling in-line. To create LaTeX in its own line, simply use $$ before and after your code. Read more from the docs [here](https://mintlify.com/docs/content/text#latex).
+
+<img
+  src="/static/images/blog/august-2023/latex.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Copying headers from mobile
+
+Trying to quickly send an anchored link to your docs? You can now copy anchor links from mobile by simply tapping on the header from mobile. Easy.
+
+<img
+  src="/static/images/blog/august-2023/headers.gif"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Expanded icon use & icon types
+
+We now support adding icons onto your sidebar group folders, as well as the various icon types available on [Font Awesome](https://fontawesome.com/icons). Try by adding the `iconType` to your page metadata or sidebar navigation definition.
+
+<img
+  src="/static/images/blog/august-2023/icons.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Wrapping Up
+
+This concludes our August round-up of Mintlify’s latest features. Stay tuned to all of our latest product updates, make sure to follow our <a href="https://twitter.com/mintlify" target="_blank">Twitter</a>. To request any features, let us know in our <a href="https://join.slack.com/t/mintlify-users/shared_invite/zt-1xfzz6x35-f4o4WCYfpvLhSj3O7WAOMA" target="_blank">Slack community</a>. We’ll see you around :)
