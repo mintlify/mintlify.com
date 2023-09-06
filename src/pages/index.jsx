@@ -22,7 +22,7 @@ import logoElevenLabs from '@/images/logos/clouds/elevenlabs.svg'
 import logoDepict from '@/images/logos/clouds/depict.svg'
 import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
 
-import { featuredShowcases } from './showcase'
+import { featuredShowcases } from './customers'
 import DynamicLink from '@/components/DynamicLink'
 
 function StartIcon(props) {
