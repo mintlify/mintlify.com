@@ -134,7 +134,7 @@ function FeaturedShowcases() {
     <div className="rounded-2xl border border-zinc-100 py-6 dark:border-zinc-700/40">
       <h2 className="mx-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <StarIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Featured showcases</span>
+        <span className="ml-3">Featured customers</span>
       </h2>
       <ol className="mt-6">
         {featuredShowcases.map((showcase, roleIndex) => (

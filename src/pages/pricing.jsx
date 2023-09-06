@@ -4,7 +4,6 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { RadioGroup } from '@headlessui/react'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import { Testimonials } from '@/components/Testimonials'
 
 const plans = [
   {
@@ -328,7 +327,6 @@ export default function ArticlesIndex() {
         intro="Whichever plan you pick, it's free until you love your docs. That's our promise."
       >
         <Pricing />
-        <Testimonials />
       </SimpleLayout>
     </>
   )

@@ -25,6 +25,7 @@ import logoFliptShowcase from '@/images/logos/showcase/flipt.svg'
 import logoRadiantShowcase from '@/images/logos/showcase/radiant.svg'
 import logoTriggerShowcase from '@/images/logos/showcase/trigger.svg'
 import logoFlatfileShowcase from '@/images/logos/showcase/flatfile.svg'
+import { Testimonials } from '@/components/Testimonials'
 
 export const featuredShowcases = [
   {
@@ -195,37 +196,35 @@ export default function Projects() {
         <title>Showcase - Mintlify</title>
         <meta
           name="description"
-          content="Discover how we help hundreds of developer-focused companies win with documentation."
+          content="Discover how we help developer-focused companies win with documentation."
         />
       </Head>
       <SimpleLayout
         title="Customer showcase"
-        intro="Discover how we help hundreds of developer-focused companies win with documentation."
+        intro="Discover how we help developer-focused companies win with documentation."
       >
         <ul
           role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {showcases.map((project) => (
-            <Card as="li" key={project.name}>
-              <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
+            <li key={project.name} className="relative rounded-2xl border border-zinc-100 bg-white p-6 shadow-lg shadow-zinc-900/5 dark:border-zinc-800/60 dark:bg-zinc-900/80">
+              <div className="flex items-center space-x-4">
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8 rounded-full"
+                  className="h-7 w-7 rounded-full"
                   unoptimized
                 />
+                <h2 className="text-base text-zinc-800 dark:text-zinc-100">
+                  {project.name}
+                </h2>
               </div>
-              <h2 className="mt-6 text-base font-medium text-zinc-800 dark:text-zinc-100">
-                <Card.Link href={project.link.href}>{project.name}</Card.Link>
-              </h2>
-              <Card.Description>{project.description}</Card.Description>
-              <p className="relative z-10 mt-4 flex text-sm text-zinc-400 group-hover:text-primary dark:text-zinc-500 dark:group-hover:text-light">
-                {project.link.label}
-              </p>
-            </Card>
+              <p className='mt-4 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
+            </li>
           ))}
         </ul>
+        <Testimonials />
       </SimpleLayout>
     </>
   )

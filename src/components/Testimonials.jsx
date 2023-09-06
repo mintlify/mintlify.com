@@ -179,7 +179,7 @@ export function Testimonials() {
             <ul role="list" className="flex flex-col gap-y-6">
               {column.map((testimonial, testimonialIndex) => (
                 <li key={testimonialIndex}>
-                  <figure className="relative rounded-2xl border border-zinc-100 bg-white p-6 shadow-lg shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900 sm:gap-y-8">
+                  <figure className="relative rounded-2xl border border-zinc-100 bg-white p-6 shadow-lg shadow-zinc-900/5 dark:border-zinc-800/60 dark:bg-zinc-900/80 sm:gap-y-8">
                     <blockquote className="relative">
                       <p className="text-sm text-zinc-600 dark:text-zinc-400">
                         {testimonial.content}
