@@ -43,7 +43,7 @@ export default function Projects() {
           {
             categories.map((category) => (
               <li className="cursor-pointer" onClick={() => setActiveCategory(category)}>
-                <h2 className={clsx("flex text-sm leading-6 font-semibold whitespace-nowrap pt-3 pb-3 -mb-px max-w-max",
+                <h2 className={clsx("flex text-sm leading-6 font-medium whitespace-nowrap pt-3 pb-3 -mb-px max-w-max",
                   category.id === activeCategory.id
                     ? 'border-b text-primary dark:text-light border-current'
                     : 'text-zinc-900 border-transparent hover:border-b hover:border-zinc-300 dark:text-zinc-200 dark:hover:border-zinc-700')}>
@@ -59,16 +59,16 @@ export default function Projects() {
         >
           {filteredShowcases.map((project) => (
             <li key={project.name} className="relative flex flex-col rounded-xl border border-zinc-100 bg-white p-6 shadow-xl shadow-zinc-300/10 dark:shadow-none dark:border-zinc-800/80 dark:bg-gradient-to-bl dark:bg-zinc-900 dark:from-zinc-950/5 dark:to-zinc-950/30 dark:hover:bg-zinc-800/50 cursor-pointer">
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3.5">
                 <div className="border dark:border-zinc-800 rounded-full">
                   <Image
                     src={project.logo}
                     alt=""
-                    className="h-8 w-8 rounded-full"
+                    className="h-7 w-7 rounded-full"
                     unoptimized
                   />
                 </div>
-                <h2 className="text-base text-zinc-800 dark:text-zinc-100">
+                <h2 className="text-base text-zinc-800 dark:text-zinc-100 font-medium">
                   {project.name}
                 </h2>
               </div>
