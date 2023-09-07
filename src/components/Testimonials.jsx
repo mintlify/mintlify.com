@@ -172,7 +172,7 @@ export function Testimonials() {
       </div>
       <ul
         role="list"
-        className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
+        className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 lg:mt-20 lg:max-w-none lg:grid-cols-3"
       >
         {testimonials.map((column, columnIndex) => (
           <li key={columnIndex}>

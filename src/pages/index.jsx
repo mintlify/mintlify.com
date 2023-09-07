@@ -22,8 +22,8 @@ import logoElevenLabs from '@/images/logos/clouds/elevenlabs.svg'
 import logoDepict from '@/images/logos/clouds/depict.svg'
 import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
 
-import { featuredShowcases } from './customers'
 import DynamicLink from '@/components/DynamicLink'
+import { featuredShowcases } from '@/lib/customers'
 
 function StartIcon(props) {
   return (
