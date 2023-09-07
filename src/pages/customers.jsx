@@ -26,6 +26,43 @@ import logoRadiantShowcase from '@/images/logos/showcase/radiant.svg'
 import logoTriggerShowcase from '@/images/logos/showcase/trigger.svg'
 import logoFlatfileShowcase from '@/images/logos/showcase/flatfile.svg'
 import { Testimonials } from '@/components/Testimonials'
+import { useState } from 'react'
+import clsx from 'clsx'
+
+const categories = [
+  {
+    id: 'featured',
+    label: 'Featured'
+  },
+  {
+    id: 'ai',
+    label: 'Artifical Intelligence'
+  },
+  {
+    id: 'devtool',
+    label: 'Developer Tools'
+  },
+  {
+    id: 'saas',
+    label: 'SaaS'
+  },
+  {
+    id: 'consumer',
+    label: 'Consumer'
+  },
+  {
+    id: 'fintech',
+    label: 'Fintech'
+  },
+  {
+    id: 'web3',
+    label: 'Web3'
+  },
+  {
+    id: 'healthcare',
+    label: 'Healthcare'
+  },
+]
 
 export const featuredShowcases = [
   {
@@ -142,7 +179,7 @@ const showcases = [
   },
   {
     name: 'Invopop',
-    description: `API to automate VAT, complex e-invoicing formats and integrations with local tax authorities`,
+    description: `API to automate VAT, complex e-invoicing formats and integrations`,
     link: { href: 'https://docs.invopop.com', label: 'docs.invopop.com' },
     logo: logoInvopopShowcase,
   },
@@ -154,7 +191,7 @@ const showcases = [
   },
   {
     name: 'Propelauth',
-    description: `End-to-end managed user authentication specializing in B2B use cases`,
+    description: `End-to-end managed B2B user authentication`,
     link: { href: 'https://docs.propelauth.com', label: 'docs.propelauth.com' },
     logo: logoPropelauthShowcase,
   },
@@ -190,6 +227,7 @@ export function LinkIcon(props) {
 }
 
 export default function Projects() {
+  const [activeCategory, setActiveCategory] = useState('featured');
   return (
     <>
       <Head>
@@ -203,12 +241,26 @@ export default function Projects() {
         title="Customer showcase"
         intro="Discover how we help developer-focused companies win with documentation."
       >
+        <ul className="not-prose mb-6 pb-[1px] flex-none min-w-full overflow-auto space-x-6 flex border-b dark:border-zinc-800/50">
+          {
+            categories.map((category) => (
+              <li className="cursor-pointer">
+                <h2 className={clsx("flex text-sm leading-6 font-semibold whitespace-nowrap pt-3 pb-3 -mb-px max-w-max",
+                  category.id === activeCategory
+                    ? 'border-b text-primary dark:text-light border-current'
+                    : 'text-zinc-900 border-transparent hover:border-zinc-300 dark:text-zinc-200 dark:hover:border-zinc-700')}>
+                  {category.label}
+                </h2>
+              </li>
+            ))
+          }
+        </ul>
         <ul
           role="list"
-          className="grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3"
+          className="mt-12 grid grid-cols-1 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-3"
         >
           {showcases.map((project) => (
-            <li key={project.name} className="relative rounded-2xl border border-zinc-100 bg-white p-6 shadow-lg shadow-zinc-900/5 dark:border-zinc-800/60 dark:bg-zinc-900/80">
+            <li key={project.name} className="relative flex flex-col rounded-2xl border border-zinc-100 bg-white p-6 shadow-xl shadow-zinc-300/10 dark:shadow-none dark:border-zinc-800/60 dark:bg-zinc-900/60">
               <div className="flex items-center space-x-4">
                 <Image
                   src={project.logo}
@@ -220,10 +272,11 @@ export default function Projects() {
                   {project.name}
                 </h2>
               </div>
-              <p className='mt-4 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
+              <p className='flex-1 mt-4 mb-1 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
             </li>
           ))}
         </ul>
+        {/* <div></div> */}
         <Testimonials />
       </SimpleLayout>
     </>
