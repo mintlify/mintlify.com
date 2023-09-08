@@ -60,7 +60,7 @@ export default function Projects() {
           className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {filteredShowcases.map((project) => (
-            <div key={project.name} className="relative flex flex-col rounded-xl border border-zinc-200/50 bg-white p-6 shadow-xl shadow-zinc-300/10 dark:shadow-none dark:border-zinc-800/80 dark:bg-gradient-to-bl dark:bg-zinc-900 dark:from-zinc-950/5 dark:to-zinc-950/30 dark:hover:bg-zinc-800/50" target="_blank">
+            <Link href={project.link.href} target={project.isCustomerStory ? "_self" : "_blank"} key={project.name} className="group relative flex flex-col rounded-xl border border-zinc-200/50 bg-white p-6 shadow-xl shadow-zinc-300/10 dark:shadow-none dark:border-zinc-800/80 dark:bg-gradient-to-bl dark:bg-zinc-900 dark:from-zinc-950/5 dark:to-zinc-950/30 hover:bg-zinc-50 dark:hover:bg-zinc-800/50">
               <div className="flex items-center space-x-3.5">
                 <div className="border dark:border-zinc-800 rounded-full">
                   <Image
@@ -80,11 +80,11 @@ export default function Projects() {
                 }
               </div>
               <p className='flex-1 mt-4 mb-1 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
-                <Link href={project.link.href} target={project.isCustomerStory ? "_self" : "_blank"} className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-200/50 dark:border-zinc-800 dark:hover:border-zinc-700 hover:bg-zinc-50 dark:hover:bg-transparent dark:text-white font-medium w-fit px-4 py-1 text-sm">
+                <span href={project.link.href} target={project.isCustomerStory ? "_self" : "_blank"} className="flex items-center space-x-1 mt-4 rounded-full dark:hover:bg-transparent text-zinc-800 dark:text-white group-hover:text-primary dark:group-hover:text-light font-medium w-fit py-1 text-sm">
                   {project.isCustomerStory ? 'Read more' : 'View docs'}
                 <ChevronRightIcon className="ml-1 h-auto w-4 stroke-current" />
-              </Link>
-            </div>
+              </span>
+            </Link>
           ))}
         </ul>
         <Testimonials />

@@ -117,7 +117,7 @@ export const featuredShowcases = [
   },
   {
     name: 'Mage',
-    description: `Open-source data pipeline for transforming and integrating data`,
+    description: `Open-source data pipeline`,
     link: { href: 'https://docs.mage.ai', label: 'docs.mage.ai' },
     logo: logoMageShowcase,
     category: ['featured', 'devtool']
@@ -157,6 +157,14 @@ export const showcases = [
       label: 'docs.elementary-data.com',
     },
     logo: logoElementaryShowcase,
+    category: ['devtool']
+  },
+  {
+    name: 'Upstash',
+    description:
+      'Serverless Data Platform for developers',
+    link: { href: 'https://upstash.com/docs', label: 'upstash.com/docs' },
+    logo: logoUpstashShowcase,
     category: ['devtool']
   },
   {
@@ -292,14 +300,6 @@ export const showcases = [
     description: `End-to-end managed B2B user authentication`,
     link: { href: 'https://docs.propelauth.com', label: 'docs.propelauth.com' },
     logo: logoPropelauthShowcase,
-    category: ['devtool']
-  },
-  {
-    name: 'Upstash',
-    description:
-      'Serverless Data Platform for developers',
-    link: { href: 'https://upstash.com/docs', label: 'upstash.com/docs' },
-    logo: logoUpstashShowcase,
     category: ['devtool']
   },
   {
