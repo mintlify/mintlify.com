@@ -109,7 +109,7 @@ export const featuredShowcases = [
   },
   {
     name: 'Mage',
-    description: `Open-source data pipeline tool for transforming and integrating data`,
+    description: `Open-source data pipeline for transforming and integrating data`,
     link: { href: 'https://docs.mage.ai', label: 'docs.mage.ai' },
     logo: logoMageShowcase,
     category: ['featured', 'devtool']
