@@ -154,7 +154,7 @@ export const showcases = [
   {
     name: 'ElevenLabs',
     description: 'Generative Voice AI',
-    link: { href: 'https://docs.elevenlabs', label: 'docs.elevenlabs.io' },
+    link: { href: 'https://docs.elevenlabs.io', label: 'docs.elevenlabs.io' },
     logo: logoElevenLabsShowcase,
     category: ['featured', 'ai']
   },
