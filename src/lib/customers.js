@@ -36,6 +36,19 @@ import logoSyndicateShowcase from '@/images/logos/showcase/syndicate.svg'
 import logoStationShowcase from '@/images/logos/showcase/station.svg'
 import logoDynamicShowcase from '@/images/logos/showcase/dynamic.svg'
 import logoEtherspotShowcase from '@/images/logos/showcase/etherspot.svg'
+import logoGoodyShowcase from '@/images/logos/showcase/goody.svg'
+import logoKarrotMarketShowcase from '@/images/logos/showcase/karrotmarket.svg'
+import logoRevocalizeShowcase from '@/images/logos/showcase/revocalize.svg'
+import logoVioletShowcase from '@/images/logos/showcase/violet.svg'
+import logoLagoShowcase from '@/images/logos/showcase/lago.svg'
+import logoGr4vyShowcase from '@/images/logos/showcase/gr4vy.svg'
+import logoSequenceShowcase from '@/images/logos/showcase/sequence.svg'
+import logoTealShowcase from '@/images/logos/showcase/teal.svg'
+import logoLatchBioShowcase from '@/images/logos/showcase/latchbio.svg'
+import logoVitalShowcase from '@/images/logos/showcase/vital.svg'
+import logoMetriportShowcase from '@/images/logos/showcase/metriport.svg'
+import logoOpkitShowcase from '@/images/logos/showcase/opkit.svg'
+import logoSpotShowcase from '@/images/logos/showcase/spot.svg'
 
 export const categories = [
   {
@@ -55,12 +68,12 @@ export const categories = [
     label: 'SaaS'
   },
   {
-    id: 'consumer',
-    label: 'Consumer'
-  },
-  {
     id: 'fintech',
     label: 'Fintech'
+  },
+  {
+    id: 'consumer',
+    label: 'Consumer'
   },
   {
     id: 'web3',
@@ -125,7 +138,7 @@ export const showcases = [
       'Email for developers',
     link: { href: 'https://resend.com/docs', label: 'resend.com/docs' },
     logo: logoResendShowcase,
-    category: ['devtool']
+    category: ['featured', 'devtool']
   },
   {
     name: 'Elementary',
@@ -273,13 +286,6 @@ export const showcases = [
     category: ['fintech']
   },
   {
-    name: 'Bitski',
-    description: `The NFT wallet for everyone`,
-    link: { href: 'https://docs.bitski.com', label: 'docs.bitski.com' },
-    logo: logoBitskiShowcase,
-    category: ['consumer', 'web3']
-  },
-  {
     name: 'Propelauth',
     description: `End-to-end managed B2B user authentication`,
     link: { href: 'https://docs.propelauth.com', label: 'docs.propelauth.com' },
@@ -362,5 +368,116 @@ export const showcases = [
     link: { href: 'https://etherspot.fyi', label: 'etherspot.fyi' },
     logo: logoEtherspotShowcase,
     category: ['web3']
+  },
+  {
+    name: 'Goody',
+    description:
+      'All-in-one platform for business gifting',
+    link: { href: 'https://developer.ongoody.com', label: 'developer.ongoody.com' },
+    logo: logoGoodyShowcase,
+    category: ['consumer']
+  },
+  {
+    name: 'Karrot Market',
+    description:
+      'Hyperlocal community app which offers a secondhand marketplace',
+      link: { href: 'https://docs.karrotmini.com', label: 'docs.karrotmini.com' },
+    logo: logoKarrotMarketShowcase,
+    category: ['consumer']
+  },
+  {
+    name: 'Bitski',
+    description: `The NFT wallet for everyone`,
+    link: { href: 'https://docs.bitski.com', label: 'docs.bitski.com' },
+    logo: logoBitskiShowcase,
+    category: ['consumer', 'web3']
+  },
+  {
+    name: 'Revocalize',
+    description:
+      'Your personal AI Voice Toolkit',
+    link: { href: 'https://docs.revocalize.ai', label: 'docs.revocalize.ai' },
+    logo: logoRevocalizeShowcase,
+    category: ['consumer']
+  },
+  {
+    name: 'Sequence',
+    description:
+      'Integrated billing and pricing solution for B2B scaleups',
+    link: { href: 'https://docs.sequencehq.com', label: 'docs.sequencehq.com' },
+    logo: logoSequenceShowcase,
+    category: ['fintech']
+  },
+  {
+    name: 'Violet',
+    description:
+      'Unified commerce API connecting merchants and channels directly',
+    link: { href: 'https://docs.violet.io', label: 'docs.violet.io' },
+    logo: logoVioletShowcase,
+    category: ['fintech']
+  },
+  {
+    name: 'Gr4vy',
+    description:
+      'Cloud payment orchestration platform',
+    link: { href: 'https://docs.gr4vy.com', label: 'docs.gr4vy.com' },
+    logo: logoGr4vyShowcase,
+    category: ['fintech']
+  },
+  {
+    name: 'Lago',
+    description:
+      'Open-source metering and usage-based billing',
+    link: { href: 'https://docs.getlago.com', label: 'docs.getlago.com' },
+    logo: logoLagoShowcase,
+    category: ['fintech']
+  },
+  {
+    name: 'Teal',
+    description:
+      'Embedded SMB Accounting',
+    link: { href: 'https://docs.teal.dev', label: 'docs.teal.dev' },
+    logo: logoTealShowcase,
+    category: ['fintech']
+  },
+  {
+    name: 'LatchBio',
+    description:
+      'The Cloud for Biology',
+    link: { href: 'https://wiki.latch.bio', label: 'wiki.latch.bio' },
+    logo: logoLatchBioShowcase,
+    category: ['healthcare']
+  },
+  {
+    name: 'Vital',
+    description:
+      'API for collecting at-home health data for building privacy-focused applications',
+    link: { href: 'https://docs.tryvital.io', label: 'docs.tryvital.io' },
+    logo: logoVitalShowcase,
+    category: ['healthcare']
+  },
+  {
+    name: 'Metriport',
+    description:
+      'Medical data management for digital health companies',
+    link: { href: 'https://docs.metriport.com', label: 'docs.metriport.com' },
+    logo: logoMetriportShowcase,
+    category: ['healthcare']
+  },
+  {
+    name: 'Opkit',
+    description:
+      'Automated health insurance verification platform',
+    link: { href: 'https://docs.opkit.co', label: 'docs.opkit.co' },
+    logo: logoOpkitShowcase,
+    category: ['healthcare']
+  },
+  {
+    name: 'Spot',
+    description:
+      'At-home tests for telehealth companies',
+    link: { href: 'https://docs.spotdx.com', label: 'docs.spotdx.com' },
+    logo: logoSpotShowcase,
+    category: ['healthcare']
   },
 ]
