@@ -47,7 +47,7 @@ export function StoryLayout({ children, meta, about }) {
                 <div className="sticky top-0 col-span-2 h-screen pr-4 pt-12">
                   <img
                     src={about.imageUrl}
-                    className="block w-2/3 rounded-md object-cover"
+                    className="block w-12 rounded-md object-cover"
                   />
                   <AboutSection title="About" text={about.description} />
                   <Link

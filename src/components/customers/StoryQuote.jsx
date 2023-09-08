@@ -1,18 +1,18 @@
-export function StoryQuote({ quote, imgUrl, person }) {
+export function StoryQuote({ quote, person, imgUrl }) {
   return (
-    <div className="border-1 flex flex-col items-center gap-4 rounded-md border border-zinc-200 p-6 text-center">
-      <div class="flex items-center justify-center">
-        <div class="w-full rounded-full bg-gradient-to-r from-green-200 via-blue-200 to-green-200 p-1">
-          <img
-            src={imgUrl}
-            className="border-1 flex h-14 w-14 rounded-full border grayscale "
-          />
+    <div className="relative flex py-2 space-x-8">
+      <div className="rounded-full w-2 bg-primary"></div>
+      <div className="py-2">
+        <div className="text-lg dark:text-zinc-100">
+          {quote}
+        </div>
+        <div className="mt-4 flex items-center space-x-3">
+          <img className="h-6 w-6" src={imgUrl} />
+          <div>
+            {person}
+          </div>
         </div>
       </div>
-      <span className="px-8 text-lg font-semibold text-zinc-800">
-        "{quote}"
-      </span>
-      <span className="text-sm">{person}</span>
     </div>
   )
 }
