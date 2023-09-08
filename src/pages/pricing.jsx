@@ -185,7 +185,7 @@ function Plan({
                     : 'text-zinc-600 dark:text-zinc-400'
                 )}
               >
-                /month
+                /month{name !== 'Free' && '/project'}
               </span>
             </span>
             <span
@@ -206,7 +206,7 @@ function Plan({
                     : 'text-zinc-600 dark:text-zinc-400'
                 )}
               >
-                /month
+                /month{name !== 'Free' && '/project'}
               </span>
             </span>
           </>

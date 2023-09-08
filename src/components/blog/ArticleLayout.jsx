@@ -5,7 +5,7 @@ import { Prose } from '@/components/Prose'
 import { Author } from '@/pages/blog'
 import Link from 'next/link'
 
-function ArrowLeftIcon(props) {
+export function ArrowLeftIcon(props) {
   return (
     <svg viewBox="0 -9 3 24" {...props}>
       <path
@@ -39,7 +39,7 @@ export function ArticleLayout({ children, meta, isRssFeed = false }) {
               className="group mb-8 mt-12 flex items-center justify-center space-x-0.5 text-sm font-medium text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-500 dark:hover:text-zinc-300 lg:absolute lg:-left-5 lg:mb-0 xl:-top-0.5 xl:left-0 xl:mt-0"
               href="/blog"
             >
-              <ArrowLeftIcon className="h-6 w-6" />
+              <ArrowLeftIcon className="h-5 w-5" />
               <span>Back</span>
             </Link>
             <article>

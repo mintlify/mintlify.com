@@ -136,7 +136,7 @@ export const showcases = [
     name: 'Resend',
     description:
       'Email for developers',
-    link: { href: 'https://resend.com/docs', label: 'resend.com/docs' },
+    link: { href: '/customers/resend', label: 'resend.com/docs' },
     logo: logoResendShowcase,
     category: ['featured', 'devtool'],
     isCustomerStory: true
@@ -156,7 +156,7 @@ export const showcases = [
     description: 'Generative Voice AI',
     link: { href: 'https://docs.elevenlabs', label: 'docs.elevenlabs.io' },
     logo: logoElevenLabsShowcase,
-    category: ['ai']
+    category: ['featured', 'ai']
   },
   {
     name: 'AgentGPT',
@@ -312,7 +312,7 @@ export const showcases = [
   {
     name: 'Kaldea',
     description: `The unified analytics platform`,
-    link: { href: 'https://docs.kaldea.com', label: 'kaldea.com/docs' },
+    link: { href: 'https://kaldea.com/docs', label: 'kaldea.com/docs' },
     logo: logoKaldeaShowcase,
     category: ['saas']
   },

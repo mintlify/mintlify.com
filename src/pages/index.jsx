@@ -253,8 +253,8 @@ const features = [
     description:
       'Everything is meticulously designed and optimized for a great user experience, from performance to navigation.',
     cta: {
-      name: 'View showcase',
-      href: '/showcase',
+      name: 'View customers',
+      href: '/customers',
     },
   },
   {
