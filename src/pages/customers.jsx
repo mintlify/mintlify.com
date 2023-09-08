@@ -6,6 +6,7 @@ import { useState } from 'react'
 import clsx from 'clsx'
 import { categories, showcases } from '@/lib/customers'
 import { ChevronRightIcon } from '@/components/Card'
+import Link from 'next/link'
 
 
 export function LinkIcon(props) {
@@ -59,7 +60,7 @@ export default function Projects() {
           className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
         >
           {filteredShowcases.map((project) => (
-            <li key={project.name} className="relative flex flex-col rounded-xl border border-zinc-100 bg-white p-6 shadow-xl shadow-zinc-300/10 dark:shadow-none dark:border-zinc-800/80 dark:bg-gradient-to-bl dark:bg-zinc-900 dark:from-zinc-950/5 dark:to-zinc-950/30 dark:hover:bg-zinc-800/50 cursor-pointer">
+            <div key={project.name} className="relative flex flex-col rounded-xl border border-zinc-100 bg-white p-6 shadow-xl shadow-zinc-300/10 dark:shadow-none dark:border-zinc-800/80 dark:bg-gradient-to-bl dark:bg-zinc-900 dark:from-zinc-950/5 dark:to-zinc-950/30 dark:hover:bg-zinc-800/50" target="_blank">
               <div className="flex items-center space-x-3.5">
                 <div className="border dark:border-zinc-800 rounded-full">
                   <Image
@@ -74,13 +75,13 @@ export default function Projects() {
                 </h2>
               </div>
               <p className='flex-1 mt-4 mb-1 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
-              <button className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-800 dark:text-white font-medium w-fit px-4 py-1 text-sm">
+              <Link href={project.link.href} target="_blank" className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-800 hover:border-zinc-700 dark:text-white font-medium w-fit px-4 py-1 text-sm">
                 <span>
                   View docs
                 </span>
                 <ChevronRightIcon className="ml-1 h-auto w-4 stroke-current" />
-              </button>
-            </li>
+              </Link>
+            </div>
           ))}
         </ul>
         {/* <div></div> */}
