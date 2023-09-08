@@ -52,7 +52,7 @@ export function StoryLayout({ children, meta, about }) {
                   <AboutSection title="About" text={about.description} />
                   <Link
                     className="flex items-center gap-2 text-xs text-primary dark:text-light dark:hover:text-primary hover:fill-zinc-900 hover:text-zinc-900"
-                    href={about.docsUrl}
+                    href={`https://${about.docsUrl}`}
                   >
                     {about.docsUrl}
                   </Link>

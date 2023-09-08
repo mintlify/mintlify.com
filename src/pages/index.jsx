@@ -172,7 +172,7 @@ function FeaturedShowcases() {
         ))}
       </ol>
       <div className="mx-6 mt-6">
-        <Button href="/showcase" variant="secondary" className="group w-full">
+        <Button href="/customers" variant="secondary" className="group w-full">
           See more
           <ArrowRightIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
         </Button>
