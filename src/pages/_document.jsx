@@ -10,7 +10,7 @@ const modeScript = `
 
   function updateMode() {
     let isSystemDarkMode = darkModeMediaQuery.matches
-    let isDarkMode = false;
+    let isDarkMode = window.localStorage.isDarkMode === 'true' || (!('isDarkMode' in window.localStorage) && isSystemDarkMode)
 
     if (isDarkMode) {
       document.documentElement.classList.add('dark')
