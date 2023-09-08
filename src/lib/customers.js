@@ -101,6 +101,14 @@ export const featuredShowcases = [
     category: ['featured', 'ai']
   },
   {
+    name: 'Dynamic',
+    description:
+      'Multi-chain wallet-based authentication and authorization platform',
+    link: { href: 'https://docs.dynamic.xyz', label: 'docs.dynamic.xyz' },
+    logo: logoDynamicShowcase,
+    category: ['featured', 'web3']
+  },
+  {
     name: 'Whop',
     description: 'One-stop-shop for all the latest and greatest digital products',
     link: { href: 'https://dev.whop.com', label: 'dev.whop.com' },
@@ -179,13 +187,6 @@ export const showcases = [
     link: { href: 'https://docs.uberduck.ai', label: 'docs.uberduck.ai' },
     logo: logoUberduckShowcase,
     category: ['ai']
-  },
-  {
-    name: 'Explo',
-    description: 'Customer-facing analytics for any platform',
-    link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
-    logo: logoExploShowcase,
-    category: ['featured', 'saas']
   },
   {
     name: 'Monterey',
@@ -355,12 +356,11 @@ export const showcases = [
     category: ['web3']
   },
   {
-    name: 'Dynamic',
-    description:
-      'Multi-chain wallet-based authentication and authorization platform',
-    link: { href: 'https://docs.dynamic.xyz', label: 'docs.dynamic.xyz' },
-    logo: logoDynamicShowcase,
-    category: ['web3']
+    name: 'Explo',
+    description: 'Customer-facing analytics for any platform',
+    link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
+    logo: logoExploShowcase,
+    category: ['saas']
   },
   {
     name: 'Etherspot',
