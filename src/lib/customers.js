@@ -204,7 +204,7 @@ export const showcases = [
   {
     name: 'Koala',
     description: 'Customer intent platform',
-    link: { href: 'https://getkoala.com', label: 'getkoala.com/docs' },
+    link: { href: 'https://getkoala.com/docs', label: 'getkoala.com/docs' },
     logo: logoKoalaShowcase,
     category: ['saas']
   },
