@@ -95,7 +95,7 @@ export const featuredShowcases = [
   },
   {
     name: 'MindsDB',
-    description: 'Introducing AI to your database',
+    description: 'AI Development Cloud Platform',
     link: { href: 'https://docs.mindsdb.com', label: 'docs.mindsdb.com' },
     logo: logoMindsDBShowcase,
     category: ['featured', 'ai']
@@ -138,7 +138,8 @@ export const showcases = [
       'Email for developers',
     link: { href: 'https://resend.com/docs', label: 'resend.com/docs' },
     logo: logoResendShowcase,
-    category: ['featured', 'devtool']
+    category: ['featured', 'devtool'],
+    isCustomerStory: true
   },
   {
     name: 'Elementary',

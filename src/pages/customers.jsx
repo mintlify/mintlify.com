@@ -26,7 +26,7 @@ export default function Projects() {
     label: 'Featured'
   });
 
-  const filteredShowcases = showcases.filter((showcase) => showcase.category?.includes(activeCategory.id));
+  const filteredShowcases = showcases.filter((showcase) => showcase.category?.includes(activeCategory.id)).sort((a, b) => (a.isCustomerStory) ? -1 : 1);
 
   return (
     <>
@@ -73,18 +73,31 @@ export default function Projects() {
                 <h2 className="text-base text-zinc-800 dark:text-zinc-100 font-medium">
                   {project.name}
                 </h2>
+                {
+                  project.isCustomerStory && <span className="inline-flex items-center leading-none rounded-full bg-green-50 dark:bg-light/5 px-2 py-1 text-xs font-medium text-primary dark:text-light ring-1 ring-inset ring-primary/20 dark:ring-light/20">
+                  Customer story
+                </span>
+                }
               </div>
               <p className='flex-1 mt-4 mb-1 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
-              <Link href={project.link.href} target="_blank" className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-800 hover:border-zinc-700 dark:text-white font-medium w-fit px-4 py-1 text-sm">
-                <span>
-                  View docs
-                </span>
-                <ChevronRightIcon className="ml-1 h-auto w-4 stroke-current" />
-              </Link>
+              {
+                project.isCustomerStory
+                  ? <Link href={project.link.href} className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-800 hover:border-zinc-700 dark:text-white font-medium w-fit px-4 py-1 text-sm">
+                      <span>
+                        Read more
+                      </span>
+                      <ChevronRightIcon className="ml-1 h-auto w-4 stroke-current" />
+                    </Link>
+                  : <Link href={project.link.href} target="_blank" className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-800 hover:border-zinc-700 dark:text-white font-medium w-fit px-4 py-1 text-sm">
+                      <span>
+                        View docs
+                      </span>
+                      <ChevronRightIcon className="ml-1 h-auto w-4 stroke-current" />
+                    </Link>
+              }
             </div>
           ))}
         </ul>
-        {/* <div></div> */}
         <Testimonials />
       </SimpleLayout>
     </>
