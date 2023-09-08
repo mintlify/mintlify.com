@@ -22,8 +22,8 @@ import logoElevenLabs from '@/images/logos/clouds/elevenlabs.svg'
 import logoDepict from '@/images/logos/clouds/depict.svg'
 import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
 
-import { featuredShowcases } from '@/components/Showcase'
 import DynamicLink from '@/components/DynamicLink'
+import { featuredShowcases } from '@/lib/customers'
 
 function StartIcon(props) {
   return (
@@ -92,12 +92,10 @@ function ArrowRightIcon(props) {
 function Feature({ feature }) {
   return (
     <Card as="article">
-      <Card.Link href={feature.cta.href}>
-        <Card.Eyebrow>{feature.icon}</Card.Eyebrow>
-        <Card.Title>{feature.title}</Card.Title>
-        <Card.Description>{feature.description}</Card.Description>
-        <Card.Cta>{feature.cta.name}</Card.Cta>
-      </Card.Link>
+      <Card.Title href={feature.cta.href}>{feature.title}</Card.Title>
+      <Card.Eyebrow>{feature.icon}</Card.Eyebrow>
+      <Card.Description>{feature.description}</Card.Description>
+      <Card.Cta>{feature.cta.name}</Card.Cta>
     </Card>
   )
 }
@@ -136,7 +134,7 @@ function FeaturedShowcases() {
     <div className="rounded-2xl border border-zinc-100 py-6 dark:border-zinc-700/40">
       <h2 className="mx-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <StarIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Featured showcases</span>
+        <span className="ml-3">Featured customers</span>
       </h2>
       <ol className="mt-6">
         {featuredShowcases.map((showcase, roleIndex) => (
@@ -174,7 +172,7 @@ function FeaturedShowcases() {
         ))}
       </ol>
       <div className="mx-6 mt-6">
-        <Button href="/showcase" variant="secondary" className="group w-full">
+        <Button href="/customers" variant="secondary" className="group w-full">
           See more
           <ArrowRightIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
         </Button>
@@ -255,8 +253,8 @@ const features = [
     description:
       'Everything is meticulously designed and optimized for a great user experience, from performance to navigation.',
     cta: {
-      name: 'View showcase',
-      href: '/showcase',
+      name: 'View customers',
+      href: '/customers',
     },
   },
   {
@@ -288,17 +286,14 @@ const features = [
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="currentColor"
-        className="h-6 w-6"
+        className="w-6 h-6"
       >
-        <path
-          fillRule="evenodd"
-          d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z"
-          clipRule="evenodd"
-        />
+        <path fillRule="evenodd" d="M9 4.5a.75.75 0 01.721.544l.813 2.846a3.75 3.75 0 002.576 2.576l2.846.813a.75.75 0 010 1.442l-2.846.813a3.75 3.75 0 00-2.576 2.576l-.813 2.846a.75.75 0 01-1.442 0l-.813-2.846a3.75 3.75 0 00-2.576-2.576l-2.846-.813a.75.75 0 010-1.442l2.846-.813A3.75 3.75 0 007.466 7.89l.813-2.846A.75.75 0 019 4.5zM18 1.5a.75.75 0 01.728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 010 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 01-1.456 0l-.258-1.036a2.625 2.625 0 00-1.91-1.91l-1.036-.258a.75.75 0 010-1.456l1.036-.258a2.625 2.625 0 001.91-1.91l.258-1.036A.75.75 0 0118 1.5zM16.5 15a.75.75 0 01.712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 010 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 01-1.422 0l-.395-1.183a1.5 1.5 0 00-.948-.948l-1.183-.395a.75.75 0 010-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0116.5 15z" clipRule="evenodd" />
       </svg>
     ),
     title: 'AI enabled',
-    description: `Access the limitless power of AI, right inside your documentation.`,
+    description:
+      `Access the limitless power of AI, right inside your documentation.`,
     cta: {
       name: 'Learn more',
       href: '/blog/chat',
@@ -317,7 +312,7 @@ export default function Home() {
         />
       </Head>
       <Container className="relative mt-9">
-        <div class="absolute inset-x-0 -top-32 bottom-0 z-0 text-slate-900/10 [mask-image:radial-gradient(circle,white,transparent)] dark:text-white/10">
+        <div class="absolute inset-x-0 bottom-0 -top-32 z-0 text-slate-900/10 [mask-image:radial-gradient(circle,white,transparent)] dark:text-white/10">
           <svg aria-hidden="true" class="absolute inset-0 h-full w-full">
             <defs>
               <pattern
@@ -382,8 +377,8 @@ export default function Home() {
       </Container>
       <Photos />
       <Container className="mt-24 md:mt-28">
-        <div className="mx-auto grid max-w-xl grid-cols-2 gap-y-20 lg:max-w-none lg:grid-cols-2">
-          <div className="flex flex-col gap-6">
+        <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
+          <div className="flex flex-col gap-16">
             {features.map((feature) => (
               <Feature key={feature.slug} feature={feature} />
             ))}

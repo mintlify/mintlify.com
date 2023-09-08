@@ -24,37 +24,29 @@ export function Card({ as: Component = 'div', className, children }) {
   )
 }
 
-Card.Link = function CardLink({ children, className, ...props }) {
+Card.Link = function CardLink({ children, ...props }) {
   return (
-    <div
-      className={clsx(
-        'z-0 h-full w-full p-6 group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800/50 sm:rounded-2xl',
-        className
-      )}
-    >
+    <>
+      <div className="absolute -inset-y-6 -inset-x-4 z-0 group-hover:bg-zinc-50 dark:group-hover:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
       <DynamicLink {...props}>
+        <span className="absolute -inset-y-6 -inset-x-4 z-20 sm:-inset-x-6 sm:rounded-2xl" />
         <span className="relative z-10">{children}</span>
       </DynamicLink>
-    </div>
+    </>
   )
 }
 
 Card.Title = function CardTitle({ as: Component = 'h2', href, children }) {
   return (
     <Component className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
-      {children}
+      {href ? <Card.Link href={href}>{children}</Card.Link> : children}
     </Component>
   )
 }
 
-Card.Description = function CardDescription({ children, className }) {
+Card.Description = function CardDescription({ children }) {
   return (
-    <p
-      className={clsx(
-        'relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400',
-        className
-      )}
-    >
+    <p className="relative z-10 mt-2 text-sm text-zinc-600 dark:text-zinc-400">
       {children}
     </p>
   )
