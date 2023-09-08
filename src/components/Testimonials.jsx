@@ -172,14 +172,14 @@ export function Testimonials() {
       </div>
       <ul
         role="list"
-        className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:mt-20 lg:max-w-none lg:grid-cols-3"
+        className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 lg:mt-20 lg:max-w-none lg:grid-cols-3"
       >
         {testimonials.map((column, columnIndex) => (
           <li key={columnIndex}>
             <ul role="list" className="flex flex-col gap-y-6">
               {column.map((testimonial, testimonialIndex) => (
                 <li key={testimonialIndex}>
-                  <figure className="relative rounded-2xl border border-zinc-100 bg-white p-6 shadow-lg shadow-zinc-900/5 dark:border-zinc-800 dark:bg-zinc-900 sm:gap-y-8">
+                  <figure className="relative rounded-2xl border border-zinc-100 bg-white p-6 shadow-lg shadow-zinc-900/5 dark:border-zinc-800/60 dark:bg-zinc-900/60 sm:gap-y-8">
                     <blockquote className="relative">
                       <p className="text-sm text-zinc-600 dark:text-zinc-400">
                         {testimonial.content}

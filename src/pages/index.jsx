@@ -22,8 +22,8 @@ import logoElevenLabs from '@/images/logos/clouds/elevenlabs.svg'
 import logoDepict from '@/images/logos/clouds/depict.svg'
 import logoMindsDB from '@/images/logos/clouds/mindsdb.svg'
 
-import { featuredShowcases } from './showcase'
 import DynamicLink from '@/components/DynamicLink'
+import { featuredShowcases } from '@/lib/customers'
 
 function StartIcon(props) {
   return (
@@ -134,7 +134,7 @@ function FeaturedShowcases() {
     <div className="rounded-2xl border border-zinc-100 py-6 dark:border-zinc-700/40">
       <h2 className="mx-6 flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <StarIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Featured showcases</span>
+        <span className="ml-3">Featured customers</span>
       </h2>
       <ol className="mt-6">
         {featuredShowcases.map((showcase, roleIndex) => (
@@ -172,7 +172,7 @@ function FeaturedShowcases() {
         ))}
       </ol>
       <div className="mx-6 mt-6">
-        <Button href="/showcase" variant="secondary" className="group w-full">
+        <Button href="/customers" variant="secondary" className="group w-full">
           See more
           <ArrowRightIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
         </Button>
@@ -253,8 +253,8 @@ const features = [
     description:
       'Everything is meticulously designed and optimized for a great user experience, from performance to navigation.',
     cta: {
-      name: 'View showcase',
-      href: '/showcase',
+      name: 'View customers',
+      href: '/customers',
     },
   },
   {
