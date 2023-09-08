@@ -80,7 +80,7 @@ export default function Projects() {
                 }
               </div>
               <p className='flex-1 mt-4 mb-1 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
-                <Link href={project.link.href} target={project.isCustomerStory ? "_self" : "_blank"} className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-200/60 dark:border-zinc-800 dark:hover:border-zinc-700 bg-zinc-50/60 hover:bg-zinc-100 dark:text-white font-medium w-fit px-4 py-1 text-sm">
+                <Link href={project.link.href} target={project.isCustomerStory ? "_self" : "_blank"} className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-200/60 dark:border-zinc-800 dark:hover:border-zinc-700 bg-zinc-50/60 dark:bg-transparent hover:bg-zinc-100 dark:text-white font-medium w-fit px-4 py-1 text-sm">
                   {project.isCustomerStory ? 'Read more' : 'View docs'}
                 <ChevronRightIcon className="ml-1 h-auto w-4 stroke-current" />
               </Link>
