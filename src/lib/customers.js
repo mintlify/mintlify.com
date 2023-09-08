@@ -29,6 +29,13 @@ import logoPlaneShowcase from '@/images/logos/showcase/plane.svg'
 import logoMontereyShowcase from '@/images/logos/showcase/monterey.svg'
 import logoRevenueHeroShowcase from '@/images/logos/showcase/revenuehero.svg'
 import logoKoalaShowcase from '@/images/logos/showcase/koala.svg'
+import logoResendShowcase from '@/images/logos/showcase/resend.svg'
+import logoDeferShowcase from '@/images/logos/showcase/defer.svg'
+import logoUpstashShowcase from '@/images/logos/showcase/upstash.svg'
+import logoSyndicateShowcase from '@/images/logos/showcase/syndicate.svg'
+import logoStationShowcase from '@/images/logos/showcase/station.svg'
+import logoDynamicShowcase from '@/images/logos/showcase/dynamic.svg'
+import logoEtherspotShowcase from '@/images/logos/showcase/etherspot.svg'
 
 export const categories = [
   {
@@ -36,12 +43,12 @@ export const categories = [
     label: 'Featured',
   },
   {
-    id: 'ai',
-    label: 'Artifical Intelligence'
-  },
-  {
     id: 'devtool',
     label: 'Developer Tools'
+  },
+  {
+    id: 'ai',
+    label: 'Artifical Intelligence'
   },
   {
     id: 'saas',
@@ -112,6 +119,14 @@ export const featuredShowcases = [
 
 export const showcases = [
   ...featuredShowcases,
+  {
+    name: 'Resend',
+    description:
+      'Email for developers',
+    link: { href: 'https://resend.com/docs', label: 'resend.com/docs' },
+    logo: logoResendShowcase,
+    category: ['devtool']
+  },
   {
     name: 'Elementary',
     description: 'Open-source data observability',
@@ -272,6 +287,22 @@ export const showcases = [
     category: ['devtool']
   },
   {
+    name: 'Upstash',
+    description:
+      'Serverless Data Platform for developers',
+    link: { href: 'https://upstash.com/docs', label: 'upstash.com/docs' },
+    logo: logoUpstashShowcase,
+    category: ['devtool']
+  },
+  {
+    name: 'Defer',
+    description:
+      'Onboarding flows and rich product integrations',
+    link: { href: 'https://docs.defer.run', label: 'docs.defer.run' },
+    logo: logoDeferShowcase,
+    category: ['devtool']
+  },
+  {
     name: 'Kaldea',
     description: `The unified analytics platform`,
     link: { href: 'https://docs.kaldea.com', label: 'kaldea.com/docs' },
@@ -299,5 +330,37 @@ export const showcases = [
     link: { href: 'https://docs.sievedata.com', label: 'docs.sievedata.com' },
     logo: logoSieveShowcase,
     category: ['ai']
+  },
+  {
+    name: 'Syndicate',
+    description:
+      'Decentralized asset management platform and social network.',
+    link: { href: 'https://docs.syndicate.io', label: 'docs.syndicate.io' },
+    logo: logoSyndicateShowcase,
+    category: ['web3']
+  },
+  {
+    name: 'GroupOS',
+    description:
+      'Web3 toolkit for autonomous networks',
+    link: { href: 'https://docs.groupos.xyz', label: 'docs.groupos.xyz' },
+    logo: logoStationShowcase,
+    category: ['web3']
+  },
+  {
+    name: 'Dynamic',
+    description:
+      'Multi-chain wallet-based authentication and authorization platform',
+    link: { href: 'https://docs.dynamic.xyz', label: 'docs.dynamic.xyz' },
+    logo: logoDynamicShowcase,
+    category: ['web3']
+  },
+  {
+    name: 'Etherspot',
+    description:
+      'An account abstraction SDK, delivering frictionless Web3 UX.',
+    link: { href: 'https://etherspot.fyi', label: 'etherspot.fyi' },
+    logo: logoEtherspotShowcase,
+    category: ['web3']
   },
 ]

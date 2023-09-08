@@ -5,6 +5,7 @@ import { Testimonials } from '@/components/Testimonials'
 import { useState } from 'react'
 import clsx from 'clsx'
 import { categories, showcases } from '@/lib/customers'
+import { ChevronRightIcon } from '@/components/Card'
 
 
 export function LinkIcon(props) {
@@ -73,6 +74,12 @@ export default function Projects() {
                 </h2>
               </div>
               <p className='flex-1 mt-4 mb-1 text-sm text-zinc-600 dark:text-zinc-400'>{project.description}</p>
+              <button className="flex items-center space-x-1 mt-4 rounded-full border border-zinc-800 dark:text-white font-medium w-fit px-4 py-1 text-sm">
+                <span>
+                  View docs
+                </span>
+                <ChevronRightIcon className="ml-1 h-auto w-4 stroke-current" />
+              </button>
             </li>
           ))}
         </ul>
