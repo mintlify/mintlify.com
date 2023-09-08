@@ -6,11 +6,16 @@ import clsx from 'clsx'
 import { Button } from '@/components/Button'
 import { Card, ChevronRightIcon } from '@/components/Card'
 import { Container } from '@/components/Container'
-import corrily from '@/images/screenshots/corrily.svg'
-import loophole from '@/images/screenshots/loophole.svg'
-import mindsdb from '@/images/screenshots/mindsdb.svg'
-import explo from '@/images/screenshots/explo.svg'
-import elementary from '@/images/screenshots/elementary.svg'
+import dynamicLight from '@/images/screenshots/dynamic-light.svg'
+import dynamicDark from '@/images/screenshots/dynamic-dark.svg'
+import elevenlabsLight from '@/images/screenshots/elevenlabs-light.svg'
+import elevenlabsDark from '@/images/screenshots/elevenlabs-dark.svg'
+import flatfileLight from '@/images/screenshots/flatfile-light.svg'
+import flatfileDark from '@/images/screenshots/flatfile-dark.svg'
+import frpcLight from '@/images/screenshots/frpc-light.svg'
+import frpcDark from '@/images/screenshots/frpc-dark.svg'
+import mindsdbLight from '@/images/screenshots/mindsdb-light.svg'
+import mindsdbDark from '@/images/screenshots/mindsdb-dark.svg'
 import logoYCombinator from '@/images/logos/clouds/ycombinator.svg'
 import logoFlatfile from '@/images/logos/clouds/flatfile.svg'
 import logoWhop from '@/images/logos/clouds/whop.svg'
@@ -187,20 +192,26 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[corrily, loophole, explo, mindsdb, elementary].map(
-          (image, imageIndex) => (
+        {[{ light: elevenlabsLight, dark: elevenlabsDark }, { light: frpcLight, dark: frpcDark }, { light: dynamicLight, dark: dynamicDark }, { light: mindsdbLight, dark: mindsdbDark }, { light: flatfileLight, dark: flatfileDark }].map(
+          ({ light, dark }, imageIndex) => (
             <div
-              key={image.src}
+              key={light.src}
               className={clsx(
-                'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
+                'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-lg bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-lg border border-zinc-100 dark:border-none',
                 rotations[imageIndex % rotations.length]
               )}
             >
               <Image
-                src={image}
-                alt=""
+                src={light}
+                alt="Light"
                 sizes="(min-width: 640px) 18rem, 11rem"
-                className="absolute inset-0 object-cover"
+                className="block dark:hidden absolute inset-0 object-cover"
+              />
+              <Image
+                src={dark}
+                alt="Dark"
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="hidden dark:block absolute inset-0 object-cover"
               />
             </div>
           )
