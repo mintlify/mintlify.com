@@ -44,6 +44,10 @@ window.dataLayer = window.dataLayer || [];
   gtag('config', 'G-NZ6RFCB9LN');
 `
 
+const koalaScript = `
+!function(t){if(window.ko)return;window.ko=[],["identify","track","removeListeners","open","on","off","qualify","ready"].forEach(function(t){ko[t]=function(){var n=[].slice.call(arguments);return n.unshift(t),ko.push(n),ko}});var n=document.createElement("script");n.async=!0,n.setAttribute("src","https://cdn.getkoala.com/v1/pk_76a6caa274e800f3ceff0b2bc6b9b9d82ab8/sdk.js"),(document.body || document.head).appendChild(n)}();
+`
+
 export default function Document() {
   return (
     <Html className="h-full antialiased" lang="en">
@@ -56,6 +60,11 @@ export default function Document() {
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: googleAnalyticsScript }}
+      />
+      <script
+        id="koala"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: koalaScript }}
       />
       <script dangerouslySetInnerHTML={{ __html: modeScript }} />
       <body className="flex h-full flex-col bg-zinc-50 dark:bg-zinc-950">
