@@ -57,31 +57,31 @@ export const categories = [
   },
   {
     id: 'devtool',
-    label: 'Developer Tools'
+    label: 'Developer Tools',
   },
   {
     id: 'ai',
-    label: 'Artifical Intelligence'
+    label: 'Artifical Intelligence',
   },
   {
     id: 'saas',
-    label: 'SaaS'
+    label: 'SaaS',
   },
   {
     id: 'fintech',
-    label: 'Fintech'
+    label: 'Fintech',
   },
   {
     id: 'consumer',
-    label: 'Consumer'
+    label: 'Consumer',
   },
   {
     id: 'web3',
-    label: 'Web3'
+    label: 'Web3',
   },
   {
     id: 'healthcare',
-    label: 'Healthcare'
+    label: 'Healthcare',
   },
 ]
 
@@ -91,14 +91,14 @@ export const featuredShowcases = [
     description: 'Smart APIs for file-based data import',
     link: { href: 'https://flatfile.com/docs', label: 'flatfile.com/docs' },
     logo: logoFlatfileShowcase,
-    category: ['featured', 'devtool']
+    category: ['featured', 'devtool'],
   },
   {
     name: 'MindsDB',
     description: 'AI Development Cloud Platform',
     link: { href: 'https://docs.mindsdb.com', label: 'docs.mindsdb.com' },
     logo: logoMindsDBShowcase,
-    category: ['featured', 'ai']
+    category: ['featured', 'ai'],
   },
   {
     name: 'Dynamic',
@@ -106,35 +106,36 @@ export const featuredShowcases = [
       'Multi-chain wallet-based authentication and authorization platform',
     link: { href: 'https://docs.dynamic.xyz', label: 'docs.dynamic.xyz' },
     logo: logoDynamicShowcase,
-    category: ['featured', 'web3']
+    category: ['featured', 'web3'],
   },
   {
     name: 'Whop',
-    description: 'One-stop-shop for all the latest and greatest digital products',
+    description:
+      'One-stop-shop for all the latest and greatest digital products',
     link: { href: 'https://dev.whop.com', label: 'dev.whop.com' },
     logo: logoWhopShowcase,
-    category: ['featured', 'consumer']
+    category: ['featured', 'consumer'],
   },
   {
     name: 'Mage',
     description: `Open-source data pipeline`,
     link: { href: 'https://docs.mage.ai', label: 'docs.mage.ai' },
     logo: logoMageShowcase,
-    category: ['featured', 'devtool']
+    category: ['featured', 'devtool'],
   },
   {
     name: 'Plane',
     description: 'Modern payroll and HR for startups',
     link: { href: 'https://docs.plane.com', label: 'docs.plane.com' },
     logo: logoPlaneShowcase,
-    category: ['featured', 'saas']
+    category: ['featured', 'saas'],
   },
   {
     name: 'Loophole Labs',
     description: 'Modern application delivery for developers and DevOps teams',
     link: { href: 'https://frpc.io', label: 'frpc.io' },
     logo: logoLoopholeShowcase,
-    category: ['featured', 'devtool']
+    category: ['featured', 'devtool'],
   },
 ]
 
@@ -142,12 +143,19 @@ export const showcases = [
   ...featuredShowcases,
   {
     name: 'Resend',
-    description:
-      'Email for developers',
+    description: 'Email for developers',
     link: { href: '/customers/resend', label: 'resend.com/docs' },
     logo: logoResendShowcase,
     category: ['featured', 'devtool'],
-    isCustomerStory: true
+    isCustomerStory: true,
+  },
+  {
+    name: 'Goody',
+    description: 'Gifting integration API',
+    link: { href: '/customers/goody', label: 'developer.goody.com' },
+    logo: logoGoodyShowcase,
+    category: ['featured', 'saas'],
+    isCustomerStory: true,
   },
   {
     name: 'Elementary',
@@ -157,65 +165,64 @@ export const showcases = [
       label: 'docs.elementary-data.com',
     },
     logo: logoElementaryShowcase,
-    category: ['devtool']
+    category: ['devtool'],
   },
   {
     name: 'Upstash',
-    description:
-      'Serverless Data Platform for developers',
+    description: 'Serverless Data Platform for developers',
     link: { href: 'https://upstash.com/docs', label: 'upstash.com/docs' },
     logo: logoUpstashShowcase,
-    category: ['devtool']
+    category: ['devtool'],
   },
   {
     name: 'ElevenLabs',
     description: 'Generative Voice AI',
     link: { href: 'https://docs.elevenlabs.io', label: 'docs.elevenlabs.io' },
     logo: logoElevenLabsShowcase,
-    category: ['featured', 'ai']
+    category: ['featured', 'ai'],
   },
   {
     name: 'AgentGPT',
-    description:
-      'Autonomous AI Agent platform',
+    description: 'Autonomous AI Agent platform',
     link: { href: 'https://docs.reworkd.ai', label: 'docs.reworkd.ai' },
     logo: logoReworkdShowcase,
-    category: ['ai']
+    category: ['ai'],
   },
   {
     name: 'Chainlit',
     description: 'Open source LLM builder for Python',
     link: { href: 'https://docs.chainlit.io', label: 'docs.chainlit.io' },
     logo: logoChainlitShowcase,
-    category: ['ai']
+    category: ['ai'],
   },
   {
     name: 'Uberduck',
     description: 'Synthetic singing and rapping vocals',
     link: { href: 'https://docs.uberduck.ai', label: 'docs.uberduck.ai' },
     logo: logoUberduckShowcase,
-    category: ['ai']
+    category: ['ai'],
   },
   {
     name: 'Monterey',
     description: 'Copilot for product insights',
     link: { href: 'https://docs.monterey.ai', label: 'docs.monterey.ai' },
     logo: logoMontereyShowcase,
-    category: ['saas', 'ai']
+    category: ['saas', 'ai'],
   },
   {
     name: 'RevenueHero',
-    description: 'Pipeline acceleration platform that qualifies, routes and schedules meetings',
+    description:
+      'Pipeline acceleration platform that qualifies, routes and schedules meetings',
     link: { href: 'https://help.revenuehero.io', label: 'help.revenuehero.io' },
     logo: logoRevenueHeroShowcase,
-    category: ['saas']
+    category: ['saas'],
   },
   {
     name: 'Koala',
     description: 'Customer intent platform',
     link: { href: 'https://getkoala.com/docs', label: 'getkoala.com/docs' },
     logo: logoKoalaShowcase,
-    category: ['saas']
+    category: ['saas'],
   },
   {
     name: 'Infisical',
@@ -223,7 +230,7 @@ export const showcases = [
       'Automatically sync your environment variables easily, securely',
     link: { href: 'https://infisical.com/docs', label: 'infisical.com/docs' },
     logo: logoInfisicalShowcase,
-    category: ['devtool', 'saas']
+    category: ['devtool', 'saas'],
   },
   {
     name: 'Trigger.dev',
@@ -233,7 +240,7 @@ export const showcases = [
       label: 'docs.trigger.com',
     },
     logo: logoTriggerShowcase,
-    category: ['devtool']
+    category: ['devtool'],
   },
   {
     name: 'Tolstoy',
@@ -243,7 +250,7 @@ export const showcases = [
       label: 'developers.gotolstoy.com',
     },
     logo: logoTolstoyShowcase,
-    category: ['consumer']
+    category: ['consumer'],
   },
   {
     name: 'Corrily',
@@ -251,85 +258,84 @@ export const showcases = [
       'Know exactly what to price your products, services, and subscriptions',
     link: { href: 'https://docs.corrily.com', label: 'docs.corrily.com' },
     logo: logoCorrilyShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Depict',
     description: 'E-commerce merchandising for fashion',
     link: { href: 'https://docs.depict.ai', label: 'docs.depict.ai' },
     logo: logoDepictAIShowcase,
-    category: ['ai']
+    category: ['ai'],
   },
   {
     name: 'Thanx',
     description: `The #1 guest engagement platform`,
     link: { href: 'https://docs.thanx.com', label: 'docs.thanx.com' },
     logo: logoThanxShowcase,
-    category: ['saas']
+    category: ['saas'],
   },
   {
     name: 'Hop',
     description: `Automatically detects your environment and builds your code`,
     link: { href: 'https://docs.hop.io', label: 'docs.hop.io' },
     logo: logoHopioShowcase,
-    category: ['devtool']
+    category: ['devtool'],
   },
   {
     name: 'Lotus',
     description: `A real-time engine for your pricing & packaging`,
     link: { href: 'https://docs.uselotus.io', label: 'docs.uselotus.io' },
     logo: logoLotusShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Dots',
     description: `A Single Unified Platform For All Your Payments`,
     link: { href: 'https://docs.dots.dev', label: 'docs.dots.dev' },
     logo: logoDotsShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Invopop',
     description: `API to automate VAT, complex e-invoicing formats and integrations`,
     link: { href: 'https://docs.invopop.com', label: 'docs.invopop.com' },
     logo: logoInvopopShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Propelauth',
     description: `End-to-end managed B2B user authentication`,
     link: { href: 'https://docs.propelauth.com', label: 'docs.propelauth.com' },
     logo: logoPropelauthShowcase,
-    category: ['devtool']
+    category: ['devtool'],
   },
   {
     name: 'Defer',
-    description:
-      'Onboarding flows and rich product integrations',
+    description: 'Onboarding flows and rich product integrations',
     link: { href: 'https://docs.defer.run', label: 'docs.defer.run' },
     logo: logoDeferShowcase,
-    category: ['devtool']
+    category: ['devtool'],
   },
   {
     name: 'Kaldea',
     description: `The unified analytics platform`,
     link: { href: 'https://kaldea.com/docs', label: 'kaldea.com/docs' },
     logo: logoKaldeaShowcase,
-    category: ['saas']
+    category: ['saas'],
   },
   {
     name: 'Flipt',
     description: `Open source feature flag infrastructure`,
     link: { href: 'https://flipt.io/docs', label: 'flipt.io/docs' },
     logo: logoFliptShowcase,
-    category: ['devtool']
+    category: ['devtool'],
   },
   {
     name: 'Radiant',
     description: `Web3 no-code automation`,
     link: { href: 'https://docs.radiant.so', label: 'docs.radiant.so' },
     logo: logoRadiantShowcase,
-    category: ['web3']
+    category: ['web3'],
   },
   {
     name: 'Sieve',
@@ -337,77 +343,64 @@ export const showcases = [
       'Build magical video AI functionality into your apps with just a few API calls',
     link: { href: 'https://docs.sievedata.com', label: 'docs.sievedata.com' },
     logo: logoSieveShowcase,
-    category: ['ai']
+    category: ['ai'],
   },
   {
     name: 'Syndicate',
-    description:
-      'Decentralized asset management platform and social network.',
+    description: 'Decentralized asset management platform and social network.',
     link: { href: 'https://docs.syndicate.io', label: 'docs.syndicate.io' },
     logo: logoSyndicateShowcase,
-    category: ['web3']
+    category: ['web3'],
   },
   {
     name: 'GroupOS',
-    description:
-      'Web3 toolkit for autonomous networks',
+    description: 'Web3 toolkit for autonomous networks',
     link: { href: 'https://docs.groupos.xyz', label: 'docs.groupos.xyz' },
     logo: logoStationShowcase,
-    category: ['web3']
+    category: ['web3'],
   },
   {
     name: 'Explo',
     description: 'Customer-facing analytics for any platform',
     link: { href: 'https://docs.explo.co', label: 'docs.explo.co' },
     logo: logoExploShowcase,
-    category: ['saas']
+    category: ['saas'],
   },
   {
     name: 'Etherspot',
-    description:
-      'An account abstraction SDK, delivering frictionless Web3 UX.',
+    description: 'An account abstraction SDK, delivering frictionless Web3 UX.',
     link: { href: 'https://etherspot.fyi', label: 'etherspot.fyi' },
     logo: logoEtherspotShowcase,
-    category: ['web3']
-  },
-  {
-    name: 'Goody',
-    description:
-      'All-in-one platform for business gifting',
-    link: { href: 'https://developer.ongoody.com', label: 'developer.ongoody.com' },
-    logo: logoGoodyShowcase,
-    category: ['consumer']
+    category: ['web3'],
   },
   {
     name: 'Karrot Market',
     description:
       'Hyperlocal community app which offers a secondhand marketplace',
-      link: { href: 'https://docs.karrotmini.com', label: 'docs.karrotmini.com' },
+    link: { href: 'https://docs.karrotmini.com', label: 'docs.karrotmini.com' },
     logo: logoKarrotMarketShowcase,
-    category: ['consumer']
+    category: ['consumer'],
   },
   {
     name: 'Bitski',
     description: `The NFT wallet for everyone`,
     link: { href: 'https://docs.bitski.com', label: 'docs.bitski.com' },
     logo: logoBitskiShowcase,
-    category: ['consumer', 'web3']
+    category: ['consumer', 'web3'],
   },
   {
     name: 'Revocalize',
-    description:
-      'Your personal AI Voice Toolkit',
+    description: 'Your personal AI Voice Toolkit',
     link: { href: 'https://docs.revocalize.ai', label: 'docs.revocalize.ai' },
     logo: logoRevocalizeShowcase,
-    category: ['consumer']
+    category: ['consumer'],
   },
   {
     name: 'Sequence',
-    description:
-      'Integrated billing and pricing solution for B2B scaleups',
+    description: 'Integrated billing and pricing solution for B2B scaleups',
     link: { href: 'https://docs.sequencehq.com', label: 'docs.sequencehq.com' },
     logo: logoSequenceShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Violet',
@@ -415,39 +408,35 @@ export const showcases = [
       'Unified commerce API connecting merchants and channels directly',
     link: { href: 'https://docs.violet.io', label: 'docs.violet.io' },
     logo: logoVioletShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Gr4vy',
-    description:
-      'Cloud payment orchestration platform',
+    description: 'Cloud payment orchestration platform',
     link: { href: 'https://docs.gr4vy.com', label: 'docs.gr4vy.com' },
     logo: logoGr4vyShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Lago',
-    description:
-      'Open-source metering and usage-based billing',
+    description: 'Open-source metering and usage-based billing',
     link: { href: 'https://docs.getlago.com', label: 'docs.getlago.com' },
     logo: logoLagoShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'Teal',
-    description:
-      'Embedded SMB Accounting',
+    description: 'Embedded SMB Accounting',
     link: { href: 'https://docs.teal.dev', label: 'docs.teal.dev' },
     logo: logoTealShowcase,
-    category: ['fintech']
+    category: ['fintech'],
   },
   {
     name: 'LatchBio',
-    description:
-      'The Cloud for Biology',
+    description: 'The Cloud for Biology',
     link: { href: 'https://wiki.latch.bio', label: 'wiki.latch.bio' },
     logo: logoLatchBioShowcase,
-    category: ['healthcare']
+    category: ['healthcare'],
   },
   {
     name: 'Vital',
@@ -455,30 +444,27 @@ export const showcases = [
       'API for collecting at-home health data for building privacy-focused applications',
     link: { href: 'https://docs.tryvital.io', label: 'docs.tryvital.io' },
     logo: logoVitalShowcase,
-    category: ['healthcare']
+    category: ['healthcare'],
   },
   {
     name: 'Metriport',
-    description:
-      'Medical data management for digital health companies',
+    description: 'Medical data management for digital health companies',
     link: { href: 'https://docs.metriport.com', label: 'docs.metriport.com' },
     logo: logoMetriportShowcase,
-    category: ['healthcare']
+    category: ['healthcare'],
   },
   {
     name: 'Opkit',
-    description:
-      'Automated health insurance verification platform',
+    description: 'Automated health insurance verification platform',
     link: { href: 'https://docs.opkit.co', label: 'docs.opkit.co' },
     logo: logoOpkitShowcase,
-    category: ['healthcare']
+    category: ['healthcare'],
   },
   {
     name: 'Spot',
-    description:
-      'At-home tests for telehealth companies',
+    description: 'At-home tests for telehealth companies',
     link: { href: 'https://docs.spotdx.com', label: 'docs.spotdx.com' },
     logo: logoSpotShowcase,
-    category: ['healthcare']
+    category: ['healthcare'],
   },
 ]

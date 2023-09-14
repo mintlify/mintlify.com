@@ -12,7 +12,7 @@ export function ArrowLeftIcon(props) {
         d="M3 0L0 3L3 6"
         fill="none"
         stroke="currentColor"
-        stroke-width="2"
+        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       ></path>

@@ -1,0 +1,103 @@
+import { StoryLayout } from '@/components/customers/StoryLayout'
+import { StoryQuote } from '@/components/customers/StoryQuote'
+
+export const meta = {
+  title:
+    'Why Goody Partnered With Mintlify To Create Stripe-Level Documentation',
+  description:
+    'Goody wanted API documentation with a best-in-class user experience. Learn how Mintlify delivered.',
+  desktopImageUrl: '/static/images/customers/goody/desktop.png',
+  logoImageUrl: '/static/images/customers/goody/logo.svg',
+  quote:
+    "Mintlify is the only documentation product on the market that matters. Honestly, I wouldn't use anything else.",
+  company: 'Goody',
+}
+
+export const about = {
+  imageUrl: '/static/images/customers/goody/logo.svg',
+  docsUrl: 'developer.ongoody.com',
+  description:
+    'Gifting platform that makes sending business and personal gifts as easy as sending a text. Founded in 2020.',
+  backedBy:
+    'New Enterprise Associates, David Solomon of Goldman Sachs, Scott Bellsky of Adobe, and more.',
+}
+
+export const Quote = ({ quote }) => {
+  return (
+    <StoryQuote
+      quote={quote}
+      imgUrl="/static/images/customers/goody/mark.png"
+      person="Mark Bao, Co-Founder & CTO"
+    />
+  )
+}
+
+export default (props) => <StoryLayout meta={meta} about={about} {...props} />
+
+From day one, Goody Co-Founder and CTO, Mark Bao, knew exactly what kind of documentation he wanted so users could integrate Goody seamlessly into dozens of websites and apps.
+
+With a view that docs are a core part of the product and the user experience, Mark sought docs that were all about clarity and good design.
+
+<Quote quote="A big focus for us is making it as easy as possible for people who are not familiar with our product and API to find what they need." />
+
+## The Challenge to Find a Documentation Partner
+
+During Goody’s development, Mark went on the hunt for a product that would help the startup bring to life his vision for high-quality docs.
+
+“I searched for months for a tool to deliver this, and then became convinced that tool didn’t exist,” he says.
+
+He decided to give Spotlight a try, and although he had found a product that could take Goody to launch, he soon discovered aspects of the tool that would soon become deal breakers. Mark says he was disappointed in Stoplight’s lack of mobile support, the cumbersome updating process, and the lack of customization. But the most frustrating part, he says, was the fact that URLs changed after every update, making it impossible to link to specific pages. Bad links = bad user experience.
+
+Then “fortuitously,” says Mark, he saw a comment about Mintlify on Reddit. He checked out Mintlify’s website and its customers’ docs and knew right away Goody had to make the switch.
+
+<Quote quote="The way Mintlify’s docs were displayed just felt really user-friendly for us, and more importantly, for our developer customers. I felt like I had finally found a tool that could give us the Stripe-level documentation we wanted." />
+
+## The Solution
+
+### White-glove migration
+
+“The setup process was really simple,” says Mark. Mintlify's team handled the migration of docs from Stoplight from start to finish. Mark estimates this saved him “several days of straight work.”
+
+<img
+  src="/static/images/customers/goody/docs-2.png"
+  alt="Docs demo"
+  className="rounded-md"
+/>
+
+He adds that he was impressed by the level of detail from Mintlify—from changing links to implementing best practices in structuring the docs.
+
+<Quote quote="You can phone in a migration and just get it done, but Mintlify proved they have an eye for detail and really cared about us getting started on the right foot." />
+
+### 5-star customer support
+
+Another plus: Mintlify's speedy customer support and quick response to all kinds of queries—from simple questions to feature requests, such as more API examples.
+
+<Quote quote="Customer support has been incredible. There are very few companies that we work with that are as responsive as Mintlify." />
+
+### A fast and simple updating process
+
+With Stoplight, updating docs was a tedious process of pasting code into Stoplight, and then pasting Stoplight IDs into the code. And then there was the constant chasing of broken links after every update.
+
+<img
+  src="/static/images/customers/goody/docs.png"
+  alt="Docs demo"
+  className="rounded-md"
+/>
+
+After switching to Mintlfy, the process is fast and as simple as pushing to git. Goody uses [Mintlify and OpenAPI to easily autogenerate docs](https://mintlify.com/blog/autogenerate-openapi) for each API endpoint. Goody configures OpenAPI by adding the file or URL to its documentation repository.
+
+Every time the OpenAPI file changes, Mintlify automatically updates the doc. On top of that, docs are customizable and come preloaded with features like an API playground and response examples.
+
+<Quote quote="Our docs are designed in a way that makes sense to people. And because of the way we’ve customized our docs with Mintlify, we’re able to surface our guides and our API docs very quickly." />
+
+## Results
+
+In Mark’s view, Goody’s docs have reached a level of craft that distinguishes companies who really care about docs. “When we show our documentation to customers, we’re really happy and proud of them,” he says. “And because of better SEO in our docs, we’re able to amplify our reach and win more deals.”
+
+His only regret is not finding Mintlify sooner.
+
+<Quote quote="Mintlify is the only documentation product on the market that matters. Honestly, I wouldn't use anything else." />
+
+### Want to create high-quality docs with Mintlify?
+
+Get out white-glove migration for free as a part of our startup plan — get started [here](https://mintlify.com/start).
