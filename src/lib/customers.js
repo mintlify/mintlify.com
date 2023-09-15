@@ -179,7 +179,7 @@ export const showcases = [
     description: 'Generative Voice AI',
     link: { href: 'https://docs.elevenlabs.io', label: 'docs.elevenlabs.io' },
     logo: logoElevenLabsShowcase,
-    category: ['featured', 'ai'],
+    category: ['ai'],
   },
   {
     name: 'AgentGPT',
