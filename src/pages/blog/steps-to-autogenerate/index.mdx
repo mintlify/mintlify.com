@@ -1,0 +1,134 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: '5 steps to Autogenerate API documentation from OpenAPI',
+  description:
+    'A step-by-step guide for autogenerating your OpenAPI spec into API documentation on Mintlify',
+  mobileImageUrl: '/static/images/blog/steps-to-autogenerate/desktop.png',
+  desktopImageUrl: '/static/images/blog/steps-to-autogenerate/mobile.png',
+  author: 'Josephine Cheng',
+  authorRole: 'Content',
+  date: 'September 15, 2023',
+  categories: ['Featured', 'Developer Experience'],
+  authorImageUrl: '/static/images/blog/authors/josephine.jpeg',
+  readingTime: '4 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/steps-to-autogenerate/desktop.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Already using OpenAPI? Looking for a quick and efficient method to create beautiful and effective API documentation? You’re in the right place. Follow along for a step-by-step tutorial on how to turn your OpenAPI spec into API documentation on Mintlify..
+
+Mintlify is a docs platform that takes your MDX files and transforms them into beautiful documentation. Once you’ve set up the initial documentation deployment, you can autogenerate your OpenAPI spec into API docs that are effortless to build and easy to maintain.
+
+## Step 1: Generate your OpenAPI spec
+
+Generate an OpenAPI spec in either a json or yaml format. You'll need to be using OpenAPI 3.0+, and if you’re using an API service like Swagger or Stoplight, you should be able to export your OpenAPI file easily.
+
+Make sure your file passes the [validator](https://apitools.dev/swagger-parser/online/).
+
+## Step 2: Clone the Mintlify starter kit
+
+Set up your Mintlify deployment [here](https://mintlify.com/start?utm_campaign=how-to-openapi&utm_medium=blog&utm_source=mintlify). It’s an easy three step process that should only take a few minutes.
+
+Don’t forget to install the Github app using the link on your dashboard so that all your updates are automatically deployed when you push changes to your repo.
+
+## Step 3: Configure your OpenAPI in the docs
+
+Here’s where your technical chops come in.
+
+Clone your new docs repo from your Github and add your OpenAPI spec to the root folder (where the `mint.json` file is located). Then, navigate to the `mint.json` file and add the following to your JSON:
+
+```json
+{
+    "openapi": YOUR_OPENAPI_FILE
+}
+```
+
+If you have a URL that returns your OpenAPI file, you can also use the URL instead of adding the file to your docs. This is optimal if your OpenAPI spec changes frequently - new changes will automatically be pulled in.
+
+<img
+  src="/static/images/blog/autogenerate-openapi/goody-example.png"
+  alt="Goody Example"
+  className="w-full rounded-md"
+/>
+
+```json
+{
+	"api": {
+		"baseUrl": YOUR_API_BASEURL,
+		"auth": {
+		    "method": YOUR_AUTH_TYPE // “bearer”, “basic” or “key”
+		},
+	}
+}
+```
+
+If you’d like to hide the API playground, you can add the following instead:
+
+```json
+{
+  "playground": {
+    "mode": "hide"
+  }
+}
+```
+
+## Step 4: Autogenerate your endpoints
+
+This is the moment we’ve been waiting for. Mintlify has a [scraper](https://www.npmjs.com/package/@mintlify/scraping) that enables you to [autogenerate your endpoint MDX files](https://mintlify.com/docs/api-playground/openapi-generation) from your OpenAPI spec in seconds.
+
+To use Mintlify’s scraper, apply the relative path to the OpenAPI file in your codebase.
+
+```bash
+npx @mintlify/scraping@latest openapi-file <path-to-openapi-file>
+```
+
+If you are hosting your Open API file at a URL, try copying the contents into an openapi.json or openapi yaml file in your codebase to run the scraper once. You can delete the file later.
+
+To specify which folder you would like your files to populate, you can manually add -o flags to your preferred folder. If unspecified, your files will populate into the current folder.
+
+```bash
+npx @mintlify/scraping@latest openapi-file <path-to-openapi-file> -o api-reference
+```
+
+You’ll see an MDX file be created for each endpoint in your OpenAPI spec. If you open the file, you’ll only see page metadata at the top, but rest assured the API doc features will show up when deployed.
+
+Note that if you add more endpoints, you’ll need to create MDX files for them, but any changes to existing endpoints will be automatically reflected.
+
+## Step 5: Showcase your API
+
+Organize the API endpoints in your docs sidebar by adding them to the `navigation` field of the `mint.json` file. Here’s an example:
+
+```json
+  "navigation": [
+    {
+        "group": "API Reference",
+        "pages": [
+            "api-reference/get-user",
+            "api-reference/create-user",
+            "api-reference/update-user",
+            "api-reference/delete-user",
+        ]
+    }
+  ],
+```
+
+You can use different sections, tabs, and folders to make your API docs user-friendly and accessible.
+
+**Pro tip**: Copy the output of the Mintlify scraper into your navigation field so you don’t need to type the file names.
+
+Preview your changes using Mintlify’s [CLI](https://mintlify.com/docs/development). When you’re ready, simply push to git.
+
+The best part? Mintlify docs pages are automatically SEO-optimized and highly searchable, so you don’t need to fuss over the details. Instead, focus on the quality of your product and high-level improvements to make your docs truly stand out.
+
+## Wrapping-Up:
+
+This concludes our tutorial on how to autogenerate API documentation using your OpenAPI specs. We hope this was helpful!
+
+[Join us or sign in now](https://mintlify.com/start?utm_campaign=how-to-openapi&utm_medium=blog&utm_source=mintlify) now to autogenerate your API docs with Mintlify. For support or feedback, find us on [Twitter](https://twitter.com/mintlify) or join our [Slack community](https://join.slack.com/t/mintlify-users/shared_invite/zt-1xfzz6x35-f4o4WCYfpvLhSj3O7WAOMA) to stay posted.
