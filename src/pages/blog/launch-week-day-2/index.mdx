@@ -1,0 +1,72 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: 'Launch Week Day 2: Docs Feedback',
+  description:
+    'Docs Feedback to optimize your docs with direct user feedback. ',
+  mobileImageUrl: '/static/images/blog/launch-week-day-2/feedback.svg',
+  desktopImageUrl: '/static/images/blog/launch-week-day-2/feedback.svg',
+  author: 'Han Wang',
+  authorRole: 'Co-founder',
+  date: 'September 26, 2023',
+  categories: ['Featured', 'Product'],
+  authorImageUrl: '/static/images/blog/authors/han.png',
+  readingTime: '2 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/launch-week-day-2/header-2.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Day 2 of Launch Week brings Docs Feedback to your documentation. 
+
+Simple to use and intuitive in design, this new feature is the easiest way for you to create a direct channel for gathering feedback from your users 👍👎
+
+With Docs Feedback, users upvote or downvote the helpfulness of a page and you can access that feedback right in your analytics.  
+ 
+## Why it matters 
+
+Documentation is a powerful leverage for improving conversions and boosting customer success, but only if you can understand what your users are looking for and whether they can find what they need.
+
+The best way to collect that information? By setting up a direct channel for user response. 
+
+With Docs Feedback, you can now easily identify which pages are underperforming, where there are gaps in content, and how to improve them. 
+
+On the analytics side, [Posthog](https://www.linkedin.com/company/posthog/) makes it exceptionally easy for you to track usage and feedback for their own products. At Mintlify, we use Posthog for our own product, and we love how the platform can do wonders for you, too. 
+
+## Getting started
+
+To get Docs Feedback, simply enable documentation feedback in your mint.json file like so
+
+```json
+"feedback": {
+	"thumbsRating": true
+}
+```
+
+You can also enable your doc viewers to open Github issues and open PRs to suggest edits (for public repos) 
+
+```json
+"feedback": {
+	"suggestEdit": true,
+	"raiseIssue": true
+}
+```
+
+## Check it out
+
+You can see our Docs Feedback in action at the bottom of all of our pages, like [here](https://mintlify.com/docs/quickstart). 
+
+Here’s a sneak peak of our own internal analytics from Docs Feedback, with our most helpful pages measured by number of upvotes versus downvotes.
+
+<img
+  src="/static/images/blog/launch-week-day-2/thumbnail.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Follow our [Twitter](https://twitter.com/mintlify) or join the [community](http://mintlify.com/community) to stay tuned for more! 
