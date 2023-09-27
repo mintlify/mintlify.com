@@ -84,7 +84,7 @@ export default function ArticlesIndex({ articles }) {
       <div className="mx-auto">
         <Container className="mt-12 sm:mt-24">
           <header>
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
+            <h1 className="text-5xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100">
               Blog
             </h1>
           </header>

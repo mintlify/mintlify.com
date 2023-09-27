@@ -17,7 +17,7 @@ function Tag({ title, onClick, isSelected }) {
 
 export function CategoryTags({ setCategory, selectedCategory }) {
   return (
-    <div className="mt-8 flex gap-2">
+    <div className="mt-12 flex gap-2">
       {CATEGORIES.map((category) => (
         <Tag
           title={category}

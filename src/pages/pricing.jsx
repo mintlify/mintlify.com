@@ -8,7 +8,7 @@ import { SimpleLayout } from '@/components/SimpleLayout'
 const plans = [
   {
     name: 'Free',
-    featured: true,
+    featured: false,
     price: { Monthly: '$0', Annually: '$0' },
     description: 'Simple and powerful',
     button: {
@@ -16,18 +16,18 @@ const plans = [
       href: '/start',
     },
     features: [
-      'SEO-optimized documentation',
       'Beautiful styling out of the box',
-      'Custom domains',
+      'Custom domain',
+      'SEO-optimizations',
       'Auto-generated API docs',
       'Built-in components library',
       'Third-party analytics integrations',
-      'In-app search and user logs',
+      'In-app search',
     ],
   },
   {
     name: 'Startup',
-    featured: false,
+    featured: true,
     price: { Monthly: '$150', Annually: '$120' },
     description: 'Built for growing companies',
     button: {
@@ -36,12 +36,33 @@ const plans = [
     },
     features: [
       'The Free plan plus:',
-      'Unlimited editors',
-      'Analytics and conversion insights',
+      'Up to 5 editors',
+      'Analytics & conversion insights',
       'ChatGPT for docs',
-      'Intelligent content suggestions',
+      'User feedback',
       'Custom subpaths /docs',
+      'GitLab support',
       'White-glove migrations',
+    ],
+  },
+  {
+    name: 'Growth',
+    featured: false,
+    price: { Monthly: '$450', Annually: '$400' },
+    description: 'Built for growing companies',
+    button: {
+      label: 'Try for free',
+      href: '/start',
+    },
+    features: [
+      'The Startup plan plus:', 
+      'Up to 15 editors',
+      'Custom ChatGPT responses',
+      'Preview deployments',
+      'Multiple repo sources',
+      'Password-protection',
+      'Custom global CSS',
+      'Slack connect support',
     ],
   },
   {
@@ -54,13 +75,14 @@ const plans = [
       href: '/enterprise',
     },
     features: [
-      'The Startup plan plus:',
-      'Authentication and gated content',
-      'Multiple documentation instances',
+      'The Growth plan plus:',
+      'Unlimited editors',
+      'Advanced security & compliance',
+      'Remove Mintlify branding',
+      'Custom authentication',
       'Custom integrations',
-      'No Mintlify branding',
       'Translation management',
-      'Slack Connect customer support',
+      'Custom SLA agreement',
     ],
     isNotMonthly: true,
   },
@@ -137,7 +159,7 @@ function Plan({
   return (
     <section
       className={clsx(
-        'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-zinc-900/5',
+        'h-full flex flex-col overflow-hidden rounded-2xl p-6 shadow-lg shadow-zinc-900/5',
         featured
           ? 'order-first bg-zinc-900 dark:bg-slate-50 lg:order-none'
           : 'border border-zinc-100 dark:border-zinc-800'
@@ -236,11 +258,11 @@ function Plan({
             <li key={feature} className="flex py-2">
               <CheckIcon
                 className={clsx(
-                  'h-6 w-6 flex-none',
+                  'mt-0.5 h-5 w-5 flex-none',
                   featured ? 'text-white dark:text-primary' : 'text-primary'
                 )}
               />
-              <span className="ml-3">{feature}</span>
+              <span className="ml-2">{feature}</span>
             </li>
           ))}
         </ul>
@@ -306,7 +328,7 @@ export function Pricing() {
         </div>
       </div>
 
-      <div className="mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 py-4 sm:mt-6 lg:max-w-none lg:grid-cols-3">
+      <div className="mt-4 grid max-w-2xl grid-cols-1 items-start gap-x-4 gap-y-10 py-4 sm:mt-6 lg:max-w-none lg:grid-cols-4">
         {plans.map((plan) => (
           <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
         ))}
