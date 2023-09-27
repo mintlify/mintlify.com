@@ -49,7 +49,7 @@ const plans = [
     name: 'Growth',
     featured: false,
     price: { Monthly: '$450', Annually: '$400' },
-    description: 'Built for growing companies',
+    description: 'Built for scale',
     button: {
       label: 'Try for free',
       href: '/start',
