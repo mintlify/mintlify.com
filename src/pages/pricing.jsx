@@ -51,8 +51,8 @@ const plans = [
     price: { Monthly: '$450', Annually: '$400' },
     description: 'Built for scale',
     button: {
-      label: 'Try for free',
-      href: '/start',
+      label: 'Contact us',
+      href: 'mailto:support@mintlify.com',
     },
     features: [
       'The Startup plan plus:', 
