@@ -1,0 +1,47 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: 'Launch Week Day 5: Web Editor',
+  description: 'Edit, preview, and commit, all in the same platform',
+  mobileImageUrl: '/static/images/blog/launch-week-day-5/thumbnail.png',
+  desktopImageUrl: '/static/images/blog/launch-week-day-5/square.png',
+  author: 'Nirmalya Ghosh',
+  authorRole: 'Engineering',
+  date: 'September 29, 2023',
+  categories: ['Featured', 'Product'],
+  authorImageUrl: '/static/images/blog/authors/nirmalya.png',
+  readingTime: '2 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/launch-week-day-5/thumbnail.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Day 5 of Launch Week brings our most requested feature yet—our Web Editor.
+
+Inspired by editors like VS Code, our Web Editor enables you to alter your docs content right on the web, no IDE needed. Through the editor workflow, you can now commit and push directly from the dashboard, rather than going through Git. 
+
+Through the editor, you can now get a live preview of your content without the CLI. This high-fidelity preview sits right beside your code and automatically reflects any changes made in code.  
+
+Using our parsers, valid markdown code instantly generates a preview so you can better visualize your edits. Invalid code (such as missing a closing tag of an element) prevents live previews— ensuring that you are alerted to errors as soon as possible.  
+
+We used packages from our Dashboard and Mint, including React, Next.js, Tailwind CSS, and remark and rehype plugins, to create the ideal Web Editor experience.
+
+<video className="w-full" controls>
+  <source src="/static/images/blog/launch-week-day-5/editor.mp4" type="video/mp4" />
+</video>
+
+## Why it matters
+
+When it comes to delivering a best-in-class platform, we want all our users to have the flexibility and convenience to work in whichever mode they prefer. With Web Editor, developers, PMs, and technical writers can now choose between the CLI and the editor experience. 
+
+More options means more freedom to work however you like, and we are proud to say that our users can now easily leverage the optimal docs-building experience for their workflows. 
+
+## Getting started 
+The web editor is now available in beta on the [dashboard](https://dashboard.mintlify.com) for all of our users!
+
+To stay tuned with future updates, follow our [Twitter](https://twitter.com/mintlify). Join the [community](http://mintlify.com/community) to request features and show us some love! 
