@@ -1,0 +1,190 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: 'Launch Week Sept 2023: Wrap-Up',
+  description: '5 features launched over the past 5 days',
+  mobileImageUrl: '/static/images/blog/launch-week-wrapup/wrapup.png',
+  desktopImageUrl: '/static/images/blog/launch-week-wrapup/square-wrapup.png',
+  author: 'Han Wang',
+  authorRole: 'Co-founder',
+  date: 'October 2, 2023',
+  categories: ['Featured', 'Product'],
+  authorImageUrl: '/static/images/blog/authors/han.png',
+  readingTime: '3 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/launch-week-wrapup/wrapup.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Last week, we launched a feature a day, from CLI enhancements to Global CSS to the Web Editor.
+
+Need a recap of everything we've pushed? Here's a deep dive into each feature.
+
+## Day 1: Enhanced CLI
+
+<img
+  src="/static/images/blog/launch-week-day-1/header.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+We now ship a prebuilt and compiled version of Mintlify that's ready to run in seconds. Plus, we added a custom hot-reloading implementation to speed up development.
+
+The optimal docs-building experience requires speed and efficiency. With an optimized CLI, you can now enjoy a smooth and powerful platform that is ready whenever you are.
+
+**What's new**
+
+Our CLI enhancements deliver:
+
+- A ~90% decrease in the size of the Mintlify CLI on users' disks
+- A 95% decrease in CLI installation time
+- Huge reductions in first load time and hot-reload time
+- A removal of dependency on yarn (ie. less variables and less bugs!)
+
+**Getting started**
+
+Upgrade your CLI with `npm i -g mintlify@latest` to get the latest CLI!
+For an in-depth look at our CLI enhancements, read the [full blog](https://mintlify.com/blog/launch-week-day-1).
+
+## Day 2: Docs Feedback
+
+<img
+  src="/static/images/blog/launch-week-day-2/header.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Documentation is a powerful tool for improving conversion and boosting customer success, but only if maintainers know how their docs can be fine-tuned to meet users' needs.
+
+Simple to use and intuitive in design, this feature is the best way for maintainers to create a direct channel for gathering feedback from their users.
+
+**What's new**
+
+With Docs Feedback:
+
+- Users can upvote or downvote on the helpfulness of a piece of content
+- You can access that feedback right in your analytics
+- You can identify which pages are underperforming and where there are gaps in your content
+
+**Getting started**
+
+To get Docs Feedback, simply enable documentation feedback in your `mint.json` file like so:
+
+```json
+"feedback": {
+	"thumbsRating": true
+}
+```
+
+You can also enable your doc viewers to open Github issues and open PRs to suggest edits (for public repos):
+
+```json
+"feedback": {
+	"suggestEdit": true,
+	"raiseIssue": true
+}
+```
+
+For an in-depth look at Docs Feedback, head to the [full article](https://mintlify.com/blog/launch-week-day-2).
+
+## Day 3: Global CSS
+
+<img
+  src="/static/images/blog/launch-week-day-3/thumbnail.svg"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+If you're searching for the design functions needed to seamlessly fit your docs into your brand, look no further. Now, you can alter design, layout, and variations for different device displays, all from a single style sheet.
+
+**What's new**
+
+With the addition of global CSS, you can now fully tailor your docs however you'd like, including setting global CSS for specific tags (such as h2, p, and img, etc).
+
+**Getting started**
+
+Simply add a .css file into the root of your docs repository. From there, any style changes will propagate to the rest of your documentation.
+For an in-depth look at Global CSS, visit [the full blog post](https://mintlify.com/blog/launch-week-day-3).
+
+## Day 4: API Playground
+
+<img
+  src="/static/images/blog/launch-week-day-4/thumbnail.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+We wanted our API pages to be a standard-setter for the industry—powerful, easy to use, and amazing to look at. So, we overhauled our API Playground for a new and improved design.
+
+The result?
+
+An upgraded API Playground that handles all edge cases and offers expanded features, including supercharged technical functions, effortless UX, and sleek UI.
+
+**What's new**
+
+Technical Functionality
+
+- A wider range of input displays - first-class handling of more complex types such as nested arrays, objects, and mixed types
+- Multimedia response handling - view images and stream audio responses directly in your docs
+
+UI/UX
+
+- An all-around facelift
+- More accessible and intuitive input field UI
+- Exposing more response data to the user
+
+<video className="w-full" controls>
+  <source
+    src="/static/images/blog/launch-week-day-4/video-1.mp4"
+    type="video/mp4"
+  />
+</video>
+
+**Getting started**
+
+If you use OpenAPI to host your API docs on Mintlify, your docs will be upgraded automatically
+For an in-depth look at our API Playground, head [here](https://mintlify.com/blog/launch-week-day-4).
+
+## Day 5: Web Editor
+
+<img
+  src="/static/images/blog/launch-week-day-5/thumbnail.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+When it comes to delivering a best-in-class platform, we want all our users to have access, be it developers, PMs, or technical writers.
+
+More options mean more freedom to work however you like. With Web Editor, all users can now easily leverage the ideal docs-building experience for their workflows.
+
+**What's new**
+
+Built with our markdown parsers and inspired by code editors like VS Code, our Web Editor lets you:
+
+- Alter docs content on the web, no IDE needed
+- Commit and push in-editor (you heard us right, no Git process required)
+- Access a high-fidelity preview of your docs content next to code, without CLI
+- Instantly preview all valid markdown edits
+
+<video className="w-full" controls>
+  <source
+    src="/static/images/blog/launch-week-day-5/editor.mp4"
+    type="video/mp4"
+  />
+</video>
+
+**Getting started**
+
+Web Editor is available on user dashboards now.
+For an in-depth look at our Web Editor, read [the full blog post](https://mintlify.com/blog/launch-week-day-5).
+
+## Wrapping Up
+
+This concludes our first-ever Launch Week!
+
+Show us some love on our [Twitter](https://twitter.com/mintlify) or join our [community](https://mintlify.com/community) to stay tuned for the latest updates and more.
