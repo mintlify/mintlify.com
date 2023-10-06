@@ -28,6 +28,10 @@ export const navigation = [
     href: '/blog',
   },
   {
+    name: 'Careers',
+    href: '/careers',
+  },
+  {
     name: 'Enterprise',
     href: '/enterprise',
     hideInFooter: true,
@@ -38,12 +42,6 @@ export const navigation = [
     hideInHeaderDeskop: true,
     hideInHeaderMobile: true,
     hideInFooter: true,
-  },
-  {
-    name: 'Careers',
-    href: '/careers',
-    hideInHeaderDeskop: true,
-    hideInHeaderMobile: true,
   },
   {
     name: 'Status',
