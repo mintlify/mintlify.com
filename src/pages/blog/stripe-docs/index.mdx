@@ -1,0 +1,120 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: 'How Stripe Creates the Best Documentation in the Tech Industry',
+  description: 'Stripe is our role model for product docs. Here’s how they build the best docs in tech .',
+  mobileImageUrl: '/static/images/blog/stripe-docs/01-design.png',
+  desktopImageUrl: '/static/images/blog/stripe-docs/thumb.png',
+  author: 'Hahnbee Lee',
+  authorRole: 'Co-founder',
+  date: 'October 9, 2023',
+  categories: ['Featured', 'Developer Experience'],
+  authorImageUrl: '/static/images/blog/authors/hahnbee.jpg',
+  readingTime: '3 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/stripe-docs/01-design.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+
+Ask any developer which company has the best documentation and you’ll hear the same answer: Stripe.
+
+I’ve spent quite some time looking at docs, and it’s clear to me that Stripe has set a high bar for developer tool documentation. Their docs are as usable as they are beautiful, and even more impressively, they’re highly comprehensive. Each page feels thoughtful in both content and structure, giving the impression that it was made by people who consider documentation an art rather than a chore.
+
+Stripe’s documentation—and the impact it has had on the company’s user experience, retention, and brand—is a huge reason why the company is valued at more than $50 billion. 
+
+But Stripe isn’t alone in its goal of building the best docs. Many companies aspire to do the same but fail somewhere along the way. Why? 
+
+I went down this research rabbit hole, and here’s how Stripe created the culture and habits that enabled their team of engineers to write beautiful docs.
+
+## Write down everything, and write it well 
+
+There are few companies that have embedded writing into their culture more than Stripe. The company has [a literal press](https://press.stripe.com/) that publishes books, [an engineering magazine](https://increment.com/), and one of the most widely read [engineering blogs](https://stripe.com/blog) of any company in Silicon Valley.
+
+<img
+  src="/static/images/blog/stripe-docs/twitter.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+As former Stripe employee [Patrick McKenzie](https://www.kalzumeus.com/2019/3/18/two-years-at-stripe/), put it: “Stripe is a celebration of the written word which happens to be incorporated in the state of Delaware.”
+
+This culture starts at the top, according to Dave Nunez, Stripe’s former Documentation Manager. “The first emails I saw from our CEO [Patrick Collison] literally had footnotes,” he told [Slab](https://slab.com/blog/stripe-writing-culture/) in an interview. “He structured his emails to be like research papers and put the peripheral information at the bottom so as not to detract from the core information.”
+
+For companies that want to build better docs, Nunez believes culture change is the biggest lever available. “I wouldn’t recommend early-stage startups just go out and hire a full-time docs writer. I’ve learned that, especially in high-performance environments, changing the culture is the highest leverage investment you can make,” he told [First Round Review](https://review.firstround.com/investing-in-internal-documentation-a-brick-by-brick-guide-for-startups).
+
+It’s worth noting that this takes work—and in some cases, behavior change—from leaders in a company. 
+
+“I’ve seen executives write emails all lowercase, loaded with abbreviations and typos, which gives the impression that the time they saved by writing a low-quality email is more valuable than the time it’s going to take others to decipher it. Not only are people frustrated with the poor readability, but other employees will learn not to take writing seriously either,” Nunez told First Round Review. 
+
+**My takeaway**: When building a culture, actions speak louder than words. In order to get people to prioritize writing quality you have to demonstrate thoughtfulness and attention to detail every day. High-quality input leads to high-quality output. 
+
+## Stripe created support systems to help developers write docs
+
+Tactically, Stripe has also built systems and strategies that encourage developers to write docs. 
+
+When Nunez joined Stripe as its Head of Docs, he learned that many developers struggled with writer’s block. They wanted to write documentation, but when it came time to sit down in front of the computer screen, they froze up. 
+
+He solved this problem by creating resources and guides for developers on how to write strong docs. “We create docs that offer some of the basics, so engineers aren’t forced to stare at a blank page — which can be terrifying,” Nunez told Slab.
+
+Templates and resources didn’t solve all of Stripe’s problems, however. 
+
+Stripe is a globally distributed company with employees in dozens of countries around the world. As a result, many of the company’s engineers aren’t native-English speakers or writers. Soon after joining, Nunez learned that many ESL engineers struggled to write docs. 
+
+In order to support these employees, Stripe created classes on writing and documentation best practices; they offered these classes to new engineers during the onboarding process. They also created office hours where employees could seek advice from technical writers and documentation experts, according to Nunez.
+
+**My takeaway**: Empowering each team member to write spreads ownership and responsibility. It also reinforces the belief that everyone should be writing high-quality documentation.
+
+## Stripe includes docs in career ladders and performance reviews
+
+Stripe includes docs in career ladders and performance reviews
+In addition to creating support systems, Stripe also encourages developers to write documentation by including it in engineers’ job ladders. 
+
+Before joining Stripe in 2017, Nunez oversaw all of Uber’s technical content. In order to encourage developers to prioritize documentation more, he worked with an engineering leader to add documentation expectations in every level of an engineer’s career ladder. Immediately, engineers began writing more documentation. 
+
+When Nunez joined Stripe, he brought this strategy along with him. “I took this step in the first week. I put one line about documentation on each level of the job ladder,” he said in an interview.
+
+But Stripe doesn’t just include documentation requirements in their job ladder. They also follow up by assessing engineers' documentation writing in performance reviews. 
+
+“Managers need to take this requirement seriously come performance review time,” Nunez [writes](https://increment.com/documentation/why-investing-in-internal-docs-is-worth-it/). “Set the expectation in the interview phase that documentation is an integral part of the software development expectations at your company.”
+
+Some managers even publicly recognize engineers who write high-qualit y documentation. At one point an engineering manager at Stripe included a ‘doc star of the week’ in her weekly updates to the broader team. 
+
+**My takeaway**: Rewarding people for creating high-quality documentation encourages your team to constantly add to, and improve, your documentation. It also ensures that the labor that goes into creating docs is never wasted, nor does it go uncelebrated. 
+
+## Stripe builds docs that feel like a product
+
+“Our product docs are designed to feel like an application rather than a traditional user manual," Ryan Paul, Stripe’s current Head of Docs [wrote](https://stripe.com/blog/markdoc) in a blog post last year.
+
+Instead of relying on large blocks of text, Stripe’s docs use custom features to improve interactivity and usability. Users can add the language they are programming in and see code examples in Node, for example.
+
+<img
+  src="/static/images/blog/stripe-docs/stripe-docs-node.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+Stripe’s docs are also interactive and tailored to individual users depending on where they are in their onboarding process . For example, a user’s API test keys are automatically added to code samples, a subtle detail that makes for a great user experience.
+
+The company recently built an entire Markdown-based syntax called Markdoc to make their docs more manageable and flexible. As Markdoc creator Ryan Paul [wrote](https://stripe.com/blog/markdoc), “Our team at Stripe spends a lot of time thinking about the authoring experience and how to get it right. In many ways, Markdoc is the embodiment of our obsession with building a better authoring experience.”
+
+It’s tempting to think that Stripe can only afford to do this because of their size. After all, the company is worth $50 billion. But Stripe has been building docs that feel like a product since its earliest days. 
+
+Looking at [Wayback Machine’s snapshot](https://web.archive.org/web/20111122032114/https://stripe.com/) of Stripe’s website in 2011, one year before the company raised their Series A, you can see that they already had docs that included a working API key and support for multiple languages. 
+
+Stripe’s history is evidence that every company can build beautiful docs, no matter their size or the amount of cash in their bank. 
+
+<img
+  src="/static/images/blog/stripe-docs/stripe-docs-api.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Your turn: Who inspires your docs?
+
+What do you think makes Stripe’s docs great? What company sets your gold standard for docs and why? Let me know on [X (formerly Twitter)](https://twitter.com/hahnbeeIee).
