@@ -48,7 +48,7 @@ const nextConfig = {
       {
         source: '/careers',
         destination:
-          'http://cket5sntpdnc70a6auag-crew-work.s3-website.eu-central-1.amazonaws.com/jobs',
+          'https://mintlify.crew.work',
         permanent: false,
       },
       {
