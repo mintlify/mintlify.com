@@ -37,7 +37,7 @@ const nextConfig = {
       {
         source: '/community',
         destination:
-          'https://join.slack.com/t/mintlify-users/shared_invite/zt-23qwna8sg-R9PbdUo6jX3rujUfQ9q_gA',
+          'https://join.slack.com/t/mintlify-users/shared_invite/zt-25bghb943-f4wz4jb1Q8pl2P1H25PKrQ',
         permanent: false,
       },
       {
