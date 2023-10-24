@@ -1,0 +1,120 @@
+import { StoryLayout } from '@/components/customers/StoryLayout'
+import { StoryQuote } from '@/components/customers/StoryQuote'
+
+export const meta = {
+  title:
+    'How Defer Partnered with Mintlify to Build Documentation That Elevates the User Experience',
+  description:
+    'For Defer’s founders, docs are core to the product experience. Discover why Defer chose to switch from self-hosting their docs to building with Mintlify.',
+  desktopImageUrl: '/static/images/customers/defer/desktop.png',
+  logoImageUrl: '/static/images/customers/defer/logo.svg',
+  quote:
+    'Documentation is a big deal. It helps to get users, and it helps to unlock content that is better recognized. Documentation is about providing a whole new experience for the user and the developer.',
+  company: 'Defer',
+}
+
+export const about = {
+  imageUrl: '/static/images/customers/defer/desktop.png',
+  docsUrl: 'docs.defer.run',
+  description:
+    'An infrastructure development tool helping Node.js developers write and operate background jobs at scale. Founded in November 2022',
+  backedBy: 'Y Combinator',
+}
+
+export const Quote = ({ quote }) => {
+  return (
+    <StoryQuote
+      quote={quote}
+      imgUrl="/static/images/customers/defer/charly.jpg"
+      person="Charly Poly, Co-Founder & CEO"
+    />
+  )
+}
+
+export default (props) => <StoryLayout meta={meta} about={about} {...props} />
+
+Defer founders, Charly and Bryan, have long embraced documentation as an extension of their marketing and product. It is a vision heavily informed by Charly’s experience with technical writing and documentation projects, including the Algolia Shopify Integration docs.
+
+A startup with developer and B2B SaaS clients, Defer enables developers to write, manage, and deploy asynchronous jobs in minutes, from advanced onboarding flows to rich product integrations.
+
+<Quote quote="A big focus for us is making it as easy as possible for people who are not familiar with our product and API to find what they need." />
+
+## The Challenge: Defer’s search for documentation as an experience
+
+Fresh out of YC, Defer decided to build their docs on top of Nextra and made them accessible to end users through AWS Cloudfront.
+
+As a free, open-source template built on Next.js that allows users to host documentation sites, Nextra seemed promising. By owning their docs codebase, Defer hoped that Nextra would enable greater flexibility for building their site while providing a smooth user experience.
+
+They quickly realized that using Nextra took up far more time and resources than expected.
+
+Set-up was a two day long process and the finished product faced a number of technical hiccups, including deployment and caching issues. The code was more complex than preferred and proved to be difficult to customize. There was no SEO optimization out-of-the-box, leading to limited brand awareness, poor traffic, and little user engagement on their site.
+
+Defer needed another solution: something which produced developer experience-focused docs quickly and efficiently.
+
+They were impressed by the docs of their friends at Resend, noticed that it was powered by Mintlify, and decided to dig a little deeper. They found that Mintlify was just as invested in the same philosophy as Defer—that better docs meant a better product.
+
+It was time to switch.
+
+## The Solution
+
+### Powerful documentation right out-of-the-box
+
+Mintlify offered a “plug and play solution,” so that all Defer had to do was provide the content. Everything else—including a quick set-up and fantastic out-of-the-box experience—came built into the platform.
+
+<img
+  src="/static/images/customers/defer/main.png"
+  alt="Docs demo"
+  className="rounded-md"
+/>
+
+Three key features stood out to Defer:
+
+- Optimized SEO to reach users
+- Easy maintenance
+- Stunning ready-to-use design
+
+The new docs were opinionated when users were lazy, yet infinitely flexible when users needed them to be.
+
+### Driving user engagement
+
+Mintlify’s SEO optimization capabilities have since expanded Defer’s audience reach. **Now, the site receives 4 times more user traffic, along with a 42% increase in new unique visitors.** In addition, unique sessions have doubled and pageviews have skyrocketed.
+
+More awareness means more leads down the line, and optimized SEO has been key to helping Defer gain top-of-funnel traction.
+
+### Less maintenance, more content
+
+With Mintlify, the set-up process was vastly shortened, taking only a few hours from first page to production.
+
+Since then, Mintlify has saved Defer an hour a week, while taking care of other aspects such as documentation search. Charly sees using Mintlify as an opportunity for him to integrate non-technical docs contributors as well, so the team can better distribute their time.
+
+<Quote quote="It really is a time-saver and an energy-saver. You can just focus on your docs, instead of trying to play around with a tool that is not working the way you want" />
+
+### Developer experience-focused design
+
+While Defer had considered hiring a designer for their previous documentation, they eventually decided against it.
+
+Without the necessary understanding around the purpose of good documentation, it was difficult for the team to communicate the ideal docs design. Hiring a full-time designer was an added cost that Defer could not fully commit to.
+
+Despite this, Defer was eager to achieve a level of documentation on par with leading developer-first companies like Stripe and Algolia—even without a team of in-house designers.
+
+Using Mintlify has proven to be a great return on investment. The platform’s unique focus on design means they no longer need to hire a full-time designer. Instead, Mintlify does all the work for them, from fine tuning the higher-level aspects like a navigable content structure, built-in components, and powerful search, to covering the little things like call-out cards, typography, and user feedback analytics.
+
+<Quote quote="[With Mintlify], you don’t have to worry again about the design and maintenance of your docs" />
+
+## The Results: Growing Defer with Mintlify
+
+<video className="w-full" controls>
+  <source src="/static/images/customers/defer/docs.mp4" type="video/mp4" />
+</video>
+
+With Mintlify, Defer found a solution to supercharge their growth. They’ve boosted brand awareness through improved SEO, achieved user-first design in their docs, and reduced time spent on maintenance so the team can focus on developing their content and building their core product.
+
+As Defer grows, they are confident that Mintlify’s continual support in improving documentation and creating a developer-forward user experience will give them the best docs they need.
+
+<Quote quote="We have peace of mind knowing that we have Mintlify to help us grow and continue on our journey to achieve the top documentation." />
+
+### Getting Started with Mintlify
+
+We love partnering with Defer and other early startups to take their growth to the next level with design-forward and high-impact docs.
+
+Want to set up docs like Defer? We’ll migrate your docs as a part of our [startup plan](https://mintlify.com/start?utm_campaign=<defer-customer-story>&utm_medium=blog&utm_source=mintlify)
