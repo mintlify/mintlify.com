@@ -312,9 +312,10 @@ export const showcases = [
   {
     name: 'Defer',
     description: 'Onboarding flows and rich product integrations',
-    link: { href: 'https://docs.defer.run', label: 'docs.defer.run' },
+    link: { href: `/customers/defer`, label: 'docs.defer.run' },
     logo: logoDeferShowcase,
     category: ['devtool'],
+    isCustomerStory: true,
   },
   {
     name: 'Kaldea',
