@@ -1,0 +1,118 @@
+import { ArticleLayout } from '@/components/blog/ArticleLayout'
+
+export const meta = {
+  title: 'Mintlify Product Update October 2023',
+  description:
+    'What we launched in August: Persisting Auth Tokens, CLI Errors Handling, and more. ',
+  mobileImageUrl: '/static/images/blog/august-2023/desktop.png',
+  desktopImageUrl: '/static/images/blog/october-2023/desktop.png',
+  author: 'Josh Kim',
+  authorRole: 'Operations',
+  date: 'October 31, 2023',
+  categories: ['Featured', 'Product'],
+  authorImageUrl: '/static/images/blog/authors/josh.jpg',
+  readingTime: '2 minute read',
+}
+
+export default (props) => <ArticleLayout meta={meta} {...props} />
+
+<img
+  src="/static/images/blog/october-2023/desktop.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+In October, we brought new feature improvements to our platform, including a new CLI upgrade, improved version stability, multiple frontend and UX improvements with the API Playground, and more.
+
+Here’s a detailed look at all our latest updates this past month:
+
+## API Playground Upgrades
+
+<video className="w-full" controls>
+  <source src="/static/images/blog/october-2023/bearer-persisting.mp4" type="video/mp4" />
+</video>
+
+Since the release of the revamped API Playground, we've made several strides, including:
+- Persisting authentication tokens
+- Automatically prepending `Bearer` for Bearer authentication
+- Adding copy & download buttons to API Playground response
+- Supporting `additionalProperties`
+- Improving API Playground styling capability with background images
+
+<video className="w-full" controls>
+  <source src="/static/images/blog/october-2023/copy-paste.mp4" type="video/mp4" />
+</video>
+
+No need to do anything! These upgrades will automatically be applied to your playground. 
+
+## CLI Error Handling
+
+<img
+  src="/static/images/blog/october-2023/parsing-error.png"
+  alt="CLI upgrade"
+  className="w-full rounded-md"
+/>
+
+The newest version of our Mintlify CLI is out! With this upgrade, you can now preview your local changes and enjoy much faster page load speeds (because, like, who wants pages that move slower than me pre-caffeine on a Monday morning).
+
+Upgrade your CLI with the following command to get the latest changes:
+
+```bash
+npm i -g mintlify@latest
+```
+
+## Documentation Feedback
+
+<img
+  src="/static/images/blog/august-2023/feedback.jpeg"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+We take consistent feedback from our users seriously, and so should you. Our new docs feedback configuration allows users to easily indicate whether a page was helpful and suggest edits, creating a direct channel for constructive feedback. With their help, you can better identify new areas of improvement to achieve the best user experience possible. Read more from the docs [here](https://mintlify.com/docs/settings/global#structure).
+
+To integrate our feedback configuration into your docs, simply add the following snippet into your mint.json file:
+
+```json
+{
+  "feedback": {
+    "thumbsRating": true, // option to thumbs up/down
+    "suggestEdit": true, // option to create a PR on the Github repo
+    "raiseIssue": true // option to raise an issue on Github
+  }
+}
+```
+
+## LaTeX Support
+
+We now support LaTeX in our docs. To use them in your interface, use $ before and after your code to convert it into LateX styling in-line. To create LaTeX in its own line, simply use $$ before and after your code. Read more from the docs [here](https://mintlify.com/docs/content/text#latex).
+
+<img
+  src="/static/images/blog/august-2023/latex.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Copying headers from mobile
+
+Trying to quickly send an anchored link to your docs? You can now copy anchor links from mobile by simply tapping on the header from mobile. Easy.
+
+<img
+  src="/static/images/blog/august-2023/headers.gif"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Expanded icon use & icon types
+
+We now support adding icons onto your sidebar group folders, as well as the various icon types available on [Font Awesome](https://fontawesome.com/icons). Try by adding the `iconType` to your page metadata or sidebar navigation definition.
+
+<img
+  src="/static/images/blog/august-2023/icons.png"
+  alt="blog thumbnail"
+  className="w-full rounded-md"
+/>
+
+## Wrapping Up
+
+This concludes our August round-up of Mintlify’s latest features. Stay tuned to all of our latest product updates, make sure to follow our [Twitter](https://twitter.com/mintlify). To request any features, let us know in our [Slack community](https://mintlify.com/community). We’ll see you around :)
