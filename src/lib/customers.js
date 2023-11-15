@@ -89,9 +89,10 @@ export const featuredShowcases = [
   {
     name: 'Flatfile',
     description: 'Smart APIs for file-based data import',
-    link: { href: 'https://flatfile.com/docs', label: 'flatfile.com/docs' },
+    link: { href: '/customers/flatfile', label: 'flatfile.com/docs' },
     logo: logoFlatfileShowcase,
     category: ['featured', 'devtool'],
+    isCustomerStory: true,
   },
   {
     name: 'MindsDB',
